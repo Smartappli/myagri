@@ -72,6 +72,11 @@ header {
     margin-top: 1rem;
 }
 
+.nav-list a[aria-current="page"] {
+    background: rgb(234 255 239 / 22%);
+    border-color: rgb(234 255 239 / 55%);
+}
+
 .hero h1 {
     margin-bottom: 0.6rem;
 }

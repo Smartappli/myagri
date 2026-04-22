@@ -2,12 +2,12 @@
 
 Portail citoyen en **PHP** pour informer le grand public sur l'agriculture en Wallonie.
 
-## Fonctionnalités
+## Ce qui a été amélioré
 
-- Navigation claire par sections (bases, filières, enjeux, actions citoyennes, FAQ, glossaire).
-- Fiches filières détaillées avec recherche instantanée par mot-clé.
-- FAQ interactive (accordéon accessible).
-- Contenu éditorial centralisé dans `includes/data.php`.
+- Structure éditoriale centralisée via `getPortalData()`.
+- Helpers dédiés (`includes/functions.php`) pour l’échappement HTML et la gestion de page.
+- Navigation multi-vues via `?page=accueil|filieres|ressources`.
+- Filtrage dynamique des filières et FAQ interactive accessible.
 
 ## Exécution locale
 
@@ -15,4 +15,8 @@ Portail citoyen en **PHP** pour informer le grand public sur l'agriculture en Wa
 php -S 127.0.0.1:8000
 ```
 
-Puis ouvrez : <http://127.0.0.1:8000>
+Pages utiles :
+
+- <http://127.0.0.1:8000/?page=accueil>
+- <http://127.0.0.1:8000/?page=filieres>
+- <http://127.0.0.1:8000/?page=ressources>

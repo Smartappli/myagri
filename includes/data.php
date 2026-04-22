@@ -2,121 +2,111 @@
 
 declare(strict_types=1);
 
-$site = [
-    'title' => 'AgriWallonie — Portail citoyen',
-    'subtitle' => 'Toute l’agriculture wallonne expliquée simplement : productions, alimentation, environnement, économie et métiers.',
-    'updated_at' => '22 avril 2026',
-];
-
-$quickFacts = [
-    [
-        'title' => 'À quoi sert l’agriculture ?',
-        'content' => 'Elle produit notre alimentation, entretient les paysages, alimente des filières locales et participe à la vitalité des communes rurales.',
-    ],
-    [
-        'title' => 'Pourquoi en parler maintenant ?',
-        'content' => 'Climat, biodiversité, prix alimentaires et souveraineté alimentaire transforment les attentes envers le secteur agricole.',
-    ],
-    [
-        'title' => 'Quel est l’objectif du portail ?',
-        'content' => 'Donner des repères fiables et pédagogiques au grand public sans jargon inutile.',
-    ],
-];
-
-$pillars = [
-    ['name' => 'Produire', 'description' => 'Assurer une alimentation de qualité avec des filières diversifiées et résilientes.'],
-    ['name' => 'Préserver', 'description' => 'Protéger l’eau, les sols, la biodiversité et réduire les émissions de gaz à effet de serre.'],
-    ['name' => 'Partager', 'description' => 'Renforcer le lien producteurs-consommateurs via la pédagogie et les circuits courts.'],
-    ['name' => 'Innover', 'description' => 'Mobiliser recherche, numérique et coopération territoriale.'],
-];
-
-$sectors = [
-    [
-        'slug' => 'cultures',
-        'label' => 'Grandes cultures',
-        'emoji' => '🌾',
-        'summary' => 'Céréales, pommes de terre, betteraves et cultures protéiques structurent fortement l’espace agricole wallon.',
-        'enjeux' => [
-            'Rentabilité dépendante des prix et du climat.',
-            'Réduction de la dépendance aux intrants.',
-            'Diversification des rotations pour améliorer les sols.',
+/**
+ * @return array<string, mixed>
+ */
+function getPortalData(): array
+{
+    return [
+        'site' => [
+            'title' => 'AgriWallonie — Portail citoyen',
+            'subtitle' => 'Comprendre l’agriculture wallonne : alimentation, territoires, environnement, économie et métiers.',
+            'updated_at' => '22 avril 2026',
         ],
-        'bon_a_savoir' => 'La pomme de terre est un maillon majeur des filières agroalimentaires régionales.',
-    ],
-    [
-        'slug' => 'elevage',
-        'label' => 'Élevage bovin et laitier',
-        'emoji' => '🐄',
-        'summary' => 'L’élevage valorise les prairies et participe à l’identité agricole wallonne, notamment en zones herbagères.',
-        'enjeux' => [
-            'Prix rémunérateur pour les producteurs.',
-            'Bien-être animal et conditions de travail.',
-            'Réduction de l’empreinte carbone par l’alimentation et la gestion des effluents.',
+        'quickFacts' => [
+            [
+                'title' => 'Un enjeu quotidien',
+                'content' => 'L’agriculture influence directement le prix, la qualité et la diversité de notre alimentation.',
+            ],
+            [
+                'title' => 'Un rôle territorial',
+                'content' => 'Elle structure les paysages, soutient l’emploi local et maintient la vie économique rurale.',
+            ],
+            [
+                'title' => 'Un secteur en transition',
+                'content' => 'Les fermes s’adaptent au climat, à la pression économique et aux attentes sociétales.',
+            ],
         ],
-        'bon_a_savoir' => 'Les prairies permanentes jouent un rôle important dans le stockage du carbone.',
-    ],
-    [
-        'slug' => 'maraichage',
-        'label' => 'Maraîchage, horticulture et vergers',
-        'emoji' => '🥕',
-        'summary' => 'Ces filières de proximité répondent à la demande croissante en produits frais, saisonniers et locaux.',
-        'enjeux' => [
-            'Main-d’œuvre qualifiée et saisonnalité.',
-            'Gestion de l’eau et adaptation aux fortes chaleurs.',
-            'Organisation logistique des circuits courts.',
+        'pillars' => [
+            ['name' => 'Produire', 'description' => 'Assurer une production fiable et diversifiée.'],
+            ['name' => 'Préserver', 'description' => 'Protéger eau, sol, climat et biodiversité.'],
+            ['name' => 'Relier', 'description' => 'Créer du lien entre producteurs et citoyens.'],
+            ['name' => 'Innover', 'description' => 'S’appuyer sur la recherche et les pratiques de terrain.'],
         ],
-        'bon_a_savoir' => 'La vente directe permet souvent de mieux valoriser le travail agricole.',
-    ],
-];
-
-$focusThemes = [
-    [
-        'title' => 'Eau et sécheresse',
-        'details' => 'Stockage d’eau, couverture des sols et adaptation des itinéraires techniques deviennent prioritaires dans de nombreuses exploitations.',
-    ],
-    [
-        'title' => 'Sols vivants',
-        'details' => 'Allongement des rotations, couverts végétaux et limitation du tassement sont au cœur de la fertilité durable.',
-    ],
-    [
-        'title' => 'Biodiversité utile',
-        'details' => 'Haies, bandes fleuries et infrastructures agroécologiques favorisent pollinisateurs et régulation naturelle des ravageurs.',
-    ],
-    [
-        'title' => 'Énergie et climat',
-        'details' => 'Efficacité énergétique, valorisation de coproduits et sobriété des intrants renforcent la résilience des fermes.',
-    ],
-];
-
-$citizenActions = [
-    'Privilégier les produits locaux et de saison.',
-    'Visiter une ferme pédagogique pour comprendre les réalités du terrain.',
-    'Comparer les labels et poser des questions sur l’origine des produits.',
-    'Soutenir les initiatives collectives : coopératives, magasins de producteurs, paniers hebdomadaires.',
-];
-
-$faq = [
-    [
-        'q' => 'L’agriculture wallonne est-elle seulement intensive ?',
-        'a' => 'Non. On y trouve une grande diversité de modèles : conventionnel, biologique, circuits courts, systèmes herbagers, etc.',
-    ],
-    [
-        'q' => 'Pourquoi les prix varient-ils autant ?',
-        'a' => 'Ils dépendent des coûts de production, des marchés internationaux, de la météo et de la chaîne de transformation/distribution.',
-    ],
-    [
-        'q' => 'Le bio suffit-il à résoudre tous les enjeux ?',
-        'a' => 'Le bio apporte des réponses importantes, mais la transition mobilise aussi d’autres leviers : sols, eau, énergie, rémunération et coopération.',
-    ],
-    [
-        'q' => 'Comment parler d’agriculture avec les enfants ?',
-        'a' => 'Par des exemples concrets : saisonnalité des fruits, visite de ferme, potager scolaire, lecture d’étiquettes.',
-    ],
-];
-
-$glossary = [
-    ['term' => 'Circuit court', 'definition' => 'Mode de vente avec peu ou pas d’intermédiaires entre producteur et consommateur.'],
-    ['term' => 'Agroécologie', 'definition' => 'Approche qui applique les principes de l’écologie aux systèmes agricoles.'],
-    ['term' => 'Prairie permanente', 'definition' => 'Surface herbagère installée depuis plusieurs années, essentielle pour l’élevage et les écosystèmes.'],
-    ['term' => 'Rotation', 'definition' => 'Succession planifiée des cultures sur une même parcelle pour préserver la fertilité et limiter les risques.'],
-];
+        'sectors' => [
+            [
+                'label' => 'Grandes cultures',
+                'emoji' => '🌾',
+                'summary' => 'Céréales, pommes de terre et betteraves occupent une place importante.',
+                'enjeux' => [
+                    'Gestion des risques climatiques.',
+                    'Fertilité des sols et rotations.',
+                    'Stabilité économique des exploitations.',
+                ],
+                'public_actions' => [
+                    'Privilégier la saisonnalité et l’origine locale.',
+                    'S’informer sur les filières de transformation régionales.',
+                ],
+            ],
+            [
+                'label' => 'Élevage bovin et laitier',
+                'emoji' => '🐄',
+                'summary' => 'L’élevage valorise les prairies et alimente les filières laitières et viandeuses.',
+                'enjeux' => [
+                    'Bien-être animal et revenu des éleveurs.',
+                    'Autonomie fourragère et coûts de production.',
+                    'Réduction de l’empreinte environnementale.',
+                ],
+                'public_actions' => [
+                    'Découvrir les labels et démarches qualité.',
+                    'Soutenir les points de vente fermiers.',
+                ],
+            ],
+            [
+                'label' => 'Maraîchage, horticulture et vergers',
+                'emoji' => '🥕',
+                'summary' => 'Des productions de proximité adaptées aux circuits courts.',
+                'enjeux' => [
+                    'Main-d’œuvre, stockage et logistique.',
+                    'Irrigation et adaptation aux canicules.',
+                    'Valorisation commerciale en vente directe.',
+                ],
+                'public_actions' => [
+                    'Acheter en direct chez les producteurs.',
+                    'Diversifier son panier avec des produits de saison.',
+                ],
+            ],
+        ],
+        'focusThemes' => [
+            ['title' => 'Eau', 'details' => 'Économiser et mieux stocker l’eau pour sécuriser les productions.'],
+            ['title' => 'Sols', 'details' => 'Renforcer la matière organique et limiter l’érosion.'],
+            ['title' => 'Biodiversité', 'details' => 'Déployer haies, bandes fleuries et infrastructures écologiques.'],
+            ['title' => 'Climat', 'details' => 'Adapter les pratiques et limiter les émissions.'],
+        ],
+        'faq' => [
+            [
+                'q' => 'Pourquoi les prix agricoles sont-ils parfois instables ?',
+                'a' => 'Ils dépendent à la fois des marchés mondiaux, de la météo, des coûts de l’énergie et de la transformation.',
+            ],
+            [
+                'q' => 'Le circuit court est-il toujours possible ?',
+                'a' => 'Pas pour tous les produits, mais il peut renforcer le lien local et la valeur ajoutée quand il est bien organisé.',
+            ],
+            [
+                'q' => 'Comment sensibiliser les enfants ?',
+                'a' => 'Via des visites de fermes, des ateliers alimentaires, des potagers et l’observation des saisons.',
+            ],
+        ],
+        'glossary' => [
+            ['term' => 'Agroécologie', 'definition' => 'Application de principes écologiques à la production agricole.'],
+            ['term' => 'Rotation', 'definition' => 'Alternance planifiée des cultures sur une même parcelle.'],
+            ['term' => 'Circuit court', 'definition' => 'Vente avec peu ou pas d’intermédiaires.'],
+            ['term' => 'Prairie permanente', 'definition' => 'Prairie installée durablement, utile à l’élevage et aux écosystèmes.'],
+        ],
+        'resources' => [
+            ['title' => 'Visites pédagogiques', 'description' => 'Trouver des fermes ouvertes au public et aux écoles.'],
+            ['title' => 'Formations et métiers', 'description' => 'Explorer les parcours liés à l’agriculture et l’agroalimentaire.'],
+            ['title' => 'Consommation responsable', 'description' => 'Repères pratiques pour des achats plus durables.'],
+        ],
+    ];
+}
