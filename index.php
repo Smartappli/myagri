@@ -8,82 +8,130 @@ require __DIR__ . '/includes/data.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portail Agriculture Wallonie</title>
-    <meta name="description" content="Portail d'information sur l'agriculture wallonne : filières, pratiques durables, enjeux et ressources pour le grand public.">
+    <title><?= htmlspecialchars($site['title']) ?></title>
+    <meta name="description" content="Portail citoyen détaillé sur l'agriculture en Wallonie : filières, enjeux, transition, glossaire et actions concrètes.">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <header>
     <div class="container">
-        <h1><?= htmlspecialchars($hero['title']) ?></h1>
-        <p class="hero-subtitle"><?= htmlspecialchars($hero['subtitle']) ?></p>
-        <a class="button" href="#filieres"><?= htmlspecialchars($hero['cta']) ?></a>
+        <div class="header-top">
+            <div class="brand">AgriWallonie</div>
+            <nav aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="#bases">Comprendre</a></li>
+                    <li><a href="#filieres">Filières</a></li>
+                    <li><a href="#enjeux">Enjeux</a></li>
+                    <li><a href="#agir">Agir</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#glossaire">Glossaire</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero">
+            <h1><?= htmlspecialchars($site['title']) ?></h1>
+            <p class="subtitle"><?= htmlspecialchars($site['subtitle']) ?></p>
+            <p class="meta">Dernière mise à jour du contenu : <?= htmlspecialchars($site['updated_at']) ?>.</p>
+        </div>
     </div>
 </header>
 
 <main class="container">
-    <section aria-labelledby="chiffres-cles">
-        <h2 id="chiffres-cles">Repères essentiels</h2>
-        <p class="small">Une vue synthétique pour comprendre les dynamiques agricoles régionales.</p>
-        <div class="grid stats-grid">
-            <?php foreach ($stats as $stat): ?>
+    <section id="bases" aria-labelledby="bases-title">
+        <h2 id="bases-title">Les bases à connaître</h2>
+        <p class="section-intro">Une entrée rapide pour comprendre l'agriculture wallonne au sens large.</p>
+        <div class="grid grid-3">
+            <?php foreach ($quickFacts as $fact): ?>
                 <article class="card">
-                    <p class="tag"><?= htmlspecialchars($stat['label']) ?></p>
-                    <h3><?= htmlspecialchars($stat['value']) ?></h3>
-                    <p><?= htmlspecialchars($stat['description']) ?></p>
+                    <h3><?= htmlspecialchars($fact['title']) ?></h3>
+                    <p><?= htmlspecialchars($fact['content']) ?></p>
+                </article>
+            <?php endforeach; ?>
+        </div>
+    </section>
+
+    <section aria-labelledby="piliers-title">
+        <h2 id="piliers-title">4 piliers du portail</h2>
+        <div class="grid grid-2 pillars">
+            <?php foreach ($pillars as $pillar): ?>
+                <article class="card">
+                    <h3><?= htmlspecialchars($pillar['name']) ?></h3>
+                    <p><?= htmlspecialchars($pillar['description']) ?></p>
                 </article>
             <?php endforeach; ?>
         </div>
     </section>
 
     <section id="filieres" aria-labelledby="filieres-title">
-        <h2 id="filieres-title">Filières agricoles en Wallonie</h2>
-        <p class="small">Des productions complémentaires qui structurent l'économie et l'alimentation locale.</p>
-        <div class="grid sector-grid">
+        <h2 id="filieres-title">Filières agricoles</h2>
+        <p class="section-intro">Filtrez les filières par mot-clé (ex: lait, vergers, cultures, proximité).</p>
+        <label for="sector-filter" class="meta">Rechercher dans les filières</label>
+        <input id="sector-filter" class="filter" type="search" placeholder="Tapez un mot-clé..." data-sector-filter>
+
+        <div class="grid grid-3">
             <?php foreach ($sectors as $sector): ?>
-                <article class="card">
-                    <h3 class="sector-title"><span><?= $sector['icon'] ?></span> <?= htmlspecialchars($sector['name']) ?></h3>
-                    <p><?= htmlspecialchars($sector['focus']) ?></p>
-                    <ul>
-                        <?php foreach ($sector['public_info'] as $line): ?>
-                            <li><?= htmlspecialchars($line) ?></li>
+                <?php
+                $searchText = mb_strtolower($sector['label'] . ' ' . $sector['summary'] . ' ' . implode(' ', $sector['enjeux']) . ' ' . $sector['bon_a_savoir']);
+                ?>
+                <article class="card" data-sector-card data-search-text="<?= htmlspecialchars($searchText) ?>">
+                    <h3 class="sector-title"><span><?= htmlspecialchars($sector['emoji']) ?></span> <?= htmlspecialchars($sector['label']) ?></h3>
+                    <p><?= htmlspecialchars($sector['summary']) ?></p>
+                    <ul class="list-tight">
+                        <?php foreach ($sector['enjeux'] as $enjeu): ?>
+                            <li><?= htmlspecialchars($enjeu) ?></li>
                         <?php endforeach; ?>
                     </ul>
+                    <p class="callout"><strong>Bon à savoir :</strong> <?= htmlspecialchars($sector['bon_a_savoir']) ?></p>
                 </article>
             <?php endforeach; ?>
         </div>
     </section>
 
-    <section aria-labelledby="transitions-title">
-        <h2 id="transitions-title">Transitions et innovations</h2>
-        <div class="timeline">
-            <?php foreach ($initiatives as $initiative): ?>
+    <section id="enjeux" aria-labelledby="enjeux-title">
+        <h2 id="enjeux-title">Enjeux transversaux</h2>
+        <div class="grid grid-2">
+            <?php foreach ($focusThemes as $theme): ?>
                 <article class="card">
-                    <h3><?= htmlspecialchars($initiative['title']) ?></h3>
-                    <p><?= htmlspecialchars($initiative['description']) ?></p>
-                    <p><strong>Impact public :</strong> <?= htmlspecialchars($initiative['impact']) ?></p>
+                    <h3><?= htmlspecialchars($theme['title']) ?></h3>
+                    <p><?= htmlspecialchars($theme['details']) ?></p>
                 </article>
             <?php endforeach; ?>
         </div>
     </section>
 
-    <section aria-labelledby="faq-title">
-        <h2 id="faq-title">Questions fréquentes</h2>
-        <?php foreach ($faq as $item): ?>
-            <article class="faq-item">
-                <h3><?= htmlspecialchars($item['q']) ?></h3>
-                <p><?= htmlspecialchars($item['a']) ?></p>
-            </article>
-        <?php endforeach; ?>
+    <section id="agir" aria-labelledby="agir-title">
+        <h2 id="agir-title">Comment agir en tant que citoyen ?</h2>
+        <div class="card">
+            <ul>
+                <?php foreach ($citizenActions as $action): ?>
+                    <li><?= htmlspecialchars($action) ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
     </section>
 
-    <section aria-labelledby="ressources-title">
-        <h2 id="ressources-title">Ressources citoyennes</h2>
-        <div class="grid stats-grid">
-            <?php foreach ($resources as $resource): ?>
+    <section id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">FAQ</h2>
+        <div class="grid">
+            <?php foreach ($faq as $index => $item): ?>
+                <?php $answerId = 'faq-' . $index; ?>
+                <article class="faq-item">
+                    <button class="faq-button" type="button" aria-expanded="false" aria-controls="<?= htmlspecialchars($answerId) ?>" data-faq-button>
+                        <?= htmlspecialchars($item['q']) ?>
+                    </button>
+                    <p id="<?= htmlspecialchars($answerId) ?>" hidden><?= htmlspecialchars($item['a']) ?></p>
+                </article>
+            <?php endforeach; ?>
+        </div>
+    </section>
+
+    <section id="glossaire" aria-labelledby="glossaire-title">
+        <h2 id="glossaire-title">Glossaire</h2>
+        <div class="grid grid-2">
+            <?php foreach ($glossary as $entry): ?>
                 <article class="card">
-                    <h3><?= htmlspecialchars($resource['name']) ?></h3>
-                    <p><?= htmlspecialchars($resource['description']) ?></p>
+                    <h3><?= htmlspecialchars($entry['term']) ?></h3>
+                    <p><?= htmlspecialchars($entry['definition']) ?></p>
                 </article>
             <?php endforeach; ?>
         </div>
@@ -92,8 +140,10 @@ require __DIR__ . '/includes/data.php';
 
 <footer>
     <div class="container">
-        <p>Portail d'information grand public sur l'agriculture en Wallonie — version PHP 8.5.3 compatible.</p>
+        <p>AgriWallonie — portail grand public sur l'agriculture en Wallonie (PHP 8.5.3 compatible).</p>
     </div>
 </footer>
+
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>

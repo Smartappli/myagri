@@ -1,34 +1,93 @@
 :root {
-    --bg: #f7faf7;
-    --surface: #ffffff;
+    --bg: #f6faf7;
+    --surface: #fff;
     --text: #163023;
-    --muted: #486456;
-    --primary: #2b7a45;
-    --secondary: #dff2e5;
-    --border: #c8decf;
+    --muted: #4b6457;
+    --primary: #1f7a45;
+    --primary-dark: #145733;
+    --accent: #e3f2e8;
+    --border: #c9ddcf;
 }
 
 * {
     box-sizing: border-box;
 }
 
+html,
 body {
     margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
-    background: var(--bg);
     color: var(--text);
+    background: var(--bg);
     line-height: 1.6;
 }
 
-header {
-    background: linear-gradient(135deg, #0f4f2e, #2b7a45);
-    color: #fff;
-    padding: 4rem 1.25rem;
+.container {
+    width: min(1120px, 100% - 2rem);
+    margin-inline: auto;
 }
 
-.container {
-    width: min(1100px, 100% - 2rem);
-    margin-inline: auto;
+header {
+    background: linear-gradient(125deg, #0d482a, #2e8c53);
+    color: #fff;
+    padding: 3rem 0;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.brand {
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.nav-list a {
+    color: #eaffef;
+    text-decoration: none;
+    border: 1px solid rgb(234 255 239 / 30%);
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
+.hero {
+    margin-top: 1rem;
+}
+
+.hero h1 {
+    margin-bottom: 0.6rem;
+}
+
+.subtitle {
+    max-width: 70ch;
+    opacity: 0.95;
+}
+
+.meta {
+    font-size: 0.92rem;
+    opacity: 0.9;
+}
+
+section {
+    padding: 2.2rem 0;
 }
 
 h1,
@@ -38,25 +97,9 @@ h3 {
     margin-top: 0;
 }
 
-.hero-subtitle {
-    font-size: 1.1rem;
-    max-width: 70ch;
-    opacity: 0.95;
-}
-
-.button {
-    display: inline-block;
-    margin-top: 1rem;
-    background: #fff;
-    color: #145e36;
-    padding: 0.75rem 1.1rem;
-    border-radius: 0.6rem;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-section {
-    padding: 2.25rem 0;
+.section-intro {
+    color: var(--muted);
+    margin-top: -0.35rem;
 }
 
 .grid {
@@ -64,20 +107,33 @@ section {
     gap: 1rem;
 }
 
-.stats-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
 
 .card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0.8rem;
+    border-radius: 14px;
     padding: 1rem;
-    box-shadow: 0 6px 18px rgb(9 44 24 / 5%);
+    box-shadow: 0 8px 22px rgb(14 48 29 / 7%);
 }
 
-.sector-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.pillars .card {
+    border-top: 4px solid var(--primary);
+}
+
+.filter {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.65rem 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 0.9rem;
 }
 
 .sector-title {
@@ -86,36 +142,50 @@ section {
     gap: 0.5rem;
 }
 
-.tag {
-    background: var(--secondary);
-    color: #1a5732;
-    border-radius: 999px;
-    padding: 0.2rem 0.6rem;
-    font-size: 0.85rem;
+.callout {
+    background: var(--accent);
+    border-left: 5px solid var(--primary);
+    padding: 0.7rem 0.85rem;
+    border-radius: 10px;
 }
 
-.timeline {
-    border-left: 4px solid var(--primary);
-    padding-left: 1rem;
-}
-
-.timeline .card + .card {
-    margin-top: 0.8rem;
+.list-tight {
+    margin: 0;
+    padding-left: 1.15rem;
 }
 
 .faq-item {
-    border-bottom: 1px dashed var(--border);
-    padding: 0.8rem 0;
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+    padding: 0.65rem 0.8rem;
+    background: #fcfefd;
+}
+
+.faq-button {
+    width: 100%;
+    text-align: left;
+    border: 0;
+    background: transparent;
+    color: var(--primary-dark);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.2rem 0;
 }
 
 footer {
-    background: #10271b;
-    color: #deeee3;
-    padding: 1.25rem;
-    font-size: 0.95rem;
+    background: #10261a;
+    color: #def0e4;
+    padding: 1.3rem 0;
+    margin-top: 2rem;
 }
 
-.small {
-    color: var(--muted);
-    font-size: 0.95rem;
+@media (max-width: 640px) {
+    header {
+        padding-top: 2rem;
+    }
+
+    .nav-list a {
+        font-size: 0.82rem;
+    }
 }
