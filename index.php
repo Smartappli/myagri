@@ -7,12 +7,15 @@ require __DIR__ . '/includes/functions.php';
 
 $data = getPortalData();
 $page = currentPage();
+$search = isset($_GET['q']) && is_string($_GET['q']) ? trim($_GET['q']) : '';
 
 $site = $data['site'];
 $quickFacts = $data['quickFacts'];
 $pillars = $data['pillars'];
 $sectors = $data['sectors'];
 $focusThemes = $data['focusThemes'];
+$provinces = $data['provinces'];
+$seasonalCalendar = $data['seasonalCalendar'];
 $faq = $data['faq'];
 $glossary = $data['glossary'];
 $resources = $data['resources'];
@@ -42,6 +45,11 @@ $resources = $data['resources'];
             <h1><?= e($site['title']) ?></h1>
             <p class="subtitle"><?= e($site['subtitle']) ?></p>
             <p class="meta">Dernière mise à jour : <?= e($site['updated_at']) ?></p>
+            <form method="get" class="search-form">
+                <input type="hidden" name="page" value="<?= e($page) ?>">
+                <label for="global-search" class="meta">Recherche globale</label>
+                <input id="global-search" class="filter" name="q" value="<?= e($search) ?>" placeholder="Ex: eau, élevage, saison" type="search">
+            </form>
         </div>
     </div>
 </header>
@@ -50,7 +58,6 @@ $resources = $data['resources'];
     <?php if ($page === 'accueil'): ?>
         <section aria-labelledby="bases-title">
             <h2 id="bases-title">Les bases à connaître</h2>
-            <p class="section-intro">Une introduction claire pour le grand public.</p>
             <div class="grid grid-3">
                 <?php foreach ($quickFacts as $fact): ?>
                     <article class="card">
@@ -84,17 +91,46 @@ $resources = $data['resources'];
                 <?php endforeach; ?>
             </div>
         </section>
+
+        <section aria-labelledby="provinces-title">
+            <h2 id="provinces-title">Lecture par province</h2>
+            <div class="grid grid-3">
+                <?php foreach ($provinces as $province): ?>
+                    <article class="card">
+                        <h3><?= e($province['name']) ?></h3>
+                        <p><?= e($province['profile']) ?></p>
+                    </article>
+                <?php endforeach; ?>
+            </div>
+        </section>
+
+        <section aria-labelledby="calendar-title">
+            <h2 id="calendar-title">Calendrier agricole simplifié</h2>
+            <div class="grid grid-2">
+                <?php foreach ($seasonalCalendar as $entry): ?>
+                    <article class="card">
+                        <h3><?= e($entry['season']) ?></h3>
+                        <p><?= e($entry['focus']) ?></p>
+                    </article>
+                <?php endforeach; ?>
+            </div>
+        </section>
     <?php endif; ?>
 
     <?php if ($page === 'filieres'): ?>
         <section aria-labelledby="filieres-title">
             <h2 id="filieres-title">Explorer les filières</h2>
-            <p class="section-intro">Utilisez la recherche pour filtrer les fiches filières.</p>
-            <label for="sector-filter" class="meta">Recherche</label>
+            <p class="section-intro">Filtrage local (JavaScript) + recherche globale via champ en haut.</p>
+            <label for="sector-filter" class="meta">Filtre local</label>
             <input id="sector-filter" class="filter" type="search" placeholder="Ex: lait, saison, cultures" data-sector-filter>
             <div class="grid grid-3">
                 <?php foreach ($sectors as $sector): ?>
-                    <?php $searchText = mb_strtolower($sector['label'] . ' ' . $sector['summary'] . ' ' . implode(' ', $sector['enjeux'])); ?>
+                    <?php
+                    $searchText = mb_strtolower($sector['label'] . ' ' . $sector['summary'] . ' ' . implode(' ', $sector['enjeux']) . ' ' . implode(' ', $sector['public_actions']));
+                    if ($search !== '' && !str_contains($searchText, mb_strtolower($search))) {
+                        continue;
+                    }
+                    ?>
                     <article class="card" data-sector-card data-search-text="<?= e($searchText) ?>">
                         <h3 class="sector-title"><span><?= e($sector['emoji']) ?></span> <?= e($sector['label']) ?></h3>
                         <p><?= e($sector['summary']) ?></p>
@@ -121,7 +157,13 @@ $resources = $data['resources'];
             <h2 id="faq-title">FAQ citoyenne</h2>
             <div class="grid">
                 <?php foreach ($faq as $index => $item): ?>
-                    <?php $answerId = 'faq-' . $index; ?>
+                    <?php
+                    $answerText = mb_strtolower($item['q'] . ' ' . $item['a']);
+                    if ($search !== '' && !str_contains($answerText, mb_strtolower($search))) {
+                        continue;
+                    }
+                    $answerId = 'faq-' . $index;
+                    ?>
                     <article class="faq-item">
                         <button class="faq-button" type="button" aria-expanded="false" aria-controls="<?= e($answerId) ?>" data-faq-button>
                             <?= e($item['q']) ?>
@@ -136,6 +178,12 @@ $resources = $data['resources'];
             <h2 id="resources-title">Ressources utiles</h2>
             <div class="grid grid-3">
                 <?php foreach ($resources as $resource): ?>
+                    <?php
+                    $resourceText = mb_strtolower($resource['title'] . ' ' . $resource['description']);
+                    if ($search !== '' && !str_contains($resourceText, mb_strtolower($search))) {
+                        continue;
+                    }
+                    ?>
                     <article class="card">
                         <h3><?= e($resource['title']) ?></h3>
                         <p><?= e($resource['description']) ?></p>
@@ -148,6 +196,12 @@ $resources = $data['resources'];
             <h2 id="glossary-title">Glossaire</h2>
             <div class="grid grid-2">
                 <?php foreach ($glossary as $entry): ?>
+                    <?php
+                    $glossaryText = mb_strtolower($entry['term'] . ' ' . $entry['definition']);
+                    if ($search !== '' && !str_contains($glossaryText, mb_strtolower($search))) {
+                        continue;
+                    }
+                    ?>
                     <article class="card">
                         <h3><?= e($entry['term']) ?></h3>
                         <p><?= e($entry['definition']) ?></p>

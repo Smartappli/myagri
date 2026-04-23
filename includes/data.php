@@ -83,6 +83,20 @@ function getPortalData(): array
             ['title' => 'Biodiversité', 'details' => 'Déployer haies, bandes fleuries et infrastructures écologiques.'],
             ['title' => 'Climat', 'details' => 'Adapter les pratiques et limiter les émissions.'],
         ],
+
+        'provinces' => [
+            ['name' => 'Brabant wallon', 'profile' => 'Mosaïque de cultures, maraîchage et transformation locale.'],
+            ['name' => 'Hainaut', 'profile' => 'Poids important des grandes cultures et de l’agroalimentaire.'],
+            ['name' => 'Liège', 'profile' => 'Élevage, vergers et filières de valorisation de proximité.'],
+            ['name' => 'Luxembourg', 'profile' => 'Systèmes herbagers, forêts et élevage extensif.'],
+            ['name' => 'Namur', 'profile' => 'Diversité de productions entre grandes cultures, élevage et maraîchage.'],
+        ],
+        'seasonalCalendar' => [
+            ['season' => 'Printemps', 'focus' => 'Semis, gestion de l’eau, protection contre le gel tardif.'],
+            ['season' => 'Été', 'focus' => 'Récoltes précoces, irrigation ciblée, prévention du stress hydrique.'],
+            ['season' => 'Automne', 'focus' => 'Récoltes principales, semis d’automne, couverts végétaux.'],
+            ['season' => 'Hiver', 'focus' => 'Entretien du matériel, planification, soins aux animaux.'],
+        ],
         'faq' => [
             [
                 'q' => 'Pourquoi les prix agricoles sont-ils parfois instables ?',

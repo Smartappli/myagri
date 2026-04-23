@@ -91,6 +91,11 @@ header {
     opacity: 0.9;
 }
 
+.search-form {
+    margin-top: 0.8rem;
+    max-width: 520px;
+}
+
 section {
     padding: 2.2rem 0;
 }
