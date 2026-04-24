@@ -9,7 +9,7 @@ function getPortalData(): array
 {
     return [
         'site' => [
-            'title' => 'AgriWallonie — Portail citoyen',
+            'title' => 'MyAgri — Portail citoyen',
             'subtitle' => 'Comprendre l’agriculture wallonne : alimentation, territoires, environnement, économie et métiers.',
             'updated_at' => '22 avril 2026',
         ],
