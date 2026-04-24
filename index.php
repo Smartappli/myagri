@@ -32,7 +32,7 @@ $resources = $data['resources'];
 <header>
     <div class="container">
         <div class="header-top">
-            <div class="brand">AgriWallonie</div>
+            <div class="brand">MyAgri</div>
             <nav aria-label="Navigation principale">
                 <ul class="nav-list">
                     <li><a href="?page=accueil"<?= $page === 'accueil' ? ' aria-current="page"' : '' ?>>Accueil</a></li>
@@ -214,7 +214,7 @@ $resources = $data['resources'];
 
 <footer>
     <div class="container">
-        <p>AgriWallonie — portail d'information agricole grand public (compatible PHP 8.5.3).</p>
+        <p>MyAgri — portail d'information agricole grand public (compatible PHP 8.5.3).</p>
     </div>
 </footer>
 
