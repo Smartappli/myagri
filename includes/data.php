@@ -11,7 +11,7 @@ function getPortalData(): array
         'site' => [
             'title' => 'MyAgri — Portail citoyen',
             'subtitle' => 'Comprendre l’agriculture wallonne : alimentation, territoires, environnement, économie et métiers.',
-            'updated_at' => '22 avril 2026',
+            'updated_at' => '25 avril 2026',
         ],
         'quickFacts' => [
             [
@@ -25,6 +25,14 @@ function getPortalData(): array
             [
                 'title' => 'Un secteur en transition',
                 'content' => 'Les fermes s’adaptent au climat, à la pression économique et aux attentes sociétales.',
+            ],
+            [
+                'title' => 'Un moteur d’innovation',
+                'content' => 'Du numérique aux nouvelles variétés, les pratiques évoluent pour produire mieux avec moins de ressources.',
+            ],
+            [
+                'title' => 'Un lien social',
+                'content' => 'Marchés, coopératives, fermes pédagogiques et circuits courts rapprochent citoyens et producteurs.',
             ],
         ],
         'pillars' => [
@@ -76,12 +84,28 @@ function getPortalData(): array
                     'Diversifier son panier avec des produits de saison.',
                 ],
             ],
+            [
+                'label' => 'Diversification (petits fruits, houblon, viticulture)',
+                'emoji' => '🍇',
+                'summary' => 'Des filières émergentes créent de la valeur locale et renforcent la résilience des fermes.',
+                'enjeux' => [
+                    'Investissements de départ et accompagnement technique.',
+                    'Structuration des débouchés locaux et touristiques.',
+                    'Gestion des risques sanitaires et climatiques.',
+                ],
+                'public_actions' => [
+                    'Découvrir les produits locaux transformés (jus, bière, vin, confitures).',
+                    'Visiter les exploitations qui ouvrent leurs ateliers au public.',
+                ],
+            ],
         ],
         'focusThemes' => [
             ['title' => 'Eau', 'details' => 'Économiser et mieux stocker l’eau pour sécuriser les productions.'],
             ['title' => 'Sols', 'details' => 'Renforcer la matière organique et limiter l’érosion.'],
             ['title' => 'Biodiversité', 'details' => 'Déployer haies, bandes fleuries et infrastructures écologiques.'],
             ['title' => 'Climat', 'details' => 'Adapter les pratiques et limiter les émissions.'],
+            ['title' => 'Énergie', 'details' => 'Réduire les coûts via l’efficacité énergétique et l’autoproduction.'],
+            ['title' => 'Numérique', 'details' => 'Mieux piloter les cultures et troupeaux grâce aux données de terrain.'],
         ],
 
         'provinces' => [
@@ -110,17 +134,30 @@ function getPortalData(): array
                 'q' => 'Comment sensibiliser les enfants ?',
                 'a' => 'Via des visites de fermes, des ateliers alimentaires, des potagers et l’observation des saisons.',
             ],
+            [
+                'q' => 'Pourquoi parle-t-on autant de souveraineté alimentaire ?',
+                'a' => 'Elle vise à garantir une capacité locale à produire une part significative de l’alimentation en cas de crise.',
+            ],
+            [
+                'q' => 'Que signifie “prix juste” pour un agriculteur ?',
+                'a' => 'Un prix qui couvre les coûts de production, rémunère le travail et permet d’investir dans la transition.',
+            ],
         ],
         'glossary' => [
             ['term' => 'Agroécologie', 'definition' => 'Application de principes écologiques à la production agricole.'],
             ['term' => 'Rotation', 'definition' => 'Alternance planifiée des cultures sur une même parcelle.'],
             ['term' => 'Circuit court', 'definition' => 'Vente avec peu ou pas d’intermédiaires.'],
             ['term' => 'Prairie permanente', 'definition' => 'Prairie installée durablement, utile à l’élevage et aux écosystèmes.'],
+            ['term' => 'Autonomie fourragère', 'definition' => 'Capacité d’un élevage à produire la majorité de l’alimentation de ses animaux.'],
+            ['term' => 'Couvert végétal', 'definition' => 'Culture implantée entre deux cultures principales pour protéger et enrichir le sol.'],
         ],
         'resources' => [
             ['title' => 'Visites pédagogiques', 'description' => 'Trouver des fermes ouvertes au public et aux écoles.'],
             ['title' => 'Formations et métiers', 'description' => 'Explorer les parcours liés à l’agriculture et l’agroalimentaire.'],
             ['title' => 'Consommation responsable', 'description' => 'Repères pratiques pour des achats plus durables.'],
+            ['title' => 'Calendrier des marchés locaux', 'description' => 'Repérer les marchés de producteurs et points de vente à la ferme.'],
+            ['title' => 'Aides et accompagnement', 'description' => 'Comprendre les dispositifs d’appui à la transition agroécologique.'],
+            ['title' => 'Découvrir les labels', 'description' => 'Comparer les principaux labels qualité, origine et durabilité.'],
         ],
     ];
 }
