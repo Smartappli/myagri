@@ -424,6 +424,134 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
+                    <?php if (!empty($selectedResource['job_families']) && is_array($selectedResource['job_families'])): ?>
+                        <h3>Familles de métiers</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['job_families'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['training_paths']) && is_array($selectedResource['training_paths'])): ?>
+                        <h3>Parcours de formation</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['training_paths'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['key_skills']) && is_array($selectedResource['key_skills'])): ?>
+                        <h3>Compétences clés à développer</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['key_skills'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['certifications']) && is_array($selectedResource['certifications'])): ?>
+                        <h3>Certifications utiles</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['certifications'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['financing_options']) && is_array($selectedResource['financing_options'])): ?>
+                        <h3>Options de financement</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['financing_options'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['application_tips']) && is_array($selectedResource['application_tips'])): ?>
+                        <h3>Conseils de candidature</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['application_tips'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['salary_factors']) && is_array($selectedResource['salary_factors'])): ?>
+                        <h3>Facteurs qui influencent la rémunération</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['salary_factors'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['mobility_paths']) && is_array($selectedResource['mobility_paths'])): ?>
+                        <h3>Évolutions professionnelles possibles</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['mobility_paths'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['action_plan_90_days']) && is_array($selectedResource['action_plan_90_days'])): ?>
+                        <h3>Plan d’action sur 90 jours</h3>
+                        <ol class="list-tight">
+                            <?php foreach ($selectedResource['action_plan_90_days'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ol>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['purchase_strategy']) && is_array($selectedResource['purchase_strategy'])): ?>
+                        <h3>Stratégie d’achat responsable</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['purchase_strategy'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['label_reading']) && is_array($selectedResource['label_reading'])): ?>
+                        <h3>Lecture des labels et étiquettes</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['label_reading'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['seasonal_planning']) && is_array($selectedResource['seasonal_planning'])): ?>
+                        <h3>Planification saisonnière</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['seasonal_planning'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['anti_waste_playbook']) && is_array($selectedResource['anti_waste_playbook'])): ?>
+                        <h3>Plan anti-gaspillage</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['anti_waste_playbook'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['nutrition_balance']) && is_array($selectedResource['nutrition_balance'])): ?>
+                        <h3>Équilibre nutritionnel</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['nutrition_balance'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['budget_optimisation']) && is_array($selectedResource['budget_optimisation'])): ?>
+                        <h3>Optimisation du budget</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['budget_optimisation'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['kpi_tracking']) && is_array($selectedResource['kpi_tracking'])): ?>
+                        <h3>Indicateurs de suivi</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['kpi_tracking'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
                 </article>
             </section>
         <?php else: ?>
