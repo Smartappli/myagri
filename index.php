@@ -211,9 +211,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
     <?php if ($page === 'filieres'): ?>
         <section aria-labelledby="filieres-title">
             <h2 id="filieres-title">Explorer les filières</h2>
-            <p class="section-intro">Filtrage local (JavaScript) + recherche globale via champ en haut.</p>
-            <label for="sector-filter" class="meta">Filtre local</label>
-            <input id="sector-filter" class="filter" type="search" placeholder="Ex: lait, saison, cultures" data-sector-filter>
+            <input id="sector-filter" class="filter" type="search" placeholder="Ex: lait, saison, cultures" aria-label="Filtrer les filières" data-sector-filter>
             <div class="grid grid-3">
                 <?php foreach ($sectors as $sector): ?>
                     <?php
@@ -311,23 +309,32 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
                 <p><a href="?page=ressources">← Retour aux ressources</a></p>
                 <h2 id="resource-title"><?= e($selectedResource['title']) ?></h2>
                 <p class="section-intro"><?= e($selectedResource['description']) ?></p>
+                <?php $continuousResourceText = ($selectedResource['id'] ?? '') === 'visites-pedagogiques'; ?>
                 <article class="card">
                     <h3>Vue d’ensemble</h3>
                     <p><?= e($selectedResource['overview'] ?? '') ?></p>
                     <h3>Public concerné</h3>
                     <p><?= e($selectedResource['for'] ?? '') ?></p>
                     <h3>Étapes recommandées</h3>
-                    <ol class="list-tight">
-                        <?php foreach (($selectedResource['steps'] ?? []) as $step): ?>
-                            <li><?= e($step) ?></li>
-                        <?php endforeach; ?>
-                    </ol>
+                    <?php if ($continuousResourceText): ?>
+                        <p><?= e(implode(' ', (array) ($selectedResource['steps'] ?? []))) ?></p>
+                    <?php else: ?>
+                        <ol class="list-tight">
+                            <?php foreach (($selectedResource['steps'] ?? []) as $step): ?>
+                                <li><?= e($step) ?></li>
+                            <?php endforeach; ?>
+                        </ol>
+                    <?php endif; ?>
                     <h3>Checklist pratique</h3>
-                    <ul class="list-tight">
-                        <?php foreach (($selectedResource['checklist'] ?? []) as $item): ?>
-                            <li><?= e($item) ?></li>
-                        <?php endforeach; ?>
-                    </ul>
+                    <?php if ($continuousResourceText): ?>
+                        <p><?= e(implode(' ', (array) ($selectedResource['checklist'] ?? []))) ?></p>
+                    <?php else: ?>
+                        <ul class="list-tight">
+                            <?php foreach (($selectedResource['checklist'] ?? []) as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
                     <?php if (!empty($selectedResource['eligible_projects']) && is_array($selectedResource['eligible_projects'])): ?>
                         <h3>Projets généralement éligibles</h3>
                         <ul class="list-tight">
@@ -370,59 +377,87 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
                     <?php endif; ?>
                     <?php if (!empty($selectedResource['learning_objectives']) && is_array($selectedResource['learning_objectives'])): ?>
                         <h3>Objectifs pédagogiques</h3>
-                        <ul class="list-tight">
-                            <?php foreach ($selectedResource['learning_objectives'] as $item): ?>
-                                <li><?= e($item) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <?php if ($continuousResourceText): ?>
+                            <p><?= e(implode(' ', $selectedResource['learning_objectives'])) ?></p>
+                        <?php else: ?>
+                            <ul class="list-tight">
+                                <?php foreach ($selectedResource['learning_objectives'] as $item): ?>
+                                    <li><?= e($item) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     <?php endif; ?>
                     <?php if (!empty($selectedResource['recommended_program']) && is_array($selectedResource['recommended_program'])): ?>
                         <h3>Déroulé recommandé</h3>
-                        <ol class="list-tight">
-                            <?php foreach ($selectedResource['recommended_program'] as $item): ?>
-                                <li><?= e($item) ?></li>
-                            <?php endforeach; ?>
-                        </ol>
+                        <?php if ($continuousResourceText): ?>
+                            <p><?= e(implode(' ', $selectedResource['recommended_program'])) ?></p>
+                        <?php else: ?>
+                            <ol class="list-tight">
+                                <?php foreach ($selectedResource['recommended_program'] as $item): ?>
+                                    <li><?= e($item) ?></li>
+                                <?php endforeach; ?>
+                            </ol>
+                        <?php endif; ?>
                     <?php endif; ?>
                     <?php if (!empty($selectedResource['age_adaptations']) && is_array($selectedResource['age_adaptations'])): ?>
                         <h3>Adaptation selon l’âge du public</h3>
-                        <ul class="list-tight">
-                            <?php foreach ($selectedResource['age_adaptations'] as $item): ?>
-                                <li><?= e($item) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <?php if ($continuousResourceText): ?>
+                            <p><?= e(implode(' ', $selectedResource['age_adaptations'])) ?></p>
+                        <?php else: ?>
+                            <ul class="list-tight">
+                                <?php foreach ($selectedResource['age_adaptations'] as $item): ?>
+                                    <li><?= e($item) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     <?php endif; ?>
                     <?php if (!empty($selectedResource['pedagogical_activities']) && is_array($selectedResource['pedagogical_activities'])): ?>
                         <h3>Exemples d’activités pédagogiques</h3>
-                        <ul class="list-tight">
-                            <?php foreach ($selectedResource['pedagogical_activities'] as $item): ?>
-                                <li><?= e($item) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <?php if ($continuousResourceText): ?>
+                            <p><?= e(implode(' ', $selectedResource['pedagogical_activities'])) ?></p>
+                        <?php else: ?>
+                            <ul class="list-tight">
+                                <?php foreach ($selectedResource['pedagogical_activities'] as $item): ?>
+                                    <li><?= e($item) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     <?php endif; ?>
                     <?php if (!empty($selectedResource['risk_prevention']) && is_array($selectedResource['risk_prevention'])): ?>
                         <h3>Prévention et sécurité</h3>
-                        <ul class="list-tight">
-                            <?php foreach ($selectedResource['risk_prevention'] as $item): ?>
-                                <li><?= e($item) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <?php if ($continuousResourceText): ?>
+                            <p><?= e(implode(' ', $selectedResource['risk_prevention'])) ?></p>
+                        <?php else: ?>
+                            <ul class="list-tight">
+                                <?php foreach ($selectedResource['risk_prevention'] as $item): ?>
+                                    <li><?= e($item) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     <?php endif; ?>
                     <?php if (!empty($selectedResource['budget_items']) && is_array($selectedResource['budget_items'])): ?>
                         <h3>Postes de budget à prévoir</h3>
-                        <ul class="list-tight">
-                            <?php foreach ($selectedResource['budget_items'] as $item): ?>
-                                <li><?= e($item) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <?php if ($continuousResourceText): ?>
+                            <p><?= e(implode(' ', $selectedResource['budget_items'])) ?></p>
+                        <?php else: ?>
+                            <ul class="list-tight">
+                                <?php foreach ($selectedResource['budget_items'] as $item): ?>
+                                    <li><?= e($item) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     <?php endif; ?>
                     <?php if (!empty($selectedResource['evaluation_method']) && is_array($selectedResource['evaluation_method'])): ?>
                         <h3>Méthode d’évaluation</h3>
-                        <ul class="list-tight">
-                            <?php foreach ($selectedResource['evaluation_method'] as $item): ?>
-                                <li><?= e($item) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <?php if ($continuousResourceText): ?>
+                            <p><?= e(implode(' ', $selectedResource['evaluation_method'])) ?></p>
+                        <?php else: ?>
+                            <ul class="list-tight">
+                                <?php foreach ($selectedResource['evaluation_method'] as $item): ?>
+                                    <li><?= e($item) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     <?php endif; ?>
                     <?php if (!empty($selectedResource['job_families']) && is_array($selectedResource['job_families'])): ?>
                         <h3>Familles de métiers</h3>
