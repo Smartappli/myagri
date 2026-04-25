@@ -79,6 +79,22 @@ function canonicalPath(string $page, string $resourceId = ''): string
     return '/?page=accueil';
 }
 
+
+/**
+ * @param array<int, mixed> $items
+ */
+function resourceContinuousText(array $items): string
+{
+    $parts = [];
+    foreach ($items as $item) {
+        if (is_string($item) && $item !== '') {
+            $parts[] = trim($item);
+        }
+    }
+
+    return implode(' ', $parts);
+}
+
 function siteBaseUrl(): string
 {
     $envBase = getenv('SITE_URL');
