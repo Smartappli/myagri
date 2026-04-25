@@ -2,10 +2,41 @@
 
 declare(strict_types=1);
 
-require __DIR__ . '/includes/data.php';
+require __DIR__ . '/includes/portal_repository.php';
 require __DIR__ . '/includes/functions.php';
 
-$data = getPortalData();
+$data = [];
+$dataLoadError = null;
+try {
+    $data = loadPortalData();
+} catch (Throwable $exception) {
+    $dataLoadError = $exception->getMessage();
+}
+
+if (!is_array($data) || $dataLoadError !== null) {
+    http_response_code(503);
+    ?><!DOCTYPE html>
+    <html lang="fr-BE">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Service temporairement indisponible — MyAgri</title>
+        <meta name="robots" content="noindex, nofollow">
+    </head>
+    <body>
+        <main>
+            <h1>Service temporairement indisponible</h1>
+            <p>La base de données MySQL du portail est momentanément inaccessible.</p>
+            <?php if (is_string($dataLoadError) && $dataLoadError !== ''): ?>
+                <p><small><?= e($dataLoadError) ?></small></p>
+            <?php endif; ?>
+        </main>
+    </body>
+    </html>
+    <?php
+    exit;
+}
+
 $page = currentPage();
 $search = isset($_GET['q']) && is_string($_GET['q']) ? trim($_GET['q']) : '';
 
@@ -19,14 +50,75 @@ $seasonalCalendar = $data['seasonalCalendar'];
 $faq = $data['faq'];
 $glossary = $data['glossary'];
 $resources = $data['resources'];
+$resourceId = isset($_GET['resource']) && is_string($_GET['resource']) ? trim($_GET['resource']) : '';
+$resourcesById = [];
+foreach ($resources as $resourceItem) {
+    if (isset($resourceItem['id']) && is_string($resourceItem['id'])) {
+        $resourcesById[$resourceItem['id']] = $resourceItem;
+    }
+}
+$selectedResource = $resourcesById[$resourceId] ?? null;
+$seo = pageSeo($page, $site, is_array($selectedResource) ? $selectedResource : null);
+$canonicalUrl = siteBaseUrl() . canonicalPath($page, $resourceId);
+$pageTitle = $seo['title'];
+$metaDescription = $seo['description'];
+$metaKeywords = $seo['keywords'];
+$metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
+
 ?><!DOCTYPE html>
 <html lang="fr-BE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= e($site['title']) ?></title>
-    <meta name="description" content="Portail citoyen détaillé sur l'agriculture en Wallonie.">
+    <title><?= e($pageTitle) ?></title>
+    <meta name="description" content="<?= e($metaDescription) ?>">
+    <meta name="keywords" content="<?= e($metaKeywords) ?>">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="<?= e($canonicalUrl) ?>">
+    <meta property="og:locale" content="fr_BE">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?= e($pageTitle) ?>">
+    <meta property="og:description" content="<?= e($metaDescription) ?>">
+    <meta property="og:url" content="<?= e($canonicalUrl) ?>">
+    <meta property="og:site_name" content="<?= e($site['title']) ?>">
+    <meta property="og:image" content="<?= e($metaImage) ?>">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?= e($pageTitle) ?>">
+    <meta name="twitter:description" content="<?= e($metaDescription) ?>">
+    <meta name="twitter:image" content="<?= e($metaImage) ?>">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="application/ld+json">
+        <?= json_encode([
+            '@context' => 'https://schema.org',
+            '@type' => 'WebPage',
+            'name' => $pageTitle,
+            'description' => $metaDescription,
+            'url' => $canonicalUrl,
+            'inLanguage' => 'fr-BE',
+            'isPartOf' => [
+                '@type' => 'WebSite',
+                'name' => $site['title'],
+                'url' => siteBaseUrl(),
+            ],
+        ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>
+    </script>
+    <!-- Matomo -->
+    <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u = "https://stats.smartappli.eu/";
+            _paq.push(['setTrackerUrl', u + 'matomo.php']);
+            _paq.push(['setSiteId', '5']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.async = true;
+            g.src = u + 'matomo.js';
+            s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
 </head>
 <body>
 <header>
@@ -178,7 +270,7 @@ $resources = $data['resources'];
             <div class="grid grid-3">
                 <?php foreach ($resources as $resource): ?>
                     <?php
-                    $resourceText = mb_strtolower($resource['title'] . ' ' . $resource['description']);
+                    $resourceText = mb_strtolower($resource['title'] . ' ' . $resource['description'] . ' ' . ($resource['overview'] ?? '') . ' ' . ($resource['for'] ?? ''));
                     if ($search !== '' && !str_contains($resourceText, mb_strtolower($search))) {
                         continue;
                     }
@@ -186,6 +278,9 @@ $resources = $data['resources'];
                     <article class="card">
                         <h3><?= e($resource['title']) ?></h3>
                         <p><?= e($resource['description']) ?></p>
+                        <?php if (isset($resource['id']) && is_string($resource['id'])): ?>
+                            <p><a href="?page=ressource&amp;resource=<?= e($resource['id']) ?>">Voir la page détaillée</a></p>
+                        <?php endif; ?>
                     </article>
                 <?php endforeach; ?>
             </div>
@@ -209,6 +304,80 @@ $resources = $data['resources'];
             </div>
         </section>
     <?php endif; ?>
+
+    <?php if ($page === 'ressource'): ?>
+        <?php if (is_array($selectedResource)): ?>
+            <section aria-labelledby="resource-title">
+                <p><a href="?page=ressources">← Retour aux ressources</a></p>
+                <h2 id="resource-title"><?= e($selectedResource['title']) ?></h2>
+                <p class="section-intro"><?= e($selectedResource['description']) ?></p>
+                <article class="card">
+                    <h3>Vue d’ensemble</h3>
+                    <p><?= e($selectedResource['overview'] ?? '') ?></p>
+                    <h3>Public concerné</h3>
+                    <p><?= e($selectedResource['for'] ?? '') ?></p>
+                    <h3>Étapes recommandées</h3>
+                    <ol class="list-tight">
+                        <?php foreach (($selectedResource['steps'] ?? []) as $step): ?>
+                            <li><?= e($step) ?></li>
+                        <?php endforeach; ?>
+                    </ol>
+                    <h3>Checklist pratique</h3>
+                    <ul class="list-tight">
+                        <?php foreach (($selectedResource['checklist'] ?? []) as $item): ?>
+                            <li><?= e($item) ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                    <?php if (!empty($selectedResource['eligible_projects']) && is_array($selectedResource['eligible_projects'])): ?>
+                        <h3>Projets généralement éligibles</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['eligible_projects'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['required_documents']) && is_array($selectedResource['required_documents'])): ?>
+                        <h3>Documents souvent demandés</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['required_documents'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['timeline']) && is_array($selectedResource['timeline'])): ?>
+                        <h3>Chronologie indicative</h3>
+                        <ol class="list-tight">
+                            <?php foreach ($selectedResource['timeline'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ol>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['common_pitfalls']) && is_array($selectedResource['common_pitfalls'])): ?>
+                        <h3>Erreurs fréquentes à éviter</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['common_pitfalls'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['support_contacts']) && is_array($selectedResource['support_contacts'])): ?>
+                        <h3>Acteurs pouvant accompagner</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['support_contacts'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                </article>
+            </section>
+        <?php else: ?>
+            <section aria-labelledby="resource-not-found-title">
+                <h2 id="resource-not-found-title">Ressource introuvable</h2>
+                <p>La ressource demandée n’existe pas ou n’est plus disponible.</p>
+                <p><a href="?page=ressources">Retour à la liste des ressources</a></p>
+            </section>
+        <?php endif; ?>
+    <?php endif; ?>
 </main>
 
 <footer>
@@ -217,6 +386,7 @@ $resources = $data['resources'];
         <p class="meta">Dernière mise à jour : <?= e($site['updated_at']) ?></p>
     </div>
 </footer>
+
 
 <script src="assets/js/main.js" defer></script>
 </body>

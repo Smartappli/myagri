@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require __DIR__ . '/../includes/data.php';
+require __DIR__ . '/../includes/portal_repository.php';
 require __DIR__ . '/../includes/functions.php';
 
 function assertTrue(bool $condition, string $message): void
@@ -25,5 +26,12 @@ $_GET['page'] = 'invalid';
 assertTrue(currentPage() === 'accueil', 'unknown page falls back to accueil');
 
 assertTrue(e('<script>') === '&lt;script&gt;', 'escaping works');
+
+try {
+    $loadedData = loadPortalData();
+    assertTrue(isset($loadedData['site']['title']), 'repository loader returns site title');
+} catch (Throwable $exception) {
+    assertTrue(str_contains($exception->getMessage(), 'MySQL'), 'repository loader raises explicit mysql error');
+}
 
 echo "Smoke tests OK\n";
