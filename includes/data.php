@@ -36,10 +36,10 @@ function getPortalData(): array
             ],
         ],
         'pillars' => [
-            ['name' => 'Produire', 'description' => 'Assurer une production fiable et diversifiée.'],
-            ['name' => 'Préserver', 'description' => 'Protéger eau, sol, climat et biodiversité.'],
-            ['name' => 'Relier', 'description' => 'Créer du lien entre producteurs et citoyens.'],
-            ['name' => 'Innover', 'description' => 'S’appuyer sur la recherche et les pratiques de terrain.'],
+            ['name' => 'Produire', 'description' => 'Assurer une production fiable, diversifiée et de qualité pour répondre aux besoins alimentaires.'],
+            ['name' => 'Préserver', 'description' => 'Protéger l’eau, les sols, le climat et la biodiversité pour maintenir la capacité de production sur le long terme.'],
+            ['name' => 'Relier', 'description' => 'Créer du lien entre producteurs, transformateurs, distributeurs et citoyens via des filières lisibles.'],
+            ['name' => 'Innover', 'description' => 'S’appuyer sur la recherche, l’expérimentation et les retours terrain pour améliorer les pratiques.'],
         ],
         'sectors' => [
             [
@@ -50,10 +50,12 @@ function getPortalData(): array
                     'Gestion des risques climatiques.',
                     'Fertilité des sols et rotations.',
                     'Stabilité économique des exploitations.',
+                    'Disponibilité de l’eau et maîtrise des intrants.',
                 ],
                 'public_actions' => [
                     'Privilégier la saisonnalité et l’origine locale.',
                     'S’informer sur les filières de transformation régionales.',
+                    'Réduire le gaspillage alimentaire pour valoriser au mieux le travail agricole.',
                 ],
             ],
             [
@@ -64,10 +66,12 @@ function getPortalData(): array
                     'Bien-être animal et revenu des éleveurs.',
                     'Autonomie fourragère et coûts de production.',
                     'Réduction de l’empreinte environnementale.',
+                    'Transmission des fermes et renouvellement des générations.',
                 ],
                 'public_actions' => [
                     'Découvrir les labels et démarches qualité.',
                     'Soutenir les points de vente fermiers.',
+                    'Comparer l’origine des produits laitiers et carnés pour encourager les filières locales.',
                 ],
             ],
             [
@@ -78,10 +82,12 @@ function getPortalData(): array
                     'Main-d’œuvre, stockage et logistique.',
                     'Irrigation et adaptation aux canicules.',
                     'Valorisation commerciale en vente directe.',
+                    'Accès au foncier de proximité pour de nouveaux maraîchers.',
                 ],
                 'public_actions' => [
                     'Acheter en direct chez les producteurs.',
                     'Diversifier son panier avec des produits de saison.',
+                    'Planifier ses menus hebdomadaires pour soutenir une consommation locale régulière.',
                 ],
             ],
             [
@@ -92,10 +98,12 @@ function getPortalData(): array
                     'Investissements de départ et accompagnement technique.',
                     'Structuration des débouchés locaux et touristiques.',
                     'Gestion des risques sanitaires et climatiques.',
+                    'Développement de compétences en transformation et commercialisation.',
                 ],
                 'public_actions' => [
                     'Découvrir les produits locaux transformés (jus, bière, vin, confitures).',
                     'Visiter les exploitations qui ouvrent leurs ateliers au public.',
+                    'Choisir des cadeaux alimentaires issus de producteurs régionaux.',
                 ],
             ],
         ],
@@ -109,17 +117,17 @@ function getPortalData(): array
         ],
 
         'provinces' => [
-            ['name' => 'Brabant wallon', 'profile' => 'Mosaïque de cultures, maraîchage et transformation locale.'],
-            ['name' => 'Hainaut', 'profile' => 'Poids important des grandes cultures et de l’agroalimentaire.'],
-            ['name' => 'Liège', 'profile' => 'Élevage, vergers et filières de valorisation de proximité.'],
-            ['name' => 'Luxembourg', 'profile' => 'Systèmes herbagers, forêts et élevage extensif.'],
-            ['name' => 'Namur', 'profile' => 'Diversité de productions entre grandes cultures, élevage et maraîchage.'],
+            ['name' => 'Brabant wallon', 'profile' => 'Mosaïque de cultures, maraîchage et transformation locale, avec une forte proximité des bassins de consommation.'],
+            ['name' => 'Hainaut', 'profile' => 'Poids important des grandes cultures et de l’agroalimentaire, soutenu par des infrastructures logistiques structurantes.'],
+            ['name' => 'Liège', 'profile' => 'Élevage, vergers et filières de valorisation de proximité, avec des initiatives dynamiques en circuits courts.'],
+            ['name' => 'Luxembourg', 'profile' => 'Systèmes herbagers, forêts et élevage extensif, dans des paysages où l’équilibre entre production et nature est central.'],
+            ['name' => 'Namur', 'profile' => 'Diversité de productions entre grandes cultures, élevage et maraîchage, avec un tissu d’exploitations familiales varié.'],
         ],
         'seasonalCalendar' => [
-            ['season' => 'Printemps', 'focus' => 'Semis, gestion de l’eau, protection contre le gel tardif.'],
-            ['season' => 'Été', 'focus' => 'Récoltes précoces, irrigation ciblée, prévention du stress hydrique.'],
-            ['season' => 'Automne', 'focus' => 'Récoltes principales, semis d’automne, couverts végétaux.'],
-            ['season' => 'Hiver', 'focus' => 'Entretien du matériel, planification, soins aux animaux.'],
+            ['season' => 'Printemps', 'focus' => 'Semis, gestion de l’eau, protection contre le gel tardif et organisation des premières récoltes.'],
+            ['season' => 'Été', 'focus' => 'Récoltes précoces, irrigation ciblée, prévention du stress hydrique et gestion des pics de travail.'],
+            ['season' => 'Automne', 'focus' => 'Récoltes principales, semis d’automne, couverts végétaux et préparation des sols pour l’hiver.'],
+            ['season' => 'Hiver', 'focus' => 'Entretien du matériel, planification, soins aux animaux et préparation de la campagne suivante.'],
         ],
         'faq' => [
             [
@@ -142,6 +150,14 @@ function getPortalData(): array
                 'q' => 'Que signifie “prix juste” pour un agriculteur ?',
                 'a' => 'Un prix qui couvre les coûts de production, rémunère le travail et permet d’investir dans la transition.',
             ],
+            [
+                'q' => 'Comment un citoyen peut-il agir sans augmenter fortement son budget ?',
+                'a' => 'En privilégiant la saison, en cuisinant des produits bruts, en limitant le gaspillage et en comparant les points de vente locaux.',
+            ],
+            [
+                'q' => 'Pourquoi les pratiques agricoles varient-elles d’une région à l’autre ?',
+                'a' => 'Les choix techniques dépendent du climat, des sols, du relief, des filières présentes et des débouchés économiques locaux.',
+            ],
         ],
         'glossary' => [
             ['term' => 'Agroécologie', 'definition' => 'Application de principes écologiques à la production agricole.'],
@@ -158,6 +174,8 @@ function getPortalData(): array
             ['title' => 'Calendrier des marchés locaux', 'description' => 'Repérer les marchés de producteurs et points de vente à la ferme.'],
             ['title' => 'Aides et accompagnement', 'description' => 'Comprendre les dispositifs d’appui à la transition agroécologique.'],
             ['title' => 'Découvrir les labels', 'description' => 'Comparer les principaux labels qualité, origine et durabilité.'],
+            ['title' => 'Boîte à outils anti-gaspillage', 'description' => 'Astuces pour mieux conserver, cuisiner et valoriser les produits frais.'],
+            ['title' => 'Parcours pédagogiques', 'description' => 'Ressources pour enseignants et familles autour de l’alimentation et des saisons.'],
         ],
     ];
 }
