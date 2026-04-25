@@ -117,28 +117,46 @@ function loadPortalDataFromMySql(PDO $pdo): ?array
     $sql = "SELECT payload_json FROM portal_content WHERE code = 'main' LIMIT 1";
 
     try {
-        $statement = $pdo->query($sql);
-        if (!$statement) {
-            return null;
+        return fetchPortalPayload($pdo, $sql);
+    } catch (PDOException $exception) {
+        // Auto-réparation si la table n'existe pas encore.
+        $sqlState = $exception->getCode();
+        if ($sqlState === '42S02') {
+            ensurePortalStorageExists($pdo);
+            syncPortalDataToMySql($pdo);
+            return fetchPortalPayload($pdo, $sql);
         }
 
-        $row = $statement->fetch();
-        if (!is_array($row)) {
-            return null;
-        }
-
-        $payloadRaw = $row['payload_json'] ?? null;
-        if (!is_string($payloadRaw) || $payloadRaw === '') {
-            return null;
-        }
-
-        $decoded = json_decode($payloadRaw, true);
-        if (!is_array($decoded)) {
-            return null;
-        }
-
-        return $decoded;
+        throw new RuntimeException('Impossible de lire les données MySQL: ' . $exception->getMessage(), 0, $exception);
     } catch (Throwable $exception) {
         throw new RuntimeException('Impossible de lire les données MySQL: ' . $exception->getMessage(), 0, $exception);
     }
+}
+
+/**
+ * @return array<string, mixed>|null
+ */
+function fetchPortalPayload(PDO $pdo, string $sql): ?array
+{
+    $statement = $pdo->query($sql);
+    if (!$statement) {
+        return null;
+    }
+
+    $row = $statement->fetch();
+    if (!is_array($row)) {
+        return null;
+    }
+
+    $payloadRaw = $row['payload_json'] ?? null;
+    if (!is_string($payloadRaw) || $payloadRaw === '') {
+        return null;
+    }
+
+    $decoded = json_decode($payloadRaw, true);
+    if (!is_array($decoded)) {
+        return null;
+    }
+
+    return $decoded;
 }
