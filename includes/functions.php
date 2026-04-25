@@ -17,6 +17,6 @@ function currentPage(): string
         return 'accueil';
     }
 
-    $allowed = ['accueil', 'filieres', 'ressources'];
+    $allowed = ['accueil', 'filieres', 'ressources', 'ressource'];
     return in_array($page, $allowed, true) ? $page : 'accueil';
 }

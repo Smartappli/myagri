@@ -10,6 +10,7 @@ Portail citoyen en **PHP** pour informer le grand public sur l'agriculture en Wa
 - Recherche globale (`q=`) + filtre local des filières + FAQ interactive.
 - API JSON de lecture via `api.php` (`?section=...`).
 - Tracking Matomo intégré sur toutes les pages du portail (`siteId` 5).
+- Chaque ressource utile dispose d’une page individuelle (`?page=ressource&resource=<id>`).
 
 ## Exécution locale
 
