@@ -24,6 +24,11 @@ php -S 127.0.0.1:8000
 
 Le portail charge son contenu depuis MySQL de façon obligatoire.
 À chaque chargement, les données locales de `includes/data.php` sont synchronisées automatiquement dans la table MySQL.
+Vous pouvez aussi forcer le transfert manuellement avec :
+
+```bash
+php scripts/sync_portal_to_mysql.php
+```
 
 Requête utilisée par défaut :
 

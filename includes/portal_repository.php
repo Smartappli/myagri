@@ -13,9 +13,9 @@ require_once __DIR__ . '/data.php';
  */
 function loadPortalData(): array
 {
+    pushPortalDataToMySql();
+
     $pdo = createPortalPdo();
-    ensurePortalStorageExists($pdo);
-    syncPortalDataToMySql($pdo);
 
     $mysqlData = loadPortalDataFromMySql($pdo);
     if (!is_array($mysqlData)) {
@@ -23,6 +23,18 @@ function loadPortalData(): array
     }
 
     return $mysqlData;
+}
+
+/**
+ * Transfère explicitement le contenu local vers la base MySQL.
+ *
+ * @throws RuntimeException
+ */
+function pushPortalDataToMySql(): void
+{
+    $pdo = createPortalPdo();
+    ensurePortalStorageExists($pdo);
+    syncPortalDataToMySql($pdo);
 }
 
 /**
