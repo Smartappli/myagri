@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://127.0.0.1:8000/?page=accueil</loc>
+    <loc>https://myagri.be/?page=accueil</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:8000/?page=filieres</loc>
+    <loc>https://myagri.be/?page=filieres</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:8000/?page=ressources</loc>
+    <loc>https://myagri.be/?page=ressources</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:8000/?page=ressource&amp;resource=visites-pedagogiques</loc>
+    <loc>https://myagri.be/?page=ressource&amp;resource=visites-pedagogiques</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:8000/?page=ressource&amp;resource=formations-metiers</loc>
+    <loc>https://myagri.be/?page=ressource&amp;resource=formations-metiers</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:8000/?page=ressource&amp;resource=consommation-responsable</loc>
+    <loc>https://myagri.be/?page=ressource&amp;resource=consommation-responsable</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:8000/?page=ressource&amp;resource=calendrier-marches-locaux</loc>
+    <loc>https://myagri.be/?page=ressource&amp;resource=calendrier-marches-locaux</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:8000/?page=ressource&amp;resource=aides-accompagnement</loc>
+    <loc>https://myagri.be/?page=ressource&amp;resource=aides-accompagnement</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:8000/?page=ressource&amp;resource=decouvrir-labels</loc>
+    <loc>https://myagri.be/?page=ressource&amp;resource=decouvrir-labels</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:8000/?page=ressource&amp;resource=boite-a-outils-anti-gaspillage</loc>
+    <loc>https://myagri.be/?page=ressource&amp;resource=boite-a-outils-anti-gaspillage</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:8000/?page=ressource&amp;resource=parcours-pedagogiques</loc>
+    <loc>https://myagri.be/?page=ressource&amp;resource=parcours-pedagogiques</loc>
   </url>
 </urlset>

@@ -23,6 +23,12 @@ php -S 127.0.0.1:8000
 ## Base de données MySQL (obligatoire)
 
 Le portail charge son contenu depuis MySQL de façon obligatoire.
+À chaque chargement, les données locales de `includes/data.php` sont synchronisées automatiquement dans la table MySQL.
+Vous pouvez aussi forcer le transfert manuellement avec :
+
+```bash
+php scripts/sync_portal_to_mysql.php
+```
 
 Requête utilisée par défaut :
 
@@ -41,11 +47,11 @@ Si MySQL est indisponible, le front renvoie une page HTTP 503 et l’API renvoie
 
 Pages utiles :
 
-- <http://127.0.0.1:8000/?page=accueil>
-- <http://127.0.0.1:8000/?page=filieres>
-- <http://127.0.0.1:8000/?page=ressources>
-- <http://127.0.0.1:8000/api.php>
-- <http://127.0.0.1:8000/api.php?section=sectors>
+- <https://myagri.be/?page=accueil>
+- <https://myagri.be/?page=filieres>
+- <https://myagri.be/?page=ressources>
+- <https://myagri.be/api.php>
+- <https://myagri.be/api.php?section=sectors>
 
 ## Vérification rapide
 

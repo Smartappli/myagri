@@ -368,6 +368,62 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
+                    <?php if (!empty($selectedResource['learning_objectives']) && is_array($selectedResource['learning_objectives'])): ?>
+                        <h3>Objectifs pédagogiques</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['learning_objectives'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['recommended_program']) && is_array($selectedResource['recommended_program'])): ?>
+                        <h3>Déroulé recommandé</h3>
+                        <ol class="list-tight">
+                            <?php foreach ($selectedResource['recommended_program'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ol>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['age_adaptations']) && is_array($selectedResource['age_adaptations'])): ?>
+                        <h3>Adaptation selon l’âge du public</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['age_adaptations'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['pedagogical_activities']) && is_array($selectedResource['pedagogical_activities'])): ?>
+                        <h3>Exemples d’activités pédagogiques</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['pedagogical_activities'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['risk_prevention']) && is_array($selectedResource['risk_prevention'])): ?>
+                        <h3>Prévention et sécurité</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['risk_prevention'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['budget_items']) && is_array($selectedResource['budget_items'])): ?>
+                        <h3>Postes de budget à prévoir</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['budget_items'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php if (!empty($selectedResource['evaluation_method']) && is_array($selectedResource['evaluation_method'])): ?>
+                        <h3>Méthode d’évaluation</h3>
+                        <ul class="list-tight">
+                            <?php foreach ($selectedResource['evaluation_method'] as $item): ?>
+                                <li><?= e($item) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
                 </article>
             </section>
         <?php else: ?>
