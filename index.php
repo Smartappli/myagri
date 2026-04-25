@@ -2,10 +2,41 @@
 
 declare(strict_types=1);
 
-require __DIR__ . '/includes/data.php';
+require __DIR__ . '/includes/portal_repository.php';
 require __DIR__ . '/includes/functions.php';
 
-$data = getPortalData();
+$data = [];
+$dataLoadError = null;
+try {
+    $data = loadPortalData();
+} catch (Throwable $exception) {
+    $dataLoadError = $exception->getMessage();
+}
+
+if (!is_array($data) || $dataLoadError !== null) {
+    http_response_code(503);
+    ?><!DOCTYPE html>
+    <html lang="fr-BE">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Service temporairement indisponible — MyAgri</title>
+        <meta name="robots" content="noindex, nofollow">
+    </head>
+    <body>
+        <main>
+            <h1>Service temporairement indisponible</h1>
+            <p>La base de données MySQL du portail est momentanément inaccessible.</p>
+            <?php if (is_string($dataLoadError) && $dataLoadError !== ''): ?>
+                <p><small><?= e($dataLoadError) ?></small></p>
+            <?php endif; ?>
+        </main>
+    </body>
+    </html>
+    <?php
+    exit;
+}
+
 $page = currentPage();
 $search = isset($_GET['q']) && is_string($_GET['q']) ? trim($_GET['q']) : '';
 
@@ -27,15 +58,50 @@ foreach ($resources as $resourceItem) {
     }
 }
 $selectedResource = $resourcesById[$resourceId] ?? null;
+$seo = pageSeo($page, $site, is_array($selectedResource) ? $selectedResource : null);
+$canonicalUrl = siteBaseUrl() . canonicalPath($page, $resourceId);
+$pageTitle = $seo['title'];
+$metaDescription = $seo['description'];
+$metaKeywords = $seo['keywords'];
+$metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
 
 ?><!DOCTYPE html>
 <html lang="fr-BE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= e($site['title']) ?></title>
-    <meta name="description" content="Portail citoyen détaillé sur l'agriculture en Wallonie.">
+    <title><?= e($pageTitle) ?></title>
+    <meta name="description" content="<?= e($metaDescription) ?>">
+    <meta name="keywords" content="<?= e($metaKeywords) ?>">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="<?= e($canonicalUrl) ?>">
+    <meta property="og:locale" content="fr_BE">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?= e($pageTitle) ?>">
+    <meta property="og:description" content="<?= e($metaDescription) ?>">
+    <meta property="og:url" content="<?= e($canonicalUrl) ?>">
+    <meta property="og:site_name" content="<?= e($site['title']) ?>">
+    <meta property="og:image" content="<?= e($metaImage) ?>">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?= e($pageTitle) ?>">
+    <meta name="twitter:description" content="<?= e($metaDescription) ?>">
+    <meta name="twitter:image" content="<?= e($metaImage) ?>">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="application/ld+json">
+        <?= json_encode([
+            '@context' => 'https://schema.org',
+            '@type' => 'WebPage',
+            'name' => $pageTitle,
+            'description' => $metaDescription,
+            'url' => $canonicalUrl,
+            'inLanguage' => 'fr-BE',
+            'isPartOf' => [
+                '@type' => 'WebSite',
+                'name' => $site['title'],
+                'url' => siteBaseUrl(),
+            ],
+        ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>
+    </script>
     <!-- Matomo -->
     <script>
         var _paq = window._paq = window._paq || [];
