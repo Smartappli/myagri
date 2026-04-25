@@ -2,9 +2,19 @@
 
 declare(strict_types=1);
 
-require __DIR__ . '/includes/data.php';
+require __DIR__ . '/includes/portal_repository.php';
 
-$data = getPortalData();
+$data = [];
+try {
+    $data = loadPortalData();
+} catch (Throwable $exception) {
+    http_response_code(503);
+    echo json_encode([
+        'error' => 'Base MySQL indisponible',
+        'details' => $exception->getMessage(),
+    ], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR);
+    exit;
+}
 $section = $_GET['section'] ?? null;
 
 header('Content-Type: application/json; charset=utf-8');
