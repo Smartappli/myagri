@@ -19,6 +19,7 @@ $seasonalCalendar = $data['seasonalCalendar'];
 $faq = $data['faq'];
 $glossary = $data['glossary'];
 $resources = $data['resources'];
+
 ?><!DOCTYPE html>
 <html lang="fr-BE">
 <head>
@@ -27,6 +28,23 @@ $resources = $data['resources'];
     <title><?= e($site['title']) ?></title>
     <meta name="description" content="Portail citoyen détaillé sur l'agriculture en Wallonie.">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Matomo -->
+    <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u = "https://stats.smartappli.eu/";
+            _paq.push(['setTrackerUrl', u + 'matomo.php']);
+            _paq.push(['setSiteId', '5']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.async = true;
+            g.src = u + 'matomo.js';
+            s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
 </head>
 <body>
 <header>
@@ -217,6 +235,7 @@ $resources = $data['resources'];
         <p class="meta">Dernière mise à jour : <?= e($site['updated_at']) ?></p>
     </div>
 </footer>
+
 
 <script src="assets/js/main.js" defer></script>
 </body>
