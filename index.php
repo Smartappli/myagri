@@ -86,7 +86,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
     <meta name="twitter:title" content="<?= e($pageTitle) ?>">
     <meta name="twitter:description" content="<?= e($metaDescription) ?>">
     <meta name="twitter:image" content="<?= e($metaImage) ?>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="application/ld+json">
         <?= json_encode([
@@ -122,7 +122,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
     <!-- End Matomo Code -->
 </head>
 <body>
-<header>
+<header class="relative overflow-hidden">
     <div class="container">
         <div class="header-top">
             <nav aria-label="Navigation principale">
@@ -133,26 +133,26 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
                 </ul>
             </nav>
         </div>
-        <div class="hero">
+        <div class="hero backdrop-blur-sm">
             <h1><?= e($site['title']) ?></h1>
             <p class="subtitle"><?= e($site['subtitle']) ?></p>
             <p class="meta">Dernière mise à jour : <?= e($site['updated_at']) ?></p>
             <form method="get" class="search-form">
                 <input type="hidden" name="page" value="<?= e($page) ?>">
                 <label for="global-search" class="meta">Recherche globale</label>
-                <input id="global-search" class="filter form-control" name="q" value="<?= e($search) ?>" placeholder="Ex: eau, élevage, saison" type="search">
+                <input id="global-search" class="filter w-full rounded-xl border border-emerald-200 bg-white/95 px-3 py-2" name="q" value="<?= e($search) ?>" placeholder="Ex: eau, élevage, saison" type="search">
             </form>
         </div>
     </div>
 </header>
 
-<main class="container py-4">
+<main class="container py-8">
     <?php if ($page === 'accueil'): ?>
         <section aria-labelledby="bases-title">
             <h2 id="bases-title">Les bases à connaître</h2>
             <div class="grid grid-3">
                 <?php foreach ($quickFacts as $fact): ?>
-                    <article class="card h-100">
+                    <article class="card h-full">
                         <h3><?= e($fact['title']) ?></h3>
                         <p><?= e($fact['content']) ?></p>
                     </article>
@@ -164,7 +164,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             <h2 id="pillars-title">Les 4 piliers</h2>
             <div class="grid grid-2 pillars">
                 <?php foreach ($pillars as $pillar): ?>
-                    <article class="card h-100">
+                    <article class="card h-full">
                         <h3><?= e($pillar['name']) ?></h3>
                         <p><?= e($pillar['description']) ?></p>
                     </article>
@@ -176,7 +176,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             <h2 id="themes-title">Enjeux transversaux</h2>
             <div class="grid grid-2">
                 <?php foreach ($focusThemes as $theme): ?>
-                    <article class="card h-100">
+                    <article class="card h-full">
                         <h3><?= e($theme['title']) ?></h3>
                         <p><?= e($theme['details']) ?></p>
                     </article>
@@ -188,7 +188,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             <h2 id="provinces-title">Lecture par province</h2>
             <div class="grid grid-3">
                 <?php foreach ($provinces as $province): ?>
-                    <article class="card h-100">
+                    <article class="card h-full">
                         <h3><?= e($province['name']) ?></h3>
                         <p><?= e($province['profile']) ?></p>
                     </article>
@@ -200,7 +200,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             <h2 id="calendar-title">Calendrier agricole simplifié</h2>
             <div class="grid grid-2">
                 <?php foreach ($seasonalCalendar as $entry): ?>
-                    <article class="card h-100">
+                    <article class="card h-full">
                         <h3><?= e($entry['season']) ?></h3>
                         <p><?= e($entry['focus']) ?></p>
                     </article>
@@ -212,7 +212,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
     <?php if ($page === 'filieres'): ?>
         <section aria-labelledby="filieres-title">
             <h2 id="filieres-title">Explorer les filières</h2>
-            <input id="sector-filter" class="filter form-control" type="search" placeholder="Ex: lait, saison, cultures" aria-label="Filtrer les filières" data-sector-filter>
+            <input id="sector-filter" class="filter w-full rounded-xl border border-emerald-200 bg-white/95 px-3 py-2" type="search" placeholder="Ex: lait, saison, cultures" aria-label="Filtrer les filières" data-sector-filter>
             <div class="grid grid-3">
                 <?php foreach ($sectors as $sector): ?>
                     <?php
@@ -254,7 +254,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
                     }
                     $answerId = 'faq-' . $index;
                     ?>
-                    <article class="faq-item shadow-sm">
+                    <article class="faq-item shadow-sm ring-1 ring-emerald-100">
                         <button class="faq-button" type="button" aria-expanded="false" aria-controls="<?= e($answerId) ?>" data-faq-button>
                             <?= e($item['q']) ?>
                         </button>
@@ -274,7 +274,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
                         continue;
                     }
                     ?>
-                    <article class="card h-100">
+                    <article class="card h-full">
                         <h3><?= e($resource['title']) ?></h3>
                         <p><?= e($resource['description']) ?></p>
                         <?php if (isset($resource['id']) && is_string($resource['id'])): ?>
@@ -295,7 +295,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
                         continue;
                     }
                     ?>
-                    <article class="card h-100">
+                    <article class="card h-full">
                         <h3><?= e($entry['term']) ?></h3>
                         <p><?= e($entry['definition']) ?></p>
                     </article>
@@ -310,7 +310,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
                 <p><a href="?page=ressources">← Retour aux ressources</a></p>
                 <h2 id="resource-title"><?= e($selectedResource['title']) ?></h2>
                 <p class="section-intro"><?= e($selectedResource['description']) ?></p>
-                <article class="card h-100">
+                <article class="card h-full">
                     <?php
                     $continuousContent = $selectedResource['continuous_content'] ?? null;
                     if (is_string($continuousContent) && trim($continuousContent) !== ''):
