@@ -87,25 +87,6 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
     <meta name="twitter:description" content="<?= e($metaDescription) ?>">
     <meta name="twitter:image" content="<?= e($metaImage) ?>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0f9f3',
-                            100: '#d9f0e0',
-                            500: '#1f7a45',
-                            700: '#145733'
-                        }
-                    },
-                    boxShadow: {
-                        soft: '0 10px 30px rgba(17,48,30,.12)'
-                    }
-                }
-            }
-        };
-    </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="application/ld+json">
         <?= json_encode([
@@ -171,7 +152,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             <h2 id="bases-title">Les bases à connaître</h2>
             <div class="grid grid-3">
                 <?php foreach ($quickFacts as $fact): ?>
-                    <article class="card h-full transition hover:-translate-y-0.5">
+                    <article class="card h-full">
                         <h3><?= e($fact['title']) ?></h3>
                         <p><?= e($fact['content']) ?></p>
                     </article>
@@ -183,7 +164,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             <h2 id="pillars-title">Les 4 piliers</h2>
             <div class="grid grid-2 pillars">
                 <?php foreach ($pillars as $pillar): ?>
-                    <article class="card h-full transition hover:-translate-y-0.5">
+                    <article class="card h-full">
                         <h3><?= e($pillar['name']) ?></h3>
                         <p><?= e($pillar['description']) ?></p>
                     </article>
@@ -195,7 +176,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             <h2 id="themes-title">Enjeux transversaux</h2>
             <div class="grid grid-2">
                 <?php foreach ($focusThemes as $theme): ?>
-                    <article class="card h-full transition hover:-translate-y-0.5">
+                    <article class="card h-full">
                         <h3><?= e($theme['title']) ?></h3>
                         <p><?= e($theme['details']) ?></p>
                     </article>
@@ -207,7 +188,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             <h2 id="provinces-title">Lecture par province</h2>
             <div class="grid grid-3">
                 <?php foreach ($provinces as $province): ?>
-                    <article class="card h-full transition hover:-translate-y-0.5">
+                    <article class="card h-full">
                         <h3><?= e($province['name']) ?></h3>
                         <p><?= e($province['profile']) ?></p>
                     </article>
@@ -219,7 +200,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             <h2 id="calendar-title">Calendrier agricole simplifié</h2>
             <div class="grid grid-2">
                 <?php foreach ($seasonalCalendar as $entry): ?>
-                    <article class="card h-full transition hover:-translate-y-0.5">
+                    <article class="card h-full">
                         <h3><?= e($entry['season']) ?></h3>
                         <p><?= e($entry['focus']) ?></p>
                     </article>
@@ -293,7 +274,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
                         continue;
                     }
                     ?>
-                    <article class="card h-full transition hover:-translate-y-0.5">
+                    <article class="card h-full">
                         <h3><?= e($resource['title']) ?></h3>
                         <p><?= e($resource['description']) ?></p>
                         <?php if (isset($resource['id']) && is_string($resource['id'])): ?>
@@ -314,7 +295,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
                         continue;
                     }
                     ?>
-                    <article class="card h-full transition hover:-translate-y-0.5">
+                    <article class="card h-full">
                         <h3><?= e($entry['term']) ?></h3>
                         <p><?= e($entry['definition']) ?></p>
                     </article>
@@ -329,7 +310,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
                 <p><a href="?page=ressources">← Retour aux ressources</a></p>
                 <h2 id="resource-title"><?= e($selectedResource['title']) ?></h2>
                 <p class="section-intro"><?= e($selectedResource['description']) ?></p>
-                <article class="card h-full transition hover:-translate-y-0.5">
+                <article class="card h-full">
                     <?php
                     $continuousContent = $selectedResource['continuous_content'] ?? null;
                     if (is_string($continuousContent) && trim($continuousContent) !== ''):
