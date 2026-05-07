@@ -126,7 +126,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
     <div class="container">
         <div class="header-top">
             <nav aria-label="Navigation principale">
-                <ul class="nav-list">
+                <ul class="nav-list shadow-soft">
                     <li><a href="?page=accueil"<?= $page === 'accueil' ? ' aria-current="page"' : '' ?>>Accueil</a></li>
                     <li><a href="?page=filieres"<?= $page === 'filieres' ? ' aria-current="page"' : '' ?>>Filières</a></li>
                     <li><a href="?page=ressources"<?= $page === 'ressources' ? ' aria-current="page"' : '' ?>>Ressources</a></li>
@@ -148,7 +148,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
 
 <main class="container py-8">
     <?php if ($page === 'accueil'): ?>
-        <section aria-labelledby="bases-title">
+        <section aria-labelledby="bases-title" class="shadow-soft">
             <h2 id="bases-title">Les bases à connaître</h2>
             <div class="grid grid-3">
                 <?php foreach ($quickFacts as $fact): ?>
@@ -160,7 +160,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             </div>
         </section>
 
-        <section aria-labelledby="pillars-title">
+        <section aria-labelledby="pillars-title" class="shadow-soft">
             <h2 id="pillars-title">Les 4 piliers</h2>
             <div class="grid grid-2 pillars">
                 <?php foreach ($pillars as $pillar): ?>
@@ -172,7 +172,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             </div>
         </section>
 
-        <section aria-labelledby="themes-title">
+        <section aria-labelledby="themes-title" class="shadow-soft">
             <h2 id="themes-title">Enjeux transversaux</h2>
             <div class="grid grid-2">
                 <?php foreach ($focusThemes as $theme): ?>
@@ -184,7 +184,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             </div>
         </section>
 
-        <section aria-labelledby="provinces-title">
+        <section aria-labelledby="provinces-title" class="shadow-soft">
             <h2 id="provinces-title">Lecture par province</h2>
             <div class="grid grid-3">
                 <?php foreach ($provinces as $province): ?>
@@ -196,7 +196,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             </div>
         </section>
 
-        <section aria-labelledby="calendar-title">
+        <section aria-labelledby="calendar-title" class="shadow-soft">
             <h2 id="calendar-title">Calendrier agricole simplifié</h2>
             <div class="grid grid-2">
                 <?php foreach ($seasonalCalendar as $entry): ?>
@@ -210,7 +210,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
     <?php endif; ?>
 
     <?php if ($page === 'filieres'): ?>
-        <section aria-labelledby="filieres-title">
+        <section aria-labelledby="filieres-title" class="shadow-soft">
             <h2 id="filieres-title">Explorer les filières</h2>
             <input id="sector-filter" class="filter w-full rounded-xl border border-emerald-200 bg-white/95 px-3 py-2" type="search" placeholder="Ex: lait, saison, cultures" aria-label="Filtrer les filières" data-sector-filter>
             <div class="grid grid-3">
@@ -243,7 +243,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
     <?php endif; ?>
 
     <?php if ($page === 'ressources'): ?>
-        <section aria-labelledby="faq-title">
+        <section aria-labelledby="faq-title" class="shadow-soft">
             <h2 id="faq-title">FAQ citoyenne</h2>
             <div class="grid">
                 <?php foreach ($faq as $index => $item): ?>
@@ -264,7 +264,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             </div>
         </section>
 
-        <section aria-labelledby="resources-title">
+        <section aria-labelledby="resources-title" class="shadow-soft">
             <h2 id="resources-title">Ressources utiles</h2>
             <div class="grid grid-3">
                 <?php foreach ($resources as $resource): ?>
@@ -285,7 +285,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
             </div>
         </section>
 
-        <section aria-labelledby="glossary-title">
+        <section aria-labelledby="glossary-title" class="shadow-soft">
             <h2 id="glossary-title">Glossaire</h2>
             <div class="grid grid-2">
                 <?php foreach ($glossary as $entry): ?>
@@ -306,7 +306,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
 
     <?php if ($page === 'ressource'): ?>
         <?php if (is_array($selectedResource)): ?>
-            <section aria-labelledby="resource-title">
+            <section aria-labelledby="resource-title" class="shadow-soft">
                 <p><a href="?page=ressources">← Retour aux ressources</a></p>
                 <h2 id="resource-title"><?= e($selectedResource['title']) ?></h2>
                 <p class="section-intro"><?= e($selectedResource['description']) ?></p>
