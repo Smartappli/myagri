@@ -22,6 +22,12 @@ assertTrue(count($data['provinces']) === 5, 'five walloon provinces listed');
 $_GET['page'] = 'filieres';
 assertTrue(currentPage() === 'filieres', 'known page accepted');
 
+$_GET['page'] = 'faq';
+assertTrue(currentPage() === 'faq', 'faq page accepted');
+
+$_GET['page'] = 'glossaire';
+assertTrue(currentPage() === 'glossaire', 'glossary page accepted');
+
 $_GET['page'] = 'invalid';
 assertTrue(currentPage() === 'accueil', 'unknown page falls back to accueil');
 
