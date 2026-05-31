@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+<?php
+$siteGeo = siteGeoConfig($site);
+$robotsDirective = ($allowIndex ?? true)
+    ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    : 'noindex, nofollow, max-snippet:-1, max-video-preview:-1';
+$geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
+?>
+<!DOCTYPE html>
 <html lang="fr-BE">
 <head>
     <meta charset="UTF-8">
@@ -9,9 +16,12 @@
     <meta name="author" content="MyAgri">
     <meta name="theme-color" content="#1f7a45">
     <meta name="language" content="fr-BE">
-    <meta name="geo.region" content="BE-WAL">
-    <meta name="geo.placename" content="Wallonie">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="geo.region" content="<?= e($siteGeo['region_code']) ?>">
+    <meta name="geo.placename" content="<?= e($siteGeo['region']) ?>">
+    <meta name="geo.position" content="<?= e($geoCoordinates) ?>">
+    <meta name="ICBM" content="<?= e($geoCoordinates) ?>">
+    <meta name="geo.country" content="<?= e($siteGeo['country_code']) ?>">
+    <meta name="robots" content="<?= e($robotsDirective) ?>">
     <link rel="canonical" href="<?= e($canonicalUrl) ?>">
     <link rel="sitemap" type="application/xml" href="<?= e(siteBaseUrl() . '/sitemap.xml') ?>">
     <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms.txt') ?>" title="Résumé MyAgri pour moteurs génératifs">
@@ -25,13 +35,19 @@
     <meta property="og:site_name" content="<?= e($site['title']) ?>">
     <meta property="og:image" content="<?= e($metaImage) ?>">
     <meta property="og:image:alt" content="Paysage agricole wallon illustrant le portail citoyen MyAgri">
+    <meta property="place:location:latitude" content="<?= e($siteGeo['latitude']) ?>">
+    <meta property="place:location:longitude" content="<?= e($siteGeo['longitude']) ?>">
+    <meta property="place:location:country_name" content="<?= e($siteGeo['country']) ?>">
     <meta property="article:modified_time" content="<?= e(updatedAtIsoDate(isset($site['updated_at']) && is_string($site['updated_at']) ? $site['updated_at'] : '')) ?>">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@MyAgri">
     <meta name="twitter:title" content="<?= e($pageTitle) ?>">
     <meta name="twitter:description" content="<?= e($metaDescription) ?>">
     <meta name="twitter:image" content="<?= e($metaImage) ?>">
     <meta name="twitter:image:alt" content="Paysage agricole wallon illustrant le portail citoyen MyAgri">
     <link rel="alternate" href="<?= e($canonicalUrl) ?>" hreflang="fr-BE">
+    <link rel="alternate" href="<?= e($canonicalUrl) ?>" hreflang="fr">
+    <link rel="alternate" href="<?= e($canonicalUrl) ?>" hreflang="x-default">
     <meta property="article:published_time" content="<?= e(updatedAtIsoDate(isset($site['updated_at']) && is_string($site['updated_at']) ? $site['updated_at'] : '')) ?>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
