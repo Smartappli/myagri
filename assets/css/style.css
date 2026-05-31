@@ -45,8 +45,9 @@ header {
     border-bottom-right-radius: 28px;
     box-shadow: var(--shadow-md);
     background:
-        radial-gradient(circle at 18% 8%, rgb(134 220 164 / 24%), transparent 42%),
-        linear-gradient(135deg, #0c4024, #216f42 55%, #2f9458);
+        linear-gradient(90deg, rgb(7 32 18 / 86%), rgb(9 48 27 / 72%) 46%, rgb(9 48 27 / 38%)),
+        linear-gradient(180deg, rgb(7 32 18 / 20%), rgb(7 32 18 / 56%)),
+        url("../img/hero.png") center / cover no-repeat;
 }
 
 .header-top {
@@ -94,7 +95,8 @@ header {
     padding: 1.8rem;
     border-radius: 22px;
     border: 1px solid rgb(236 255 242 / 24%);
-    background: linear-gradient(155deg, rgb(236 255 242 / 18%), rgb(236 255 242 / 8%));
+    background: linear-gradient(155deg, rgb(7 32 18 / 46%), rgb(7 32 18 / 18%));
+    box-shadow: 0 18px 54px rgb(0 0 0 / 22%);
 }
 
 .hero h1 {
@@ -333,6 +335,13 @@ footer {
             radial-gradient(circle at 8% 0%, rgb(79 179 114 / 12%), transparent 42%),
             radial-gradient(circle at 90% 8%, rgb(12 81 45 / 16%), transparent 36%),
             var(--bg);
+    }
+
+    header {
+        background:
+            linear-gradient(90deg, rgb(3 18 10 / 90%), rgb(6 31 18 / 76%) 46%, rgb(6 31 18 / 44%)),
+            linear-gradient(180deg, rgb(3 18 10 / 18%), rgb(3 18 10 / 62%)),
+            url("../img/hero.png") center / cover no-repeat;
     }
 
     .nav-list a[aria-current="page"] {

@@ -27,6 +27,10 @@ assertTrue(currentPage() === 'accueil', 'unknown page falls back to accueil');
 
 assertTrue(e('<script>') === '&lt;script&gt;', 'escaping works');
 
+$structuredData = pageStructuredData('ressources', $data['site'], $data['sectors'], $data['resources'], $data['faq'], $data['glossary']);
+assertTrue(($structuredData['@context'] ?? null) === 'https://schema.org', 'structured data context exists');
+assertTrue(is_array($structuredData['@graph'] ?? null), 'structured data graph exists');
+
 try {
     $loadedData = loadPortalData();
     assertTrue(isset($loadedData['site']['title']), 'repository loader returns site title');

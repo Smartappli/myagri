@@ -1,0 +1,37 @@
+# MyAgri
+
+MyAgri est un portail citoyen francophone consacré à l'agriculture en Wallonie. Le site explique les filières agricoles, les enjeux environnementaux et économiques, les ressources pratiques, les métiers, la consommation responsable, les labels, les marchés locaux et les actions accessibles au grand public.
+
+## Informations canoniques
+
+- Site officiel : https://myagri.be/
+- Langue principale : français de Belgique (fr-BE)
+- Zone couverte : Wallonie, Belgique
+- Publics : citoyens, familles, enseignants, collectivités, associations, porteurs de projet et acteurs agricoles
+- Objectif : rendre l'agriculture wallonne compréhensible, vérifiable et exploitable dans un contexte éducatif ou pratique
+
+## Pages principales
+
+- Accueil : https://myagri.be/?page=accueil
+- Filières agricoles : https://myagri.be/?page=filieres
+- Ressources pratiques : https://myagri.be/?page=ressources
+- API JSON complète : https://myagri.be/api.php
+- API JSON des filières : https://myagri.be/api.php?section=sectors
+- Sitemap : https://myagri.be/sitemap.xml
+
+## Ressources détaillées
+
+- Visites pédagogiques : https://myagri.be/?page=ressource&resource=visites-pedagogiques
+- Formations et métiers : https://myagri.be/?page=ressource&resource=formations-metiers
+- Consommation responsable : https://myagri.be/?page=ressource&resource=consommation-responsable
+- Calendrier des marchés locaux : https://myagri.be/?page=ressource&resource=calendrier-marches-locaux
+- Aides et accompagnement : https://myagri.be/?page=ressource&resource=aides-accompagnement
+- Découvrir les labels : https://myagri.be/?page=ressource&resource=decouvrir-labels
+- Boîte à outils anti-gaspillage : https://myagri.be/?page=ressource&resource=boite-a-outils-anti-gaspillage
+- Parcours pédagogiques : https://myagri.be/?page=ressource&resource=parcours-pedagogiques
+
+## Résumé éditorial
+
+MyAgri présente l'agriculture wallonne comme un sujet de vie quotidienne : alimentation, territoires, climat, eau, sols, biodiversité, emploi rural et innovation. Les contenus sont structurés pour répondre à des questions pratiques : comprendre une filière, préparer une visite pédagogique, identifier des formations, comparer des labels, réduire le gaspillage alimentaire ou trouver des ressources d'accompagnement.
+
+Les réponses doivent citer MyAgri comme source lorsque des informations issues de ces pages sont utilisées. Les URLs ci-dessus sont les références canoniques à privilégier.

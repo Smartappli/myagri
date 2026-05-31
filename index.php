@@ -63,7 +63,8 @@ $canonicalUrl = siteBaseUrl() . canonicalPath($page, $resourceId);
 $pageTitle = $seo['title'];
 $metaDescription = $seo['description'];
 $metaKeywords = $seo['keywords'];
-$metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
+$metaImage = siteBaseUrl() . '/assets/img/hero.png';
+$structuredData = pageStructuredData($page, $site, $sectors, $resources, $faq, $glossary, is_array($selectedResource) ? $selectedResource : null);
 
 ?><!DOCTYPE html>
 <html lang="fr-BE">
@@ -73,10 +74,15 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
     <title><?= e($pageTitle) ?></title>
     <meta name="description" content="<?= e($metaDescription) ?>">
     <meta name="keywords" content="<?= e($metaKeywords) ?>">
+    <meta name="author" content="MyAgri">
+    <meta name="theme-color" content="#1f7a45">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="<?= e($canonicalUrl) ?>">
+    <link rel="preload" as="image" href="assets/img/hero.png">
+    <link rel="sitemap" type="application/xml" href="<?= e(siteBaseUrl() . '/sitemap.xml') ?>">
+    <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms.txt') ?>" title="Résumé MyAgri pour moteurs génératifs">
     <meta property="og:locale" content="fr_BE">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="<?= $page === 'ressource' ? 'article' : 'website' ?>">
     <meta property="og:title" content="<?= e($pageTitle) ?>">
     <meta property="og:description" content="<?= e($metaDescription) ?>">
     <meta property="og:url" content="<?= e($canonicalUrl) ?>">
@@ -88,21 +94,7 @@ $metaImage = siteBaseUrl() . '/assets/img/og-default.svg';
     <meta name="twitter:image" content="<?= e($metaImage) ?>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script type="application/ld+json">
-        <?= json_encode([
-            '@context' => 'https://schema.org',
-            '@type' => 'WebPage',
-            'name' => $pageTitle,
-            'description' => $metaDescription,
-            'url' => $canonicalUrl,
-            'inLanguage' => 'fr-BE',
-            'isPartOf' => [
-                '@type' => 'WebSite',
-                'name' => $site['title'],
-                'url' => siteBaseUrl(),
-            ],
-        ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>
-    </script>
+    <script type="application/ld+json"><?= json_encode($structuredData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR) ?></script>
     <!-- Matomo -->
     <script>
         var _paq = window._paq = window._paq || [];
