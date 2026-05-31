@@ -114,7 +114,7 @@ $structuredData = pageStructuredData($page, $site, $sectors, $resources, $faq, $
     <!-- End Matomo Code -->
 </head>
 <body>
-<header class="relative overflow-hidden">
+<header class="site-hero relative overflow-hidden">
     <div class="container">
         <div class="header-top">
             <nav aria-label="Navigation principale">
@@ -125,16 +125,20 @@ $structuredData = pageStructuredData($page, $site, $sectors, $resources, $faq, $
                 </ul>
             </nav>
         </div>
-        <div class="hero backdrop-blur-sm">
-            <h1><?= e($site['title']) ?></h1>
-            <p class="subtitle"><?= e($site['subtitle']) ?></p>
-            <p class="meta">Dernière mise à jour : <?= e($site['updated_at']) ?></p>
-            <form method="get" class="search-form">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-visual" role="img" aria-label="MyAgri rapproche les citoyens du monde agricole pour comprendre, échanger et construire une agriculture durable et locale.">
+                <div class="sr-only">
+                    <h1 id="hero-title"><?= e($site['title']) ?></h1>
+                    <p><?= e($site['subtitle']) ?></p>
+                    <p>Dernière mise à jour : <?= e($site['updated_at']) ?></p>
+                </div>
+            </div>
+            <form method="get" class="search-form hero-search">
                 <input type="hidden" name="page" value="<?= e($page) ?>">
                 <label for="global-search" class="meta">Recherche globale</label>
                 <input id="global-search" class="filter w-full rounded-xl border border-emerald-200 bg-white/95 px-3 py-2" name="q" value="<?= e($search) ?>" placeholder="Ex: eau, élevage, saison" type="search">
             </form>
-        </div>
+        </section>
     </div>
 </header>
 

@@ -40,14 +40,12 @@ body {
 
 header {
     color: #fff;
-    padding: 1.2rem 0 3.1rem;
+    padding: 1rem 0 2.2rem;
     border-bottom-left-radius: 28px;
     border-bottom-right-radius: 28px;
     box-shadow: var(--shadow-md);
     background:
-        linear-gradient(90deg, rgb(7 32 18 / 86%), rgb(9 48 27 / 72%) 46%, rgb(9 48 27 / 38%)),
-        linear-gradient(180deg, rgb(7 32 18 / 20%), rgb(7 32 18 / 56%)),
-        url("../img/hero.png") center / cover no-repeat;
+        linear-gradient(135deg, #0c4024, #216f42 55%, #2f9458);
 }
 
 .header-top {
@@ -64,7 +62,7 @@ header {
     gap: 0.55rem;
     border: 1px solid rgb(234 255 239 / 34%);
     border-radius: 999px;
-    background: rgb(8 38 21 / 26%);
+    background: rgb(8 38 21 / 42%);
     backdrop-filter: blur(8px);
 }
 
@@ -91,18 +89,28 @@ header {
 }
 
 .hero {
-    margin-top: 1.5rem;
-    padding: 1.8rem;
-    border-radius: 22px;
-    border: 1px solid rgb(236 255 242 / 24%);
-    background: linear-gradient(155deg, rgb(7 32 18 / 46%), rgb(7 32 18 / 18%));
-    box-shadow: 0 18px 54px rgb(0 0 0 / 22%);
+    margin-top: 1rem;
 }
 
-.hero h1 {
-    margin: 0 0 0.5rem;
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    letter-spacing: -0.02em;
+.hero-visual {
+    min-height: clamp(420px, 54vw, 720px);
+    border-radius: 24px;
+    border: 1px solid rgb(236 255 242 / 34%);
+    background: url("../img/hero.png") left center / cover no-repeat;
+    box-shadow: 0 22px 58px rgb(8 38 21 / 24%);
+    overflow: hidden;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .subtitle {
@@ -119,12 +127,35 @@ header {
 }
 
 .search-form {
-    margin-top: 1.1rem;
+    margin-top: 1rem;
     max-width: 620px;
 }
 
+.hero-search {
+    display: grid;
+    grid-template-columns: minmax(9rem, auto) minmax(220px, 1fr);
+    align-items: center;
+    gap: 0.85rem;
+    max-width: none;
+    padding: 0.9rem;
+    border: 1px solid rgb(236 255 242 / 30%);
+    border-radius: 16px;
+    background: rgb(8 38 21 / 52%);
+    backdrop-filter: blur(10px);
+}
+
+.hero-search .meta {
+    margin-top: 0;
+    font-weight: 700;
+    color: #f1fff5;
+}
+
+.hero-search .filter {
+    margin-bottom: 0;
+}
+
 main.container {
-    margin-top: -1.5rem;
+    margin-top: -0.8rem;
 }
 
 main section {
@@ -278,7 +309,19 @@ footer {
     }
 
     .hero {
-        padding: 1.15rem;
+        margin-top: 0.85rem;
+    }
+
+    .hero-visual {
+        min-height: clamp(420px, 132vw, 620px);
+        border-radius: 18px;
+        background-position: 13% center;
+    }
+
+    .hero-search {
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
+        padding: 0.8rem;
     }
 
     .nav-list {
@@ -335,13 +378,6 @@ footer {
             radial-gradient(circle at 8% 0%, rgb(79 179 114 / 12%), transparent 42%),
             radial-gradient(circle at 90% 8%, rgb(12 81 45 / 16%), transparent 36%),
             var(--bg);
-    }
-
-    header {
-        background:
-            linear-gradient(90deg, rgb(3 18 10 / 90%), rgb(6 31 18 / 76%) 46%, rgb(6 31 18 / 44%)),
-            linear-gradient(180deg, rgb(3 18 10 / 18%), rgb(3 18 10 / 62%)),
-            url("../img/hero.png") center / cover no-repeat;
     }
 
     .nav-list a[aria-current="page"] {
