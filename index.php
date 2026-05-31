@@ -57,13 +57,29 @@ foreach ($resources as $resourceItem) {
     }
 }
 $selectedResource = $resourcesById[$resourceId] ?? null;
-$seo = pageSeo($page, $site, is_array($selectedResource) ? $selectedResource : null);
-$canonicalUrl = siteBaseUrl() . canonicalPath($page, $resourceId);
+$glossaryTermSlug = '';
+$selectedGlossaryTerm = null;
+if ($page === 'glossaire') {
+    $glossaryTermSlug = isset($_GET['term']) && is_string($_GET['term']) ? trim($_GET['term']) : '';
+    $selectedGlossaryTerm = $glossaryTermSlug !== '' ? glossaryTermBySlug($glossary, glossarySlug($glossaryTermSlug)) : null;
+}
+
+$seo = pageSeo($page, $site, is_array($selectedResource) ? $selectedResource : null, is_array($selectedGlossaryTerm) ? $selectedGlossaryTerm : null);
+$canonicalUrl = siteBaseUrl() . canonicalPath($page, $resourceId, is_array($selectedGlossaryTerm) && isset($selectedGlossaryTerm['term']) && is_string($selectedGlossaryTerm['term']) ? glossarySlug($selectedGlossaryTerm['term']) : $glossaryTermSlug);
 $pageTitle = $seo['title'];
 $metaDescription = $seo['description'];
 $metaKeywords = $seo['keywords'];
 $metaImage = siteBaseUrl() . '/assets/img/hero.png';
-$structuredData = pageStructuredData($page, $site, $sectors, $resources, $faq, $glossary, is_array($selectedResource) ? $selectedResource : null);
+$structuredData = pageStructuredData(
+    $page,
+    $site,
+    $sectors,
+    $resources,
+    $faq,
+    $glossary,
+    is_array($selectedResource) ? $selectedResource : null,
+    is_array($selectedGlossaryTerm) ? $selectedGlossaryTerm : null
+);
 
 require __DIR__ . '/includes/partials/head.php';
 

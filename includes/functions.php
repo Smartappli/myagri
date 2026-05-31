@@ -24,9 +24,10 @@ function currentPage(): string
 /**
  * @param array<string, mixed> $site
  * @param array<string, mixed>|null $resource
+ * @param array<string, mixed>|null $glossaryTerm
  * @return array{title:string,description:string,keywords:string}
  */
-function pageSeo(string $page, array $site, ?array $resource = null): array
+function pageSeo(string $page, array $site, ?array $resource = null, ?array $glossaryTerm = null): array
 {
     $siteTitle = isset($site['title']) && is_string($site['title']) ? $site['title'] : 'MyAgri';
 
@@ -51,6 +52,19 @@ function pageSeo(string $page, array $site, ?array $resource = null): array
             'title' => 'FAQ citoyenne sur l’agriculture wallonne — ' . $siteTitle,
             'description' => 'Réponses claires aux questions fréquentes sur les prix agricoles, les circuits courts, la souveraineté alimentaire et les actions citoyennes.',
             'keywords' => 'faq agriculture wallonne, questions agriculture, circuits courts, prix agricoles, souveraineté alimentaire',
+        ];
+    }
+
+    if ($page === 'glossaire' && is_array($glossaryTerm) && isset($glossaryTerm['term']) && is_string($glossaryTerm['term'])) {
+        $termTitle = $glossaryTerm['term'];
+        $termDescription = isset($glossaryTerm['definition']) && is_string($glossaryTerm['definition'])
+            ? $glossaryTerm['definition']
+            : 'DÃ©finition et applications concrÃ¨tes.';
+
+        return [
+            'title' => $termTitle . ' â€” Glossaire agricole citoyen â€” ' . $siteTitle,
+            'description' => $termDescription,
+            'keywords' => strtolower($termTitle) . ', glossaire agricole, agriculture wallonne, dÃ©finitions agricoles',
         ];
     }
 
@@ -89,6 +103,7 @@ function pageSeo(string $page, array $site, ?array $resource = null): array
  * @param array<int, array<string, mixed>> $faq
  * @param array<int, array<string, mixed>> $glossary
  * @param array<string, mixed>|null $resource
+ * @param array<string, mixed>|null $glossaryTerm
  * @return array<string, mixed>
  */
 function pageStructuredData(
@@ -98,14 +113,19 @@ function pageStructuredData(
     array $resources,
     array $faq,
     array $glossary,
-    ?array $resource = null
+    ?array $resource = null,
+    ?array $glossaryTerm = null
 ): array {
     $baseUrl = siteBaseUrl();
     $siteTitle = isset($site['title']) && is_string($site['title']) ? $site['title'] : 'MyAgri';
     $siteSubtitle = isset($site['subtitle']) && is_string($site['subtitle']) ? $site['subtitle'] : '';
     $dateModified = updatedAtIsoDate(isset($site['updated_at']) && is_string($site['updated_at']) ? $site['updated_at'] : '');
-    $seo = pageSeo($page, $site, $resource);
-    $canonicalUrl = $baseUrl . canonicalPath($page, isset($resource['id']) && is_string($resource['id']) ? $resource['id'] : '');
+    $resourceId = isset($resource['id']) && is_string($resource['id']) ? $resource['id'] : '';
+    $glossaryTermSlug = is_array($glossaryTerm) && isset($glossaryTerm['term']) && is_string($glossaryTerm['term'])
+        ? glossarySlug($glossaryTerm['term'])
+        : '';
+    $seo = pageSeo($page, $site, $resource, $glossaryTerm);
+    $canonicalUrl = $baseUrl . canonicalPath($page, $resourceId, $glossaryTermSlug);
 
     $graph = [
         [
@@ -136,7 +156,7 @@ function pageStructuredData(
             ],
         ],
         [
-            '@type' => pageSchemaType($page),
+            '@type' => pageSchemaType($page, is_array($glossaryTerm)),
             '@id' => $canonicalUrl . '#webpage',
             'url' => $canonicalUrl,
             'name' => $seo['title'],
@@ -169,7 +189,7 @@ function pageStructuredData(
         [
             '@type' => 'BreadcrumbList',
             '@id' => $canonicalUrl . '#breadcrumb',
-            'itemListElement' => breadcrumbItems($page, $resource),
+            'itemListElement' => breadcrumbItems($page, $resource, $glossaryTerm),
         ],
     ];
 
@@ -185,7 +205,11 @@ function pageStructuredData(
         $graph[] = faqStructuredData($faq, $canonicalUrl);
     }
 
-    if ($page === 'glossaire') {
+    if ($page === 'glossaire' && is_array($glossaryTerm)) {
+        $graph[] = glossaryTermStructuredData($glossaryTerm, $canonicalUrl);
+    }
+
+    if ($page === 'glossaire' && !is_array($glossaryTerm)) {
         $graph[] = glossaryStructuredData($glossary, $canonicalUrl);
     }
 
@@ -215,10 +239,14 @@ function pageKeywordList(string $keywords): array
     return $items;
 }
 
-function pageSchemaType(string $page): string
+function pageSchemaType(string $page, bool $isGlossaryTerm = false): string
 {
-    if ($page === 'filieres' || $page === 'ressources' || $page === 'glossaire') {
+    if ($page === 'filieres' || $page === 'ressources' || ($page === 'glossaire' && !$isGlossaryTerm)) {
         return 'CollectionPage';
+    }
+
+    if ($page === 'glossaire' && $isGlossaryTerm) {
+        return 'Article';
     }
 
     if ($page === 'faq') {
@@ -234,9 +262,10 @@ function pageSchemaType(string $page): string
 
 /**
  * @param array<string, mixed>|null $resource
+ * @param array<string, mixed>|null $glossaryTerm
  * @return array<int, array<string, mixed>>
  */
-function breadcrumbItems(string $page, ?array $resource = null): array
+function breadcrumbItems(string $page, ?array $resource = null, ?array $glossaryTerm = null): array
 {
     $baseUrl = siteBaseUrl();
     $items = [
@@ -254,8 +283,16 @@ function breadcrumbItems(string $page, ?array $resource = null): array
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Ressources', 'item' => $baseUrl . '/?page=ressources'];
     } elseif ($page === 'faq') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'FAQ', 'item' => $baseUrl . '/?page=faq'];
-    } elseif ($page === 'glossaire') {
+    } elseif ($page === 'glossaire' && !is_array($glossaryTerm)) {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Glossaire', 'item' => $baseUrl . '/?page=glossaire'];
+    } elseif ($page === 'glossaire' && is_array($glossaryTerm)) {
+        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Glossaire', 'item' => $baseUrl . '/?page=glossaire'];
+        $items[] = [
+            '@type' => 'ListItem',
+            'position' => 3,
+            'name' => isset($glossaryTerm['term']) && is_string($glossaryTerm['term']) ? $glossaryTerm['term'] : 'Glossaire',
+            'item' => $baseUrl . canonicalPath('glossaire', '', glossarySlug(is_array($glossaryTerm) && isset($glossaryTerm['term']) && is_string($glossaryTerm['term']) ? $glossaryTerm['term'] : '')),
+        ];
     } elseif ($page === 'ressource') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Ressources', 'item' => $baseUrl . '/?page=ressources'];
         $items[] = [
@@ -450,10 +487,14 @@ function updatedAtIsoDate(string $updatedAt): string
     return date('Y-m-d');
 }
 
-function canonicalPath(string $page, string $resourceId = ''): string
+function canonicalPath(string $page, string $resourceId = '', string $glossaryTerm = ''): string
 {
     if ($page === 'ressource' && $resourceId !== '') {
         return '/?page=ressource&resource=' . rawurlencode($resourceId);
+    }
+
+    if ($page === 'glossaire' && $glossaryTerm !== '') {
+        return '/?page=glossaire&term=' . rawurlencode($glossaryTerm);
     }
 
     if (in_array($page, ['accueil', 'filieres', 'ressources', 'faq', 'glossaire'], true)) {
@@ -461,6 +502,108 @@ function canonicalPath(string $page, string $resourceId = ''): string
     }
 
     return '/?page=accueil';
+}
+
+function glossarySlug(string $term): string
+{
+    $normalized = mb_strtolower($term, 'UTF-8');
+    $iconv = function_exists('iconv')
+        ? iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $normalized)
+        : false;
+    if ($iconv !== false && $iconv !== '') {
+        $normalized = $iconv;
+    }
+
+    $slug = preg_replace('/[^a-z0-9]+/i', '-', $normalized);
+    if (!is_string($slug)) {
+        return '';
+    }
+
+    $slug = preg_replace('/-+/', '-', $slug);
+    return trim($slug, '-');
+}
+
+/**
+ * @param array<int, array<string, mixed>> $glossary
+ * @return array<string, mixed>|null
+ */
+function glossaryTermBySlug(array $glossary, string $slug): ?array
+{
+    foreach ($glossary as $entry) {
+        if (!is_array($entry) || !isset($entry['term']) || !is_string($entry['term'])) {
+            continue;
+        }
+
+        if (glossarySlug($entry['term']) === $slug) {
+            return $entry;
+        }
+    }
+
+    return null;
+}
+
+/**
+ * @param array<int, array<string, mixed>> $glossary
+ * @return array<string, mixed>|null
+ */
+function glossaryTermByTitle(array $glossary, string $termTitle): ?array
+{
+    foreach ($glossary as $entry) {
+        if (!is_array($entry) || !isset($entry['term']) || !is_string($entry['term'])) {
+            continue;
+        }
+
+        if (mb_strtolower(trim($entry['term'])) === mb_strtolower(trim($termTitle))) {
+            return $entry;
+        }
+    }
+
+    return null;
+}
+
+/**
+ * @param array<int, array<string, mixed>> $glossary
+ * @return array<string, mixed>|null
+ */
+function glossaryTermById(string $termId, array $glossary): ?array
+{
+    return glossaryTermBySlug($glossary, $termId);
+}
+
+/**
+ * Return dedicated glossary template path when it exists.
+ */
+function glossaryTemplatePath(string $termSlug): ?string
+{
+    $normalized = trim($termSlug);
+    if (!preg_match('/^[a-z0-9-]+$/', $normalized)) {
+        return null;
+    }
+
+    $candidate = __DIR__ . '/views/glossaire/term-' . $normalized . '.php';
+    if (is_file($candidate)) {
+        return $candidate;
+    }
+
+    return null;
+}
+
+/**
+ * @param array<string, mixed> $glossaryTerm
+ */
+function glossaryTermStructuredData(array $glossaryTerm, string $canonicalUrl): array
+{
+    return [
+        '@type' => 'DefinedTerm',
+        '@id' => $canonicalUrl . '#definedTerm',
+        'name' => isset($glossaryTerm['term']) && is_string($glossaryTerm['term']) ? $glossaryTerm['term'] : 'Terme',
+        'description' => isset($glossaryTerm['definition']) && is_string($glossaryTerm['definition']) ? $glossaryTerm['definition'] : '',
+        'inDefinedTermSet' => [
+            '@type' => 'DefinedTermSet',
+            'name' => 'Glossaire agricole citoyen',
+            '@id' => rtrim(str_replace('#definedTerm', '', $canonicalUrl), '#') . '#glossary',
+        ],
+    ];
 }
 
 
