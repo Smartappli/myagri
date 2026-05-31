@@ -23,6 +23,45 @@ function currentPage(): string
 
 /**
  * @param array<string, mixed> $site
+ * @return array<string, string>
+ */
+function siteGeoConfig(array $site): array
+{
+    $geo = $site['geo'] ?? null;
+    if (!is_array($geo)) {
+        $geo = [];
+    }
+
+    $name = isset($geo['name']) && is_string($geo['name']) ? trim($geo['name']) : 'Wallonie, Belgique';
+    $region = isset($geo['region']) && is_string($geo['region']) ? trim($geo['region']) : 'Wallonie';
+    $regionCode = isset($geo['region_code']) && is_string($geo['region_code']) ? trim($geo['region_code']) : 'BE-WAL';
+    $country = isset($geo['country']) && is_string($geo['country']) ? trim($geo['country']) : 'Belgique';
+    $countryCode = isset($geo['country_code']) && is_string($geo['country_code']) ? trim($geo['country_code']) : 'BE';
+    $locality = isset($geo['locality']) && is_string($geo['locality']) ? trim($geo['locality']) : 'Namur';
+    $latitude = isset($geo['latitude']) && is_scalar($geo['latitude']) ? trim((string) $geo['latitude']) : '50.5039';
+    $longitude = isset($geo['longitude']) && is_scalar($geo['longitude']) ? trim((string) $geo['longitude']) : '4.4699';
+
+    if (!is_numeric($latitude)) {
+        $latitude = '50.5039';
+    }
+    if (!is_numeric($longitude)) {
+        $longitude = '4.4699';
+    }
+
+    return [
+        'name' => $name,
+        'region' => $region,
+        'region_code' => $regionCode,
+        'country' => $country,
+        'country_code' => $countryCode,
+        'locality' => $locality,
+        'latitude' => $latitude,
+        'longitude' => $longitude,
+    ];
+}
+
+/**
+ * @param array<string, mixed> $site
  * @param array<string, mixed>|null $resource
  * @param array<string, mixed>|null $glossaryTerm
  * @return array{title:string,description:string,keywords:string}
@@ -126,6 +165,22 @@ function pageStructuredData(
         : '';
     $seo = pageSeo($page, $site, $resource, $glossaryTerm);
     $canonicalUrl = $baseUrl . canonicalPath($page, $resourceId, $glossaryTermSlug);
+    $siteGeo = siteGeoConfig($site);
+    $geoLocation = [
+        '@type' => 'Place',
+        'name' => $siteGeo['name'],
+        'address' => [
+            '@type' => 'PostalAddress',
+            'addressCountry' => $siteGeo['country_code'],
+            'addressRegion' => $siteGeo['region'],
+            'addressLocality' => $siteGeo['locality'],
+        ],
+        'geo' => [
+            '@type' => 'GeoCoordinates',
+            'latitude' => $siteGeo['latitude'],
+            'longitude' => $siteGeo['longitude'],
+        ],
+    ];
 
     $graph = [
         [
@@ -136,8 +191,16 @@ function pageStructuredData(
             'logo' => $baseUrl . '/assets/img/og-default.svg',
             'areaServed' => [
                 '@type' => 'AdministrativeArea',
-                'name' => 'Wallonie',
+                'name' => $siteGeo['region'],
+                'identifier' => $siteGeo['region_code'],
+                'geo' => $geoLocation['geo'],
+                'containedInPlace' => [
+                    '@type' => 'Country',
+                    'name' => $siteGeo['country'],
+                    'sameAs' => 'https://en.wikipedia.org/wiki/' . rawurlencode($siteGeo['country']),
+                ],
             ],
+            'location' => $geoLocation,
         ],
         [
             '@type' => 'WebSite',
@@ -162,6 +225,7 @@ function pageStructuredData(
             'headline' => $seo['title'],
             'name' => $seo['title'],
             'description' => $seo['description'],
+            'contentLocation' => $geoLocation,
             'isPartOf' => ['@id' => $baseUrl . '/#website'],
             'primaryImageOfPage' => [
                 '@type' => 'ImageObject',
@@ -220,7 +284,7 @@ function pageStructuredData(
     }
 
     if ($page === 'ressource' && is_array($resource)) {
-        $graph[] = resourceArticleStructuredData($resource, $canonicalUrl, $baseUrl, $siteTitle, $dateModified);
+        $graph[] = resourceArticleStructuredData($resource, $canonicalUrl, $baseUrl, $siteTitle, $dateModified, $siteGeo);
         $graph[] = faqStructuredDataFromPairs(
             resourceFaqPairs($resource),
             $canonicalUrl . '#faq'
@@ -561,6 +625,9 @@ function glossaryStructuredData(array $glossary, string $canonicalUrl): array
  */
 function resourceArticleStructuredData(array $resource, string $canonicalUrl, string $baseUrl, string $siteTitle, string $dateModified): array
 {
+    $siteName = isset($resource['content_location']) && is_string($resource['content_location']) ? trim($resource['content_location']) : '';
+    $siteName = $siteName !== '' ? $siteName : 'Wallonie';
+
     return [
         '@type' => 'Article',
         '@id' => $canonicalUrl . '#article',
@@ -569,6 +636,7 @@ function resourceArticleStructuredData(array $resource, string $canonicalUrl, st
         'articleBody' => resourcePlainText($resource),
         'mainEntityOfPage' => $canonicalUrl,
         'mainEntity' => ['@id' => $canonicalUrl . '#faq'],
+        'spatialCoverage' => $siteName,
         'image' => $baseUrl . '/assets/img/hero.png',
         'keywords' => pageKeywordList(pageSeo('ressource', ['title' => $siteTitle], $resource)['keywords']),
         'inLanguage' => 'fr-BE',

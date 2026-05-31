@@ -10,6 +10,16 @@ function getPortalData(): array
             'title' => 'MyAgri — Portail citoyen',
             'subtitle' => 'Comprendre l’agriculture wallonne : alimentation, territoires, environnement, économie et métiers.',
             'updated_at' => '25 avril 2026',
+            'geo' => [
+                'name' => 'Wallonie, Belgique',
+                'region' => 'Wallonie',
+                'region_code' => 'BE-WAL',
+                'country' => 'Belgique',
+                'country_code' => 'BE',
+                'locality' => 'Namur',
+                'latitude' => '50.5039',
+                'longitude' => '4.4699',
+            ],
         ],
         'quickFacts' => [
             [
