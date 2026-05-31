@@ -39,13 +39,9 @@ body {
 }
 
 header {
-    color: #fff;
+    color: var(--text);
     padding: 1rem 0 2.2rem;
-    border-bottom-left-radius: 28px;
-    border-bottom-right-radius: 28px;
-    box-shadow: var(--shadow-md);
-    background:
-        linear-gradient(135deg, #0c4024, #216f42 55%, #2f9458);
+    background: transparent;
 }
 
 .header-top {
@@ -60,14 +56,15 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 0.55rem;
-    border: 1px solid rgb(234 255 239 / 34%);
+    border: 1px solid rgb(20 87 51 / 14%);
     border-radius: 999px;
-    background: rgb(8 38 21 / 42%);
+    background: rgb(255 255 255 / 86%);
     backdrop-filter: blur(8px);
+    box-shadow: var(--shadow-sm);
 }
 
 .nav-list a {
-    color: #eefcf3;
+    color: var(--primary-dark);
     text-decoration: none;
     padding: 0.45rem 0.9rem;
     border-radius: 999px;
@@ -79,13 +76,13 @@ header {
 .nav-list a:hover,
 .nav-list a:focus-visible {
     transform: translateY(-1px);
-    background: rgb(234 255 239 / 16%);
+    background: rgb(222 242 230 / 72%);
     outline: none;
 }
 
 .nav-list a[aria-current="page"] {
-    color: #134d2f;
-    background: #ecfff2;
+    color: #fff;
+    background: var(--primary);
 }
 
 .hero {
@@ -95,7 +92,7 @@ header {
 .hero-visual {
     min-height: clamp(420px, 54vw, 720px);
     border-radius: 24px;
-    border: 1px solid rgb(236 255 242 / 34%);
+    border: 1px solid var(--border);
     background: url("../img/hero.png") left center / cover no-repeat;
     box-shadow: 0 22px 58px rgb(8 38 21 / 24%);
     overflow: hidden;
@@ -138,16 +135,16 @@ header {
     gap: 0.85rem;
     max-width: none;
     padding: 0.9rem;
-    border: 1px solid rgb(236 255 242 / 30%);
+    border: 1px solid var(--border);
     border-radius: 16px;
-    background: rgb(8 38 21 / 52%);
-    backdrop-filter: blur(10px);
+    background: rgb(255 255 255 / 92%);
+    box-shadow: var(--shadow-sm);
 }
 
 .hero-search .meta {
     margin-top: 0;
     font-weight: 700;
-    color: #f1fff5;
+    color: var(--primary-dark);
 }
 
 .hero-search .filter {
@@ -155,7 +152,7 @@ header {
 }
 
 main.container {
-    margin-top: -0.8rem;
+    margin-top: 0;
 }
 
 main section {

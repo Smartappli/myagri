@@ -133,14 +133,17 @@ $structuredData = pageStructuredData($page, $site, $sectors, $resources, $faq, $
                     <p>Dernière mise à jour : <?= e($site['updated_at']) ?></p>
                 </div>
             </div>
-            <form method="get" class="search-form hero-search">
-                <input type="hidden" name="page" value="<?= e($page) ?>">
-                <label for="global-search" class="meta">Recherche globale</label>
-                <input id="global-search" class="filter w-full rounded-xl border border-emerald-200 bg-white/95 px-3 py-2" name="q" value="<?= e($search) ?>" placeholder="Ex: eau, élevage, saison" type="search">
-            </form>
         </section>
     </div>
 </header>
+
+<div class="container hero-search-wrap">
+    <form method="get" class="search-form hero-search">
+        <input type="hidden" name="page" value="<?= e($page) ?>">
+        <label for="global-search" class="meta">Recherche globale</label>
+        <input id="global-search" class="filter w-full rounded-xl border border-emerald-200 bg-white/95 px-3 py-2" name="q" value="<?= e($search) ?>" placeholder="Ex: eau, élevage, saison" type="search">
+    </form>
+</div>
 
 <main class="container py-8">
     <?php if ($page === 'accueil'): ?>
