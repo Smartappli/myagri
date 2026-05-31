@@ -127,6 +127,7 @@ function pageStructuredData(
             'url' => $baseUrl,
             'description' => $siteSubtitle,
             'inLanguage' => 'fr-BE',
+            'keywords' => pageKeywordList($seo['keywords']),
             'publisher' => ['@id' => $baseUrl . '/#organization'],
             'potentialAction' => [
                 '@type' => 'SearchAction',
@@ -141,6 +142,12 @@ function pageStructuredData(
             'name' => $seo['title'],
             'description' => $seo['description'],
             'isPartOf' => ['@id' => $baseUrl . '/#website'],
+            'primaryImageOfPage' => [
+                '@type' => 'ImageObject',
+                'url' => $baseUrl . '/assets/img/hero.png',
+                'caption' => 'Paysage agricole wallon illustrant le portail citoyen MyAgri.',
+            ],
+            'keywords' => pageKeywordList($seo['keywords']),
             'about' => [
                 'agriculture wallonne',
                 'alimentation locale',
@@ -153,6 +160,11 @@ function pageStructuredData(
             ],
             'inLanguage' => 'fr-BE',
             'dateModified' => $dateModified,
+            'publisher' => ['@id' => $baseUrl . '/#organization'],
+            'speakable' => [
+                '@type' => 'SpeakableSpecification',
+                'cssSelector' => ['main h2', 'main h3', 'main p'],
+            ],
         ],
         [
             '@type' => 'BreadcrumbList',
@@ -185,6 +197,22 @@ function pageStructuredData(
         '@context' => 'https://schema.org',
         '@graph' => $graph,
     ];
+}
+
+/**
+ * @return array<int, string>
+ */
+function pageKeywordList(string $keywords): array
+{
+    $items = [];
+    foreach (explode(',', $keywords) as $keyword) {
+        $keyword = trim($keyword);
+        if ($keyword !== '') {
+            $items[] = $keyword;
+        }
+    }
+
+    return $items;
 }
 
 function pageSchemaType(string $page): string
@@ -361,7 +389,8 @@ function resourceArticleStructuredData(array $resource, string $canonicalUrl, st
         'description' => isset($resource['description']) && is_string($resource['description']) ? $resource['description'] : '',
         'articleBody' => resourcePlainText($resource),
         'mainEntityOfPage' => $canonicalUrl,
-        'image' => $baseUrl . '/assets/img/og-default.svg',
+        'image' => $baseUrl . '/assets/img/hero.png',
+        'keywords' => pageKeywordList(pageSeo('ressource', ['title' => $siteTitle], $resource)['keywords']),
         'author' => [
             '@type' => 'Organization',
             'name' => 'MyAgri',
