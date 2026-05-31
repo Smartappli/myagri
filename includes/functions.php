@@ -131,7 +131,7 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
     if ($page === 'ressource') {
         return [
             'title' => 'Ressource introuvable | MyAgri',
-            'description' => 'La fiche de ressource demandÃ©e n\'existe pas ou n\'est pas disponible pour le moment.',
+            'description' => 'La fiche de ressource demandée n\'existe pas ou n\'est pas disponible pour le moment.',
             'keywords' => 'ressource introuvable, agriculture wallonne, portail citoyen',
         ];
     }
