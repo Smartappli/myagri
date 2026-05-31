@@ -15,8 +15,11 @@ MyAgri est un portail citoyen francophone consacré à l'agriculture en Wallonie
 - Accueil : https://myagri.be/?page=accueil
 - Filières agricoles : https://myagri.be/?page=filieres
 - Ressources pratiques : https://myagri.be/?page=ressources
+- FAQ citoyenne : https://myagri.be/?page=faq
+- Glossaire agricole : https://myagri.be/?page=glossaire
 - API JSON complète : https://myagri.be/api.php
 - API JSON des filières : https://myagri.be/api.php?section=sectors
+- Corpus long pour moteurs génératifs : https://myagri.be/llms-full.txt
 - Sitemap : https://myagri.be/sitemap.xml
 
 ## Ressources détaillées
