@@ -122,6 +122,8 @@ $structuredData = pageStructuredData($page, $site, $sectors, $resources, $faq, $
                     <li><a href="?page=accueil"<?= $page === 'accueil' ? ' aria-current="page"' : '' ?>>Accueil</a></li>
                     <li><a href="?page=filieres"<?= $page === 'filieres' ? ' aria-current="page"' : '' ?>>Filières</a></li>
                     <li><a href="?page=ressources"<?= $page === 'ressources' ? ' aria-current="page"' : '' ?>>Ressources</a></li>
+                    <li><a href="?page=faq"<?= $page === 'faq' ? ' aria-current="page"' : '' ?>>FAQ</a></li>
+                    <li><a href="?page=glossaire"<?= $page === 'glossaire' ? ' aria-current="page"' : '' ?>>Glossaire</a></li>
                 </ul>
             </nav>
         </div>
@@ -242,27 +244,6 @@ $structuredData = pageStructuredData($page, $site, $sectors, $resources, $faq, $
     <?php endif; ?>
 
     <?php if ($page === 'ressources'): ?>
-        <section aria-labelledby="faq-title" class="shadow-soft">
-            <h2 id="faq-title">FAQ citoyenne</h2>
-            <div class="grid">
-                <?php foreach ($faq as $index => $item): ?>
-                    <?php
-                    $answerText = mb_strtolower($item['q'] . ' ' . $item['a']);
-                    if ($search !== '' && !str_contains($answerText, mb_strtolower($search))) {
-                        continue;
-                    }
-                    $answerId = 'faq-' . $index;
-                    ?>
-                    <article class="faq-item shadow-sm ring-1 ring-emerald-100">
-                        <button class="faq-button" type="button" aria-expanded="false" aria-controls="<?= e($answerId) ?>" data-faq-button>
-                            <?= e($item['q']) ?>
-                        </button>
-                        <p id="<?= e($answerId) ?>" hidden><?= e($item['a']) ?></p>
-                    </article>
-                <?php endforeach; ?>
-            </div>
-        </section>
-
         <section aria-labelledby="resources-title" class="shadow-soft">
             <h2 id="resources-title">Ressources utiles</h2>
             <div class="grid grid-3">

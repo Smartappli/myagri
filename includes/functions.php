@@ -427,7 +427,7 @@ function canonicalPath(string $page, string $resourceId = ''): string
         return '/?page=ressource&resource=' . rawurlencode($resourceId);
     }
 
-    if (in_array($page, ['accueil', 'filieres', 'ressources'], true)) {
+    if (in_array($page, ['accueil', 'filieres', 'ressources', 'faq', 'glossaire'], true)) {
         return '/?page=' . rawurlencode($page);
     }
 
