@@ -40,7 +40,7 @@ body {
 
 header {
     color: var(--text);
-    padding: 1rem 0 2.2rem;
+    padding: 1rem 0 0.45rem;
     background: transparent;
 }
 
@@ -129,7 +129,7 @@ header {
 }
 
 .search-form {
-    margin-top: 1rem;
+    margin-top: 0.45rem;
     max-width: 620px;
 }
 
@@ -157,7 +157,7 @@ header {
 }
 
 main.container {
-    margin-top: 0;
+    margin-top: -0.35rem;
 }
 
 main section {
@@ -311,7 +311,7 @@ footer {
     }
 
     .hero {
-        margin-top: 0.85rem;
+        margin-top: 0.65rem;
     }
 
     .hero-visual {
@@ -333,7 +333,7 @@ footer {
     }
 
     main.container {
-        margin-top: -1rem;
+        margin-top: -0.65rem;
     }
 
     main section {
