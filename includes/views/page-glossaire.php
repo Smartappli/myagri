@@ -19,12 +19,12 @@ if (is_array($selectedGlossaryTerm)) {
     $selectedSlug = isset($selectedGlossaryTerm['term']) && is_string($selectedGlossaryTerm['term']) ? glossarySlug($selectedGlossaryTerm['term']) : '';
     ?>
     <section aria-labelledby="glossary-title" class="shadow-soft">
-        <p><a href="?page=glossaire">← Retour au glossaire</a></p>
+        <p><a href="?page=glossaire">Retour au glossaire</a></p>
         <h2 id="glossary-title"><?= e($selectedTerm) ?></h2>
         <article class="card resource-summary">
             <p><?= e($selectedDefinition) ?></p>
             <?php if ($selectedSlug !== ''): ?>
-                <p><a href="?page=glossaire&amp;term=<?= e($selectedSlug) ?>">Retour à la fiche dédiée</a></p>
+                <p><a href="?page=glossaire&amp;term=<?= e($selectedSlug) ?>">Retour a la fiche detaillee</a></p>
             <?php endif; ?>
         </article>
     </section>
@@ -54,7 +54,7 @@ if (is_array($selectedGlossaryTerm)) {
             <article class="card h-full">
                 <h3><?= e($term) ?></h3>
                 <p><?= e($definition) ?></p>
-                <p><a href="?page=glossaire&amp;term=<?= e($termSlug) ?>">Voir la page détaillée</a></p>
+                <p><a href="?page=glossaire&amp;term=<?= e($termSlug) ?>">Voir la page detaillee</a></p>
             </article>
         <?php endforeach; ?>
     </div>
