@@ -230,6 +230,23 @@ h2::before {
     color: #274637;
 }
 
+.resource-summary {
+    border-left: 4px solid var(--primary);
+    background: linear-gradient(180deg, var(--accent), #f6fcf7);
+    margin-bottom: 0.9rem;
+}
+
+.resource-detail-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-top: 0.9rem;
+}
+
+.resource-detail-card {
+    border-left: 4px solid var(--primary-dark);
+}
+
 .pillars .card {
     border-top: 4px solid var(--primary);
 }

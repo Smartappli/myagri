@@ -479,6 +479,61 @@ function resourceContinuousText(array $items): string
     return implode(' ', $parts);
 }
 
+/**
+ * Return dedicated resource template path when it exists.
+ */
+function resourceTemplatePath(string $resourceId): ?string
+{
+    $normalized = trim($resourceId);
+    if (!preg_match('/^[a-z0-9-]+$/', $normalized)) {
+        return null;
+    }
+
+    $candidate = __DIR__ . '/views/resources/resource-' . $normalized . '.php';
+    if (is_file($candidate)) {
+        return $candidate;
+    }
+
+    return null;
+}
+
+function splitTextIntoParagraphs(string $text): array
+{
+    $text = trim($text);
+    if ($text === '') {
+        return [];
+    }
+
+    $doubleBreaks = preg_split('/\R{2,}/u', $text, -1, PREG_SPLIT_NO_EMPTY);
+    if (is_array($doubleBreaks) && count($doubleBreaks) > 1) {
+        $paragraphs = [];
+        foreach ($doubleBreaks as $paragraph) {
+            $clean = trim($paragraph);
+            if ($clean !== '') {
+                $paragraphs[] = $clean;
+            }
+        }
+        return $paragraphs;
+    }
+
+    $sentences = preg_split('/(?<=[\.\?\!\x{2026}])\s+(?=[«A-Za-zÀ-ÿ0-9])/u', $text, -1, PREG_SPLIT_NO_EMPTY);
+    if (!is_array($sentences) || count($sentences) <= 1) {
+        return [$text];
+    }
+
+    $paragraphs = [];
+    $chunkSize = 2;
+    for ($i = 0, $count = count($sentences); $i < $count; $i += $chunkSize) {
+        $chunk = array_slice($sentences, $i, $chunkSize);
+        $paragraph = trim(implode(' ', $chunk));
+        if ($paragraph !== '') {
+            $paragraphs[] = $paragraph;
+        }
+    }
+
+    return $paragraphs;
+}
+
 function siteBaseUrl(): string
 {
     $envBase = getenv('SITE_URL');
