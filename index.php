@@ -81,7 +81,6 @@ $structuredData = pageStructuredData($page, $site, $sectors, $resources, $faq, $
     <meta name="geo.placename" content="Wallonie">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="<?= e($canonicalUrl) ?>">
-    <link rel="preload" as="image" href="assets/img/hero.png">
     <link rel="sitemap" type="application/xml" href="<?= e(siteBaseUrl() . '/sitemap.xml') ?>">
     <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms.txt') ?>" title="Résumé MyAgri pour moteurs génératifs">
     <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms-full.txt') ?>" title="Corpus MyAgri pour moteurs génératifs">
