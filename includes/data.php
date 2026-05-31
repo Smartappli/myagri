@@ -211,9 +211,10 @@ function getPortalData(): array
             ['term' => 'Séquestration carbone', 'definition' => 'Stockage du carbone dans les sols et la biomasse, contribuant à atténuer le changement climatique.'],
             ['term' => 'Souveraineté alimentaire', 'definition' => 'Capacité d’un territoire à organiser durablement son alimentation et à sécuriser son approvisionnement.'],
             ['term' => 'Stress hydrique', 'definition' => 'Situation où les besoins en eau des cultures dépassent les disponibilités, affectant rendement et qualité.'],
-            ['term' => 'Transformation à la ferme', 'definition' => 'Valorisation des productions directement sur l’exploitation (fromage, jus, yaourt, etc.).'],
+            ['term' => 'Transformation à la ferme', 'definition' => 'Valorisation des productions directement sur l\'exploitation (fromage, jus, yaourt, etc.).'],
             ['term' => 'Transition agroécologique', 'definition' => 'Évolution progressive des systèmes agricoles vers des pratiques plus durables sur les plans environnemental, social et économique.'],
             ['term' => 'Zéro artificialisation nette (ZAN)', 'definition' => 'Objectif visant à limiter la consommation d’espaces naturels, agricoles et forestiers par l’urbanisation.'],
+            ['term' => 'WALLeSmart', 'definition' => 'Plateforme numérique de coordination, de diffusion d’informations et d’outils pratiques pour relier acteurs, données et actions locales autour de l’agriculture.'],
         ],
         'resources' => [
             [
