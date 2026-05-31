@@ -36,8 +36,12 @@ if (!is_array($data) || $dataLoadError !== null) {
     exit;
 }
 
+$requestedPage = isset($_GET['page']) && is_string($_GET['page']) ? trim($_GET['page']) : 'accueil';
+$allowedPages = ['accueil', 'filieres', 'ressources', 'faq', 'glossaire', 'ressource'];
 $page = currentPage();
 $search = isset($_GET['q']) && is_string($_GET['q']) ? trim($_GET['q']) : '';
+$shouldIndex = true;
+$isInvalidPage = $requestedPage !== '' && !in_array($requestedPage, $allowedPages, true);
 
 $site = $data['site'];
 $quickFacts = $data['quickFacts'];
@@ -64,6 +68,13 @@ if ($page === 'glossaire') {
     $selectedGlossaryTerm = $glossaryTermSlug !== '' ? glossaryTermBySlug($glossary, glossarySlug($glossaryTermSlug)) : null;
 }
 
+$isNotFoundResource = $page === 'ressource' && $resourceId !== '' && !is_array($selectedResource);
+$isNotFoundGlossaryTerm = $page === 'glossaire' && $glossaryTermSlug !== '' && !is_array($selectedGlossaryTerm);
+$shouldIndex = $shouldIndex && !$isInvalidPage && !$isNotFoundResource && !$isNotFoundGlossaryTerm;
+if (!$shouldIndex) {
+    http_response_code(404);
+}
+
 $seo = pageSeo($page, $site, is_array($selectedResource) ? $selectedResource : null, is_array($selectedGlossaryTerm) ? $selectedGlossaryTerm : null);
 $canonicalUrl = siteBaseUrl() . canonicalPath($page, $resourceId, is_array($selectedGlossaryTerm) && isset($selectedGlossaryTerm['term']) && is_string($selectedGlossaryTerm['term']) ? glossarySlug($selectedGlossaryTerm['term']) : $glossaryTermSlug);
 $pageTitle = $seo['title'];
@@ -80,6 +91,7 @@ $structuredData = pageStructuredData(
     is_array($selectedResource) ? $selectedResource : null,
     is_array($selectedGlossaryTerm) ? $selectedGlossaryTerm : null
 );
+$allowIndex = $shouldIndex;
 
 $pageFaqPairs = [];
 if ($page === 'ressource' && is_array($selectedResource)) {

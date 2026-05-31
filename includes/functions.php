@@ -479,7 +479,7 @@ function breadcrumbItems(string $page, ?array $resource = null, ?array $glossary
             '@type' => 'ListItem',
             'position' => 1,
             'name' => 'Accueil',
-            'item' => $baseUrl . '/?page=accueil',
+            'item' => $baseUrl . '/',
         ],
     ];
 
@@ -623,10 +623,18 @@ function glossaryStructuredData(array $glossary, string $canonicalUrl): array
  * @param array<string, mixed> $resource
  * @return array<string, mixed>
  */
-function resourceArticleStructuredData(array $resource, string $canonicalUrl, string $baseUrl, string $siteTitle, string $dateModified): array
-{
-    $siteName = isset($resource['content_location']) && is_string($resource['content_location']) ? trim($resource['content_location']) : '';
-    $siteName = $siteName !== '' ? $siteName : 'Wallonie';
+function resourceArticleStructuredData(
+    array $resource,
+    string $canonicalUrl,
+    string $baseUrl,
+    string $siteTitle,
+    string $dateModified,
+    array $siteGeo = []
+): array {
+    $siteName = isset($siteGeo['name']) && is_string($siteGeo['name']) ? trim($siteGeo['name']) : '';
+    if ($siteName === '') {
+        $siteName = 'Wallonie, Belgique';
+    }
 
     return [
         '@type' => 'Article',
@@ -709,7 +717,11 @@ function canonicalPath(string $page, string $resourceId = '', string $glossaryTe
         return '/?page=glossaire&term=' . rawurlencode($glossaryTerm);
     }
 
-    if (in_array($page, ['accueil', 'filieres', 'ressources', 'faq', 'glossaire'], true)) {
+    if ($page === 'accueil') {
+        return '/';
+    }
+
+    if (in_array($page, ['filieres', 'ressources', 'faq', 'glossaire'], true)) {
         return '/?page=' . rawurlencode($page);
     }
 
