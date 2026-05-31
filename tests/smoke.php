@@ -36,6 +36,21 @@ assertTrue(e('<script>') === '&lt;script&gt;', 'escaping works');
 $structuredData = pageStructuredData('ressources', $data['site'], $data['sectors'], $data['resources'], $data['faq'], $data['glossary']);
 assertTrue(($structuredData['@context'] ?? null) === 'https://schema.org', 'structured data context exists');
 assertTrue(is_array($structuredData['@graph'] ?? null), 'structured data graph exists');
+assertTrue(pageKeywordList('agriculture, wallonie, agro') === ['agriculture', 'wallonie', 'agro'], 'keyword parser works');
+
+$sampleResource = $data['resources'][0] ?? null;
+if (is_array($sampleResource)) {
+    $resourcePairs = resourceFaqPairs($sampleResource);
+    assertTrue(is_array($resourcePairs), 'resource FAQ pairs computed');
+    assertTrue($resourcePairs !== [], 'resource FAQ pairs are not empty');
+}
+
+$sampleTerm = $data['glossary'][0] ?? null;
+if (is_array($sampleTerm)) {
+    $termPairs = glossaryTermFaqPairs($sampleTerm);
+    assertTrue(is_array($termPairs), 'glossary FAQ pairs computed');
+    assertTrue($termPairs !== [], 'glossary FAQ pairs are not empty');
+}
 
 try {
     $loadedData = loadPortalData();

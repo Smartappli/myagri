@@ -81,6 +81,14 @@ $structuredData = pageStructuredData(
     is_array($selectedGlossaryTerm) ? $selectedGlossaryTerm : null
 );
 
+$pageFaqPairs = [];
+if ($page === 'ressource' && is_array($selectedResource)) {
+    $pageFaqPairs = resourceFaqPairs($selectedResource);
+}
+if ($page === 'glossaire' && is_array($selectedGlossaryTerm)) {
+    $pageFaqPairs = glossaryTermFaqPairs($selectedGlossaryTerm);
+}
+
 require __DIR__ . '/includes/partials/head.php';
 
 switch ($page) {
@@ -105,6 +113,12 @@ switch ($page) {
     default:
         require __DIR__ . '/includes/views/page-accueil.php';
         break;
+}
+
+if ($pageFaqPairs !== []) {
+    $qaTitle = $page === 'ressource' ? 'Questions autour de cette ressource' : 'Questions autour de ce terme';
+    $qaIntro = 'Reponses rapides pour la recherche et la relecture :';
+    require __DIR__ . '/includes/partials/page-qa-block.php';
 }
 
 require __DIR__ . '/includes/partials/footer.php';

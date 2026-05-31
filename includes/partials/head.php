@@ -18,7 +18,7 @@
     <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms-full.txt') ?>" title="Corpus MyAgri pour moteurs génératifs">
     <link rel="alternate" type="application/json" href="<?= e(siteBaseUrl() . '/api.php') ?>" title="Données structurées MyAgri">
     <meta property="og:locale" content="fr_BE">
-    <meta property="og:type" content="<?= $page === 'ressource' ? 'article' : 'website' ?>">
+    <meta property="og:type" content="<?= ($page === 'ressource' || $page === 'glossaire') ? 'article' : 'website' ?>">
     <meta property="og:title" content="<?= e($pageTitle) ?>">
     <meta property="og:description" content="<?= e($metaDescription) ?>">
     <meta property="og:url" content="<?= e($canonicalUrl) ?>">
@@ -31,6 +31,8 @@
     <meta name="twitter:description" content="<?= e($metaDescription) ?>">
     <meta name="twitter:image" content="<?= e($metaImage) ?>">
     <meta name="twitter:image:alt" content="Paysage agricole wallon illustrant le portail citoyen MyAgri">
+    <link rel="alternate" href="<?= e($canonicalUrl) ?>" hreflang="fr-BE">
+    <meta property="article:published_time" content="<?= e(updatedAtIsoDate(isset($site['updated_at']) && is_string($site['updated_at']) ? $site['updated_at'] : '')) ?>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="application/ld+json"><?= json_encode($structuredData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR) ?></script>
