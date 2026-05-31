@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 declare(strict_types=1);
 
@@ -27,80 +27,75 @@ function currentPage(): string
  * @param array<string, mixed>|null $glossaryTerm
  * @return array{title:string,description:string,keywords:string}
  */
-/**
- * @param array<string, mixed> $site
- * @param array<string, mixed>|null $resource
- * @param array<string, mixed>|null $glossaryTerm
- * @return array{title:string,description:string,keywords:string}
- */
 function pageSeo(string $page, array $site, ?array $resource = null, ?array $glossaryTerm = null): array
 {
-    $siteTitle = isset($site[''title'']) && is_string($site[''title'']) ? $site[''title''] : ''MyAgri'';
+    $siteTitle = isset($site['title']) && is_string($site['title']) ? $site['title'] : 'MyAgri';
 
-    if ($page === ''filieres'') {
+    if ($page === 'filieres') {
         return [
-            ''title'' => ''Filieres agricoles en Wallonie - '' . $siteTitle,
-            ''description'' => ''Explorez les filieres agricoles wallonnes : grandes cultures, elevation, marai chage, diversification, enjeux et actions citoyennes.'',
-            ''keywords'' => ''filieres agricoles, wallonie, elevation, cultures, maraichage, diversification, agriculture durable'',
+            'title' => 'Filières agricoles en Wallonie | MyAgri',
+            'description' => 'Comprendre les filières agricoles wallonnes : grandes cultures, élevage, maraîchage, diversification, innovation et actions citoyennes.',
+            'keywords' => 'filières agricoles, agriculture wallonne, grandes cultures, élevage, maraîchage, diversification agricole',
         ];
     }
 
-    if ($page === ''ressources'') {
+    if ($page === 'ressources') {
         return [
-            ''title'' => ''Ressources agricoles pratiques - '' . $siteTitle,
-            ''description'' => ''Retrouvez des ressources pratiques : aides, formations, marches locaux, labels, consommation responsable et outils pedagogiques.'',
-            ''keywords'' => ''ressources agricoles, aides agricoles, marches locaux, labels, formation agricole, consommation responsable'',
+            'title' => 'Ressources agricoles pratiques | MyAgri',
+            'description' => 'Accès aux ressources pratiques sur les formations, marchés locaux, labels, consommation responsable, anti-gaspillage et parcours pédagogiques.',
+            'keywords' => 'ressources agricoles, aides agricoles, circuits courts, labels, consommation responsable, marché local',
         ];
     }
 
-    if ($page === ''faq'') {
+    if ($page === 'faq') {
         return [
-            ''title'' => ''FAQ citoyenne sur l''agriculture wallonne - '' . $siteTitle,
-            ''description'' => ''Reponses claires aux questions frequentes sur les prix agricoles, les circuits courts, la souverainete alimentaire et les actions citoyennes.'',
-            ''keywords'' => ''faq agriculture wallonne, questions agriculture, circuits courts, prix agricoles, souverainete alimentaire'',
+            'title' => 'FAQ agriculture wallonne | MyAgri',
+            'description' => 'Réponses claires sur les prix agricoles, les circuits courts, la souveraineté alimentaire et les actions citoyennes concrètes.',
+            'keywords' => 'FAQ agriculture wallonne, questions agriculture, circuits courts, prix agricoles, souveraineté alimentaire',
         ];
     }
 
-    if ($page === ''glossaire'' && is_array($glossaryTerm) && isset($glossaryTerm[''term'']) && is_string($glossaryTerm[''term''])) {
-        $termTitle = $glossaryTerm[''term''];
-        $termDescription = isset($glossaryTerm[''definition'']) && is_string($glossaryTerm[''definition''])
-            ? $glossaryTerm[''definition'']
-            : ''Definition et applications concretes.'';
+    if ($page === 'glossaire' && is_array($glossaryTerm) && isset($glossaryTerm['term']) && is_string($glossaryTerm['term'])) {
+        $termTitle = $glossaryTerm['term'];
+        $termDescription = isset($glossaryTerm['definition']) && is_string($glossaryTerm['definition'])
+            ? $glossaryTerm['definition']
+            : 'Définition et applications concrètes en agriculture.';
 
         return [
-            ''title'' => $termTitle . '' - Glossaire agricole citoyen - '' . $siteTitle,
-            ''description'' => $termDescription,
-            ''keywords'' => strtolower($termTitle) . '', glossaire agricole, agriculture wallonne, definitions agricoles'',
+            'title' => $termTitle . ' | Glossaire agricole | MyAgri',
+            'description' => $termDescription,
+            'keywords' => strtolower($termTitle) . ', glossaire agricole, agriculture wallonne, définition agricole, termes de l\'agriculture',
         ];
     }
 
-    if ($page === ''glossaire'') {
+    if ($page === 'glossaire') {
         return [
-            ''title'' => ''Glossaire agricole citoyen - '' . $siteTitle,
-            ''description'' => ''Comprendre les mots cles de l\'agriculture wallonne : agroecologie, rotation, circuit court, biodiversite, filiere et transition.'',
-            ''keywords'' => ''glossaire agricole, vocabulaire agriculture, definitions agriculture, agroecologie, circuit court, wallonie'',
+            'title' => 'Glossaire agricole citoyen | MyAgri',
+            'description' => 'Décryptage des mots-clés de l\'agriculture : agroécologie, rotation, circuit court, filière, biodiversité et transition.',
+            'keywords' => 'glossaire agricole, vocabulaire agriculture, définitions agriculture, agroécologie, circuit court, wallonie',
         ];
     }
 
-    if ($page === ''ressource'' && is_array($resource)) {
-        $resourceTitle = isset($resource[''title'']) && is_string($resource[''title'']) ? $resource[''title''] : ''Ressource'';
-        $resourceDescription = isset($resource[''description'']) && is_string($resource[''description''])
-            ? $resource[''description'']
-            : ''Ressource pratique du portail MyAgri.'';
+    if ($page === 'ressource' && is_array($resource)) {
+        $resourceTitle = isset($resource['title']) && is_string($resource['title']) ? $resource['title'] : 'Ressource';
+        $resourceDescription = isset($resource['description']) && is_string($resource['description'])
+            ? $resource['description']
+            : 'Ressource pratique du portail MyAgri.';
 
         return [
-            ''title'' => $resourceTitle . '' - '' . $siteTitle,
-            ''description'' => $resourceDescription,
-            ''keywords'' => strtolower($resourceTitle) . '', agriculture wallonne, ressource pratique, myagri'',
+            'title' => $resourceTitle . ' | MyAgri',
+            'description' => $resourceDescription,
+            'keywords' => strtolower($resourceTitle) . ', agriculture wallonne, ressource pratique, guide agricole',
         ];
     }
 
     return [
-        ''title'' => $siteTitle,
-        ''description'' => ''Portail citoyen pour comprendre l\'agriculture wallonne : alimentation, environnement, metiers, filieres et ressources utiles.'',
-        ''keywords'' => ''agriculture wallonne, portail citoyen, alimentation locale, environnement, filieres agricoles, ressources'',
+        'title' => 'MyAgri | Portail citoyen de l\'agriculture wallonne',
+        'description' => 'Comprendre l\'agriculture wallonne : alimentation, environnement, métiers, filières, labels, ressources pratiques et glossaire citoyen.',
+        'keywords' => 'agriculture wallonne, portail citoyen, alimentation locale, environnement, filières agricoles, ressources',
     ];
 }
+
 /**
  * @param array<string, mixed> $site
  * @param array<int, array<string, mixed>> $sectors
@@ -177,12 +172,12 @@ function pageStructuredData(
             'about' => [
                 'agriculture wallonne',
                 'alimentation locale',
-                'filiÃ¨res agricoles',
+                'filières agricoles',
                 'ressources citoyennes',
             ],
             'audience' => [
                 '@type' => 'Audience',
-                'audienceType' => 'Citoyens, familles, enseignants, collectivitÃ©s et acteurs agricoles en Wallonie',
+                'audienceType' => 'Citoyens, familles, enseignants, collectivités et acteurs agricoles en Wallonie',
             ],
             'inLanguage' => 'fr-BE',
             'datePublished' => $dateModified,
@@ -281,38 +276,38 @@ function resourceFaqPairs(array $resource, int $limit = 6): array
     }
 
     if (isset($resource['for']) && is_string($resource['for']) && trim($resource['for']) !== '') {
-        $add('Qui peut sâ€™appuyer sur cette ressource ?', trim($resource['for']));
+        $add('Qui peut s’en servir ?', trim($resource['for']));
     }
 
     if (isset($resource['overview']) && is_string($resource['overview']) && trim($resource['overview']) !== '') {
-        $add('Quel est lâ€™objectif de cette ressource ?', trim($resource['overview']));
+        $add('Quel est l’objectif de cette ressource ?', trim($resource['overview']));
     }
 
     if (is_array($resource['steps'] ?? null) && $resource['steps'] !== []) {
         $steps = array_slice(array_values(array_filter($resource['steps'], 'is_string')), 0, 3);
         if ($steps !== []) {
-            $add('Quelle marche a suivre ?', implode(' / ', array_map('trim', $steps)));
+            $add('Quelle démarche suivre ?', implode(' / ', array_map('trim', $steps)));
         }
     }
 
     if (is_array($resource['checklist'] ?? null) && $resource['checklist'] !== []) {
         $items = array_slice(array_values(array_filter($resource['checklist'], 'is_string')), 0, 3);
         if ($items !== []) {
-            $add('Quels points verifier en premier ?', 'Principaux points : ' . implode(' ; ', array_map('trim', $items)));
+            $add('Quels sont les points clés ?', 'Points principaux : ' . implode(' ; ', array_map('trim', $items)));
         }
     }
 
     if (is_array($resource['timeline'] ?? null) && $resource['timeline'] !== []) {
         $items = array_slice(array_values(array_filter($resource['timeline'], 'is_string')), 0, 3);
         if ($items !== []) {
-            $add('Comment suit-on le calendrier ?', implode(' > ', array_map('trim', $items)));
+            $add('Comment suivre le calendrier ?', implode(' > ', array_map('trim', $items)));
         }
     }
 
     if (is_array($resource['support_contacts'] ?? null) && $resource['support_contacts'] !== []) {
         $items = array_slice(array_values(array_filter($resource['support_contacts'], 'is_string')), 0, 2);
         if ($items !== []) {
-            $add('Qui peut accompagner ?', implode(' ; ', array_map('trim', $items)));
+            $add('Qui accompagne sur ce sujet ?', implode(' ; ', array_map('trim', $items)));
         }
     }
 
@@ -333,14 +328,21 @@ function glossaryTermFaqPairs(array $glossaryTerm, int $limit = 4): array
 
     $pairs = [
         [
-            'question' => sprintf('Que signifie le terme \"%s\" ?', $term),
+            'question' => sprintf('Que signifie le terme "%s" ?', $term),
             'answer' => $definition,
         ],
         [
-            'question' => 'Pourquoi ce terme est-il important pour une politique agricole ?',
-            'answer' => 'Il permet de comprendre un choix de pratique et de mesurer son impact.',
+            'question' => 'Pourquoi ce terme est-il important pour une pratique agricole durable ?',
+            'answer' => 'Parce qu’il permet de mieux comprendre les choix techniques, les impacts environnementaux et les effets économiques.',
         ],
     ];
+
+    if (count($pairs) < $limit) {
+        $pairs[] = [
+            'question' => 'Dans quel contexte ce terme est-il le plus utilisé ?',
+            'answer' => 'Ce terme est fréquemment utilisé dans les échanges entre agriculteurs, transformateurs, collectivités et citoyen.ne.s.',
+        ];
+    }
 
     return array_slice($pairs, 0, $limit);
 }
@@ -418,7 +420,7 @@ function breadcrumbItems(string $page, ?array $resource = null, ?array $glossary
     ];
 
     if ($page === 'filieres') {
-        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'FiliÃ¨res', 'item' => $baseUrl . '/?page=filieres'];
+        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Filières', 'item' => $baseUrl . '/?page=filieres'];
     } elseif ($page === 'ressources') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Ressources', 'item' => $baseUrl . '/?page=ressources'];
     } elseif ($page === 'faq') {
@@ -457,7 +459,7 @@ function sectorItemList(array $sectors, string $baseUrl): array
         $items[] = [
             '@type' => 'ListItem',
             'position' => $position + 1,
-            'name' => isset($sector['label']) && is_string($sector['label']) ? $sector['label'] : 'FiliÃ¨re agricole',
+            'name' => isset($sector['label']) && is_string($sector['label']) ? $sector['label'] : 'Filière agricole',
             'description' => isset($sector['summary']) && is_string($sector['summary']) ? $sector['summary'] : '',
             'url' => $baseUrl . '/?page=filieres',
         ];
@@ -466,7 +468,7 @@ function sectorItemList(array $sectors, string $baseUrl): array
     return [
         '@type' => 'ItemList',
         '@id' => $baseUrl . '/?page=filieres#sector-list',
-        'name' => 'FiliÃ¨res agricoles en Wallonie',
+        'name' => 'Filières agricoles en Wallonie',
         'itemListElement' => $items,
     ];
 }
@@ -492,7 +494,7 @@ function resourceItemList(array $resources, string $baseUrl): array
     return [
         '@type' => 'ItemList',
         '@id' => $baseUrl . '/?page=ressources#resource-list',
-        'name' => 'Ressources pratiques sur lâ€™agriculture wallonne',
+        'name' => 'Ressources pratiques sur l\'agriculture wallonne',
         'itemListElement' => $items,
     ];
 }
@@ -606,17 +608,17 @@ function updatedAtIsoDate(string $updatedAt): string
 {
     $months = [
         'janvier' => '01',
-        'fÃ©vrier' => '02',
+        'février' => '02',
         'mars' => '03',
         'avril' => '04',
         'mai' => '05',
         'juin' => '06',
         'juillet' => '07',
-        'aoÃ»t' => '08',
+        'août' => '08',
         'septembre' => '09',
         'octobre' => '10',
         'novembre' => '11',
-        'dÃ©cembre' => '12',
+        'décembre' => '12',
     ];
 
     if (preg_match('/^(\d{1,2})\s+([[:alpha:]]+)\s+(\d{4})$/u', mb_strtolower($updatedAt), $matches) === 1) {
@@ -653,87 +655,24 @@ function glossarySlug(string $term): string
         return '';
     }
 
-    $normalized = html_entity_decode($normalized, ENT_QUOTES | ENT_HTML5, 'UTF-8');
-    $normalized = strtolower($normalized);
+    if (!function_exists('iconv')) {
+        $normalized = mb_strtolower($normalized);
+    } else {
+        $normalized = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $normalized);
+        if ($normalized === false) {
+            $normalized = mb_strtolower($term);
+        } else {
+            $normalized = mb_strtolower((string) $normalized);
+        }
+    }
 
-    $utf8Map = [
-        "\xC3\x80" => 'a',
-        "\xC3\x81" => 'a',
-        "\xC3\x82" => 'a',
-        "\xC3\x83" => 'a',
-        "\xC3\x84" => 'a',
-        "\xC3\x85" => 'a',
-        "\xC3\x89" => 'e',
-        "\xC3\x88" => 'e',
-        "\xC3\x8A" => 'e',
-        "\xC3\x8B" => 'e',
-        "\xC3\x8E" => 'i',
-        "\xC3\x8F" => 'i',
-        "\xC3\x8F" => 'i',
-        "\xC3\x9C" => 'u',
-        "\xC3\x91" => 'n',
-        "\xC3\x92" => 'o',
-        "\xC3\x93" => 'o',
-        "\xC3\x94" => 'o',
-        "\xC3\x95" => 'o',
-        "\xC3\x96" => 'o',
-        "\xC3\x98" => 'o',
-        "\xC3\x99" => 'u',
-        "\xC3\x9A" => 'u',
-        "\xC3\x9B" => 'u',
-        "\xC3\x9C" => 'u',
-        "\xC3\x9F" => 'ss',
-        "\xC3\xA0" => 'a',
-        "\xC3\xA1" => 'a',
-        "\xC3\xA2" => 'a',
-        "\xC3\xA3" => 'a',
-        "\xC3\xA4" => 'a',
-        "\xC3\xA5" => 'a',
-        "\xC3\xA7" => 'c',
-        "\xC3\xA8" => 'e',
-        "\xC3\xA9" => 'e',
-        "\xC3\xAA" => 'e',
-        "\xC3\xAB" => 'e',
-        "\xC3\xAC" => 'i',
-        "\xC3\xAD" => 'i',
-        "\xC3\xAE" => 'i',
-        "\xC3\xAF" => 'i',
-        "\xC3\xB0" => 'd',
-        "\xC3\xB1" => 'n',
-        "\xC3\xB2" => 'o',
-        "\xC3\xB3" => 'o',
-        "\xC3\xB4" => 'o',
-        "\xC3\xB5" => 'o',
-        "\xC3\xB6" => 'o',
-        "\xC3\xB8" => 'o',
-        "\xC3\xB9" => 'u',
-        "\xC3\xBA" => 'u',
-        "\xC3\xBB" => 'u',
-        "\xC3\xBC" => 'u',
-        "\xC5\x92" => 'oe',
-        "\xC5\x93" => 'oe',
-        "\xC3\x86" => 'ae',
-        "\xC3\xA6" => 'ae',
-        "\xE2\x80\x99" => '-',
-        "\xE2\x80\x9C" => '',
-        "\xE2\x80\x9D" => '',
-        "\xE2\x80\x93" => '-',
-        "\xE2\x80\x94" => '-',
-        "\xE2\x80\xA6" => '-',
-        "\xC2\xA0" => ' ',
-        'ï¿½' => 'a',
-        'ï¿½' => 'a',
-    ];
-
-    $normalized = strtr($normalized, $utf8Map);
-
-    $slug = preg_replace('/[^a-z0-9]+/i', '-', $normalized);
-    if (!is_string($slug)) {
+    $normalized = preg_replace('/[^a-z0-9]+/i', '-', $normalized);
+    if (!is_string($normalized)) {
         return '';
     }
 
-    $slug = preg_replace('/-+/', '-', $slug);
-    return trim($slug, '-');
+    $normalized = preg_replace('/-+/', '-', $normalized);
+    return trim($normalized, '-');
 }
 
 /**
@@ -809,6 +748,7 @@ function glossaryTermStructuredData(array $glossaryTerm, string $canonicalUrl): 
 {
     $term = isset($glossaryTerm['term']) && is_string($glossaryTerm['term']) ? $glossaryTerm['term'] : 'Terme';
     $definition = isset($glossaryTerm['definition']) && is_string($glossaryTerm['definition']) ? $glossaryTerm['definition'] : '';
+    $base = rtrim($canonicalUrl, '#');
 
     return [
         '@type' => 'DefinedTerm',
@@ -820,12 +760,11 @@ function glossaryTermStructuredData(array $glossaryTerm, string $canonicalUrl): 
         'inDefinedTermSet' => [
             '@type' => 'DefinedTermSet',
             'name' => 'Glossaire agricole citoyen',
-            '@id' => rtrim(str_replace('#definedTerm', '', $canonicalUrl), '#') . '#glossary',
-            'url' => rtrim(str_replace('#definedTerm', '', $canonicalUrl), '#') . '#glossary',
+            '@id' => $base . '#glossary',
+            'url' => $base . '#glossary',
         ],
     ];
 }
-
 
 /**
  * @param array<int, mixed> $items
@@ -879,7 +818,7 @@ function splitTextIntoParagraphs(string $text): array
         return $paragraphs;
     }
 
-    $sentences = preg_split('/(?<=[\.\?\!\x{2026}])\s+(?=[Â«A-Za-zÃ€-Ã¿0-9])/u', $text, -1, PREG_SPLIT_NO_EMPTY);
+    $sentences = preg_split('/(?<=[\.\?\!\x{2026}])\s+(?=[«A-Za-zÀ-ÖØ-öø-ÿ0-9])/u', $text, -1, PREG_SPLIT_NO_EMPTY);
     if (!is_array($sentences) || count($sentences) <= 1) {
         return [$text];
     }
@@ -906,8 +845,3 @@ function siteBaseUrl(): string
 
     return 'https://myagri.be';
 }
-
-
-
-
-
