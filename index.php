@@ -76,6 +76,9 @@ $structuredData = pageStructuredData($page, $site, $sectors, $resources, $faq, $
     <meta name="keywords" content="<?= e($metaKeywords) ?>">
     <meta name="author" content="MyAgri">
     <meta name="theme-color" content="#1f7a45">
+    <meta name="language" content="fr-BE">
+    <meta name="geo.region" content="BE-WAL">
+    <meta name="geo.placename" content="Wallonie">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="<?= e($canonicalUrl) ?>">
     <link rel="preload" as="image" href="assets/img/hero.png">
