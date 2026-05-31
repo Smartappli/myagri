@@ -128,6 +128,14 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         ];
     }
 
+    if ($page === 'ressource') {
+        return [
+            'title' => 'Ressource introuvable | MyAgri',
+            'description' => 'La fiche de ressource demandÃ©e n\'existe pas ou n\'est pas disponible pour le moment.',
+            'keywords' => 'ressource introuvable, agriculture wallonne, portail citoyen',
+        ];
+    }
+
     return [
         'title' => 'MyAgri | Portail citoyen de l\'agriculture wallonne',
         'description' => 'Comprendre l\'agriculture wallonne : alimentation, environnement, métiers, filières, labels, ressources pratiques et glossaire citoyen.',
@@ -197,7 +205,7 @@ function pageStructuredData(
                 'containedInPlace' => [
                     '@type' => 'Country',
                     'name' => $siteGeo['country'],
-                    'sameAs' => 'https://en.wikipedia.org/wiki/' . rawurlencode($siteGeo['country']),
+                    'sameAs' => 'https://en.wikipedia.org/wiki/Belgium',
                 ],
             ],
             'location' => $geoLocation,
@@ -709,7 +717,11 @@ function updatedAtIsoDate(string $updatedAt): string
 
 function canonicalPath(string $page, string $resourceId = '', string $glossaryTerm = ''): string
 {
-    if ($page === 'ressource' && $resourceId !== '') {
+    if ($page === 'ressource') {
+        if ($resourceId === '') {
+            return '/?page=ressources';
+        }
+
         return '/?page=ressource&resource=' . rawurlencode($resourceId);
     }
 

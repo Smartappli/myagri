@@ -68,7 +68,7 @@ if ($page === 'glossaire') {
     $selectedGlossaryTerm = $glossaryTermSlug !== '' ? glossaryTermBySlug($glossary, glossarySlug($glossaryTermSlug)) : null;
 }
 
-$isNotFoundResource = $page === 'ressource' && $resourceId !== '' && !is_array($selectedResource);
+$isNotFoundResource = $page === 'ressource' && !is_array($selectedResource);
 $isNotFoundGlossaryTerm = $page === 'glossaire' && $glossaryTermSlug !== '' && !is_array($selectedGlossaryTerm);
 $shouldIndex = $shouldIndex && !$isInvalidPage && !$isNotFoundResource && !$isNotFoundGlossaryTerm;
 if (!$shouldIndex) {
@@ -76,7 +76,11 @@ if (!$shouldIndex) {
 }
 
 $seo = pageSeo($page, $site, is_array($selectedResource) ? $selectedResource : null, is_array($selectedGlossaryTerm) ? $selectedGlossaryTerm : null);
-$canonicalUrl = siteBaseUrl() . canonicalPath($page, $resourceId, is_array($selectedGlossaryTerm) && isset($selectedGlossaryTerm['term']) && is_string($selectedGlossaryTerm['term']) ? glossarySlug($selectedGlossaryTerm['term']) : $glossaryTermSlug);
+$canonicalResource = is_array($selectedResource) && $resourceId !== '' ? $resourceId : '';
+$canonicalGlossaryTerm = is_array($selectedGlossaryTerm) && isset($selectedGlossaryTerm['term']) && is_string($selectedGlossaryTerm['term'])
+    ? glossarySlug($selectedGlossaryTerm['term'])
+    : '';
+$canonicalUrl = siteBaseUrl() . canonicalPath($page, $canonicalResource, $canonicalGlossaryTerm);
 $pageTitle = $seo['title'];
 $metaDescription = $seo['description'];
 $metaKeywords = $seo['keywords'];
