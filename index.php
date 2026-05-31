@@ -84,6 +84,8 @@ $structuredData = pageStructuredData($page, $site, $sectors, $resources, $faq, $
     <link rel="preload" as="image" href="assets/img/hero.png">
     <link rel="sitemap" type="application/xml" href="<?= e(siteBaseUrl() . '/sitemap.xml') ?>">
     <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms.txt') ?>" title="Résumé MyAgri pour moteurs génératifs">
+    <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms-full.txt') ?>" title="Corpus MyAgri pour moteurs génératifs">
+    <link rel="alternate" type="application/json" href="<?= e(siteBaseUrl() . '/api.php') ?>" title="Données structurées MyAgri">
     <meta property="og:locale" content="fr_BE">
     <meta property="og:type" content="<?= $page === 'ressource' ? 'article' : 'website' ?>">
     <meta property="og:title" content="<?= e($pageTitle) ?>">
@@ -91,10 +93,13 @@ $structuredData = pageStructuredData($page, $site, $sectors, $resources, $faq, $
     <meta property="og:url" content="<?= e($canonicalUrl) ?>">
     <meta property="og:site_name" content="<?= e($site['title']) ?>">
     <meta property="og:image" content="<?= e($metaImage) ?>">
+    <meta property="og:image:alt" content="Paysage agricole wallon illustrant le portail citoyen MyAgri">
+    <meta property="article:modified_time" content="<?= e(updatedAtIsoDate(isset($site['updated_at']) && is_string($site['updated_at']) ? $site['updated_at'] : '')) ?>">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?= e($pageTitle) ?>">
     <meta name="twitter:description" content="<?= e($metaDescription) ?>">
     <meta name="twitter:image" content="<?= e($metaImage) ?>">
+    <meta name="twitter:image:alt" content="Paysage agricole wallon illustrant le portail citoyen MyAgri">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="application/ld+json"><?= json_encode($structuredData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR) ?></script>
