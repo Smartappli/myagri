@@ -17,7 +17,7 @@ function currentPage(): string
         return 'accueil';
     }
 
-    $allowed = ['accueil', 'filieres', 'ressources', 'ressource'];
+    $allowed = ['accueil', 'filieres', 'ressources', 'faq', 'glossaire', 'ressource'];
     return in_array($page, $allowed, true) ? $page : 'accueil';
 }
 
@@ -43,6 +43,22 @@ function pageSeo(string $page, array $site, ?array $resource = null): array
             'title' => 'Ressources agricoles pratiques — ' . $siteTitle,
             'description' => 'Retrouvez des ressources pratiques : aides, formations, marchés locaux, labels, consommation responsable et outils pédagogiques.',
             'keywords' => 'ressources agricoles, aides agricoles, marchés locaux, labels, formation agricole, consommation responsable',
+        ];
+    }
+
+    if ($page === 'faq') {
+        return [
+            'title' => 'FAQ citoyenne sur l’agriculture wallonne — ' . $siteTitle,
+            'description' => 'Réponses claires aux questions fréquentes sur les prix agricoles, les circuits courts, la souveraineté alimentaire et les actions citoyennes.',
+            'keywords' => 'faq agriculture wallonne, questions agriculture, circuits courts, prix agricoles, souveraineté alimentaire',
+        ];
+    }
+
+    if ($page === 'glossaire') {
+        return [
+            'title' => 'Glossaire agricole citoyen — ' . $siteTitle,
+            'description' => 'Comprendre les mots clés de l’agriculture wallonne : agroécologie, rotation, circuit court, biodiversité, filière et transition.',
+            'keywords' => 'glossaire agricole, vocabulaire agriculture, définitions agriculture, agroécologie, circuit court, wallonie',
         ];
     }
 
@@ -151,7 +167,13 @@ function pageStructuredData(
 
     if ($page === 'ressources') {
         $graph[] = resourceItemList($resources, $baseUrl);
+    }
+
+    if ($page === 'faq') {
         $graph[] = faqStructuredData($faq, $canonicalUrl);
+    }
+
+    if ($page === 'glossaire') {
         $graph[] = glossaryStructuredData($glossary, $canonicalUrl);
     }
 
@@ -167,8 +189,12 @@ function pageStructuredData(
 
 function pageSchemaType(string $page): string
 {
-    if ($page === 'filieres' || $page === 'ressources') {
+    if ($page === 'filieres' || $page === 'ressources' || $page === 'glossaire') {
         return 'CollectionPage';
+    }
+
+    if ($page === 'faq') {
+        return 'FAQPage';
     }
 
     if ($page === 'ressource') {
@@ -198,6 +224,10 @@ function breadcrumbItems(string $page, ?array $resource = null): array
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Filières', 'item' => $baseUrl . '/?page=filieres'];
     } elseif ($page === 'ressources') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Ressources', 'item' => $baseUrl . '/?page=ressources'];
+    } elseif ($page === 'faq') {
+        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'FAQ', 'item' => $baseUrl . '/?page=faq'];
+    } elseif ($page === 'glossaire') {
+        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Glossaire', 'item' => $baseUrl . '/?page=glossaire'];
     } elseif ($page === 'ressource') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Ressources', 'item' => $baseUrl . '/?page=ressources'];
         $items[] = [
