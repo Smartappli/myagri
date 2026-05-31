@@ -136,13 +136,14 @@ $structuredData = pageStructuredData($page, $site, $sectors, $resources, $faq, $
             </nav>
         </div>
         <section class="hero" aria-labelledby="hero-title">
-            <div class="hero-visual" role="img" aria-label="MyAgri rapproche les citoyens du monde agricole pour comprendre, échanger et construire une agriculture durable et locale.">
+            <figure class="hero-visual">
+                <img src="assets/img/hero.png" alt="MyAgri rapproche les citoyens du monde agricole pour comprendre, échanger et construire une agriculture durable et locale.">
                 <div class="sr-only">
                     <h1 id="hero-title"><?= e($site['title']) ?></h1>
                     <p><?= e($site['subtitle']) ?></p>
                     <p>Dernière mise à jour : <?= e($site['updated_at']) ?></p>
                 </div>
-            </div>
+            </figure>
         </section>
     </div>
 </header>
