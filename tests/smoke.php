@@ -38,6 +38,8 @@ $structuredData = pageStructuredData('ressources', $data['site'], $data['sectors
 assertTrue(($structuredData['@context'] ?? null) === 'https://schema.org', 'structured data context exists');
 assertTrue(is_array($structuredData['@graph'] ?? null), 'structured data graph exists');
 assertTrue(pageKeywordList('agriculture, wallonie, agro') === ['agriculture', 'wallonie', 'agro'], 'keyword parser works');
+assertTrue(is_file(__DIR__ . '/../assets/css/tailwind-local.css'), 'local Tailwind utility CSS exists');
+assertTrue(is_file(__DIR__ . '/../assets/img/logo-myagri.svg'), 'MyAgri logo SVG exists');
 
 $manifestPath = __DIR__ . '/../manifest.json';
 assertTrue(is_file($manifestPath), 'PWA manifest exists');

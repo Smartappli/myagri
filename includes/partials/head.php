@@ -58,7 +58,7 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
     <link rel="alternate" href="<?= e($canonicalUrl) ?>" hreflang="fr">
     <link rel="alternate" href="<?= e($canonicalUrl) ?>" hreflang="x-default">
     <meta property="article:published_time" content="<?= e(updatedAtIsoDate(isset($site['updated_at']) && is_string($site['updated_at']) ? $site['updated_at'] : '')) ?>">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/tailwind-local.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="application/ld+json"><?= json_encode($structuredData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR) ?></script>
     <!-- Matomo -->
@@ -83,6 +83,9 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
 <header class="site-hero relative overflow-hidden">
     <div class="container">
         <div class="header-top">
+            <a class="brand-link" href="?page=accueil" aria-label="Accueil MyAgri">
+                <img src="/assets/img/logo-myagri.svg" alt="MyAgri">
+            </a>
             <nav aria-label="Navigation principale">
                 <ul class="nav-list shadow-soft">
                     <li><a href="?page=accueil"<?= $page === 'accueil' ? ' aria-current="page"' : '' ?>>Accueil</a></li>

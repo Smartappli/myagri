@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'myagri-pwa-v2026-06-01';
+const CACHE_VERSION = 'myagri-pwa-v2026-06-01-logo-local-tailwind';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -11,8 +11,11 @@ const PRECACHE_URLS = [
     '/?page=glossaire',
     '/offline.html',
     '/manifest.json',
+    '/assets/css/tailwind-local.css',
     '/assets/css/style.css',
     '/assets/js/main.js',
+    '/assets/img/logo-myagri.svg',
+    '/assets/img/og-default.svg',
     '/assets/img/hero.png',
     '/assets/img/favicon-32.png',
     '/assets/img/apple-touch-icon.png',
