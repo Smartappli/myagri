@@ -7,7 +7,7 @@ function getPortalData(): array
 {
     return [
         'site' => [
-            'title' => 'MyAgri — Agriculture wallonne expliquée',
+            'title' => 'MyAgri — L\'agriculture wallonne expliquée',
             'subtitle' => 'Un portail citoyen pour comprendre les filières, les métiers, les saisons, les labels et les gestes concrets qui relient alimentation, territoire et environnement.',
             'updated_at' => '1 juin 2026',
             'geo' => [

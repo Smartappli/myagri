@@ -196,7 +196,7 @@ function pageStructuredData(
             '@id' => $baseUrl . '/#organization',
             'name' => 'MyAgri',
             'url' => $baseUrl,
-            'logo' => $baseUrl . '/assets/img/og-default.svg',
+            'logo' => $baseUrl . '/assets/img/logo-myagri.svg',
             'areaServed' => [
                 '@type' => 'AdministrativeArea',
                 'name' => $siteGeo['region'],
@@ -666,7 +666,7 @@ function resourceArticleStructuredData(
             'name' => $siteTitle,
             'logo' => [
                 '@type' => 'ImageObject',
-                'url' => $baseUrl . '/assets/img/og-default.svg',
+                'url' => $baseUrl . '/assets/img/logo-myagri.svg',
             ],
         ],
         'dateModified' => $dateModified,

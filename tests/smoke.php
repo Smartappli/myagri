@@ -40,6 +40,11 @@ assertTrue(is_array($structuredData['@graph'] ?? null), 'structured data graph e
 assertTrue(pageKeywordList('agriculture, wallonie, agro') === ['agriculture', 'wallonie', 'agro'], 'keyword parser works');
 assertTrue(is_file(__DIR__ . '/../assets/css/tailwind-local.css'), 'local Tailwind utility CSS exists');
 assertTrue(is_file(__DIR__ . '/../assets/img/logo-myagri.svg'), 'MyAgri logo SVG exists');
+$headMarkup = (string) file_get_contents(__DIR__ . '/../includes/partials/head.php');
+$tailwindCdn = 'cdn.' . 'tailwindcss.com';
+assertTrue(str_contains($headMarkup, 'assets/css/tailwind-local.css'), 'head references local Tailwind CSS');
+assertTrue(!str_contains($headMarkup, $tailwindCdn), 'head does not reference Tailwind CDN');
+assertTrue(str_contains($headMarkup, 'logo-myagri.svg'), 'head references MyAgri logo');
 
 $manifestPath = __DIR__ . '/../manifest.json';
 assertTrue(is_file($manifestPath), 'PWA manifest exists');
