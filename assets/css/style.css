@@ -56,7 +56,7 @@ header {
 .brand-link {
     display: inline-flex;
     align-items: center;
-    min-width: 268px;
+    min-width: 330px;
     padding: 0.28rem 0.35rem;
     border-radius: 14px;
     text-decoration: none;
@@ -72,8 +72,8 @@ header {
 
 .brand-link img {
     display: block;
-    width: 310px;
-    max-width: 48vw;
+    width: 390px;
+    max-width: 52vw;
     height: auto;
 }
 
@@ -753,8 +753,8 @@ footer {
     }
 
     .brand-link img {
-        width: 280px;
-        max-width: 88vw;
+        width: 350px;
+        max-width: 90vw;
     }
 
     .nav-list a {
