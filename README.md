@@ -12,6 +12,7 @@ Portail citoyen en **PHP** pour informer le grand public sur l'agriculture en Wa
 - Tracking Matomo intégré sur toutes les pages du portail (`siteId` 5).
 - Chaque ressource utile dispose d'une page individuelle (`?page=ressource&resource=<id>`).
 - Couche repository (`includes/portal_repository.php`) connectée en MySQL.
+- Tailwind servi localement via `assets/css/tailwind-local.css` pour supprimer la dépendance au CDN.
 - SEO/GSO renforcé : balises meta dynamiques, Open Graph/Twitter, canonical, JSON-LD enrichi, `robots.txt`, `sitemap.xml`, `llms.txt`.
 - PWA installable : `manifest.json`, service worker `sw.js`, page hors ligne `offline.html`, icônes Android/iOS et cache des pages principales.
 
@@ -62,6 +63,11 @@ Le champ `payload_json` doit contenir un JSON compatible avec la structure atten
 - Le service worker `sw.js` met en cache les pages principales, les assets locaux et une page de secours hors ligne.
 - Les icônes PWA sont dans `assets/img/` (`pwa-icon-192.png`, `pwa-icon-512.png`, `pwa-maskable-512.png`, `apple-touch-icon.png`).
 - En production, servez le site en HTTPS pour permettre l'installation sur mobile et desktop.
+
+## Design
+
+- Le logo principal est disponible en SVG dans `assets/img/logo-myagri.svg`.
+- L'image de partage par défaut est `assets/img/og-default.svg`.
 
 Pages utiles :
 
