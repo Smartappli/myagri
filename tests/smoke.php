@@ -20,6 +20,20 @@ assertTrue(count($data['sectors']) >= 3, 'at least 3 sectors');
 assertTrue(count($data['provinces']) === 5, 'five walloon provinces listed');
 assertTrue(count($data['glossary']) >= 80, 'expanded glossary has at least 80 terms');
 assertTrue(isset($data['dossiers']) && is_array($data['dossiers']) && count($data['dossiers']) >= 3, 'citizen dossiers exist');
+foreach ($data['dossiers'] as $dossier) {
+    assertTrue(is_array($dossier), 'dossier is an array');
+    assertTrue(count($dossier['learning_objectives'] ?? []) >= 4, 'dossier has learning objectives');
+    assertTrue(count($dossier['pedagogical_use'] ?? []) >= 4, 'dossier has pedagogical use guidance');
+    assertTrue(count($dossier['activity_kit'] ?? []) >= 4, 'dossier has activity kit');
+    assertTrue(count($dossier['vocabulary'] ?? []) >= 8, 'dossier has linked vocabulary');
+    foreach (($dossier['chapters'] ?? []) as $chapter) {
+        assertTrue(is_array($chapter), 'dossier chapter is an array');
+        assertTrue(count($chapter['pedagogical_sequence'] ?? []) >= 4, 'chapter has pedagogical sequence');
+        assertTrue(isset($chapter['workshop']) && is_array($chapter['workshop']), 'chapter has guided workshop');
+        assertTrue(count($chapter['discussion_questions'] ?? []) >= 3, 'chapter has discussion questions');
+        assertTrue(count($chapter['teacher_notes'] ?? []) >= 3, 'chapter has teacher notes');
+    }
+}
 
 $_GET['page'] = 'filieres';
 assertTrue(currentPage() === 'filieres', 'known page accepted');
