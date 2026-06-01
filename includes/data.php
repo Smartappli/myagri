@@ -171,6 +171,10 @@ function getPortalData(): array
                 'a' => 'Il faut distinguer témoignage, donnée officielle, argument commercial et conseil technique. Pour une décision administrative, sanitaire ou financière, il est préférable de confirmer l’information auprès de l’organisme compétent.',
             ],
             [
+                'q' => 'Quelle est la différence entre origine locale et transformation locale ?',
+                'a' => 'L’origine locale indique où la matière première a été produite. La transformation locale indique où elle a été préparée, conditionnée ou cuisinée. Pour comprendre l’impact d’un produit, il faut idéalement regarder les deux informations.',
+            ],
+            [
                 'q' => 'Pourquoi les pratiques agricoles varient-elles d’une région à l’autre ?',
                 'a' => 'Les choix techniques dépendent du climat, des sols, du relief, des filières présentes et des débouchés économiques locaux.',
             ],
