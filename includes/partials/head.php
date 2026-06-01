@@ -91,6 +91,7 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
                     <li><a href="?page=accueil"<?= $page === 'accueil' ? ' aria-current="page"' : '' ?>>Accueil</a></li>
                     <li><a href="?page=filieres"<?= $page === 'filieres' ? ' aria-current="page"' : '' ?>>Filières</a></li>
                     <li><a href="?page=ressources"<?= $page === 'ressources' ? ' aria-current="page"' : '' ?>>Ressources</a></li>
+                    <li><a href="?page=dossiers"<?= in_array($page, ['dossiers', 'dossier'], true) ? ' aria-current="page"' : '' ?>>Dossiers</a></li>
                     <li><a href="?page=faq"<?= $page === 'faq' ? ' aria-current="page"' : '' ?>>FAQ</a></li>
                     <li><a href="?page=glossaire"<?= $page === 'glossaire' ? ' aria-current="page"' : '' ?>>Glossaire</a></li>
                 </ul>

@@ -117,6 +117,9 @@ $pageTitle = $seo['title'];
 $metaDescription = $seo['description'];
 $metaKeywords = $seo['keywords'];
 $metaImage = siteBaseUrl() . '/assets/img/hero.png';
+if ($page === 'dossier' && is_array($selectedDossier) && isset($selectedDossier['illustration']) && is_string($selectedDossier['illustration'])) {
+    $metaImage = siteBaseUrl() . $selectedDossier['illustration'];
+}
 $structuredData = pageStructuredData(
     $page,
     $site,
