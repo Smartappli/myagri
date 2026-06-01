@@ -15,6 +15,12 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
     <meta name="keywords" content="<?= e($metaKeywords) ?>">
     <meta name="author" content="MyAgri">
     <meta name="theme-color" content="#1f7a45">
+    <meta name="application-name" content="MyAgri">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="MyAgri">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="msapplication-TileColor" content="#1f7a45">
     <meta name="language" content="fr-BE">
     <meta name="geo.region" content="<?= e($siteGeo['region_code']) ?>">
     <meta name="geo.placename" content="<?= e($siteGeo['region']) ?>">
@@ -23,6 +29,9 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
     <meta name="geo.country" content="<?= e($siteGeo['country_code']) ?>">
     <meta name="robots" content="<?= e($robotsDirective) ?>">
     <link rel="canonical" href="<?= e($canonicalUrl) ?>">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
     <link rel="sitemap" type="application/xml" href="<?= e(siteBaseUrl() . '/sitemap.xml') ?>">
     <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms.txt') ?>" title="Résumé MyAgri pour moteurs génératifs">
     <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms-full.txt') ?>" title="Corpus MyAgri pour moteurs génératifs">

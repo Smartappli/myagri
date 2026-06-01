@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hors ligne - MyAgri</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#1f7a45">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <style>
+        :root {
+            --bg: #f6f7f2;
+            --surface: #ffffff;
+            --text: #13281d;
+            --muted: #546d61;
+            --primary: #1f7a45;
+            --primary-dark: #145733;
+            --border: #d4e4da;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            padding: 1.5rem;
+            color: var(--text);
+            font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.65;
+            background: linear-gradient(180deg, #f6f7f2 0%, #eef6f1 100%);
+        }
+
+        main {
+            width: min(680px, 100%);
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--surface);
+            box-shadow: 0 18px 44px rgb(17 48 30 / 14%);
+        }
+
+        img {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+        }
+
+        h1 {
+            margin: 1rem 0 0.4rem;
+            line-height: 1.2;
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+        a {
+            display: inline-flex;
+            margin-top: 0.4rem;
+            padding: 0.62rem 0.9rem;
+            border-radius: 8px;
+            color: #fff;
+            background: var(--primary-dark);
+            font-weight: 750;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus-visible {
+            background: var(--primary);
+        }
+    </style>
+</head>
+<body>
+<main>
+    <img src="/assets/img/pwa-icon-192.png" alt="">
+    <h1>MyAgri est hors ligne</h1>
+    <p>La connexion semble indisponible. Les pages déjà visitées peuvent rester accessibles depuis l’application. Revenez à l’accueil ou réessayez quand le réseau sera revenu.</p>
+    <a href="/?page=accueil">Retour à l’accueil</a>
+</main>
+</body>
+</html>

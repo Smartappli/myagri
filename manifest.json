@@ -1,0 +1,58 @@
+{
+  "name": "MyAgri - Agriculture wallonne expliquee",
+  "short_name": "MyAgri",
+  "description": "Portail citoyen pour comprendre l'agriculture wallonne, ses filieres, ses ressources pratiques et son glossaire.",
+  "lang": "fr-BE",
+  "dir": "ltr",
+  "id": "/?page=accueil",
+  "start_url": "/?page=accueil",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f7f2",
+  "theme_color": "#1f7a45",
+  "orientation": "any",
+  "categories": ["education", "food", "reference"],
+  "icons": [
+    {
+      "src": "/assets/img/pwa-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Filières agricoles",
+      "short_name": "Filières",
+      "description": "Explorer les filières agricoles wallonnes.",
+      "url": "/?page=filieres",
+      "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Ressources pratiques",
+      "short_name": "Ressources",
+      "description": "Accéder aux guides pratiques MyAgri.",
+      "url": "/?page=ressources",
+      "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Glossaire agricole",
+      "short_name": "Glossaire",
+      "description": "Consulter le glossaire agricole citoyen.",
+      "url": "/?page=glossaire",
+      "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

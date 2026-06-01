@@ -13,6 +13,7 @@ Portail citoyen en **PHP** pour informer le grand public sur l'agriculture en Wa
 - Chaque ressource utile dispose d'une page individuelle (`?page=ressource&resource=<id>`).
 - Couche repository (`includes/portal_repository.php`) connectée en MySQL.
 - SEO/GSO renforcé : balises meta dynamiques, Open Graph/Twitter, canonical, JSON-LD enrichi, `robots.txt`, `sitemap.xml`, `llms.txt`.
+- PWA installable : `manifest.json`, service worker `sw.js`, page hors ligne `offline.html`, icônes Android/iOS et cache des pages principales.
 
 ## Accès local
 
@@ -54,6 +55,13 @@ Le champ `payload_json` doit contenir un JSON compatible avec la structure atten
 - Le fichier `llms.txt` fournit un résumé canonique du portail et des URLs clés pour les moteurs génératifs.
 - Définissez `SITE_URL` en production pour générer des URLs canoniques absolues correctes.
 - Les fichiers `robots.txt`, `sitemap.xml` et `llms.txt` sont fournis à la racine.
+
+## PWA
+
+- Le manifest est exposé via `manifest.json`.
+- Le service worker `sw.js` met en cache les pages principales, les assets locaux et une page de secours hors ligne.
+- Les icônes PWA sont dans `assets/img/` (`pwa-icon-192.png`, `pwa-icon-512.png`, `pwa-maskable-512.png`, `apple-touch-icon.png`).
+- En production, servez le site en HTTPS pour permettre l'installation sur mobile et desktop.
 
 Pages utiles :
 
