@@ -48,6 +48,13 @@
       "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
     },
     {
+      "name": "Dossiers citoyens",
+      "short_name": "Dossiers",
+      "description": "Lire les dossiers thématiques MyAgri.",
+      "url": "/?page=dossiers",
+      "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
       "name": "Glossaire agricole",
       "short_name": "Glossaire",
       "description": "Consulter le glossaire agricole citoyen.",
