@@ -634,6 +634,74 @@ function resourceItemList(array $resources, string $baseUrl): array
 }
 
 /**
+ * @param array<int, array<string, mixed>> $dossiers
+ * @return array<string, mixed>
+ */
+function dossierItemList(array $dossiers, string $baseUrl): array
+{
+    $items = [];
+    foreach ($dossiers as $position => $dossier) {
+        $id = isset($dossier['id']) && is_string($dossier['id']) ? $dossier['id'] : '';
+        $items[] = [
+            '@type' => 'ListItem',
+            'position' => $position + 1,
+            'name' => isset($dossier['title']) && is_string($dossier['title']) ? $dossier['title'] : 'Dossier citoyen',
+            'description' => isset($dossier['subtitle']) && is_string($dossier['subtitle']) ? $dossier['subtitle'] : '',
+            'url' => $baseUrl . canonicalPath('dossier', '', '', $id),
+        ];
+    }
+
+    return [
+        '@type' => 'ItemList',
+        '@id' => $baseUrl . '/?page=dossiers#dossier-list',
+        'name' => 'Dossiers citoyens MyAgri',
+        'itemListElement' => $items,
+    ];
+}
+
+/**
+ * @param array<string, mixed> $dossier
+ * @param array<string, mixed>|null $chapter
+ * @return array<string, mixed>
+ */
+function dossierArticleStructuredData(array $dossier, ?array $chapter, string $canonicalUrl, string $baseUrl, string $siteTitle, string $dateModified): array
+{
+    $title = isset($dossier['title']) && is_string($dossier['title']) ? $dossier['title'] : 'Dossier MyAgri';
+    $headline = $title;
+    if (isset($chapter['title']) && is_string($chapter['title']) && $chapter['title'] !== '') {
+        $headline = $chapter['title'] . ' | ' . $title;
+    }
+
+    $description = isset($chapter['summary']) && is_string($chapter['summary'])
+        ? $chapter['summary']
+        : (isset($dossier['subtitle']) && is_string($dossier['subtitle']) ? $dossier['subtitle'] : '');
+
+    return [
+        '@type' => 'Article',
+        '@id' => $canonicalUrl . '#article',
+        'headline' => $headline,
+        'description' => $description,
+        'mainEntityOfPage' => $canonicalUrl,
+        'image' => $baseUrl . (isset($dossier['illustration']) && is_string($dossier['illustration']) ? $dossier['illustration'] : '/assets/img/hero.png'),
+        'inLanguage' => 'fr-BE',
+        'datePublished' => $dateModified,
+        'dateModified' => $dateModified,
+        'author' => [
+            '@type' => 'Organization',
+            'name' => 'MyAgri',
+        ],
+        'publisher' => [
+            '@type' => 'Organization',
+            'name' => $siteTitle,
+            'logo' => [
+                '@type' => 'ImageObject',
+                'url' => $baseUrl . '/assets/img/logo-myagri.svg',
+            ],
+        ],
+    ];
+}
+
+/**
  * @param array<int, array<string, mixed>> $faq
  * @return array<string, mixed>
  */
