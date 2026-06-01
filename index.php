@@ -37,7 +37,7 @@ if (!is_array($data) || $dataLoadError !== null) {
 }
 
 $requestedPage = isset($_GET['page']) && is_string($_GET['page']) ? trim($_GET['page']) : 'accueil';
-$allowedPages = ['accueil', 'filieres', 'ressources', 'faq', 'glossaire', 'ressource'];
+$allowedPages = ['accueil', 'filieres', 'ressources', 'faq', 'glossaire', 'ressource', 'dossiers', 'dossier'];
 $page = currentPage();
 $search = isset($_GET['q']) && is_string($_GET['q']) ? trim($_GET['q']) : '';
 $shouldIndex = true;
@@ -53,6 +53,7 @@ $seasonalCalendar = $data['seasonalCalendar'];
 $faq = $data['faq'];
 $glossary = $data['glossary'];
 $resources = $data['resources'];
+$dossiers = is_array($data['dossiers'] ?? null) ? $data['dossiers'] : [];
 $resourceId = isset($_GET['resource']) && is_string($_GET['resource']) ? trim($_GET['resource']) : '';
 $resourcesById = [];
 foreach ($resources as $resourceItem) {
@@ -61,6 +62,27 @@ foreach ($resources as $resourceItem) {
     }
 }
 $selectedResource = $resourcesById[$resourceId] ?? null;
+$dossierId = isset($_GET['dossier']) && is_string($_GET['dossier']) ? trim($_GET['dossier']) : '';
+$chapterId = isset($_GET['chapitre']) && is_string($_GET['chapitre']) ? trim($_GET['chapitre']) : '';
+$dossiersById = [];
+foreach ($dossiers as $dossierItem) {
+    if (isset($dossierItem['id']) && is_string($dossierItem['id'])) {
+        $dossiersById[$dossierItem['id']] = $dossierItem;
+    }
+}
+$selectedDossier = $dossiersById[$dossierId] ?? null;
+$selectedDossierChapter = null;
+if ($page === 'dossier' && is_array($selectedDossier) && is_array($selectedDossier['chapters'] ?? null)) {
+    $chapters = $selectedDossier['chapters'];
+    $requestedChapter = $chapterId !== '' ? $chapterId : (isset($chapters[0]['id']) && is_string($chapters[0]['id']) ? $chapters[0]['id'] : '');
+    foreach ($chapters as $chapterItem) {
+        if (isset($chapterItem['id']) && is_string($chapterItem['id']) && $chapterItem['id'] === $requestedChapter) {
+            $selectedDossierChapter = $chapterItem;
+            $chapterId = $requestedChapter;
+            break;
+        }
+    }
+}
 $glossaryTermSlug = '';
 $selectedGlossaryTerm = null;
 if ($page === 'glossaire') {
@@ -69,18 +91,28 @@ if ($page === 'glossaire') {
 }
 
 $isNotFoundResource = $page === 'ressource' && !is_array($selectedResource);
+$isNotFoundDossier = $page === 'dossier' && (!is_array($selectedDossier) || !is_array($selectedDossierChapter));
 $isNotFoundGlossaryTerm = $page === 'glossaire' && $glossaryTermSlug !== '' && !is_array($selectedGlossaryTerm);
-$shouldIndex = $shouldIndex && !$isInvalidPage && !$isNotFoundResource && !$isNotFoundGlossaryTerm;
+$shouldIndex = $shouldIndex && !$isInvalidPage && !$isNotFoundResource && !$isNotFoundDossier && !$isNotFoundGlossaryTerm;
 if (!$shouldIndex) {
     http_response_code(404);
 }
 
-$seo = pageSeo($page, $site, is_array($selectedResource) ? $selectedResource : null, is_array($selectedGlossaryTerm) ? $selectedGlossaryTerm : null);
+$seo = pageSeo(
+    $page,
+    $site,
+    is_array($selectedResource) ? $selectedResource : null,
+    is_array($selectedGlossaryTerm) ? $selectedGlossaryTerm : null,
+    is_array($selectedDossier) ? $selectedDossier : null,
+    is_array($selectedDossierChapter) ? $selectedDossierChapter : null
+);
 $canonicalResource = is_array($selectedResource) && $resourceId !== '' ? $resourceId : '';
 $canonicalGlossaryTerm = is_array($selectedGlossaryTerm) && isset($selectedGlossaryTerm['term']) && is_string($selectedGlossaryTerm['term'])
     ? glossarySlug($selectedGlossaryTerm['term'])
     : '';
-$canonicalUrl = siteBaseUrl() . canonicalPath($page, $canonicalResource, $canonicalGlossaryTerm);
+$canonicalDossier = is_array($selectedDossier) && isset($selectedDossier['id']) && is_string($selectedDossier['id']) ? $selectedDossier['id'] : '';
+$canonicalChapter = is_array($selectedDossierChapter) && isset($selectedDossierChapter['id']) && is_string($selectedDossierChapter['id']) ? $selectedDossierChapter['id'] : '';
+$canonicalUrl = siteBaseUrl() . canonicalPath($page, $canonicalResource, $canonicalGlossaryTerm, $canonicalDossier, $canonicalChapter);
 $pageTitle = $seo['title'];
 $metaDescription = $seo['description'];
 $metaKeywords = $seo['keywords'];
@@ -93,7 +125,10 @@ $structuredData = pageStructuredData(
     $faq,
     $glossary,
     is_array($selectedResource) ? $selectedResource : null,
-    is_array($selectedGlossaryTerm) ? $selectedGlossaryTerm : null
+    is_array($selectedGlossaryTerm) ? $selectedGlossaryTerm : null,
+    is_array($dossiers) ? $dossiers : [],
+    is_array($selectedDossier) ? $selectedDossier : null,
+    is_array($selectedDossierChapter) ? $selectedDossierChapter : null
 );
 $allowIndex = $shouldIndex;
 
@@ -116,6 +151,12 @@ switch ($page) {
         break;
     case 'ressources':
         require __DIR__ . '/includes/views/page-ressources.php';
+        break;
+    case 'dossiers':
+        require __DIR__ . '/includes/views/page-dossiers.php';
+        break;
+    case 'dossier':
+        require __DIR__ . '/includes/views/page-dossier.php';
         break;
     case 'faq':
         require __DIR__ . '/includes/views/page-faq.php';
