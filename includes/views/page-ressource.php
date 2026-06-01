@@ -3,8 +3,8 @@ if (!is_array($selectedResource)) {
     ?>
     <section aria-labelledby="resource-not-found-title">
         <h2 id="resource-not-found-title">Ressource introuvable</h2>
-        <p>La ressource demandee n'existe pas ou n'est plus disponible.</p>
-        <p><a href="?page=ressources">Retour a la liste des ressources</a></p>
+        <p>La ressource demandée n'existe pas ou n'est plus disponible.</p>
+        <p><a href="?page=ressources">Retour à la liste des ressources</a></p>
     </section>
     <?php
     return;
@@ -86,20 +86,20 @@ if ($resourceTemplate !== null) {
 
     <?php
     $resourceSections = [
-        'steps' => 'Etapes recommandees',
+        'steps' => 'Étapes recommandées',
         'checklist' => 'Checklist pratique',
-        'eligible_projects' => 'Projets generalement eligibles',
-        'required_documents' => 'Documents souvent demandes',
+        'eligible_projects' => 'Projets généralement éligibles',
+        'required_documents' => 'Documents souvent demandés',
         'timeline' => 'Chronologie indicative',
-        'common_pitfalls' => 'Erreurs frequentes a eviter',
+        'common_pitfalls' => 'Erreurs fréquentes à éviter',
         'support_contacts' => 'Acteurs pouvant accompagner',
-        'learning_objectives' => 'Objectifs pedagogiques',
-        'recommended_program' => 'Deroule recommande',
-        'age_adaptations' => "Adaptation selon l'age du public",
-        'pedagogical_activities' => "Exemples d'activites pedagogiques",
-        'risk_prevention' => 'Prevention et securite',
-        'budget_items' => 'Postes de budget a prevoir',
-        'evaluation_method' => "Methode d'evaluation",
+        'learning_objectives' => 'Objectifs pédagogiques',
+        'recommended_program' => 'Déroulé recommandé',
+        'age_adaptations' => "Adaptation selon l'âge du public",
+        'pedagogical_activities' => "Exemples d'activités pédagogiques",
+        'risk_prevention' => 'Prévention et sécurité',
+        'budget_items' => 'Postes de budget à prévoir',
+        'evaluation_method' => "Méthode d'évaluation",
     ];
 
     $resourceSectionCards = [];

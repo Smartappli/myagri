@@ -24,7 +24,7 @@ if (is_array($selectedGlossaryTerm)) {
         <article class="card resource-summary">
             <p><?= e($selectedDefinition) ?></p>
             <?php if ($selectedSlug !== ''): ?>
-                <p><a href="?page=glossaire&amp;term=<?= e($selectedSlug) ?>">Retour a la fiche detaillee</a></p>
+                <p><a href="?page=glossaire&amp;term=<?= e($selectedSlug) ?>">Retour à la fiche détaillée</a></p>
             <?php endif; ?>
         </article>
     </section>
@@ -54,7 +54,7 @@ if (is_array($selectedGlossaryTerm)) {
             <article class="card h-full">
                 <h3><?= e($term) ?></h3>
                 <p><?= e($definition) ?></p>
-                <p><a href="?page=glossaire&amp;term=<?= e($termSlug) ?>">Voir la page detaillee</a></p>
+                <p><a href="?page=glossaire&amp;term=<?= e($termSlug) ?>">Voir la page détaillée</a></p>
             </article>
         <?php endforeach; ?>
     </div>

@@ -7,9 +7,9 @@ function getPortalData(): array
 {
     return [
         'site' => [
-            'title' => 'MyAgri — Portail citoyen',
-            'subtitle' => 'Comprendre l’agriculture wallonne : alimentation, territoires, environnement, économie et métiers.',
-            'updated_at' => '25 avril 2026',
+            'title' => 'MyAgri — Agriculture wallonne expliquée',
+            'subtitle' => 'Un portail citoyen pour comprendre les filières, les métiers, les saisons, les labels et les gestes concrets qui relient alimentation, territoire et environnement.',
+            'updated_at' => '1 juin 2026',
             'geo' => [
                 'name' => 'Wallonie, Belgique',
                 'region' => 'Wallonie',
@@ -24,23 +24,23 @@ function getPortalData(): array
         'quickFacts' => [
             [
                 'title' => 'Un enjeu quotidien',
-                'content' => 'L’agriculture influence directement le prix, la qualité et la diversité de notre alimentation.',
+                'content' => 'L’agriculture influence directement le prix, la qualité, la saisonnalité et la diversité de ce que nous mangeons.',
             ],
             [
                 'title' => 'Un rôle territorial',
-                'content' => 'Elle structure les paysages, soutient l’emploi local et maintient la vie économique rurale.',
+                'content' => 'Elle façonne les paysages, soutient l’emploi local, entretient les sols et maintient une activité économique dans les villages.',
             ],
             [
                 'title' => 'Un secteur en transition',
-                'content' => 'Les fermes s’adaptent au climat, à la pression économique et aux attentes sociétales.',
+                'content' => 'Les fermes doivent composer avec le climat, les coûts de production, la transmission des exploitations et les attentes des consommateurs.',
             ],
             [
                 'title' => 'Un moteur d’innovation',
-                'content' => 'Du numérique aux nouvelles variétés, les pratiques évoluent pour produire mieux avec moins de ressources.',
+                'content' => 'Capteurs, sélection variétale, autonomie énergétique, diversification et coopération locale aident à produire avec plus de précision.',
             ],
             [
                 'title' => 'Un lien social',
-                'content' => 'Marchés, coopératives, fermes pédagogiques et circuits courts rapprochent citoyens et producteurs.',
+                'content' => 'Marchés, coopératives, fermes pédagogiques, cantines et circuits courts rendent les choix alimentaires plus compréhensibles.',
             ],
         ],
         'pillars' => [
@@ -161,6 +161,14 @@ function getPortalData(): array
             [
                 'q' => 'Comment un citoyen peut-il agir sans augmenter fortement son budget ?',
                 'a' => 'En privilégiant la saison, en cuisinant des produits bruts, en limitant le gaspillage et en comparant les points de vente locaux.',
+            ],
+            [
+                'q' => 'Pourquoi acheter local ne signifie-t-il pas toujours acheter plus cher ?',
+                'a' => 'Le prix dépend du produit, de la saison, du mode de vente, des volumes achetés et du gaspillage évité. Comparer au kilo, planifier les repas et acheter des produits de saison permet souvent de mieux maîtriser le budget.',
+            ],
+            [
+                'q' => 'Comment vérifier qu’une information agricole est fiable ?',
+                'a' => 'Il faut distinguer témoignage, donnée officielle, argument commercial et conseil technique. Pour une décision administrative, sanitaire ou financière, il est préférable de confirmer l’information auprès de l’organisme compétent.',
             ],
             [
                 'q' => 'Pourquoi les pratiques agricoles varient-elles d’une région à l’autre ?',

@@ -87,11 +87,11 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
         <section class="hero" aria-labelledby="hero-title">
             <figure class="hero-visual">
                 <img src="assets/img/hero.png" alt="MyAgri rapproche les citoyens du monde agricole pour comprendre, échanger et construire une agriculture durable et locale.">
-                <div class="sr-only">
+                <figcaption class="hero-copy">
                     <h1 id="hero-title"><?= e($site['title']) ?></h1>
                     <p><?= e($site['subtitle']) ?></p>
-                    <p>Dernière mise à jour : <?= e($site['updated_at']) ?></p>
-                </div>
+                    <p class="hero-meta">Mis à jour le <?= e($site['updated_at']) ?> · Wallonie, Belgique</p>
+                </figcaption>
             </figure>
         </section>
     </div>
