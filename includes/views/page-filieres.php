@@ -1,5 +1,6 @@
 <section aria-labelledby="filieres-title" class="shadow-soft">
     <h2 id="filieres-title">Explorer les filières</h2>
+    <p class="section-intro">Chaque filière combine une production, des métiers, des contraintes de terrain, des débouchés et des choix de consommation. Cette page aide à relier ce que l’on voit dans le paysage avec ce que l’on retrouve dans l’assiette.</p>
     <input id="sector-filter" class="filter w-full rounded-xl border border-emerald-200 bg-white/95 px-3 py-2" type="search" placeholder="Ex: lait, saison, cultures" aria-label="Filtrer les filières" data-sector-filter>
     <div class="grid grid-3">
         <?php foreach ($sectors as $sector): ?>
