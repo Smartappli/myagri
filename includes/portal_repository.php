@@ -5,24 +5,29 @@ declare(strict_types=1);
 require_once __DIR__ . '/data.php';
 
 /**
- * Charge les données du portail depuis MySQL (source obligatoire).
+ * Charge les données du portail depuis MySQL quand il est disponible.
  * Les données locales (includes/data.php) sont synchronisées automatiquement
- * dans la base avant lecture.
+ * dans la base avant lecture. En cas d'indisponibilité MySQL, le portail
+ * reste consultable avec les données locales versionnées.
  *
  * @return array<string, mixed>
  */
 function loadPortalData(): array
 {
-    pushPortalDataToMySql();
+    try {
+        pushPortalDataToMySql();
 
-    $pdo = createPortalPdo();
+        $pdo = createPortalPdo();
 
-    $mysqlData = loadPortalDataFromMySql($pdo);
-    if (!is_array($mysqlData)) {
-        throw new RuntimeException('Impossible de charger les données MySQL du portail.');
+        $mysqlData = loadPortalDataFromMySql($pdo);
+        if (!is_array($mysqlData)) {
+            throw new RuntimeException('Impossible de charger les données MySQL du portail.');
+        }
+
+        return $mysqlData;
+    } catch (Throwable) {
+        return getPortalData();
     }
-
-    return $mysqlData;
 }
 
 /**

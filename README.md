@@ -28,7 +28,7 @@ Puis ouvrir :
 - <http://127.0.0.1:8000/?page=filieres>
 - <http://127.0.0.1:8000/?page=ressources>
 
-Le portail charge son contenu depuis MySQL. Si la base n'est pas joignable depuis votre poste (accès réseau, pare-feu, identifiants ou serveur indisponible), le front renvoie une page HTTP 503 et l'API renvoie une erreur JSON HTTP 503. Dans ce cas, vérifiez d'abord l'accès MySQL avant de diagnostiquer le rendu HTML.
+Le portail charge son contenu depuis MySQL quand la base est joignable. Si MySQL est indisponible en local ou en production, le site et l'API restent consultables grâce au contenu versionné dans `includes/data.php`.
 
 ## Base de données MySQL
 
