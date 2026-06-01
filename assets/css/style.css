@@ -450,6 +450,25 @@ footer {
     background: #10261a;
 }
 
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem 1rem;
+    margin: 0.6rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links a {
+    color: #f5f2dd;
+    font-weight: 700;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    color: #bfe7ce;
+}
+
 @media (max-width: 640px) {
     header {
         padding-top: 1rem;
