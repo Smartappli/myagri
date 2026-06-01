@@ -18,6 +18,7 @@ $data = getPortalData();
 assertTrue(isset($data['site']['title']), 'site title exists');
 assertTrue(count($data['sectors']) >= 3, 'at least 3 sectors');
 assertTrue(count($data['provinces']) === 5, 'five walloon provinces listed');
+assertTrue(count($data['glossary']) >= 80, 'expanded glossary has at least 80 terms');
 
 $_GET['page'] = 'filieres';
 assertTrue(currentPage() === 'filieres', 'known page accepted');
@@ -51,6 +52,8 @@ if (is_array($sampleTerm)) {
     assertTrue(is_array($termPairs), 'glossary FAQ pairs computed');
     assertTrue($termPairs !== [], 'glossary FAQ pairs are not empty');
 }
+
+assertTrue(glossaryTemplatePath('vente-directe') !== null, 'generic glossary term template fallback exists');
 
 try {
     $loadedData = loadPortalData();

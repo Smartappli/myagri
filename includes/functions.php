@@ -110,8 +110,8 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
     if ($page === 'glossaire') {
         return [
             'title' => 'Glossaire agricole citoyen | MyAgri',
-            'description' => 'Décryptage des mots-clés de l\'agriculture : agroécologie, rotation, circuit court, filière, biodiversité et transition.',
-            'keywords' => 'glossaire agricole, vocabulaire agriculture, définitions agriculture, agroécologie, circuit court, wallonie',
+            'description' => 'Décryptage des mots-clés de l\'agriculture wallonne : sols, eau, élevage, filières, labels, vente directe, PAC, biodiversité et transition.',
+            'keywords' => 'glossaire agricole, vocabulaire agriculture, définitions agriculture, agroécologie, circuit court, PAC, vente directe, wallonie',
         ];
     }
 
@@ -900,6 +900,11 @@ function glossaryTemplatePath(string $termSlug): ?string
     $candidate = __DIR__ . '/views/glossaire/term-' . $normalized . '.php';
     if (is_file($candidate)) {
         return $candidate;
+    }
+
+    $fallback = __DIR__ . '/views/glossaire/term-template.php';
+    if (is_file($fallback)) {
+        return $fallback;
     }
 
     return null;

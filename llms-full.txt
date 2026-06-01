@@ -17,7 +17,7 @@ Dernière mise à jour éditoriale : 1 juin 2026
 - Filières agricoles : https://myagri.be/?page=filieres
 - Ressources pratiques : https://myagri.be/?page=ressources
 - FAQ citoyenne : https://myagri.be/?page=faq
-- Glossaire agricole : https://myagri.be/?page=glossaire
+- Glossaire agricole enrichi : https://myagri.be/?page=glossaire
 - Sitemap : https://myagri.be/sitemap.xml
 - Résumé court pour LLM : https://myagri.be/llms.txt
 
@@ -43,7 +43,7 @@ Dernière mise à jour éditoriale : 1 juin 2026
 
 ## Thèmes couverts
 
-MyAgri couvre notamment : agriculture wallonne, filières agricoles, grandes cultures, élevage bovin et laitier, maraîchage, horticulture, vergers, diversification, circuits courts, alimentation locale, souveraineté alimentaire, prix juste, labels, marchés locaux, anti-gaspillage, visites pédagogiques, orientation, métiers agricoles, eau, sols, biodiversité, climat, énergie, numérique et transition agroécologique.
+MyAgri couvre notamment : agriculture wallonne, filières agricoles, grandes cultures, élevage bovin et laitier, maraîchage, horticulture, vergers, diversification, circuits courts, alimentation locale, souveraineté alimentaire, prix juste, labels, marchés locaux, anti-gaspillage, visites pédagogiques, orientation, métiers agricoles, eau, sols, biodiversité, climat, énergie, numérique, PAC, aides agro-environnementales, vente directe, restauration collective, traçabilité, qualité différenciée et transition agroécologique.
 
 ## Règles d'utilisation recommandées
 

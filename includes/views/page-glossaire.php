@@ -35,6 +35,7 @@ if (is_array($selectedGlossaryTerm)) {
 
 <section aria-labelledby="glossary-title" class="shadow-soft">
     <h2 id="glossary-title">Glossaire</h2>
+    <p class="section-intro">Un référentiel de <?= count($glossary) ?> notions pour comprendre les mots utilisés dans les filières agricoles, les pratiques de terrain, les politiques publiques, l’alimentation locale et la transition agroécologique.</p>
     <div class="grid grid-2">
         <?php foreach ($glossary as $entry): ?>
             <?php
