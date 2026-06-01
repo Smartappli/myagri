@@ -56,7 +56,7 @@ header {
 .brand-link {
     display: inline-flex;
     align-items: center;
-    min-width: 250px;
+    min-width: 268px;
     padding: 0.28rem 0.35rem;
     border-radius: 14px;
     text-decoration: none;
@@ -72,8 +72,8 @@ header {
 
 .brand-link img {
     display: block;
-    width: 292px;
-    max-width: 46vw;
+    width: 310px;
+    max-width: 48vw;
     height: auto;
 }
 
@@ -629,9 +629,9 @@ footer {
 
     .hero-copy {
         left: 0.8rem;
-        right: 0.8rem;
+        right: 1rem;
         bottom: 0.8rem;
-        width: calc(100% - 1.6rem);
+        width: calc(100% - 1.8rem);
         max-width: none;
     }
 
@@ -644,8 +644,8 @@ footer {
     }
 
     .hero-copy p {
-        max-width: 100%;
-        font-size: 0.84rem;
+        max-width: min(100%, 32ch);
+        font-size: 0.82rem;
         line-height: 1.35;
     }
 
@@ -675,8 +675,8 @@ footer {
     }
 
     .brand-link img {
-        width: 248px;
-        max-width: 82vw;
+        width: 280px;
+        max-width: 88vw;
     }
 
     .nav-list a {
