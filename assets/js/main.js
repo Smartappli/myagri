@@ -21,3 +21,11 @@ faqButtons.forEach((button) => {
         target.hidden = expanded;
     });
 });
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {
+            // The site remains usable when service workers are unavailable.
+        });
+    });
+}
