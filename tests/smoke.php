@@ -39,6 +39,18 @@ assertTrue(($structuredData['@context'] ?? null) === 'https://schema.org', 'stru
 assertTrue(is_array($structuredData['@graph'] ?? null), 'structured data graph exists');
 assertTrue(pageKeywordList('agriculture, wallonie, agro') === ['agriculture', 'wallonie', 'agro'], 'keyword parser works');
 
+$manifestPath = __DIR__ . '/../manifest.json';
+assertTrue(is_file($manifestPath), 'PWA manifest exists');
+$manifest = json_decode((string) file_get_contents($manifestPath), true);
+assertTrue(is_array($manifest), 'PWA manifest is valid JSON');
+assertTrue(($manifest['short_name'] ?? null) === 'MyAgri', 'PWA short name exists');
+assertTrue(isset($manifest['icons']) && is_array($manifest['icons']) && count($manifest['icons']) >= 3, 'PWA icons are declared');
+assertTrue(is_file(__DIR__ . '/../sw.js'), 'service worker exists');
+assertTrue(is_file(__DIR__ . '/../offline.html'), 'offline page exists');
+assertTrue(is_file(__DIR__ . '/../assets/img/pwa-icon-192.png'), '192px PWA icon exists');
+assertTrue(is_file(__DIR__ . '/../assets/img/pwa-icon-512.png'), '512px PWA icon exists');
+assertTrue(is_file(__DIR__ . '/../assets/img/pwa-maskable-512.png'), 'maskable PWA icon exists');
+
 $sampleResource = $data['resources'][0] ?? null;
 if (is_array($sampleResource)) {
     $resourcePairs = resourceFaqPairs($sampleResource);
