@@ -145,26 +145,28 @@ header {
     left: clamp(1.1rem, 4vw, 3rem);
     bottom: clamp(1.1rem, 4vw, 3rem);
     z-index: 1;
-    max-width: 680px;
+    max-width: min(620px, 62%);
     color: #fff;
     text-shadow: 0 2px 20px rgb(0 0 0 / 42%);
 }
 
 .hero-copy h1 {
-    margin-bottom: 0.75rem;
-    font-size: clamp(2rem, 5vw, 4.2rem);
+    margin-bottom: 0.55rem;
+    font-size: clamp(1.45rem, 3.2vw, 2.8rem);
+    line-height: 1.08;
     letter-spacing: 0;
 }
 
 .hero-copy p {
-    max-width: 58ch;
+    max-width: 52ch;
     margin: 0;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-size: clamp(0.88rem, 1.1vw, 1.05rem);
+    line-height: 1.45;
 }
 
 .hero-copy .hero-meta {
-    margin-top: 0.9rem;
-    font-size: 0.92rem;
+    margin-top: 0.65rem;
+    font-size: 0.82rem;
     font-weight: 700;
     color: #f5f2dd;
 }
@@ -615,18 +617,26 @@ footer {
     }
 
     .hero-copy {
-        left: 1rem;
-        right: 1rem;
-        bottom: 1rem;
+        left: 0.8rem;
+        right: 0.8rem;
+        bottom: 0.8rem;
         max-width: none;
     }
 
     .hero-copy h1 {
-        font-size: 1.65rem;
+        margin-bottom: 0.35rem;
+        font-size: 1.08rem;
+        line-height: 1.1;
     }
 
     .hero-copy p {
-        font-size: 0.95rem;
+        font-size: 0.76rem;
+        line-height: 1.35;
+    }
+
+    .hero-copy .hero-meta {
+        margin-top: 0.35rem;
+        font-size: 0.68rem;
     }
 
     .hero-search {
