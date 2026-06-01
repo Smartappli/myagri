@@ -20,6 +20,11 @@
             <p>Consultez les définitions utiles pour lire un article, préparer un cours ou comparer des démarches.</p>
             <a class="button-link" href="?page=glossaire">Ouvrir le glossaire</a>
         </article>
+        <article class="action-card">
+            <h3>Approfondir un sujet</h3>
+            <p>Lisez des dossiers illustrés en plusieurs chapitres, avec repères citoyens et références officielles.</p>
+            <a class="button-link" href="?page=dossiers">Voir les dossiers</a>
+        </article>
     </div>
 </section>
 

@@ -422,6 +422,87 @@ h2::before {
     border-left: 4px solid var(--primary-dark);
 }
 
+.dossier-list {
+    align-items: stretch;
+}
+
+.dossier-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+}
+
+.dossier-card-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border);
+}
+
+.dossier-card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.05rem;
+}
+
+.dossier-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dossier-hero img {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+}
+
+.chapter-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin: 1rem 0;
+}
+
+.chapter-nav a {
+    display: inline-flex;
+    padding: 0.46rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.chapter-nav a[aria-current="page"] {
+    color: #fff;
+    border-color: var(--primary-dark);
+    background: var(--primary-dark);
+}
+
+.dossier-chapter .lead {
+    color: #345344;
+    font-size: 1.08rem;
+    font-weight: 650;
+}
+
+.references-card {
+    margin-top: 1rem;
+}
+
+.reference-list {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
 .pillars .card {
     border-top: 4px solid var(--primary);
 }
@@ -577,6 +658,10 @@ footer {
         font-size: 0.82rem;
     }
 
+    .dossier-hero {
+        grid-template-columns: 1fr;
+    }
+
     main.container {
         margin-top: -0.65rem;
     }
@@ -635,8 +720,14 @@ footer {
     .section-intro,
     .action-card p,
     .resource-overview,
-    .tagline {
+    .tagline,
+    .dossier-chapter .lead {
         color: #c5ddd1;
+    }
+
+    .chapter-nav a,
+    .related-terms a {
+        background: var(--surface);
     }
 
     .nav-list a[aria-current="page"] {
