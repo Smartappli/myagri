@@ -16,6 +16,7 @@ $pages = [
     ['loc' => $baseUrl . '/?page=faq', 'changefreq' => 'monthly', 'priority' => '0.8'],
     ['loc' => $baseUrl . '/?page=glossaire', 'changefreq' => 'monthly', 'priority' => '0.8'],
     ['loc' => $baseUrl . '/?page=ressources', 'changefreq' => 'weekly', 'priority' => '0.9'],
+    ['loc' => $baseUrl . '/?page=dossiers', 'changefreq' => 'monthly', 'priority' => '0.85'],
 ];
 
 if (isset($site['resources']) && is_array($site['resources'])) {
@@ -28,6 +29,27 @@ if (isset($site['resources']) && is_array($site['resources'])) {
             'changefreq' => 'monthly',
             'priority' => '0.7',
         ];
+    }
+}
+
+if (isset($site['dossiers']) && is_array($site['dossiers'])) {
+    foreach ($site['dossiers'] as $dossier) {
+        if (!isset($dossier['id']) || !is_string($dossier['id'])) {
+            continue;
+        }
+
+        $chapters = is_array($dossier['chapters'] ?? null) ? $dossier['chapters'] : [];
+        foreach ($chapters as $chapter) {
+            if (!isset($chapter['id']) || !is_string($chapter['id'])) {
+                continue;
+            }
+
+            $pages[] = [
+                'loc' => $baseUrl . '/?page=dossier&dossier=' . rawurlencode($dossier['id']) . '&chapitre=' . rawurlencode($chapter['id']),
+                'changefreq' => 'monthly',
+                'priority' => '0.75',
+            ];
+        }
     }
 }
 
