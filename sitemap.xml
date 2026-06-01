@@ -31,6 +31,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://myagri.be/?page=dossiers</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://myagri.be/?page=ressource&amp;resource=visites-pedagogiques</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -77,6 +83,60 @@
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=reserve-eau-sol</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=erosion-ruissellement</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=eau-nitrates</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=local-circuit-court-saison</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=prix-juste-budget</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=collectif-cantines-communes</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=biodiversite-utile</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=pratiques-climat</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=pac-maec-eco-regimes</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://myagri.be/?page=glossaire&amp;term=agroecologie</loc>

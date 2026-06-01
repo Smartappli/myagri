@@ -19,6 +19,7 @@ assertTrue(isset($data['site']['title']), 'site title exists');
 assertTrue(count($data['sectors']) >= 3, 'at least 3 sectors');
 assertTrue(count($data['provinces']) === 5, 'five walloon provinces listed');
 assertTrue(count($data['glossary']) >= 80, 'expanded glossary has at least 80 terms');
+assertTrue(isset($data['dossiers']) && is_array($data['dossiers']) && count($data['dossiers']) >= 3, 'citizen dossiers exist');
 
 $_GET['page'] = 'filieres';
 assertTrue(currentPage() === 'filieres', 'known page accepted');
@@ -28,6 +29,9 @@ assertTrue(currentPage() === 'faq', 'faq page accepted');
 
 $_GET['page'] = 'glossaire';
 assertTrue(currentPage() === 'glossaire', 'glossary page accepted');
+
+$_GET['page'] = 'dossiers';
+assertTrue(currentPage() === 'dossiers', 'dossiers page accepted');
 
 $_GET['page'] = 'invalid';
 assertTrue(currentPage() === 'accueil', 'unknown page falls back to accueil');
@@ -57,6 +61,9 @@ assertTrue(is_file(__DIR__ . '/../offline.html'), 'offline page exists');
 assertTrue(is_file(__DIR__ . '/../assets/img/pwa-icon-192.png'), '192px PWA icon exists');
 assertTrue(is_file(__DIR__ . '/../assets/img/pwa-icon-512.png'), '512px PWA icon exists');
 assertTrue(is_file(__DIR__ . '/../assets/img/pwa-maskable-512.png'), 'maskable PWA icon exists');
+assertTrue(is_file(__DIR__ . '/../assets/img/dossier-eau-sols.png'), 'water and soil dossier illustration exists');
+assertTrue(is_file(__DIR__ . '/../assets/img/dossier-circuits-courts.png'), 'short circuits dossier illustration exists');
+assertTrue(is_file(__DIR__ . '/../assets/img/dossier-climat-biodiversite.png'), 'climate and biodiversity dossier illustration exists');
 
 $sampleResource = $data['resources'][0] ?? null;
 if (is_array($sampleResource)) {

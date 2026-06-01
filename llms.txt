@@ -16,6 +16,7 @@ MyAgri est un portail citoyen francophone consacré à l'agriculture en Wallonie
 - Accueil : https://myagri.be/?page=accueil
 - Filières agricoles : https://myagri.be/?page=filieres
 - Ressources pratiques : https://myagri.be/?page=ressources
+- Dossiers citoyens : https://myagri.be/?page=dossiers
 - FAQ citoyenne : https://myagri.be/?page=faq
 - Glossaire agricole enrichi (plus de 80 notions) : https://myagri.be/?page=glossaire
 - API JSON complète : https://myagri.be/api.php
@@ -33,6 +34,12 @@ MyAgri est un portail citoyen francophone consacré à l'agriculture en Wallonie
 - Découvrir les labels : https://myagri.be/?page=ressource&resource=decouvrir-labels
 - Boîte à outils anti-gaspillage : https://myagri.be/?page=ressource&resource=boite-a-outils-anti-gaspillage
 - Parcours pédagogiques : https://myagri.be/?page=ressource&resource=parcours-pedagogiques
+
+## Dossiers thématiques
+
+- Eau, sols et sécheresse : https://myagri.be/?page=dossier&dossier=eau-sols-secheresse&chapitre=reserve-eau-sol
+- Circuits courts et alimentation locale : https://myagri.be/?page=dossier&dossier=circuits-courts-alimentation-locale&chapitre=local-circuit-court-saison
+- Climat, biodiversité et pratiques agricoles : https://myagri.be/?page=dossier&dossier=climat-biodiversite-pratiques-agricoles&chapitre=biodiversite-utile
 
 ## Résumé éditorial
 
