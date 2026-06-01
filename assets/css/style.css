@@ -360,6 +360,25 @@ h2::before {
     margin-top: auto;
 }
 
+.related-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.related-terms a {
+    display: inline-flex;
+    padding: 0.38rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    font-weight: 750;
+    text-decoration: none;
+}
+
 .resource-summary {
     border-left: 4px solid var(--primary);
     background: linear-gradient(180deg, var(--accent), #f6fcf7);
