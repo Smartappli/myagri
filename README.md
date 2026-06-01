@@ -9,6 +9,7 @@ Portail citoyen en **PHP** pour informer le grand public sur l'agriculture en Wa
 - Helpers PHP dans `includes/functions.php` (`e()`, `currentPage()`).
 - Recherche globale (`q=`), filtre local des filières et FAQ interactive.
 - API JSON de lecture via `api.php` (`?section=...`).
+- Dossiers thématiques citoyens en plusieurs chapitres, avec références et illustrations locales.
 - Tracking Matomo intégré sur toutes les pages du portail (`siteId` 5).
 - Chaque ressource utile dispose d'une page individuelle (`?page=ressource&resource=<id>`).
 - Couche repository (`includes/portal_repository.php`) connectée en MySQL.
@@ -29,6 +30,7 @@ Puis ouvrir :
 - <http://127.0.0.1:8000/?page=accueil>
 - <http://127.0.0.1:8000/?page=filieres>
 - <http://127.0.0.1:8000/?page=ressources>
+- <http://127.0.0.1:8000/?page=dossiers>
 
 Le portail charge son contenu depuis MySQL quand la base est joignable. Si MySQL est indisponible en local ou en production, le site et l'API restent consultables grâce au contenu versionné dans `includes/data.php`.
 
@@ -74,6 +76,7 @@ Pages utiles :
 - <https://myagri.be/?page=accueil>
 - <https://myagri.be/?page=filieres>
 - <https://myagri.be/?page=ressources>
+- <https://myagri.be/?page=dossiers>
 - <https://myagri.be/api.php>
 - <https://myagri.be/api.php?section=sectors>
 
