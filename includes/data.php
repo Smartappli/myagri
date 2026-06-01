@@ -266,6 +266,237 @@ function getPortalData(): array
             ['term' => 'Vente directe', 'definition' => 'Commercialisation d’un produit du producteur au consommateur sans intermédiaire commercial, à la ferme, au marché, en point relais ou en ligne.'],
             ['term' => 'Zone tampon', 'definition' => 'Espace aménagé entre une activité agricole et un milieu sensible pour réduire les transferts de polluants, protéger l’eau ou préserver la biodiversité.'],
         ],
+        'dossiers' => [
+            [
+                'id' => 'eau-sols-secheresse',
+                'title' => 'Eau, sols et sécheresse',
+                'subtitle' => 'Comprendre comment les sols agricoles stockent l’eau, limitent le ruissellement et protègent les cultures face aux sécheresses.',
+                'audience' => 'Citoyens, familles, enseignants, communes, associations locales et groupes d’achat.',
+                'duration' => 'Lecture guidée : 25 à 35 minutes',
+                'illustration' => '/assets/img/dossier-eau-sols.png',
+                'chapters' => [
+                    [
+                        'id' => 'reserve-eau-sol',
+                        'title' => 'Le sol comme réserve d’eau',
+                        'summary' => 'Un sol vivant agit comme une éponge : sa structure, sa matière organique et sa couverture végétale déterminent une partie de l’eau disponible pour les cultures.',
+                        'paragraphs' => [
+                            'Quand on parle de sécheresse agricole, il ne faut pas seulement regarder la pluie tombée. Il faut aussi comprendre ce que le sol peut stocker et restituer aux plantes. Un sol tassé, pauvre en matière organique ou laissé nu perd plus vite son eau utile.',
+                            'Les pratiques agricoles peuvent améliorer cette capacité : couverts végétaux, rotations plus longues, apport de matière organique, réduction du tassement et choix de variétés adaptées. Ces leviers ne suppriment pas le manque d’eau, mais ils peuvent réduire la vulnérabilité des cultures.',
+                            'Pour un citoyen, cette lecture aide à comprendre pourquoi deux champs voisins réagissent différemment à une même période sèche. La différence peut venir du sol, du relief, de la culture, de la profondeur racinaire ou de l’historique des pratiques.',
+                        ],
+                        'key_points' => [
+                            'La réserve utile dépend de la texture, de la profondeur, de la structure et de la matière organique du sol.',
+                            'Un sol couvert limite l’évaporation, protège la surface et nourrit l’activité biologique.',
+                            'L’adaptation à la sécheresse combine agronomie, choix variétaux, calendrier de travail et gestion de l’eau.',
+                        ],
+                        'citizen_actions' => [
+                            'Observer si les champs restent couverts en hiver ou entre deux cultures.',
+                            'Poser des questions simples lors d’une visite de ferme : comment la ferme gère-t-elle la sécheresse ?',
+                            'Valoriser les produits de saison, car ils correspondent mieux aux cycles locaux de production.',
+                        ],
+                    ],
+                    [
+                        'id' => 'erosion-ruissellement',
+                        'title' => 'Érosion et ruissellement',
+                        'summary' => 'Les pluies intenses peuvent emporter la terre fertile, provoquer des coulées boueuses et transporter des particules vers les fossés, routes et cours d’eau.',
+                        'paragraphs' => [
+                            'L’érosion hydrique se produit lorsque l’impact des gouttes de pluie détache les particules de sol, puis que l’eau ruisselle au lieu de s’infiltrer. Les parcelles en pente, les sols nus et certains épisodes orageux augmentent le risque.',
+                            'Les mesures de protection cherchent à couvrir le sol, ralentir l’eau, augmenter l’infiltration et réduire les longueurs de pente. Les bandes enherbées, haies, couverts, techniques culturales simplifiées et aménagements de parcelles font partie des leviers possibles.',
+                            'Le sujet concerne aussi les habitants : les coulées boueuses touchent les routes, les caves, les avaloirs, les cours d’eau et la qualité de vie locale. La prévention se joue donc à l’échelle des fermes, mais aussi des bassins versants et des communes.',
+                        ],
+                        'key_points' => [
+                            'Le sol perdu met longtemps à se reconstituer et représente une perte de fertilité.',
+                            'La prévention est plus efficace que la réparation après un épisode intense.',
+                            'Les cartes de sensibilité et simulateurs aident à cibler les parcelles les plus exposées.',
+                        ],
+                        'citizen_actions' => [
+                            'Signaler les zones récurrentes de ruissellement à la commune ou aux acteurs compétents.',
+                            'Soutenir les projets de haies, bandes enherbées et aménagements qui ralentissent l’eau.',
+                            'Éviter de juger une parcelle sur une seule photo : relief, météo et historique comptent.',
+                        ],
+                    ],
+                    [
+                        'id' => 'eau-nitrates',
+                        'title' => 'Nitrates et qualité de l’eau',
+                        'summary' => 'L’azote est nécessaire aux plantes, mais les excès ou mauvais moments d’apport peuvent contribuer aux pertes de nitrates vers l’eau.',
+                        'paragraphs' => [
+                            'Les nitrates sont une forme minérale de l’azote. Ils sont utiles aux cultures, mais peuvent migrer avec l’eau lorsqu’ils ne sont pas absorbés par les plantes. Le risque dépend des apports, du sol, des pluies, de la couverture végétale et du calendrier.',
+                            'Les plans de fumure, couverts végétaux, périodes d’interdiction d’épandage, analyses de sol et conseils techniques visent à mieux synchroniser les besoins des cultures avec les apports fertilisants.',
+                            'Pour les citoyens, le sujet montre que la qualité de l’eau n’est pas séparée des choix alimentaires, des pratiques agricoles et des règles collectives. L’enjeu n’est pas de supprimer l’azote, mais de l’utiliser au bon endroit, au bon moment et à la bonne dose.',
+                        ],
+                        'key_points' => [
+                            'La fertilisation doit être raisonnée selon les besoins réels des cultures.',
+                            'Les pertes augmentent lorsque l’azote reste disponible sans culture active pour l’absorber.',
+                            'La qualité de l’eau se protège par des règles, des pratiques et un suivi dans la durée.',
+                        ],
+                        'citizen_actions' => [
+                            'Comprendre la différence entre fertilisation utile et excès de fertilisation.',
+                            'Participer aux visites ou animations locales sur l’eau, les sols et les paysages.',
+                            'Vérifier les informations sensibles auprès des organismes compétents avant de les relayer.',
+                        ],
+                    ],
+                ],
+                'references' => [
+                    ['label' => 'SPW Agriculture — Gestion de la ressource eau', 'url' => 'https://agriculture.wallonie.be/home/recherche-developpement/adaptations-a-la-secheresse/resilience-en-grandes-cultures/efficience-en-eau.html'],
+                    ['label' => 'SPW Agriculture — Mesures de protection des sols agricoles', 'url' => 'https://agriculture.wallonie.be/home/ruralite-et-foncier/ruralite/protection-des-sols/prevention-et-lutte-contre-l-erosion-des-sols/mesures-de-protection-de-sols-agricoles.html'],
+                    ['label' => 'SPW Agriculture — Référentiel cartographique de sensibilité à l’érosion', 'url' => 'https://agriculture.wallonie.be/home/ruralite-et-foncier/ruralite/protection-des-sols/prevention-et-lutte-contre-l-erosion-des-sols/referentiel-cartographique-de-sensibilite-a-l-erosion.html'],
+                    ['label' => 'SPW Environnement — Nitrates et eau de distribution', 'url' => 'https://environnement.wallonie.be/home/milieux/eau/etat-des-eaux/eau-de-distribution/qualite-de-l-eau-de-distribution/nitrates.html'],
+                ],
+            ],
+            [
+                'id' => 'circuits-courts-alimentation-locale',
+                'title' => 'Circuits courts et alimentation locale',
+                'subtitle' => 'Apprendre à distinguer origine locale, vente directe, transformation locale, prix juste et consommation de saison.',
+                'audience' => 'Ménages, écoles, associations de consommateurs, collectivités, cantines et initiatives citoyennes.',
+                'duration' => 'Lecture guidée : 20 à 30 minutes',
+                'illustration' => '/assets/img/dossier-circuits-courts.png',
+                'chapters' => [
+                    [
+                        'id' => 'local-circuit-court-saison',
+                        'title' => 'Local, circuit court et saison : trois notions différentes',
+                        'summary' => 'Un produit peut être local sans être vendu en circuit court, vendu localement sans être produit localement, ou de saison sans venir de proximité.',
+                        'paragraphs' => [
+                            'Le mot “local” désigne une proximité géographique, mais il ne dit pas tout. Il faut regarder où la matière première a été produite, où elle a été transformée, combien d’intermédiaires interviennent et à quelle saison le produit est naturellement disponible.',
+                            'Le circuit court met l’accent sur le nombre limité d’intermédiaires et sur la relation entre producteur et consommateur. Il peut prendre plusieurs formes : marché, magasin à la ferme, point relais, coopérative, paniers ou plateforme locale.',
+                            'La saisonnalité reste un repère simple pour concilier goût, disponibilité, budget et impact. Acheter local hors saison peut parfois nécessiter stockage, chauffage ou transformation ; il faut donc lire l’ensemble du parcours du produit.',
+                        ],
+                        'key_points' => [
+                            'Local, circuit court et saison ne sont pas synonymes.',
+                            'Le lieu de transformation est aussi important que le lieu de production.',
+                            'Une bonne décision d’achat combine origine, saison, prix au kilo, usage prévu et gaspillage évité.',
+                        ],
+                        'citizen_actions' => [
+                            'Demander l’origine de production et le lieu de transformation.',
+                            'Comparer des produits similaires au prix au kilo plutôt qu’au format d’emballage.',
+                            'Construire une liste courte de produits locaux réguliers plutôt que viser une perfection impossible.',
+                        ],
+                    ],
+                    [
+                        'id' => 'prix-juste-budget',
+                        'title' => 'Prix juste et budget familial',
+                        'summary' => 'Le prix payé doit être compris à la fois côté ménage et côté producteur : coûts, saison, volumes, transformation, stockage et pertes évitées.',
+                        'paragraphs' => [
+                            'Un prix juste n’est pas seulement un prix bas. Il doit couvrir les coûts de production, rémunérer le travail et permettre à la ferme d’investir. Côté ménage, le budget reste une contrainte réelle : il faut donc chercher des arbitrages praticables.',
+                            'La planification des repas, l’achat de produits bruts, la réduction du gaspillage, la comparaison au kilo et l’achat groupé peuvent améliorer le budget sans rompre le lien avec les producteurs locaux.',
+                            'Les circuits courts ne sont pas automatiquement moins chers ou plus chers. Tout dépend du produit, de la saison, de la transformation, des volumes, du transport et de la valeur ajoutée conservée sur le territoire.',
+                        ],
+                        'key_points' => [
+                            'Comparer le prix doit inclure la qualité, l’usage, les pertes évitées et la rémunération.',
+                            'Le prix au kilo aide à éviter les effets trompeurs des formats.',
+                            'Un achat local régulier vaut souvent mieux qu’un achat militant ponctuel impossible à maintenir.',
+                        ],
+                        'citizen_actions' => [
+                            'Établir un panier local de base : pommes de terre, légumes de saison, œufs, produits laitiers ou pain selon l’offre disponible.',
+                            'Cuisiner une partie des produits bruts pour réduire le coût par repas.',
+                            'Partager les bonnes adresses locales avec des critères vérifiables, pas seulement des impressions.',
+                        ],
+                    ],
+                    [
+                        'id' => 'collectif-cantines-communes',
+                        'title' => 'Écoles, cantines et communes : agir collectivement',
+                        'summary' => 'Les collectivités peuvent soutenir les filières locales par leurs achats, leur pédagogie et l’organisation de débouchés réguliers.',
+                        'paragraphs' => [
+                            'Une cantine ou une commune ne change pas l’alimentation locale par une seule commande. Il faut identifier l’offre disponible, adapter les menus, sécuriser les volumes, prévoir la logistique et dialoguer avec les producteurs.',
+                            'Les marchés publics, les cuisines collectives, les animations scolaires et les événements locaux peuvent rendre l’agriculture plus visible. Mais ils doivent rester réalistes : calendrier, prix, conservation, allergies, équipements et temps de préparation comptent.',
+                            'Pour les citoyens, le levier collectif est puissant : demander une information claire sur les menus, soutenir les marchés locaux, participer aux consultations et relier alimentation, santé, territoire et économie locale.',
+                        ],
+                        'key_points' => [
+                            'La régularité des débouchés aide les producteurs à s’organiser.',
+                            'La restauration collective demande une logistique plus stricte que l’achat familial.',
+                            'La pédagogie facilite l’acceptation de menus plus saisonniers.',
+                        ],
+                        'citizen_actions' => [
+                            'Proposer une semaine de menus de saison dans une école ou une association.',
+                            'Interroger les communes sur leurs critères d’achat alimentaire.',
+                            'Inviter producteurs, cuisiniers et parents à discuter des contraintes ensemble.',
+                        ],
+                    ],
+                ],
+                'references' => [
+                    ['label' => 'Portail de l’agriculture wallonne — Circuits courts et vente directe', 'url' => 'https://agriculture.wallonie.be/home/groupements-et-conseils/diversification/circuits-courts-vente-directe-a-la-ferme.html'],
+                    ['label' => 'APAQ-W — Circuits courts', 'url' => 'https://www.apaqw.be/fr/circuits-courts'],
+                    ['label' => 'État de l’agriculture wallonne — Exploitations', 'url' => 'https://etat-agriculture.wallonie.be/contents/indicatorsheets/EAW-A_II_b_1-1.eew-sheet.html?thematic=9537325a-2206-4104-b8fc-5f2ed34c8636'],
+                    ['label' => 'APAQ-W — Baromètre de consommation de produits locaux et circuits courts', 'url' => 'https://www.apaqw.be/fr/node/11388'],
+                ],
+            ],
+            [
+                'id' => 'climat-biodiversite-pratiques-agricoles',
+                'title' => 'Climat, biodiversité et pratiques agricoles',
+                'subtitle' => 'Relier les haies, prairies, couverts, éco-régimes et MAEC aux services rendus au territoire.',
+                'audience' => 'Citoyens curieux, enseignants, collectifs locaux, communes, associations environnementales et agricoles.',
+                'duration' => 'Lecture guidée : 25 à 35 minutes',
+                'illustration' => '/assets/img/dossier-climat-biodiversite.png',
+                'chapters' => [
+                    [
+                        'id' => 'biodiversite-utile',
+                        'title' => 'La biodiversité utile à l’agriculture',
+                        'summary' => 'La biodiversité n’est pas seulement une valeur patrimoniale : elle peut contribuer à la pollinisation, à la régulation des ravageurs et à la vie du sol.',
+                        'paragraphs' => [
+                            'Dans un paysage agricole, la biodiversité utile dépend des habitats disponibles : haies, bandes fleuries, prairies, mares, bords de chemins, arbres isolés, sols vivants et cultures diversifiées. Ces éléments offrent nourriture, abris et continuités écologiques.',
+                            'Les auxiliaires de culture, pollinisateurs et organismes du sol ne remplacent pas toute intervention humaine, mais ils peuvent réduire certains déséquilibres et renforcer la stabilité des systèmes. Leur action se construit dans le temps.',
+                            'Pour le citoyen, l’enjeu est de dépasser l’opposition simpliste entre production et nature. Une ferme productive peut aussi accueillir des infrastructures écologiques, mais cela suppose du temps, des règles, des coûts et une cohérence territoriale.',
+                        ],
+                        'key_points' => [
+                            'La biodiversité fonctionnelle rend des services concrets aux cultures et aux prairies.',
+                            'Les habitats doivent former un réseau, pas seulement des éléments isolés.',
+                            'Les effets s’évaluent dans la durée et selon le contexte local.',
+                        ],
+                        'citizen_actions' => [
+                            'Soutenir les projets de plantation de haies et de bandes fleuries quand ils sont bien entretenus.',
+                            'Éviter les jugements rapides sur une parcelle : certaines zones non fauchées peuvent avoir une fonction écologique.',
+                            'Relier biodiversité, agriculture et alimentation dans les animations scolaires ou communales.',
+                        ],
+                    ],
+                    [
+                        'id' => 'pratiques-climat',
+                        'title' => 'Pratiques agricoles face au climat',
+                        'summary' => 'Les fermes s’adaptent par les sols couverts, les prairies, l’autonomie fourragère, l’efficacité énergétique et la diversification.',
+                        'paragraphs' => [
+                            'Le changement climatique modifie les repères : sécheresses, pluies intenses, chaleurs, stress hydrique et pression sur les coûts. Les réponses agricoles doivent rester concrètes : sécuriser l’eau, protéger les sols, réduire les pertes, diversifier les productions et maîtriser l’énergie.',
+                            'Les couverts végétaux, prairies permanentes, haies, rotations, choix variétaux, pâturage tournant, méthanisation ou réduction d’intrants peuvent contribuer à la résilience. Aucun levier n’est universel : tout dépend du type de ferme.',
+                            'Pour les citoyens, ces pratiques expliquent pourquoi la transition agricole ne peut pas être instantanée. Elle exige des essais, des investissements, de l’accompagnement et une rémunération suffisante.',
+                        ],
+                        'key_points' => [
+                            'La transition climatique combine adaptation et réduction des impacts.',
+                            'Les résultats doivent être mesurés : eau, sols, émissions, coûts, revenu et charge de travail.',
+                            'La diversification peut sécuriser une ferme, mais elle ajoute aussi de la complexité.',
+                        ],
+                        'citizen_actions' => [
+                            'Demander quelles pratiques sont déjà mises en place plutôt que chercher un label unique.',
+                            'Soutenir les produits issus de systèmes qui expliquent leurs contraintes et leurs progrès.',
+                            'Privilégier les démarches locales qui associent producteurs, communes, écoles et consommateurs.',
+                        ],
+                    ],
+                    [
+                        'id' => 'pac-maec-eco-regimes',
+                        'title' => 'PAC, MAEC et éco-régimes : comprendre les aides vertes',
+                        'summary' => 'Certaines aides agricoles rémunèrent des pratiques environnementales ou climatiques, mais elles répondent à des règles précises.',
+                        'paragraphs' => [
+                            'La Politique Agricole Commune ne se limite pas aux aides au revenu. Elle comprend aussi des obligations et des dispositifs destinés à soutenir des pratiques favorables au climat, aux paysages, aux sols, à l’eau ou à la biodiversité.',
+                            'Les éco-régimes sont des engagements annuels, tandis que les MAEC reposent souvent sur des engagements plus ciblés et plus longs. Ils ne remplacent pas la responsabilité des filières ni les choix de consommation, mais ils peuvent aider à financer des services environnementaux.',
+                            'Pour les citoyens, comprendre ces dispositifs permet de mieux lire les débats agricoles. Une aide n’est pas automatiquement un privilège : elle peut aussi compenser une contrainte, un manque à gagner, un coût de gestion ou un service rendu au territoire.',
+                        ],
+                        'key_points' => [
+                            'Les aides vertes sont encadrées par des cahiers des charges.',
+                            'Certaines pratiques doivent être vérifiées, documentées et maintenues dans le temps.',
+                            'Les citoyens peuvent demander plus de lisibilité sur les objectifs et résultats, sans réduire le sujet à un slogan.',
+                        ],
+                        'citizen_actions' => [
+                            'Lire les dispositifs avec une question simple : quel service est rémunéré et comment est-il vérifié ?',
+                            'Éviter de confondre aide, revenu, compensation et investissement.',
+                            'Soutenir les démarches territoriales qui rendent les résultats compréhensibles au public.',
+                        ],
+                    ],
+                ],
+                'references' => [
+                    ['label' => 'Commission européenne — Éco-régimes de la PAC', 'url' => 'https://agriculture.ec.europa.eu/common-agricultural-policy/income-support/eco-schemes_en'],
+                    ['label' => 'Commission européenne — Plan stratégique PAC Belgique Wallonie', 'url' => 'https://agriculture.ec.europa.eu/cap-my-country/cap-strategic-plans/belgium-wallonia_en'],
+                    ['label' => 'SPW Agriculture — Méthodes agro-environnementales et climatiques', 'url' => 'https://agriculture.wallonie.be/home/environnement/methodes-agro-environnementales-et-climatiques.html'],
+                    ['label' => 'SPW Agriculture — Éco-régime couverture longue du sol', 'url' => 'https://agriculture.wallonie.be/home/aides/pac-2023-2027-description-des-interventions/eco-regimes-nouveaute-2025/eco-regime-couverture-longue-du-sol-nouveaut%C3%A92025.html'],
+                    ['label' => 'SPW Agriculture — Environnement et biodiversité', 'url' => 'https://agriculture.wallonie.be/home/environnement.html'],
+                ],
+            ],
+        ],
         'resources' => [
             [
                 'id' => 'visites-pedagogiques',

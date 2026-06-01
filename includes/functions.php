@@ -17,7 +17,7 @@ function currentPage(): string
         return 'accueil';
     }
 
-    $allowed = ['accueil', 'filieres', 'ressources', 'faq', 'glossaire', 'ressource'];
+    $allowed = ['accueil', 'filieres', 'ressources', 'faq', 'glossaire', 'ressource', 'dossiers', 'dossier'];
     return in_array($page, $allowed, true) ? $page : 'accueil';
 }
 
@@ -66,7 +66,7 @@ function siteGeoConfig(array $site): array
  * @param array<string, mixed>|null $glossaryTerm
  * @return array{title:string,description:string,keywords:string}
  */
-function pageSeo(string $page, array $site, ?array $resource = null, ?array $glossaryTerm = null): array
+function pageSeo(string $page, array $site, ?array $resource = null, ?array $glossaryTerm = null, ?array $dossier = null, ?array $dossierChapter = null): array
 {
     $siteTitle = isset($site['title']) && is_string($site['title']) ? $site['title'] : 'MyAgri';
 
@@ -115,6 +115,36 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         ];
     }
 
+    if ($page === 'dossiers') {
+        return [
+            'title' => 'Dossiers citoyens sur l’agriculture wallonne | MyAgri',
+            'description' => 'Dossiers thématiques illustrés pour comprendre l’eau, les sols, les circuits courts, le climat, la biodiversité et les pratiques agricoles en Wallonie.',
+            'keywords' => 'dossiers agriculture wallonne, citoyens, eau sols agriculture, circuits courts, biodiversité agricole, climat agriculture',
+        ];
+    }
+
+    if ($page === 'dossier' && is_array($dossier)) {
+        $dossierTitle = isset($dossier['title']) && is_string($dossier['title']) ? $dossier['title'] : 'Dossier citoyen';
+        $chapterTitle = isset($dossierChapter['title']) && is_string($dossierChapter['title']) ? $dossierChapter['title'] : '';
+        $description = isset($dossierChapter['summary']) && is_string($dossierChapter['summary'])
+            ? $dossierChapter['summary']
+            : (isset($dossier['subtitle']) && is_string($dossier['subtitle']) ? $dossier['subtitle'] : 'Dossier citoyen MyAgri.');
+
+        return [
+            'title' => ($chapterTitle !== '' ? $chapterTitle . ' | ' : '') . $dossierTitle . ' | MyAgri',
+            'description' => $description,
+            'keywords' => strtolower($dossierTitle) . ', dossier citoyen, agriculture wallonne, références, pédagogie agricole',
+        ];
+    }
+
+    if ($page === 'dossier') {
+        return [
+            'title' => 'Dossier introuvable | MyAgri',
+            'description' => 'Le dossier demandé n’existe pas ou n’est pas disponible.',
+            'keywords' => 'dossier introuvable, agriculture wallonne, MyAgri',
+        ];
+    }
+
     if ($page === 'ressource' && is_array($resource)) {
         $resourceTitle = isset($resource['title']) && is_string($resource['title']) ? $resource['title'] : 'Ressource';
         $resourceDescription = isset($resource['description']) && is_string($resource['description'])
@@ -151,6 +181,9 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
  * @param array<int, array<string, mixed>> $glossary
  * @param array<string, mixed>|null $resource
  * @param array<string, mixed>|null $glossaryTerm
+ * @param array<int, array<string, mixed>> $dossiers
+ * @param array<string, mixed>|null $dossier
+ * @param array<string, mixed>|null $dossierChapter
  * @return array<string, mixed>
  */
 function pageStructuredData(
@@ -161,7 +194,10 @@ function pageStructuredData(
     array $faq,
     array $glossary,
     ?array $resource = null,
-    ?array $glossaryTerm = null
+    ?array $glossaryTerm = null,
+    array $dossiers = [],
+    ?array $dossier = null,
+    ?array $dossierChapter = null
 ): array {
     $baseUrl = siteBaseUrl();
     $siteTitle = isset($site['title']) && is_string($site['title']) ? $site['title'] : 'MyAgri';
@@ -171,8 +207,10 @@ function pageStructuredData(
     $glossaryTermSlug = is_array($glossaryTerm) && isset($glossaryTerm['term']) && is_string($glossaryTerm['term'])
         ? glossarySlug($glossaryTerm['term'])
         : '';
-    $seo = pageSeo($page, $site, $resource, $glossaryTerm);
-    $canonicalUrl = $baseUrl . canonicalPath($page, $resourceId, $glossaryTermSlug);
+    $dossierId = isset($dossier['id']) && is_string($dossier['id']) ? $dossier['id'] : '';
+    $chapterId = isset($dossierChapter['id']) && is_string($dossierChapter['id']) ? $dossierChapter['id'] : '';
+    $seo = pageSeo($page, $site, $resource, $glossaryTerm, $dossier, $dossierChapter);
+    $canonicalUrl = $baseUrl . canonicalPath($page, $resourceId, $glossaryTermSlug, $dossierId, $chapterId);
     $siteGeo = siteGeoConfig($site);
     $geoLocation = [
         '@type' => 'Place',
@@ -263,7 +301,7 @@ function pageStructuredData(
         [
             '@type' => 'BreadcrumbList',
             '@id' => $canonicalUrl . '#breadcrumb',
-            'itemListElement' => breadcrumbItems($page, $resource, $glossaryTerm),
+            'itemListElement' => breadcrumbItems($page, $resource, $glossaryTerm, $dossier, $dossierChapter),
         ],
     ];
 
@@ -273,6 +311,10 @@ function pageStructuredData(
 
     if ($page === 'ressources') {
         $graph[] = resourceItemList($resources, $baseUrl);
+    }
+
+    if ($page === 'dossiers') {
+        $graph[] = dossierItemList($dossiers, $baseUrl);
     }
 
     if ($page === 'faq') {
@@ -297,6 +339,10 @@ function pageStructuredData(
             resourceFaqPairs($resource),
             $canonicalUrl . '#faq'
         );
+    }
+
+    if ($page === 'dossier' && is_array($dossier)) {
+        $graph[] = dossierArticleStructuredData($dossier, $dossierChapter, $canonicalUrl, $baseUrl, $siteTitle, $dateModified);
     }
 
     return [
@@ -455,7 +501,7 @@ function faqStructuredDataFromPairs(array $pairs, string $id): array
 
 function pageSchemaType(string $page, bool $isGlossaryTerm = false): string
 {
-    if ($page === 'filieres' || $page === 'ressources' || ($page === 'glossaire' && !$isGlossaryTerm)) {
+    if ($page === 'filieres' || $page === 'ressources' || $page === 'dossiers' || ($page === 'glossaire' && !$isGlossaryTerm)) {
         return 'CollectionPage';
     }
 
@@ -471,6 +517,10 @@ function pageSchemaType(string $page, bool $isGlossaryTerm = false): string
         return 'Article';
     }
 
+    if ($page === 'dossier') {
+        return 'Article';
+    }
+
     return 'WebPage';
 }
 
@@ -479,7 +529,7 @@ function pageSchemaType(string $page, bool $isGlossaryTerm = false): string
  * @param array<string, mixed>|null $glossaryTerm
  * @return array<int, array<string, mixed>>
  */
-function breadcrumbItems(string $page, ?array $resource = null, ?array $glossaryTerm = null): array
+function breadcrumbItems(string $page, ?array $resource = null, ?array $glossaryTerm = null, ?array $dossier = null, ?array $dossierChapter = null): array
 {
     $baseUrl = siteBaseUrl();
     $items = [
@@ -495,6 +545,8 @@ function breadcrumbItems(string $page, ?array $resource = null, ?array $glossary
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Filières', 'item' => $baseUrl . '/?page=filieres'];
     } elseif ($page === 'ressources') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Ressources', 'item' => $baseUrl . '/?page=ressources'];
+    } elseif ($page === 'dossiers') {
+        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Dossiers', 'item' => $baseUrl . '/?page=dossiers'];
     } elseif ($page === 'faq') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'FAQ', 'item' => $baseUrl . '/?page=faq'];
     } elseif ($page === 'glossaire' && !is_array($glossaryTerm)) {
@@ -514,6 +566,16 @@ function breadcrumbItems(string $page, ?array $resource = null, ?array $glossary
             'position' => 3,
             'name' => isset($resource['title']) && is_string($resource['title']) ? $resource['title'] : 'Ressource',
             'item' => $baseUrl . canonicalPath('ressource', isset($resource['id']) && is_string($resource['id']) ? $resource['id'] : ''),
+        ];
+    } elseif ($page === 'dossier') {
+        $dossierId = isset($dossier['id']) && is_string($dossier['id']) ? $dossier['id'] : '';
+        $chapterId = isset($dossierChapter['id']) && is_string($dossierChapter['id']) ? $dossierChapter['id'] : '';
+        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Dossiers', 'item' => $baseUrl . '/?page=dossiers'];
+        $items[] = [
+            '@type' => 'ListItem',
+            'position' => 3,
+            'name' => isset($dossier['title']) && is_string($dossier['title']) ? $dossier['title'] : 'Dossier',
+            'item' => $baseUrl . canonicalPath('dossier', '', '', $dossierId, $chapterId),
         ];
     }
 
@@ -715,7 +777,7 @@ function updatedAtIsoDate(string $updatedAt): string
     return date('Y-m-d');
 }
 
-function canonicalPath(string $page, string $resourceId = '', string $glossaryTerm = ''): string
+function canonicalPath(string $page, string $resourceId = '', string $glossaryTerm = '', string $dossierId = '', string $chapterId = ''): string
 {
     if ($page === 'ressource') {
         if ($resourceId === '') {
@@ -729,11 +791,24 @@ function canonicalPath(string $page, string $resourceId = '', string $glossaryTe
         return '/?page=glossaire&term=' . rawurlencode($glossaryTerm);
     }
 
+    if ($page === 'dossier') {
+        if ($dossierId === '') {
+            return '/?page=dossiers';
+        }
+
+        $path = '/?page=dossier&dossier=' . rawurlencode($dossierId);
+        if ($chapterId !== '') {
+            $path .= '&chapitre=' . rawurlencode($chapterId);
+        }
+
+        return $path;
+    }
+
     if ($page === 'accueil') {
         return '/';
     }
 
-    if (in_array($page, ['filieres', 'ressources', 'faq', 'glossaire'], true)) {
+    if (in_array($page, ['filieres', 'ressources', 'faq', 'glossaire', 'dossiers'], true)) {
         return '/?page=' . rawurlencode($page);
     }
 
