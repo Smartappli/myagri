@@ -56,7 +56,7 @@ header {
 .brand-link {
     display: inline-flex;
     align-items: center;
-    min-width: 172px;
+    min-width: 250px;
     padding: 0.28rem 0.35rem;
     border-radius: 14px;
     text-decoration: none;
@@ -72,8 +72,8 @@ header {
 
 .brand-link img {
     display: block;
-    width: 190px;
-    max-width: 42vw;
+    width: 292px;
+    max-width: 46vw;
     height: auto;
 }
 
@@ -129,7 +129,9 @@ header {
 .hero-visual img {
     display: block;
     width: 100%;
-    height: auto;
+    height: clamp(300px, 34vw, 390px);
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero-visual::after {
@@ -151,8 +153,8 @@ header {
 }
 
 .hero-copy h1 {
-    margin-bottom: 0.55rem;
-    font-size: clamp(1.45rem, 3.2vw, 2.8rem);
+    margin-bottom: 0.6rem;
+    font-size: clamp(1.55rem, 3.1vw, 2.85rem);
     line-height: 1.08;
     letter-spacing: 0;
 }
@@ -160,7 +162,7 @@ header {
 .hero-copy p {
     max-width: 52ch;
     margin: 0;
-    font-size: clamp(0.88rem, 1.1vw, 1.05rem);
+    font-size: clamp(0.92rem, 1.12vw, 1.08rem);
     line-height: 1.45;
 }
 
@@ -612,6 +614,11 @@ footer {
         border-radius: 18px;
     }
 
+    .hero-visual img {
+        height: 300px;
+        object-position: 55% center;
+    }
+
     .hero-visual::after {
         background: linear-gradient(0deg, rgb(9 33 20 / 78%) 0%, rgb(9 33 20 / 32%) 64%, transparent 100%);
     }
@@ -624,19 +631,19 @@ footer {
     }
 
     .hero-copy h1 {
-        margin-bottom: 0.35rem;
-        font-size: 1.08rem;
+        margin-bottom: 0.4rem;
+        font-size: 1.28rem;
         line-height: 1.1;
     }
 
     .hero-copy p {
-        font-size: 0.76rem;
+        font-size: 0.84rem;
         line-height: 1.35;
     }
 
     .hero-copy .hero-meta {
-        margin-top: 0.35rem;
-        font-size: 0.68rem;
+        margin-top: 0.4rem;
+        font-size: 0.74rem;
     }
 
     .hero-search {
@@ -660,8 +667,8 @@ footer {
     }
 
     .brand-link img {
-        width: 176px;
-        max-width: 72vw;
+        width: 248px;
+        max-width: 82vw;
     }
 
     .nav-list a {
