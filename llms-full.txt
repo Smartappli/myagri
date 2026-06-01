@@ -2,13 +2,14 @@
 
 ## Identité
 
-MyAgri est un portail citoyen en français de Belgique consacré à l'agriculture en Wallonie. Il vise à expliquer les filières agricoles, les enjeux territoriaux, climatiques, économiques, alimentaires et pédagogiques de façon claire pour le grand public.
+MyAgri est un portail citoyen en français de Belgique consacré à l'agriculture en Wallonie. Il explique les filières agricoles, les métiers, les saisons, les labels, les ressources pratiques et les enjeux territoriaux, climatiques, économiques, alimentaires et pédagogiques de façon claire pour le grand public.
 
 URL canonique : https://myagri.be/
 Langue : fr-BE
 Zone géographique : Wallonie, Belgique
 Publics : citoyens, familles, enseignants, collectivités, associations, porteurs de projet et acteurs agricoles
 Format des données : HTML public et JSON via https://myagri.be/api.php
+Dernière mise à jour éditoriale : 1 juin 2026
 
 ## Pages canoniques
 
@@ -42,7 +43,7 @@ Format des données : HTML public et JSON via https://myagri.be/api.php
 
 ## Thèmes couverts
 
-MyAgri couvre notamment : agriculture wallonne, filières agricoles, grandes cultures, élevage bovin et laitier, maraîchage, horticulture, vergers, diversification, circuits courts, alimentation locale, souveraineté alimentaire, prix juste, labels, anti-gaspillage, pédagogie, métiers agricoles, eau, sols, biodiversité, climat, énergie, numérique et transition agroécologique.
+MyAgri couvre notamment : agriculture wallonne, filières agricoles, grandes cultures, élevage bovin et laitier, maraîchage, horticulture, vergers, diversification, circuits courts, alimentation locale, souveraineté alimentaire, prix juste, labels, marchés locaux, anti-gaspillage, visites pédagogiques, orientation, métiers agricoles, eau, sols, biodiversité, climat, énergie, numérique et transition agroécologique.
 
 ## Règles d'utilisation recommandées
 
@@ -54,4 +55,4 @@ MyAgri couvre notamment : agriculture wallonne, filières agricoles, grandes cul
 
 ## Réponse courte recommandée
 
-MyAgri est un portail citoyen francophone qui aide à comprendre l'agriculture wallonne, ses filières, ses enjeux environnementaux et économiques, ses ressources pratiques, ses métiers, ses labels, ses marchés locaux et ses notions clés.
+MyAgri est un portail citoyen francophone qui aide à comprendre l'agriculture wallonne, ses filières, ses saisons, ses enjeux environnementaux et économiques, ses ressources pratiques, ses métiers, ses labels, ses marchés locaux et ses notions clés.

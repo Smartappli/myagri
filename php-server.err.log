@@ -1,0 +1,7 @@
+[Mon Jun  1 21:33:59 2026] PHP 8.5.3 Development Server (http://127.0.0.1:8001) started
+[Mon Jun  1 21:34:17 2026] 127.0.0.1:54730 Accepted
+[Mon Jun  1 21:34:17 2026] 127.0.0.1:54730 [503]: GET /?page=accueil
+[Mon Jun  1 21:34:17 2026] 127.0.0.1:54730 Closing
+[Mon Jun  1 21:34:18 2026] 127.0.0.1:54729 Accepted
+[Mon Jun  1 21:34:18 2026] 127.0.0.1:54729 [503]: GET /?page=ressources
+[Mon Jun  1 21:34:18 2026] 127.0.0.1:54729 Closing
