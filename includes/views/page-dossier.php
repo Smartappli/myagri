@@ -13,6 +13,29 @@ if (!is_array($selectedDossier) || !is_array($selectedDossierChapter)) {
 $chapters = is_array($selectedDossier['chapters'] ?? null) ? $selectedDossier['chapters'] : [];
 $references = is_array($selectedDossier['references'] ?? null) ? $selectedDossier['references'] : [];
 $currentChapterId = isset($selectedDossierChapter['id']) && is_string($selectedDossierChapter['id']) ? $selectedDossierChapter['id'] : '';
+$renderList = static function (array $items, bool $ordered = false): void {
+    $tag = $ordered ? 'ol' : 'ul';
+    ?>
+    <<?= $tag ?> class="list-tight">
+        <?php foreach ($items as $item): ?>
+            <?php if (is_string($item) && trim($item) !== ''): ?>
+                <li><?= e($item) ?></li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </<?= $tag ?>>
+    <?php
+};
+$renderCard = static function (string $title, array $items, bool $ordered = false) use ($renderList): void {
+    if ($items === []) {
+        return;
+    }
+    ?>
+    <section class="card resource-detail-card">
+        <h3><?= e($title) ?></h3>
+        <?php $renderList($items, $ordered); ?>
+    </section>
+    <?php
+};
 ?>
 
 <section aria-labelledby="dossier-title" class="shadow-soft dossier-detail">
@@ -35,7 +58,24 @@ $currentChapterId = isset($selectedDossierChapter['id']) && is_string($selectedD
             </p>
         </div>
         <?php if (isset($selectedDossier['illustration']) && is_string($selectedDossier['illustration'])): ?>
-            <img src="<?= e($selectedDossier['illustration']) ?>" alt="">
+            <figure class="dossier-hero-media">
+                <img src="<?= e($selectedDossier['illustration']) ?>" alt="<?= e(isset($selectedDossier['illustration_alt']) && is_string($selectedDossier['illustration_alt']) ? $selectedDossier['illustration_alt'] : $selectedDossier['title']) ?>">
+            </figure>
+        <?php endif; ?>
+    </div>
+
+    <div class="pedagogical-overview">
+        <?php if (is_array($selectedDossier['learning_objectives'] ?? null)): ?>
+            <?php $renderCard('Objectifs pédagogiques', $selectedDossier['learning_objectives']); ?>
+        <?php endif; ?>
+        <?php if (is_array($selectedDossier['pedagogical_use'] ?? null)): ?>
+            <?php $renderCard('Mode d’emploi du dossier', $selectedDossier['pedagogical_use'], true); ?>
+        <?php endif; ?>
+        <?php if (is_array($selectedDossier['activity_kit'] ?? null)): ?>
+            <?php $renderCard('Matériel conseillé', $selectedDossier['activity_kit']); ?>
+        <?php endif; ?>
+        <?php if (is_array($selectedDossier['evaluation'] ?? null)): ?>
+            <?php $renderCard('Évaluer la compréhension', $selectedDossier['evaluation']); ?>
         <?php endif; ?>
     </div>
 
@@ -66,6 +106,35 @@ $currentChapterId = isset($selectedDossierChapter['id']) && is_string($selectedD
                 <?php endif; ?>
             <?php endforeach; ?>
         <?php endif; ?>
+
+        <?php if (is_array($selectedDossierChapter['pedagogical_sequence'] ?? null)): ?>
+            <div class="chapter-section">
+                <h4>Déroulé pédagogique</h4>
+                <?php $renderList($selectedDossierChapter['pedagogical_sequence'], true); ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if (is_array($selectedDossierChapter['workshop'] ?? null)): ?>
+            <?php $workshop = $selectedDossierChapter['workshop']; ?>
+            <aside class="chapter-workshop">
+                <p class="eyebrow">Activité guidée</p>
+                <?php if (isset($workshop['title']) && is_string($workshop['title'])): ?>
+                    <h4><?= e($workshop['title']) ?></h4>
+                <?php endif; ?>
+                <?php if (isset($workshop['duration']) && is_string($workshop['duration'])): ?>
+                    <p class="meta"><?= e($workshop['duration']) ?></p>
+                <?php endif; ?>
+                <?php if (isset($workshop['objective']) && is_string($workshop['objective'])): ?>
+                    <p><?= e($workshop['objective']) ?></p>
+                <?php endif; ?>
+                <?php if (is_array($workshop['steps'] ?? null)): ?>
+                    <?php $renderList($workshop['steps'], true); ?>
+                <?php endif; ?>
+                <?php if (isset($workshop['debrief']) && is_string($workshop['debrief'])): ?>
+                    <p><strong>Synthèse :</strong> <?= e($workshop['debrief']) ?></p>
+                <?php endif; ?>
+            </aside>
+        <?php endif; ?>
     </article>
 
     <div class="resource-detail-grid">
@@ -94,7 +163,34 @@ $currentChapterId = isset($selectedDossierChapter['id']) && is_string($selectedD
                 </ul>
             </section>
         <?php endif; ?>
+
+        <?php if (is_array($selectedDossierChapter['discussion_questions'] ?? null)): ?>
+            <section class="card resource-detail-card">
+                <h3>Questions pour débattre</h3>
+                <?php $renderList($selectedDossierChapter['discussion_questions']); ?>
+            </section>
+        <?php endif; ?>
+
+        <?php if (is_array($selectedDossierChapter['teacher_notes'] ?? null)): ?>
+            <section class="card resource-detail-card">
+                <h3>Repères d’animation</h3>
+                <?php $renderList($selectedDossierChapter['teacher_notes']); ?>
+            </section>
+        <?php endif; ?>
     </div>
+
+    <?php if (is_array($selectedDossier['vocabulary'] ?? null)): ?>
+        <section class="card dossier-vocabulary" aria-labelledby="dossier-vocabulary-title">
+            <h3 id="dossier-vocabulary-title">Lexique lié au dossier</h3>
+            <div class="vocabulary-links">
+                <?php foreach ($selectedDossier['vocabulary'] as $term): ?>
+                    <?php if (is_string($term) && trim($term) !== ''): ?>
+                        <a href="?page=glossaire&amp;term=<?= e(glossarySlug($term)) ?>"><?= e($term) ?></a>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
+        </section>
+    <?php endif; ?>
 
     <?php if ($references !== []): ?>
         <section class="card references-card" aria-labelledby="references-title">

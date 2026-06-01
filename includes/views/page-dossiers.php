@@ -17,7 +17,9 @@
             ?>
             <article class="card h-full dossier-card">
                 <?php if (isset($dossier['illustration']) && is_string($dossier['illustration'])): ?>
-                    <img class="dossier-card-image" src="<?= e($dossier['illustration']) ?>" alt="">
+                    <figure class="dossier-card-media">
+                        <img class="dossier-card-image" src="<?= e($dossier['illustration']) ?>" alt="<?= e(isset($dossier['illustration_alt']) && is_string($dossier['illustration_alt']) ? $dossier['illustration_alt'] : $dossier['title']) ?>">
+                    </figure>
                 <?php endif; ?>
                 <div class="dossier-card-body">
                     <p class="eyebrow"><?= count($chapters) ?> chapitres</p>
