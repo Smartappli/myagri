@@ -26,6 +26,6 @@
 
   <g fill="#13281d">
     <text x="108" y="48" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">MyAgri</text>
-    <text x="110" y="72" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#315d88">Agriculture wallonne expliquée</text>
+    <text x="108" y="72" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#315d88">L'agriculture wallonne expliquée</text>
   </g>
 </svg>
