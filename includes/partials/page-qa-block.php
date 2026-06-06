@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * @var array<int, array<string, string>> $faqPairs
  * @var string $qaTitle

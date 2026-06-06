@@ -960,7 +960,6 @@ function glossarySlug(string $term): string
         "\xE2\x80\x94" => ' ',
         "\xE2\x80\xA6" => ' ',
         "\xC2\xA0" => ' ',
-        "\xC3\x86" => 'ae',
         "\xC3\x9E" => 'p',
     ]);
 
