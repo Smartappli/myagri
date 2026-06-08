@@ -31,13 +31,21 @@ if (is_array($selectedGlossaryTerm)) {
     <?php
     return;
 }
+
+$sortedGlossary = $glossary;
+usort($sortedGlossary, static function (array $left, array $right): int {
+    $leftTerm = isset($left['term']) && is_string($left['term']) ? $left['term'] : '';
+    $rightTerm = isset($right['term']) && is_string($right['term']) ? $right['term'] : '';
+
+    return glossarySlug($leftTerm) <=> glossarySlug($rightTerm);
+});
 ?>
 
 <section aria-labelledby="glossary-title" class="shadow-soft">
     <h2 id="glossary-title">Glossaire</h2>
     <p class="section-intro">Un référentiel de <?= count($glossary) ?> notions pour comprendre les mots utilisés dans les filières agricoles, les pratiques de terrain, les politiques publiques, l’alimentation locale et la transition agroécologique.</p>
     <div class="grid grid-2">
-        <?php foreach ($glossary as $entry): ?>
+        <?php foreach ($sortedGlossary as $entry): ?>
             <?php
             $term = isset($entry['term']) && is_string($entry['term']) ? $entry['term'] : '';
             $definition = isset($entry['definition']) && is_string($entry['definition']) ? $entry['definition'] : '';
