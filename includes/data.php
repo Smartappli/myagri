@@ -280,7 +280,7 @@ function getPortalData(): array
             ['term' => 'Transition agroécologique', 'definition' => 'Chemin de changement qui combine essais techniques, viabilité économique, conditions de travail, réduction des dépendances et effets mesurables sur le vivant.'],
             ['term' => 'Valeur ajoutée', 'definition' => 'Richesse créée par la transformation, la qualité, l’origine ou le mode de commercialisation d’un produit.'],
             ['term' => 'Vente directe', 'definition' => 'Commercialisation d’un produit du producteur au consommateur sans intermédiaire commercial, à la ferme, au marché, en point relais ou en ligne.'],
-            ['term' => 'WALLeSmart', 'definition' => 'Plateforme numérique de coordination, de diffusion d’informations et d’outils pratiques pour relier acteurs, données et actions locales autour de l’agriculture.'],
+            ['term' => 'WALLeSmart', 'definition' => 'Plateforme numérique wallonne qui facilite l’échange sécurisé de données agricoles entre outils, agriculteurs et partenaires autorisés.'],
             ['term' => 'Zéro artificialisation nette (ZAN)', 'definition' => 'Objectif de sobriété foncière : réduire l’extension des surfaces bâties ou imperméabilisées et compenser les pertes quand les règles le prévoient.'],
             ['term' => 'Zone tampon', 'definition' => 'Espace aménagé entre une activité agricole et un milieu sensible pour réduire les transferts de polluants, protéger l’eau ou préserver la biodiversité.'],
         ],
