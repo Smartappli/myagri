@@ -45,6 +45,7 @@ $isInvalidPage = $requestedPage !== '' && !in_array($requestedPage, $allowedPage
 
 $site = $data['site'];
 $quickFacts = $data['quickFacts'];
+$editorialPrinciples = is_array($data['editorialPrinciples'] ?? null) ? $data['editorialPrinciples'] : [];
 $pillars = $data['pillars'];
 $sectors = $data['sectors'];
 $focusThemes = $data['focusThemes'];

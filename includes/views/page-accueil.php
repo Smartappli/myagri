@@ -40,6 +40,38 @@
     </div>
 </section>
 
+<?php if ($editorialPrinciples !== []): ?>
+<section aria-labelledby="editorial-title" class="shadow-soft">
+    <div class="section-heading">
+        <p class="eyebrow">Méthode éditoriale</p>
+        <h2 id="editorial-title">Contenu original, sources vérifiables</h2>
+        <p class="section-intro">MyAgri ne doit pas empiler des définitions copiées. Le portail reformule, contextualise et indique quand une information doit être vérifiée auprès d’une source compétente.</p>
+    </div>
+    <div class="grid grid-2">
+        <?php foreach ($editorialPrinciples as $principle): ?>
+            <?php
+            if (!is_array($principle)) {
+                continue;
+            }
+            $principleTitle = isset($principle['title']) && is_string($principle['title']) ? $principle['title'] : '';
+            $principleContent = isset($principle['content']) && is_string($principle['content']) ? $principle['content'] : '';
+            if ($principleTitle === '' && $principleContent === '') {
+                continue;
+            }
+            ?>
+            <article class="card h-full">
+                <?php if ($principleTitle !== ''): ?>
+                    <h3><?= e($principleTitle) ?></h3>
+                <?php endif; ?>
+                <?php if ($principleContent !== ''): ?>
+                    <p><?= e($principleContent) ?></p>
+                <?php endif; ?>
+            </article>
+        <?php endforeach; ?>
+    </div>
+</section>
+<?php endif; ?>
+
 <section aria-labelledby="pillars-title" class="shadow-soft">
     <h2 id="pillars-title">Les 4 piliers</h2>
     <div class="grid grid-2 pillars">
