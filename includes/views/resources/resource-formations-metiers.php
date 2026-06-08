@@ -188,4 +188,6 @@ $actionPlan = is_array($selectedResource['action_plan_90_days'] ?? null) ? $sele
             <?php endif; ?>
         </article>
     <?php endif; ?>
+
+    <?php require __DIR__ . '/../../partials/resource-verification.php'; ?>
 </section>

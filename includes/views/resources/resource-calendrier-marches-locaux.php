@@ -58,4 +58,6 @@ $checklist = is_array($selectedResource['checklist'] ?? null) ? $selectedResourc
             </ul>
         </article>
     <?php endif; ?>
+
+    <?php require __DIR__ . '/../../partials/resource-verification.php'; ?>
 </section>

@@ -883,6 +883,11 @@ function getPortalData(): array
                 'description' => 'Trouver des fermes ouvertes au public et aux écoles.',
                 'overview' => 'Préparer une visite de ferme avec un objectif clair, des consignes sûres et une restitution utile pour le groupe.',
                 'for' => 'Écoles, associations jeunesse, maisons de quartier, centres culturels, familles, animateurs nature et collectivités.',
+                'verification_prompts' => [
+                    'La ferme confirme-t-elle les horaires, accès, sanitaires, zones interdites, allergies et consignes autour des animaux ou machines ?',
+                    'Quel objectif d\'apprentissage sera vérifié après la visite, et avec quel support de restitution ?',
+                    'Quelles photos, notes ou productions peuvent être conservées sans problème d\'autorisation ?',
+                ],
                 'continuous_content' => 'Une visite de ferme ne devrait pas se limiter à une sortie agréable. Elle devient utile quand le groupe sait ce qu’il vient observer, quelles règles respecter, quelles questions poser et comment réutiliser ce qui a été vu. Le contenu proposé aide donc à préparer l’avant, sécuriser le temps sur place et transformer la visite en trace pédagogique exploitable.',
                 'content_blocks' => [
                     [
@@ -999,6 +1004,11 @@ function getPortalData(): array
                 'description' => 'Explorer les parcours liés à l’agriculture et l’agroalimentaire.',
                 'overview' => 'Repères d’orientation pour comparer métiers, formations, immersions et compétences attendues dans les activités agricoles et agroalimentaires.',
                 'for' => 'Collégiens/lycéens, étudiants, adultes en reconversion, demandeurs d’emploi, enseignants, conseillers en orientation et structures d’insertion.',
+                'verification_prompts' => [
+                    'La formation ou certification est-elle reconnue par l\'organisme compétent pour le métier visé ?',
+                    'Quels horaires, déplacements, contraintes physiques et niveaux de rémunération faut-il tester avant de s\'engager ?',
+                    'Quelle immersion courte permet de vérifier que le métier correspond au projet réel ?',
+                ],
                 'continuous_content' => 'S’orienter vers l’agriculture demande plus qu’une liste de formations. Il faut confronter une envie de métier à des horaires, des gestes techniques, des contraintes physiques, des débouchés locaux et un niveau d’autonomie attendu. Cette ressource aide à comparer les pistes sans vendre une vocation idéalisée : immersion courte, compétences déjà acquises, financement, mobilité et premier plan d’action.',
                 'steps' => [
                     'Étape 1 — Définir un cap métier : production végétale, élevage, transformation, commercialisation, conseil, maintenance, logistique ou qualité.',
@@ -1085,6 +1095,11 @@ function getPortalData(): array
                 'description' => 'Repères pratiques pour des achats plus durables.',
                 'overview' => 'Méthode concrète pour améliorer ses achats alimentaires sans promettre une perfection impossible : budget, saison, gaspillage, origine et usages réels.',
                 'for' => 'Ménages, étudiants, familles, associations de consommateurs, groupes d’achat, collectivités et structures d’éducation à l’alimentation.',
+                'verification_prompts' => [
+                    'Quel changement peut être tenu pendant quatre semaines sans augmenter fortement le budget ou la charge mentale ?',
+                    'Le prix est-il comparé au kilo, à la portion ou au repas plutôt qu\'au seul montant du ticket ?',
+                    'L\'origine de production et le lieu de transformation sont-ils tous les deux identifiés ?',
+                ],
                 'continuous_content' => 'Consommer de façon responsable ne consiste pas à acheter uniquement des produits parfaits. La démarche commence par ce qui se passe réellement dans le foyer : budget, temps de cuisine, restes jetés, produits disponibles près de chez soi et habitudes qui tiennent dans la durée. La page propose des arbitrages vérifiables : prix au kilo, saison, origine, conservation, part de produits bruts et réduction du gaspillage.',
                 'steps' => [
                     'Étape 1 — Diagnostiquer ses habitudes : analyser tickets de caisse, déchets alimentaires et fréquence des achats impulsifs.',
@@ -1156,6 +1171,11 @@ function getPortalData(): array
                 'description' => 'Repérer les marchés de producteurs et points de vente à la ferme.',
                 'overview' => 'Mode d’emploi pour transformer les marchés et ventes à la ferme en routine d’achat réaliste, pas en démarche ponctuelle difficile à tenir.',
                 'for' => 'Habitants, nouveaux arrivants, collectivités locales.',
+                'verification_prompts' => [
+                    'Le produit est-il réellement produit localement, transformé localement, ou seulement vendu sur un marché local ?',
+                    'Les horaires, saisons de présence et moyens de paiement ont-ils été confirmés récemment ?',
+                    'Quel plan B existe si le marché est annulé, si le producteur est absent ou si le prix dépasse le budget prévu ?',
+                ],
                 'continuous_content' => 'Un marché local n’est utile que s’il entre dans l’organisation réelle d’un ménage ou d’un collectif. Cette page aide à repérer les lieux d’achat, les jours, les producteurs réguliers, les produits saisonniers et les solutions de repli. L’objectif est de construire une routine souple : savoir où aller, quoi chercher, combien prévoir et quelles questions poser sur l’origine ou la transformation.',
                 'steps' => [
                     'Lister les marchés hebdomadaires autour du domicile ou du lieu de travail.',
@@ -1177,6 +1197,11 @@ function getPortalData(): array
                 'description' => 'Comprendre les dispositifs d’appui à la transition agroécologique.',
                 'overview' => 'Grille de préparation pour cadrer un projet agricole, vérifier son éligibilité et éviter les erreurs fréquentes avant le dépôt d’une demande d’aide.',
                 'for' => 'Agriculteurs en activité, jeunes installés, porteurs de projet, CUMA, coopératives, collectivités, structures de conseil et associations rurales.',
+                'verification_prompts' => [
+                    'Le dispositif autorise-t-il le démarrage des dépenses avant accord, ou faut-il attendre une décision formelle ?',
+                    'Quels critères d\'éligibilité, plafonds, délais et pièces justificatives sont confirmés par écrit ?',
+                    'Qui relit le dossier avant dépôt : conseiller technique, centre de gestion, guichet public ou partenaire de projet ?',
+                ],
                 'continuous_content' => 'Une aide agricole ne remplace pas un projet solide. Avant de déposer un dossier, il faut clarifier l’objectif, vérifier les règles, chiffrer les dépenses, anticiper la trésorerie et garder les preuves. Cette ressource reformule la démarche comme un outil de pilotage : ce qui est demandé, ce qui peut bloquer, ce qu’il faut documenter et ce qui doit être confirmé auprès du guichet compétent.',
                 'steps' => [
                     'Étape 1 — Clarifier le besoin : définir précisément le projet (modernisation, conversion, diversification, irrigation, sobriété énergétique, transformation à la ferme, etc.).',
@@ -1246,6 +1271,11 @@ function getPortalData(): array
                 'description' => 'Comparer les principaux labels qualité, origine et durabilité.',
                 'overview' => 'Clés de lecture pour distinguer certification contrôlée, origine, promesse marketing et critère vraiment utile au moment de choisir un produit.',
                 'for' => 'Consommateurs, animateurs d’ateliers, structures éducatives.',
+                'verification_prompts' => [
+                    'Le signe est-il un label contrôlé, une marque privée, une mention d\'origine ou une simple promesse commerciale ?',
+                    'Quel organisme contrôle le cahier des charges et quelle partie du produit est réellement couverte ?',
+                    'Quelles informations restent à comparer : saison, prix au kilo, composition, origine, transformation ou niveau de service ?',
+                ],
                 'continuous_content' => 'Un label n’explique jamais tout à lui seul. Pour éviter les raccourcis, il faut regarder ce que le signe promet vraiment, qui le contrôle, quelle partie du produit est concernée et quelles informations restent manquantes. Cette page propose une lecture critique des logos, mentions d’origine et arguments de durabilité afin de comparer des produits avec les mêmes critères.',
                 'steps' => [
                     'Identifier la promesse du label : origine, méthode de production, cahier des charges.',
@@ -1267,6 +1297,11 @@ function getPortalData(): array
                 'description' => 'Astuces pour mieux conserver, cuisiner et valoriser les produits frais.',
                 'overview' => 'Outils simples pour repérer les pertes, organiser les stocks, cuisiner les restes et mesurer les progrès sans alourdir la vie quotidienne.',
                 'for' => 'Familles, étudiants, cuisines collectives, associations.',
+                'verification_prompts' => [
+                    'Quelle catégorie d\'aliment est le plus souvent jetée et pour quelle raison précise ?',
+                    'La solution proposée respecte-t-elle les règles de conservation, de chaîne du froid et d\'hygiène ?',
+                    'Quel indicateur simple sera suivi : nombre de restes valorisés, poids jeté, argent économisé ou repas récupérés ?',
+                ],
                 'continuous_content' => 'Le gaspillage alimentaire se corrige d’abord par l’observation : quels produits reviennent trop souvent au fond du frigo, quelles portions sont mal calibrées, quelles dates sont mal suivies. La boîte à outils propose ensuite des gestes testables : rotation des stocks, repas de fin de frigo, congélation en portions, étiquetage et suivi mensuel des pertes évitées.',
                 'steps' => [
                     'Classer les aliments selon leur sensibilité (très périssable, moyen, longue conservation).',
@@ -1288,6 +1323,11 @@ function getPortalData(): array
                 'description' => 'Ressources pour enseignants et familles autour de l’alimentation et des saisons.',
                 'overview' => 'Parcours modulables pour faire travailler alimentation, saisons, métiers agricoles et esprit critique avec des publics d’âges différents.',
                 'for' => 'Enseignants, éducateurs, parents et médiateurs scientifiques.',
+                'verification_prompts' => [
+                    'Quelle question d\'enquête structure le parcours, au lieu d\'empiler des activités sans fil conducteur ?',
+                    'Le vocabulaire, la durée et le niveau d\'abstraction sont-ils adaptés à l\'âge du public ?',
+                    'Quelle restitution prouve que les participants ont compris : carte mentale, quiz, affiche, débat argumenté ou observation commentée ?',
+                ],
                 'continuous_content' => 'Un parcours pédagogique solide évite deux défauts : accumuler des informations sans activité, ou faire une animation agréable sans apprentissage clair. Cette ressource aide à choisir une question d’enquête, adapter le vocabulaire à l’âge du public, relier théorie et observation, puis terminer par une restitution qui vérifie ce qui a réellement été compris.',
                 'steps' => [
                     'Choisir un niveau (débutant, intermédiaire, avancé) selon l’âge des participants.',

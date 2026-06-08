@@ -131,4 +131,6 @@ if ($resourceTemplate !== null) {
             <?php endforeach; ?>
         </article>
     <?php endif; ?>
+
+    <?php require __DIR__ . '/../partials/resource-verification.php'; ?>
 </section>

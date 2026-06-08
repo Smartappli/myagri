@@ -211,4 +211,6 @@ $blocks = is_array($selectedResource['content_blocks'] ?? null) ? $selectedResou
             <?php endif; ?>
         </article>
     <?php endif; ?>
+
+    <?php require __DIR__ . '/../../partials/resource-verification.php'; ?>
 </section>

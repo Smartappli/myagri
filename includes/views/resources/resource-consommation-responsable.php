@@ -160,4 +160,6 @@ $kpi = is_array($selectedResource['kpi_tracking'] ?? null) ? $selectedResource['
             <?php endif; ?>
         </article>
     <?php endif; ?>
+
+    <?php require __DIR__ . '/../../partials/resource-verification.php'; ?>
 </section>

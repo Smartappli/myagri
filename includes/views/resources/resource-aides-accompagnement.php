@@ -132,4 +132,6 @@ $supportContacts = is_array($selectedResource['support_contacts'] ?? null) ? $se
             <?php endif; ?>
         </article>
     <?php endif; ?>
+
+    <?php require __DIR__ . '/../../partials/resource-verification.php'; ?>
 </section>
