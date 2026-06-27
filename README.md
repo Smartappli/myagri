@@ -1,87 +1,46 @@
-# myagri
+# MyAgri
 
-Portail citoyen en **PHP** pour informer le grand public sur l'agriculture en Wallonie.
+Deutschsprachiges PHP-Bürgerportal zur Landwirtschaft in der Wallonie.
 
-## Ce qui est inclus
+## Funktionen
 
-- Portail multi-vues via `?page=accueil|filieres|ressources`.
-- Contenu centralisé dans `includes/data.php` via `getPortalData()`.
-- Helpers PHP dans `includes/functions.php` (`e()`, `currentPage()`).
-- Recherche globale (`q=`), filtre local des filières et FAQ interactive.
-- API JSON de lecture via `api.php` (`?section=...`).
-- Dossiers thématiques citoyens en plusieurs chapitres, avec références et illustrations locales.
-- Tracking Matomo intégré sur toutes les pages du portail (`siteId` 5).
-- Chaque ressource utile dispose d'une page individuelle (`?page=ressource&resource=<id>`).
-- Couche repository (`includes/portal_repository.php`) connectée en MySQL.
-- Tailwind servi localement via `assets/css/tailwind-local.css` pour supprimer la dépendance au CDN.
-- SEO/GSO renforcé : balises meta dynamiques, Open Graph/Twitter, canonical, JSON-LD enrichi, `robots.txt`, `sitemap.xml`, `llms.txt`.
-- PWA installable : `manifest.json`, service worker `sw.js`, page hors ligne `offline.html`, icônes Android/iOS et cache des pages principales.
+- Zentraler Inhalt in `includes/data.php` über `getPortalData()`.
+- Dynamische SEO-Metadaten, Open Graph/Twitter, Canonical URLs und JSON-LD.
+- Generative Engine Optimisation über `llms.txt`, `llms-full.txt`, JSON-API und Sitemap.
+- Sektoren, Ressourcen, Dossiers, FAQ und landwirtschaftliches Glossar.
+- PWA-Unterstützung mit `manifest.json`, `sw.js`, Offline-Seite und lokalen Icons.
+- Lokales Tailwind-Utility-CSS ohne CDN-Abhängigkeit.
+- Optionaler MySQL-Repository-Layer mit automatischer Synchronisierung der lokalen Daten.
 
-## Accès local
-
-Lancer le serveur PHP :
+## Lokal Starten
 
 ```bash
 php -S 127.0.0.1:8000
 ```
 
-Puis ouvrir :
+Dann `http://127.0.0.1:8000` im Browser öffnen.
 
-- <http://127.0.0.1:8000/?page=accueil>
-- <http://127.0.0.1:8000/?page=filieres>
-- <http://127.0.0.1:8000/?page=ressources>
-- <http://127.0.0.1:8000/?page=dossiers>
+## Datenbank
 
-Le portail charge son contenu depuis MySQL quand la base est joignable. Si MySQL est indisponible en local ou en production, le site et l'API restent consultables grâce au contenu versionné dans `includes/data.php`.
+Das Portal versucht, die lokalen Daten in MySQL zu synchronisieren und daraus zu laden. Ist MySQL nicht verfügbar, fällt es auf die versionierten Daten aus `includes/data.php` zurück.
 
-## Base de données MySQL
+## SEO Und GEO
 
-À chaque chargement, les données locales de `includes/data.php` sont synchronisées automatiquement dans la table MySQL.
-Vous pouvez aussi forcer le transfert manuellement avec :
+- Seitentitel, Beschreibungen, Keywords und JSON-LD werden je nach Route erzeugt.
+- `llms.txt` liefert eine kurze kanonische Zusammenfassung für generative Suchsysteme.
+- `llms-full.txt` enthält eine ausführlichere Referenz für Antwortsysteme.
+- `sitemap.xml` wird mit `scripts/build_sitemap.php` erzeugt.
+- `SITE_URL` kann gesetzt werden, um absolute kanonische URLs für andere Umgebungen zu generieren.
 
-```bash
-php scripts/sync_portal_to_mysql.php
-```
-
-Requête utilisée par défaut :
-
-```sql
-SELECT payload_json FROM portal_content WHERE code = 'main' LIMIT 1;
-```
-
-Le champ `payload_json` doit contenir un JSON compatible avec la structure attendue du portail.
-
-## SEO et GSO
-
-- Les balises SEO (`title`, `description`, `keywords`, Open Graph, Twitter et JSON-LD) sont générées dynamiquement selon la page.
-- Le JSON-LD expose `Organization`, `WebSite`, `BreadcrumbList`, `CollectionPage`, `FAQPage`, `ItemList`, `DefinedTermSet` et `Article` selon le contexte.
-- Le fichier `llms.txt` fournit un résumé canonique du portail et des URLs clés pour les moteurs génératifs.
-- Définissez `SITE_URL` en production pour générer des URLs canoniques absolues correctes.
-- Les fichiers `robots.txt`, `sitemap.xml` et `llms.txt` sont fournis à la racine.
-
-## PWA
-
-- Le manifest est exposé via `manifest.json`.
-- Le service worker `sw.js` met en cache les pages principales, les assets locaux et une page de secours hors ligne.
-- Les icônes PWA sont dans `assets/img/` (`pwa-icon-192.png`, `pwa-icon-512.png`, `pwa-maskable-512.png`, `apple-touch-icon.png`).
-- En production, servez le site en HTTPS pour permettre l'installation sur mobile et desktop.
-
-## Design
-
-- Le logo principal est disponible en SVG dans `assets/img/logo-myagri.svg`.
-- L'image de partage par défaut est `assets/img/og-default.svg`.
-
-Pages utiles :
-
-- <https://myagri.be/?page=accueil>
-- <https://myagri.be/?page=filieres>
-- <https://myagri.be/?page=ressources>
-- <https://myagri.be/?page=dossiers>
-- <https://myagri.be/api.php>
-- <https://myagri.be/api.php?section=sectors>
-
-## Vérification rapide
+## Prüfung
 
 ```bash
 php tests/smoke.php
+php scripts/build_sitemap.php
+```
+
+Optional:
+
+```bash
+vendor/bin/phpstan analyse --level=5 .
 ```

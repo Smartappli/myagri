@@ -3,202 +3,80 @@ if (!is_array($selectedGlossaryTerm)) {
     return;
 }
 
-$term = isset($selectedGlossaryTerm['term']) && is_string($selectedGlossaryTerm['term']) ? $selectedGlossaryTerm['term'] : 'Terme';
+$term = isset($selectedGlossaryTerm['term']) && is_string($selectedGlossaryTerm['term']) ? $selectedGlossaryTerm['term'] : 'Begriff';
 $definition = isset($selectedGlossaryTerm['definition']) && is_string($selectedGlossaryTerm['definition']) ? $selectedGlossaryTerm['definition'] : '';
-$termSlug = glossarySlug($term);
+$termSlug = glossaryEntrySlug($selectedGlossaryTerm);
 
 $profiles = [
     'sols' => [
-        'theme' => 'Sols, fertilité et protection des parcelles',
-        'context' => 'En Wallonie, la qualité des sols conditionne les rendements, la résistance aux périodes sèches, la limitation de l’érosion et la capacité des fermes à réduire certains achats d’intrants.',
-        'producer_use' => 'Pour une exploitation, cette notion sert à planifier les rotations, les couverts, les apports organiques, le travail du sol et les périodes d’intervention sans dégrader la structure des parcelles.',
-        'citizen_use' => 'Pour un citoyen ou un enseignant, elle aide à comprendre pourquoi un champ ne se résume pas à une surface de production : c’est aussi un milieu vivant, fragile et long à restaurer.',
-        'indicators' => ['Présence de couverts ou de résidus végétaux entre deux cultures.', 'Stabilité de la structure du sol après pluie intense.', 'Teneur en matière organique, activité biologique et signes d’érosion visibles.'],
-        'pitfalls' => ['Réduire le sujet à une technique isolée au lieu de regarder l’ensemble du système de culture.', 'Confondre fertilité immédiate et fertilité durable.', 'Oublier que le relief, le type de sol et la météo modifient fortement les résultats.'],
-        'example' => 'Une ferme de grandes cultures peut combiner rotations plus longues, couverts végétaux et apports organiques pour protéger les parcelles en hiver et améliorer la portance au printemps.',
+        'theme' => 'Böden, Fruchtbarkeit und Schutz der Parzellen',
+        'context' => 'In der Wallonie bestimmen Bodenqualität, Struktur und organische Substanz Erträge, Trockenheitsresistenz, Erosionsrisiko und den Bedarf an Betriebsmitteln.',
+        'producer_use' => 'Für einen Betrieb hilft dieser Begriff, Fruchtfolgen, Zwischenfrüchte, organische Düngung, Bodenbearbeitung und Befahrbarkeit besser zu planen.',
+        'citizen_use' => 'Für Bürgerinnen, Bürger und Lehrkräfte zeigt er, dass ein Feld nicht nur Produktionsfläche ist, sondern ein lebendiger, empfindlicher und langsam regenerierender Standort.',
+        'indicators' => ['Bodenbedeckung oder Pflanzenreste zwischen zwei Kulturen.', 'Stabile Bodenstruktur nach starkem Regen.', 'Organische Substanz, Bodenleben und sichtbare Erosionsspuren.'],
+        'pitfalls' => ['Eine einzelne Technik isoliert bewerten, statt das Anbausystem zu betrachten.', 'Kurzfristige und dauerhafte Fruchtbarkeit verwechseln.', 'Relief, Bodenart und Wetter als Einflussfaktoren unterschätzen.'],
+        'example' => 'Ein Ackerbaubetrieb kann längere Fruchtfolgen, Zwischenfrüchte und organische Düngung kombinieren, um Parzellen im Winter zu schützen und die Tragfähigkeit im Frühjahr zu verbessern.',
         'related' => ['fertilite-du-sol', 'matiere-organique', 'humus', 'erosion-des-sols', 'couvert-vegetal', 'cultures-intermediaires', 'reserve-utile-du-sol', 'semis-direct'],
     ],
     'elevage' => [
-        'theme' => 'Élevage, prairies et autonomie des fermes',
-        'context' => 'Les systèmes herbagers wallons reposent souvent sur un équilibre entre prairies, fourrages, troupeaux, bâtiments, disponibilité de main-d’œuvre et valorisation économique du lait ou de la viande.',
-        'producer_use' => 'Pour un éleveur, cette notion aide à ajuster la conduite du troupeau, la gestion des prairies, les stocks fourragers, les coûts alimentaires et le bien-être animal.',
-        'citizen_use' => 'Pour le public, elle permet de mieux comprendre le rôle des prairies, la saisonnalité du pâturage et les différences entre modèles d’élevage.',
-        'indicators' => ['Part de l’alimentation produite sur la ferme.', 'État des prairies, disponibilité de l’herbe et pression de pâturage.', 'Coûts alimentaires, santé du troupeau et régularité de production.'],
-        'pitfalls' => ['Comparer des élevages sans tenir compte des surfaces disponibles.', 'Oublier que météo, altitude et qualité des prairies modifient les choix techniques.', 'Résumer l’élevage à un seul indicateur environnemental ou économique.'],
-        'example' => 'Un élevage laitier peut sécuriser son autonomie en alternant pâturage tournant, fauche, stockage de fourrages et ajustement du nombre d’animaux à la surface disponible.',
+        'theme' => 'Tierhaltung, Grünland und betriebliche Autonomie',
+        'context' => 'Wallonische Grünlandsysteme beruhen häufig auf dem Gleichgewicht zwischen Weiden, Futter, Herden, Gebäuden, Arbeitszeit und wirtschaftlicher Verwertung von Milch oder Fleisch.',
+        'producer_use' => 'Für Tierhaltungsbetriebe hilft der Begriff, Herdenführung, Weidemanagement, Futtervorräte, Futterkosten und Tierwohl zu steuern.',
+        'citizen_use' => 'Für die Öffentlichkeit erklärt er die Rolle von Grünland, die Saisonalität der Weide und die Unterschiede zwischen Haltungsmodellen.',
+        'indicators' => ['Anteil des Futters, der auf dem Betrieb erzeugt wird.', 'Zustand der Weiden, Grasverfügbarkeit und Weidedruck.', 'Futterkosten, Tiergesundheit und Produktionsstabilität.'],
+        'pitfalls' => ['Betriebe vergleichen, ohne verfügbare Flächen zu berücksichtigen.', 'Wetter, Höhenlage und Grünlandqualität ausblenden.', 'Tierhaltung auf einen einzigen Umwelt- oder Wirtschaftsindikator reduzieren.'],
+        'example' => 'Ein Milchviehbetrieb kann seine Autonomie durch Rotationsweide, Mahd, Futterlagerung und eine zur Fläche passende Tierzahl sichern.',
         'related' => ['prairie-permanente', 'prairie-temporaire', 'autonomie-fourragere', 'autonomie-proteique', 'paturage-tournant', 'densite-de-chargement', 'effluents-d-elevage', 'polyculture-elevage'],
     ],
     'filiere' => [
-        'theme' => 'Filières, valeur et choix de consommation',
-        'context' => 'Une production agricole prend de la valeur à travers la transformation, la logistique, la distribution, la qualité, l’origine et la relation de confiance avec les acheteurs.',
-        'producer_use' => 'Pour une ferme ou une coopérative, cette notion sert à choisir ses débouchés, négocier un prix, organiser la transformation et rendre l’offre lisible.',
-        'citizen_use' => 'Pour un consommateur, elle aide à comparer origine, labels, prix au kilo, saisonnalité, niveau de transformation et rémunération des producteurs.',
-        'indicators' => ['Nombre d’intermédiaires et transparence du prix.', 'Lieu de production et lieu de transformation.', 'Existence d’un cahier des charges, d’un label ou d’une relation directe avec le producteur.'],
-        'pitfalls' => ['Confondre produit local, produit transformé localement et produit vendu localement.', 'Penser qu’un logo suffit à résumer la qualité globale.', 'Oublier les coûts de main-d’œuvre, de stockage, de transport et de transformation.'],
-        'example' => 'Un fruit cultivé en Wallonie peut être vendu brut au marché, transformé en jus à la ferme ou intégré dans une filière plus longue avec conditionnement et distribution.',
+        'theme' => 'Wertschöpfungsketten, Wert und Konsumentscheidungen',
+        'context' => 'Ein Agrarprodukt erhält seinen Wert durch Verarbeitung, Logistik, Vertrieb, Qualität, Herkunft und Vertrauen zwischen Produzenten, Handel und Käufern.',
+        'producer_use' => 'Für Betriebe oder Kooperativen hilft der Begriff, Absatzwege zu wählen, Preise zu verhandeln, Verarbeitung zu organisieren und Angebote verständlich zu machen.',
+        'citizen_use' => 'Für Konsumentinnen und Konsumenten erleichtert er den Vergleich von Herkunft, Labels, Kilopreis, Saisonalität, Verarbeitung und Erzeugervergütung.',
+        'indicators' => ['Anzahl der Zwischenstufen und Preistransparenz.', 'Ort der Erzeugung und Ort der Verarbeitung.', 'Pflichtenheft, Label oder direkte Beziehung zum Betrieb.'],
+        'pitfalls' => ['Lokale Erzeugung, lokale Verarbeitung und lokalen Verkauf gleichsetzen.', 'Ein Logo als ausreichende Qualitätsaussage betrachten.', 'Arbeits-, Lager-, Transport- und Verarbeitungskosten vergessen.'],
+        'example' => 'Ein in der Wallonie angebauter Apfel kann roh auf dem Markt verkauft, am Hof zu Saft verarbeitet oder in eine längere Kette mit Verpackung und Vertrieb integriert werden.',
         'related' => ['filiere', 'circuit-court', 'vente-directe', 'valeur-ajoutee', 'tracabilite', 'cahier-des-charges', 'certification', 'prix-au-kilo'],
     ],
     'transition' => [
-        'theme' => 'Transition agroécologique et résilience',
-        'context' => 'La transition agricole ne consiste pas à appliquer une recette unique : elle combine diagnostic local, essais progressifs, accompagnement technique, viabilité économique et adaptation au climat.',
-        'producer_use' => 'Pour une ferme, cette notion sert à prioriser des changements réalistes, mesurer leurs effets et éviter de déplacer un problème environnemental vers un problème économique ou social.',
-        'citizen_use' => 'Pour le public, elle donne des repères pour comprendre les arbitrages entre production alimentaire, biodiversité, revenu agricole, énergie, eau et attentes sociétales.',
-        'indicators' => ['Réduction de dépendance à une ressource fragile.', 'Maintien du revenu et de la qualité de vie au travail.', 'Effets mesurables sur sols, eau, biodiversité ou émissions.'],
-        'pitfalls' => ['Présenter la transition comme immédiate ou identique partout.', 'Opposer systématiquement production et environnement.', 'Négliger le temps d’apprentissage, les investissements et les risques économiques.'],
-        'example' => 'Une exploitation peut tester des couverts, allonger ses rotations, développer une vente directe limitée et suivre les coûts avant de généraliser les changements.',
+        'theme' => 'Agroökologischer Wandel und Resilienz',
+        'context' => 'Landwirtschaftlicher Wandel ist kein Einheitsrezept. Er verbindet lokale Diagnose, schrittweise Versuche, Beratung, wirtschaftliche Tragfähigkeit und Klimaanpassung.',
+        'producer_use' => 'Für Betriebe hilft der Begriff, realistische Veränderungen zu priorisieren, Wirkungen zu messen und ökologische Probleme nicht in wirtschaftliche oder soziale Probleme zu verschieben.',
+        'citizen_use' => 'Für die Öffentlichkeit liefert er Orientierung zu Zielkonflikten zwischen Nahrungsmittelproduktion, Biodiversität, Einkommen, Energie, Wasser und gesellschaftlichen Erwartungen.',
+        'indicators' => ['Geringere Abhängigkeit von einer knappen Ressource.', 'Stabiles Einkommen und bessere Arbeitsqualität.', 'Messbare Effekte auf Böden, Wasser, Biodiversität oder Emissionen.'],
+        'pitfalls' => ['Wandel als sofortig oder überall gleich darstellen.', 'Produktion und Umwelt pauschal gegeneinanderstellen.', 'Lernzeit, Investitionen und wirtschaftliche Risiken unterschätzen.'],
+        'example' => 'Ein Betrieb kann Zwischenfrüchte testen, Fruchtfolgen verlängern, einen begrenzten Direktverkauf aufbauen und Kosten verfolgen, bevor Änderungen ausgeweitet werden.',
         'related' => ['agroecologie', 'transition-agroecologique', 'agriculture-regeneratrice', 'agriculture-biologique', 'agriculture-integree', 'agriculture-de-precision', 'services-ecosystemiques', 'diversification'],
     ],
     'climat' => [
-        'theme' => 'Climat, eau, carbone et énergie',
-        'context' => 'Les épisodes de sécheresse, les pluies intenses, les coûts énergétiques et les objectifs climatiques influencent directement les décisions agricoles en Wallonie.',
-        'producer_use' => 'Pour une exploitation, cette notion aide à gérer les risques, sécuriser les ressources, mesurer les émissions ou stockages et choisir des investissements proportionnés.',
-        'citizen_use' => 'Pour le public, elle rend visibles les liens entre pratiques agricoles, alimentation, paysage, énergie, eau et adaptation climatique.',
-        'indicators' => ['Disponibilité en eau et sensibilité des cultures au stress.', 'Émissions évitées ou carbone stocké selon les pratiques.', 'Consommation énergétique, autonomie et valorisation de coproduits.'],
-        'pitfalls' => ['Isoler un indicateur climatique sans regarder les autres impacts.', 'Confondre stockage temporaire et réduction durable des émissions.', 'Sous-estimer l’effet des années météo extrêmes sur les résultats.'],
-        'example' => 'Une ferme peut associer haies, couverts, irrigation raisonnée et efficacité énergétique pour réduire sa vulnérabilité aux sécheresses et aux hausses de coûts.',
+        'theme' => 'Klima, Wasser, Kohlenstoff und Energie',
+        'context' => 'Trockenperioden, Starkregen, Energiekosten und Klimaziele beeinflussen landwirtschaftliche Entscheidungen in der Wallonie direkt.',
+        'producer_use' => 'Für Betriebe hilft der Begriff, Risiken zu steuern, Ressourcen zu sichern, Emissionen oder Speicherung zu messen und passende Investitionen zu wählen.',
+        'citizen_use' => 'Für die Öffentlichkeit macht er die Zusammenhänge zwischen landwirtschaftlichen Praktiken, Ernährung, Landschaft, Energie, Wasser und Klimaanpassung sichtbar.',
+        'indicators' => ['Wasserverfügbarkeit und Stressanfälligkeit der Kulturen.', 'Vermiedene Emissionen oder gespeicherter Kohlenstoff.', 'Energieverbrauch, Autonomie und Verwertung von Nebenprodukten.'],
+        'pitfalls' => ['Einen Klimaindikator isoliert betrachten.', 'Vorübergehende Speicherung mit dauerhafter Emissionsminderung verwechseln.', 'Extreme Wetterjahre als Einfluss auf Ergebnisse unterschätzen.'],
+        'example' => 'Ein Betrieb kann Hecken, Zwischenfrüchte, bedarfsgerechte Bewässerung und Energieeffizienz kombinieren, um Trockenheit und steigende Kosten besser abzufedern.',
         'related' => ['bilan-carbone', 'sequestration-carbone', 'stress-hydrique', 'irrigation-raisonnee', 'empreinte-eau', 'gestion-de-l-eau-a-la-parcelle', 'methanisation', 'digestat'],
     ],
     'territoire' => [
-        'theme' => 'Territoire, politiques publiques et usages du foncier',
-        'context' => 'L’agriculture dépend de décisions collectives : accès au foncier, règles d’urbanisation, aides publiques, données partagées, infrastructures et choix alimentaires du territoire.',
-        'producer_use' => 'Pour une ferme ou un porteur de projet, cette notion aide à anticiper les règles, les contraintes administratives, les partenariats locaux et les possibilités d’accompagnement.',
-        'citizen_use' => 'Pour une collectivité ou un citoyen, elle permet de comprendre comment les décisions d’aménagement, de restauration collective ou d’achat public influencent les filières agricoles.',
-        'indicators' => ['Clarté des règles applicables et des guichets compétents.', 'Surface agricole préservée et accessibilité pour les projets.', 'Qualité des données, des partenariats et du suivi territorial.'],
-        'pitfalls' => ['Confondre objectif politique et obligation déjà opérationnelle.', 'Oublier que les règles évoluent selon niveaux européen, régional et communal.', 'Réduire le territoire à une carte sans examiner les acteurs qui y travaillent.'],
-        'example' => 'Une commune peut protéger des terres agricoles, soutenir un marché local et orienter les cantines vers des achats plus saisonniers en coordination avec les producteurs.',
+        'theme' => 'Territorium, öffentliche Politik und Bodennutzung',
+        'context' => 'Landwirtschaft hängt von kollektiven Entscheidungen ab: Zugang zu Boden, Raumplanung, öffentliche Hilfen, geteilte Daten, Infrastruktur und regionale Ernährungsentscheidungen.',
+        'producer_use' => 'Für Betriebe und Projektträger hilft der Begriff, Regeln, Verwaltungszwänge, lokale Partnerschaften und Begleitmöglichkeiten früh einzuschätzen.',
+        'citizen_use' => 'Für Gemeinden und Bürgerinnen und Bürger zeigt er, wie Raumplanung, Gemeinschaftsverpflegung und öffentliche Beschaffung Agrarsektoren beeinflussen.',
+        'indicators' => ['Klarheit der Regeln und zuständigen Stellen.', 'Erhaltene Agrarfläche und Zugang für Projekte.', 'Qualität von Daten, Partnerschaften und territorialer Nachverfolgung.'],
+        'pitfalls' => ['Politische Ziele mit bereits geltenden Pflichten verwechseln.', 'Unterschiede zwischen europäischer, regionaler und kommunaler Ebene ausblenden.', 'Territorium auf eine Karte reduzieren, ohne Akteure und Arbeit vor Ort zu betrachten.'],
+        'example' => 'Eine Gemeinde kann Agrarflächen schützen, einen lokalen Markt unterstützen und Kantinen schrittweise saisonaler ausrichten, wenn sie mit Produzenten koordiniert arbeitet.',
         'related' => ['pac', 'conditionnalite', 'eco-regime', 'maec', 'natura-2000', 'zero-artificialisation-nette-zan', 'souverainete-alimentaire', 'systeme-alimentaire-territorial'],
     ],
 ];
 
 $profileBySlug = [
-    'rotation' => 'sols',
-    'assolement' => 'sols',
-    'amendement-organique' => 'sols',
-    'analyse-de-sol' => 'sols',
-    'battance' => 'sols',
-    'couvert-vegetal' => 'sols',
-    'couverts-permanents' => 'sols',
-    'cultures-associees' => 'sols',
-    'culture-derobee' => 'sols',
-    'erosion-des-sols' => 'sols',
-    'fertilite-du-sol' => 'sols',
-    'gestion-integree-des-ravageurs' => 'sols',
-    'humus' => 'sols',
-    'interculture' => 'sols',
-    'intrants' => 'sols',
-    'labour' => 'sols',
-    'matiere-organique' => 'sols',
-    'mycorhizes' => 'sols',
-    'ph-du-sol' => 'sols',
-    'plan-de-fumure' => 'sols',
-    'proteagineux' => 'sols',
-    'ruissellement' => 'sols',
-    'auxiliaires-de-culture' => 'sols',
-    'bande-enherbee' => 'sols',
-    'biodiversite-fonctionnelle' => 'sols',
-    'compost' => 'sols',
-    'cultures-intermediaires' => 'sols',
-    'drainage-agricole' => 'sols',
-    'effluents-d-elevage' => 'sols',
-    'nitrates' => 'sols',
-    'reserve-utile-du-sol' => 'sols',
-    'semis-direct' => 'sols',
-    'tassement-du-sol' => 'sols',
-    'techniques-culturales-simplifiees' => 'sols',
-    'travail-du-sol' => 'sols',
-    'zone-tampon' => 'sols',
-    'prairie-permanente' => 'elevage',
-    'autonomie-fourragere' => 'elevage',
-    'polyculture-elevage' => 'elevage',
-    'densite-de-chargement' => 'elevage',
-    'elevage-extensif' => 'elevage',
-    'bien-etre-animal' => 'elevage',
-    'culture-fourragere' => 'elevage',
-    'ensilage' => 'elevage',
-    'fauche' => 'elevage',
-    'fourrage' => 'elevage',
-    'paturage-tournant' => 'elevage',
-    'sante-animale' => 'elevage',
-    'unite-gros-betail-ugb' => 'elevage',
-    'autonomie-proteique' => 'elevage',
-    'prairie-temporaire' => 'elevage',
-    'circuit-court' => 'filiere',
-    'filiere' => 'filiere',
-    'valeur-ajoutee' => 'filiere',
-    'tracabilite' => 'filiere',
-    'aop-igp' => 'filiere',
-    'prix-remunerateur' => 'filiere',
-    'saisonnalite' => 'filiere',
-    'transformation-a-la-ferme' => 'filiere',
-    'pertes-post-recolte' => 'filiere',
-    'cahier-des-charges' => 'filiere',
-    'certification' => 'filiere',
-    'chaine-du-froid' => 'filiere',
-    'conservation-des-aliments' => 'filiere',
-    'cooperative-agricole' => 'filiere',
-    'groupe-d-achat' => 'filiere',
-    'logistique-alimentaire' => 'filiere',
-    'point-relais' => 'filiere',
-    'prix-au-kilo' => 'filiere',
-    'prix-de-revient' => 'filiere',
-    'qualite-differenciee' => 'filiere',
-    'relocalisation-alimentaire' => 'filiere',
-    'restauration-collective' => 'filiere',
-    'stockage-a-la-ferme' => 'filiere',
-    'systeme-alimentaire-territorial' => 'filiere',
-    'vente-directe' => 'filiere',
-    'agroecologie' => 'transition',
-    'transition-agroecologique' => 'transition',
-    'resilience' => 'transition',
-    'agriculture-biologique' => 'transition',
-    'agriculture-de-precision' => 'transition',
-    'agroforesterie' => 'transition',
-    'bocage' => 'transition',
-    'diversification' => 'transition',
-    'economie-circulaire' => 'transition',
-    'agriculture-regeneratrice' => 'transition',
-    'agriculture-integree' => 'transition',
-    'agriculture-urbaine' => 'transition',
-    'apiculture' => 'transition',
-    'capteur-agricole' => 'transition',
-    'charge-de-travail' => 'transition',
-    'ferme-pedagogique' => 'transition',
-    'lutte-biologique' => 'transition',
-    'outil-d-aide-a-la-decision' => 'transition',
-    'paiement-pour-services-environnementaux' => 'transition',
-    'pollinisation' => 'transition',
-    'services-ecosystemiques' => 'transition',
-    'tableau-de-bord-agricole' => 'transition',
-    'variete-resistante' => 'transition',
-    'verger-haute-tige' => 'transition',
-    'bilan-carbone' => 'climat',
-    'biomasse' => 'climat',
-    'decarbonation-agricole' => 'climat',
-    'energie-renouvelable-agricole' => 'climat',
-    'haie-vive' => 'climat',
-    'irrigation-raisonnee' => 'climat',
-    'methanisation' => 'climat',
-    'sequestration-carbone' => 'climat',
-    'stress-hydrique' => 'climat',
-    'digestat' => 'climat',
-    'empreinte-eau' => 'climat',
-    'bassin-versant' => 'climat',
-    'gestion-de-l-eau-a-la-parcelle' => 'climat',
-    'zone-humide' => 'climat',
-    'pac' => 'territoire',
-    'souverainete-alimentaire' => 'territoire',
-    'wallesmart' => 'territoire',
-    'zero-artificialisation-nette-zan' => 'territoire',
-    'consentement-des-donnees' => 'territoire',
-    'conditionnalite' => 'territoire',
-    'eco-regime' => 'territoire',
-    'exploitation-familiale' => 'territoire',
-    'foncier-agricole' => 'territoire',
-    'interoperabilite' => 'territoire',
-    'maec' => 'territoire',
-    'marche-public-alimentaire' => 'territoire',
-    'natura-2000' => 'territoire',
-    'projet-alimentaire-territorial' => 'territoire',
+    'rotation' => 'sols', 'assolement' => 'sols', 'amendement-organique' => 'sols', 'analyse-de-sol' => 'sols', 'battance' => 'sols', 'couvert-vegetal' => 'sols', 'couverts-permanents' => 'sols', 'cultures-associees' => 'sols', 'culture-derobee' => 'sols', 'erosion-des-sols' => 'sols', 'fertilite-du-sol' => 'sols', 'gestion-integree-des-ravageurs' => 'sols', 'humus' => 'sols', 'interculture' => 'sols', 'intrants' => 'sols', 'labour' => 'sols', 'matiere-organique' => 'sols', 'mycorhizes' => 'sols', 'ph-du-sol' => 'sols', 'plan-de-fumure' => 'sols', 'proteagineux' => 'sols', 'ruissellement' => 'sols', 'auxiliaires-de-culture' => 'sols', 'bande-enherbee' => 'sols', 'biodiversite-fonctionnelle' => 'sols', 'compost' => 'sols', 'cultures-intermediaires' => 'sols', 'drainage-agricole' => 'sols', 'effluents-d-elevage' => 'sols', 'nitrates' => 'sols', 'reserve-utile-du-sol' => 'sols', 'semis-direct' => 'sols', 'tassement-du-sol' => 'sols', 'techniques-culturales-simplifiees' => 'sols', 'travail-du-sol' => 'sols', 'zone-tampon' => 'sols',
+    'prairie-permanente' => 'elevage', 'autonomie-fourragere' => 'elevage', 'polyculture-elevage' => 'elevage', 'densite-de-chargement' => 'elevage', 'elevage-extensif' => 'elevage', 'bien-etre-animal' => 'elevage', 'culture-fourragere' => 'elevage', 'ensilage' => 'elevage', 'fauche' => 'elevage', 'fourrage' => 'elevage', 'paturage-tournant' => 'elevage', 'sante-animale' => 'elevage', 'unite-gros-betail-ugb' => 'elevage', 'autonomie-proteique' => 'elevage', 'prairie-temporaire' => 'elevage',
+    'circuit-court' => 'filiere', 'filiere' => 'filiere', 'valeur-ajoutee' => 'filiere', 'tracabilite' => 'filiere', 'aop-igp' => 'filiere', 'prix-remunerateur' => 'filiere', 'saisonnalite' => 'filiere', 'transformation-a-la-ferme' => 'filiere', 'pertes-post-recolte' => 'filiere', 'cahier-des-charges' => 'filiere', 'certification' => 'filiere', 'chaine-du-froid' => 'filiere', 'conservation-des-aliments' => 'filiere', 'cooperative-agricole' => 'filiere', 'groupe-d-achat' => 'filiere', 'logistique-alimentaire' => 'filiere', 'point-relais' => 'filiere', 'prix-au-kilo' => 'filiere', 'prix-de-revient' => 'filiere', 'qualite-differenciee' => 'filiere', 'relocalisation-alimentaire' => 'filiere', 'restauration-collective' => 'filiere', 'stockage-a-la-ferme' => 'filiere', 'systeme-alimentaire-territorial' => 'filiere', 'vente-directe' => 'filiere',
+    'agroecologie' => 'transition', 'transition-agroecologique' => 'transition', 'resilience' => 'transition', 'agriculture-biologique' => 'transition', 'agriculture-de-precision' => 'transition', 'agroforesterie' => 'transition', 'bocage' => 'transition', 'diversification' => 'transition', 'economie-circulaire' => 'transition', 'agriculture-regeneratrice' => 'transition', 'agriculture-integree' => 'transition', 'agriculture-urbaine' => 'transition', 'apiculture' => 'transition', 'capteur-agricole' => 'transition', 'charge-de-travail' => 'transition', 'ferme-pedagogique' => 'transition', 'lutte-biologique' => 'transition', 'outil-d-aide-a-la-decision' => 'transition', 'paiement-pour-services-environnementaux' => 'transition', 'pollinisation' => 'transition', 'services-ecosystemiques' => 'transition', 'tableau-de-bord-agricole' => 'transition', 'variete-resistante' => 'transition', 'verger-haute-tige' => 'transition',
+    'bilan-carbone' => 'climat', 'biomasse' => 'climat', 'decarbonation-agricole' => 'climat', 'energie-renouvelable-agricole' => 'climat', 'haie-vive' => 'climat', 'irrigation-raisonnee' => 'climat', 'methanisation' => 'climat', 'sequestration-carbone' => 'climat', 'stress-hydrique' => 'climat', 'digestat' => 'climat', 'empreinte-eau' => 'climat', 'bassin-versant' => 'climat', 'gestion-de-l-eau-a-la-parcelle' => 'climat', 'zone-humide' => 'climat',
+    'pac' => 'territoire', 'souverainete-alimentaire' => 'territoire', 'wallesmart' => 'territoire', 'zero-artificialisation-nette-zan' => 'territoire', 'consentement-des-donnees' => 'territoire', 'conditionnalite' => 'territoire', 'eco-regime' => 'territoire', 'exploitation-familiale' => 'territoire', 'foncier-agricole' => 'territoire', 'interoperabilite' => 'territoire', 'maec' => 'territoire', 'marche-public-alimentaire' => 'territoire', 'natura-2000' => 'territoire', 'projet-alimentaire-territorial' => 'territoire',
 ];
 
 $profileKey = $profileBySlug[$termSlug] ?? 'transition';
@@ -206,20 +84,20 @@ $profile = $profiles[$profileKey];
 
 $introduction = $glossaryIntroduction ?? (
     $definition !== ''
-        ? $term . ' est une notion clé pour comprendre l’agriculture wallonne. ' . $definition . ' La fiche ci-dessous explique son utilité, ses effets concrets et les points à vérifier avant de l’utiliser dans un cours, une discussion citoyenne ou un projet agricole.'
-        : 'Cette notion sert à décrire un aspect précis des pratiques, des chaînes de valeur ou de la gestion quotidienne de l’agriculture.'
+        ? $term . ' ist ein Schlüsselbegriff, um Landwirtschaft in der Wallonie zu verstehen. ' . $definition . ' Die folgende Seite erklärt Nutzen, konkrete Wirkungen und Prüfpunkte für Unterricht, Bürgergespräche oder landwirtschaftliche Projekte.'
+        : 'Dieser Begriff beschreibt einen konkreten Aspekt landwirtschaftlicher Praxis, Wertschöpfungsketten oder Alltagssteuerung auf Betrieben.'
 );
 
 $whatToSee = $glossaryWhatToSee ?? $profile['indicators'];
 $whyImportant = $glossaryWhyImportant ?? [
-    'Mieux comprendre les décisions techniques prises sur une ferme ou dans une filière.',
-    'Relier un mot agricole à des effets observables sur le revenu, les sols, l’eau, la biodiversité ou l’organisation locale.',
-    'Éviter les raccourcis dans les débats publics en regardant les contraintes de terrain et les preuves disponibles.',
+    'Technische Entscheidungen auf einem Betrieb oder in einer Wertschöpfungskette besser verstehen.',
+    'Agrarbegriffe mit beobachtbaren Wirkungen auf Einkommen, Böden, Wasser, Biodiversität oder lokale Organisation verbinden.',
+    'Abkürzungen in öffentlichen Debatten vermeiden und verfügbare Nachweise einordnen.',
 ];
 $actions = $glossaryActions ?? [
-    'Identifier où le terme apparaît : document technique, étiquette, projet communal, visite de ferme ou débat public.',
-    'Demander quel indicateur permet de vérifier concrètement l’information.',
-    'Comparer plusieurs situations locales avant de généraliser une conclusion.',
+    'Prüfen, wo der Begriff auftaucht: Fachunterlage, Etikett, Gemeindeprojekt, Hofbesuch oder öffentliche Debatte.',
+    'Nachfragen, welcher Indikator die Aussage konkret überprüfbar macht.',
+    'Mehrere lokale Situationen vergleichen, bevor eine Schlussfolgerung verallgemeinert wird.',
 ];
 
 $relatedTerms = [];
@@ -237,15 +115,15 @@ if (isset($profile['related']) && is_array($profile['related'])) {
 }
 
 $verificationQuestions = [
-    'Quel problème concret ce terme permet-il de comprendre ou de résoudre ?',
-    'Quels acteurs sont concernés : producteur, transformateur, collectivité, consommateur, enseignant ?',
-    'Quels indicateurs permettent de vérifier que l’effet annoncé est réel ?',
-    'Quelles limites faut-il mentionner pour éviter une explication trop simpliste ?',
+    'Welches konkrete Problem hilft dieser Begriff zu verstehen oder zu lösen?',
+    'Welche Akteure sind betroffen: Betrieb, Verarbeiter, Gemeinde, Konsument, Lehrkraft?',
+    'Welche Indikatoren zeigen, dass die angekündigte Wirkung tatsächlich besteht?',
+    'Welche Grenzen müssen erwähnt werden, damit die Erklärung nicht zu stark vereinfacht?',
 ];
 ?>
 
 <section aria-labelledby="glossary-term-title" class="shadow-soft glossary-detail">
-    <p><a href="?page=glossaire">Retour au glossaire</a></p>
+    <p><a href="?page=glossaire">Zurück zum Glossar</a></p>
     <p class="eyebrow"><?= e($profile['theme']) ?></p>
     <h2 id="glossary-term-title"><?= e($term) ?></h2>
 
@@ -255,13 +133,13 @@ $verificationQuestions = [
 
     <div class="resource-detail-grid">
         <article class="card">
-            <h3>Définition développée</h3>
+            <h3>Erweiterte Definition</h3>
             <p><?= e($definition) ?></p>
-            <p>Dans la pratique, ce terme doit toujours être replacé dans un contexte précis : type de ferme, sol, climat local, débouchés économiques, règles applicables et objectifs poursuivis. C’est ce contexte qui permet de passer d’une définition courte à une compréhension réellement utile.</p>
+            <p>In der Praxis muss dieser Begriff immer in einen konkreten Kontext gesetzt werden: Betriebstyp, Boden, lokales Klima, Absatzwege, geltende Regeln und verfolgte Ziele. Erst dieser Kontext macht aus einer kurzen Definition nützliches Verständnis.</p>
         </article>
 
         <article class="card">
-            <h3>À quoi ça sert ?</h3>
+            <h3>Wozu dient das?</h3>
             <ul class="list-tight">
                 <?php foreach ($whyImportant as $line): ?>
                     <li><?= e($line) ?></li>
@@ -271,14 +149,14 @@ $verificationQuestions = [
     </div>
 
     <article class="card">
-        <h3>Contexte en Wallonie</h3>
+        <h3>Kontext in der Wallonie</h3>
         <p><?= e($profile['context']) ?></p>
-        <p>Cette lecture territoriale est importante, car une même notion peut produire des effets différents selon les provinces, les sols, les filières présentes, les infrastructures de transformation et les possibilités de vente locale.</p>
+        <p>Diese territoriale Einordnung ist wichtig, weil derselbe Begriff je nach Provinz, Boden, vorhandenen Sektoren, Verarbeitungsinfrastruktur und lokalen Absatzmöglichkeiten unterschiedliche Wirkungen haben kann.</p>
     </article>
 
     <div class="resource-detail-grid">
         <section class="card">
-            <h3>Ce qu’il faut observer</h3>
+            <h3>Worauf achten?</h3>
             <ul class="list-tight">
                 <?php foreach ($whatToSee as $line): ?>
                     <li><?= e($line) ?></li>
@@ -287,24 +165,24 @@ $verificationQuestions = [
         </section>
 
         <section class="card">
-            <h3>Usage côté ferme</h3>
+            <h3>Nutzung auf dem Betrieb</h3>
             <p><?= e($profile['producer_use']) ?></p>
         </section>
 
         <section class="card">
-            <h3>Usage côté citoyen</h3>
+            <h3>Nutzung für Bürgerinnen und Bürger</h3>
             <p><?= e($profile['citizen_use']) ?></p>
         </section>
     </div>
 
     <div class="resource-detail-grid">
         <section class="card">
-            <h3>Exemple concret</h3>
+            <h3>Konkretes Beispiel</h3>
             <p><?= e($profile['example']) ?></p>
         </section>
 
         <section class="card">
-            <h3>Points de vigilance</h3>
+            <h3>Prüfpunkte</h3>
             <ul class="list-tight">
                 <?php foreach ($profile['pitfalls'] as $line): ?>
                     <li><?= e($line) ?></li>
@@ -313,7 +191,7 @@ $verificationQuestions = [
         </section>
 
         <section class="card">
-            <h3>À appliquer</h3>
+            <h3>Anwenden</h3>
             <ul class="list-tight">
                 <?php foreach ($actions as $line): ?>
                     <li><?= e($line) ?></li>
@@ -323,7 +201,7 @@ $verificationQuestions = [
     </div>
 
     <article class="card">
-        <h3>Questions à se poser</h3>
+        <h3>Fragen zur Einordnung</h3>
         <ul class="list-tight">
             <?php foreach ($verificationQuestions as $question): ?>
                 <li><?= e($question) ?></li>
@@ -333,7 +211,7 @@ $verificationQuestions = [
 
     <?php if ($relatedTerms !== []): ?>
         <article class="card">
-            <h3>Termes liés</h3>
+            <h3>Verwandte Begriffe</h3>
             <ul class="related-terms">
                 <?php foreach ($relatedTerms as $relatedTerm): ?>
                     <?php
@@ -342,7 +220,7 @@ $verificationQuestions = [
                         continue;
                     }
                     ?>
-                    <li><a href="?page=glossaire&amp;term=<?= e(glossarySlug($relatedName)) ?>"><?= e($relatedName) ?></a></li>
+                    <li><a href="?page=glossaire&amp;term=<?= e(glossaryEntrySlug($relatedTerm)) ?>"><?= e($relatedName) ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </article>

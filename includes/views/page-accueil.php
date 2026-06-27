@@ -1,35 +1,35 @@
 <section aria-labelledby="start-title" class="section-feature">
     <div class="section-heading">
-        <p class="eyebrow">Comprendre, choisir, transmettre</p>
-        <h2 id="start-title">Par où commencer ?</h2>
-        <p class="section-intro">MyAgri organise l’information agricole wallonne autour de trois usages simples : comprendre les filières, préparer une action concrète et vérifier le vocabulaire avant d’en parler.</p>
+        <p class="eyebrow">Verstehen, entscheiden, weitergeben</p>
+        <h2 id="start-title">Wo anfangen?</h2>
+        <p class="section-intro">MyAgri ordnet Informationen zur wallonischen Landwirtschaft nach klaren Nutzungen: Sektoren verstehen, konkrete Schritte vorbereiten und Begriffe prüfen, bevor man darüber spricht.</p>
     </div>
     <div class="grid grid-3 action-grid">
         <article class="action-card">
-            <h3>Comprendre une filière</h3>
-            <p>Repérez les productions, les contraintes de terrain et les leviers citoyens associés.</p>
-            <a class="button-link" href="?page=filieres">Explorer les filières</a>
+            <h3>Einen Sektor verstehen</h3>
+            <p>Erkennen Sie Produktionen, praktische Zwänge und passende Handlungsmöglichkeiten.</p>
+            <a class="button-link" href="?page=filieres">Sektoren erkunden</a>
         </article>
         <article class="action-card">
-            <h3>Préparer une action</h3>
-            <p>Utilisez les guides pour une visite, un achat local, un atelier, une orientation ou un projet.</p>
-            <a class="button-link" href="?page=ressources">Voir les ressources</a>
+            <h3>Eine Aktion vorbereiten</h3>
+            <p>Nutzen Sie die Leitfäden für Besuche, lokale Einkäufe, Workshops, Orientierung oder Projekte.</p>
+            <a class="button-link" href="?page=ressources">Ressourcen ansehen</a>
         </article>
         <article class="action-card">
-            <h3>Clarifier un mot</h3>
-            <p>Consultez les définitions utiles pour lire un article, préparer un cours ou comparer des démarches.</p>
-            <a class="button-link" href="?page=glossaire">Ouvrir le glossaire</a>
+            <h3>Einen Begriff klären</h3>
+            <p>Nutzen Sie Definitionen, um Artikel zu lesen, Unterricht vorzubereiten oder Ansätze zu vergleichen.</p>
+            <a class="button-link" href="?page=glossaire">Glossar öffnen</a>
         </article>
         <article class="action-card">
-            <h3>Approfondir un sujet</h3>
-            <p>Lisez des dossiers illustrés en plusieurs chapitres, avec repères citoyens et références officielles.</p>
-            <a class="button-link" href="?page=dossiers">Voir les dossiers</a>
+            <h3>Ein Thema vertiefen</h3>
+            <p>Lesen Sie illustrierte Dossiers mit kurzen Kapiteln, Orientierungspunkten und überprüfbaren Quellen.</p>
+            <a class="button-link" href="?page=dossiers">Dossiers ansehen</a>
         </article>
     </div>
 </section>
 
 <section aria-labelledby="bases-title" class="shadow-soft">
-    <h2 id="bases-title">Les bases à connaître</h2>
+    <h2 id="bases-title">Grundlagen</h2>
     <div class="grid grid-3">
         <?php foreach ($quickFacts as $fact): ?>
             <article class="card h-full">
@@ -43,9 +43,9 @@
 <?php if ($editorialPrinciples !== []): ?>
 <section aria-labelledby="editorial-title" class="shadow-soft">
     <div class="section-heading">
-        <p class="eyebrow">Méthode éditoriale</p>
-        <h2 id="editorial-title">Contenu original, sources vérifiables</h2>
-        <p class="section-intro">MyAgri ne doit pas empiler des définitions copiées. Le portail reformule, contextualise et indique quand une information doit être vérifiée auprès d’une source compétente.</p>
+        <p class="eyebrow">Redaktionelle Methode</p>
+        <h2 id="editorial-title">Eigene Inhalte, überprüfbare Quellen</h2>
+        <p class="section-intro">MyAgri sammelt keine kopierten Definitionen. Das Portal formuliert neu, ordnet ein und zeigt, wann Informationen bei einer zuständigen Stelle geprüft werden sollten.</p>
     </div>
     <div class="grid grid-2">
         <?php foreach ($editorialPrinciples as $principle): ?>
@@ -73,7 +73,7 @@
 <?php endif; ?>
 
 <section aria-labelledby="pillars-title" class="shadow-soft">
-    <h2 id="pillars-title">Les 4 piliers</h2>
+    <h2 id="pillars-title">Die 4 Säulen</h2>
     <div class="grid grid-2 pillars">
         <?php foreach ($pillars as $pillar): ?>
             <article class="card h-full">
@@ -85,7 +85,7 @@
 </section>
 
 <section aria-labelledby="themes-title" class="shadow-soft">
-    <h2 id="themes-title">Enjeux transversaux</h2>
+    <h2 id="themes-title">Querschnittsthemen</h2>
     <div class="grid grid-2">
         <?php foreach ($focusThemes as $theme): ?>
             <article class="card h-full">
@@ -97,7 +97,7 @@
 </section>
 
 <section aria-labelledby="provinces-title" class="shadow-soft">
-    <h2 id="provinces-title">Lecture par province</h2>
+    <h2 id="provinces-title">Nach Provinz lesen</h2>
     <div class="grid grid-3">
         <?php foreach ($provinces as $province): ?>
             <article class="card h-full">
@@ -109,7 +109,7 @@
 </section>
 
 <section aria-labelledby="calendar-title" class="shadow-soft">
-    <h2 id="calendar-title">Calendrier agricole simplifié</h2>
+    <h2 id="calendar-title">Vereinfachter Agrarkalender</h2>
     <div class="grid grid-2">
         <?php foreach ($seasonalCalendar as $entry): ?>
             <article class="card h-full">

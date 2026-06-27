@@ -6,8 +6,8 @@ require __DIR__ . '/../includes/portal_repository.php';
 
 try {
     pushPortalDataToMySql();
-    echo "Synchronisation MyAgri -> MySQL réussie.\n";
+    echo "MyAgri -> MySQL-Synchronisierung erfolgreich.\n";
 } catch (Throwable $exception) {
-    fwrite(STDERR, "Échec de synchronisation MySQL: " . $exception->getMessage() . "\n");
+    fwrite(STDERR, "MySQL-Synchronisierung fehlgeschlagen: " . $exception->getMessage() . "\n");
     exit(1);
 }

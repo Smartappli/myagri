@@ -560,7 +560,7 @@ function breadcrumbItems(string $page, ?array $resource = null, ?array $glossary
     if ($page === 'filieres') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Sektoren', 'item' => $baseUrl . '/?page=filieres'];
     } elseif ($page === 'ressources') {
-        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Ressources', 'item' => $baseUrl . '/?page=ressources'];
+        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Ressourcen', 'item' => $baseUrl . '/?page=ressources'];
     } elseif ($page === 'dossiers') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Dossiers', 'item' => $baseUrl . '/?page=dossiers'];
     } elseif ($page === 'faq') {
@@ -576,7 +576,7 @@ function breadcrumbItems(string $page, ?array $resource = null, ?array $glossary
             'item' => $baseUrl . canonicalPath('glossaire', '', glossaryEntrySlug($glossaryTerm)),
         ];
     } elseif ($page === 'ressource') {
-        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Ressources', 'item' => $baseUrl . '/?page=ressources'];
+        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Ressourcen', 'item' => $baseUrl . '/?page=ressources'];
         $items[] = [
             '@type' => 'ListItem',
             'position' => 3,

@@ -2,9 +2,9 @@
 if (!is_array($selectedDossier) || !is_array($selectedDossierChapter)) {
     ?>
     <section aria-labelledby="dossier-not-found-title">
-        <h2 id="dossier-not-found-title">Dossier introuvable</h2>
-        <p>Le dossier demandé n’existe pas ou n’est plus disponible.</p>
-        <p><a href="?page=dossiers">Retour aux dossiers</a></p>
+        <h2 id="dossier-not-found-title">Dossier nicht gefunden</h2>
+        <p>Das angeforderte Dossier existiert nicht oder ist nicht mehr verfügbar.</p>
+        <p><a href="?page=dossiers">Zurück zu den Dossiers</a></p>
     </section>
     <?php
     return;
@@ -39,11 +39,11 @@ $renderCard = static function (string $title, array $items, bool $ordered = fals
 ?>
 
 <section aria-labelledby="dossier-title" class="shadow-soft dossier-detail">
-    <p><a href="?page=dossiers">Retour aux dossiers</a></p>
+    <p><a href="?page=dossiers">Zurück zu den Dossiers</a></p>
 
     <div class="dossier-hero">
         <div>
-            <p class="eyebrow">Dossier citoyen</p>
+            <p class="eyebrow">Bürgerdossier</p>
             <h2 id="dossier-title"><?= e($selectedDossier['title']) ?></h2>
             <?php if (isset($selectedDossier['subtitle']) && is_string($selectedDossier['subtitle'])): ?>
                 <p class="section-intro"><?= e($selectedDossier['subtitle']) ?></p>
@@ -53,7 +53,7 @@ $renderCard = static function (string $title, array $items, bool $ordered = fals
                     <?= e($selectedDossier['duration']) ?>
                 <?php endif; ?>
                 <?php if (isset($selectedDossier['audience']) && is_string($selectedDossier['audience'])): ?>
-                    · Pour : <?= e($selectedDossier['audience']) ?>
+                    · Für: <?= e($selectedDossier['audience']) ?>
                 <?php endif; ?>
             </p>
         </div>
@@ -66,21 +66,21 @@ $renderCard = static function (string $title, array $items, bool $ordered = fals
 
     <div class="pedagogical-overview">
         <?php if (is_array($selectedDossier['learning_objectives'] ?? null)): ?>
-            <?php $renderCard('Objectifs pédagogiques', $selectedDossier['learning_objectives']); ?>
+            <?php $renderCard('Lernziele', $selectedDossier['learning_objectives']); ?>
         <?php endif; ?>
         <?php if (is_array($selectedDossier['pedagogical_use'] ?? null)): ?>
-            <?php $renderCard('Mode d’emploi du dossier', $selectedDossier['pedagogical_use'], true); ?>
+            <?php $renderCard('So nutzen Sie das Dossier', $selectedDossier['pedagogical_use'], true); ?>
         <?php endif; ?>
         <?php if (is_array($selectedDossier['activity_kit'] ?? null)): ?>
-            <?php $renderCard('Matériel conseillé', $selectedDossier['activity_kit']); ?>
+            <?php $renderCard('Empfohlenes Material', $selectedDossier['activity_kit']); ?>
         <?php endif; ?>
         <?php if (is_array($selectedDossier['evaluation'] ?? null)): ?>
-            <?php $renderCard('Évaluer la compréhension', $selectedDossier['evaluation']); ?>
+            <?php $renderCard('Verständnis prüfen', $selectedDossier['evaluation']); ?>
         <?php endif; ?>
     </div>
 
     <?php if ($chapters !== []): ?>
-        <nav class="chapter-nav" aria-label="Chapitres du dossier">
+        <nav class="chapter-nav" aria-label="Kapitel des Dossiers">
             <?php foreach ($chapters as $chapter): ?>
                 <?php
                 if (!is_array($chapter) || !isset($chapter['id'], $chapter['title']) || !is_string($chapter['id']) || !is_string($chapter['title'])) {
@@ -109,7 +109,7 @@ $renderCard = static function (string $title, array $items, bool $ordered = fals
 
         <?php if (is_array($selectedDossierChapter['pedagogical_sequence'] ?? null)): ?>
             <div class="chapter-section">
-                <h4>Déroulé pédagogique</h4>
+                <h4>Pädagogischer Ablauf</h4>
                 <?php $renderList($selectedDossierChapter['pedagogical_sequence'], true); ?>
             </div>
         <?php endif; ?>
@@ -117,7 +117,7 @@ $renderCard = static function (string $title, array $items, bool $ordered = fals
         <?php if (is_array($selectedDossierChapter['workshop'] ?? null)): ?>
             <?php $workshop = $selectedDossierChapter['workshop']; ?>
             <aside class="chapter-workshop">
-                <p class="eyebrow">Activité guidée</p>
+                <p class="eyebrow">Angeleitete Aktivität</p>
                 <?php if (isset($workshop['title']) && is_string($workshop['title'])): ?>
                     <h4><?= e($workshop['title']) ?></h4>
                 <?php endif; ?>
@@ -131,7 +131,7 @@ $renderCard = static function (string $title, array $items, bool $ordered = fals
                     <?php $renderList($workshop['steps'], true); ?>
                 <?php endif; ?>
                 <?php if (isset($workshop['debrief']) && is_string($workshop['debrief'])): ?>
-                    <p><strong>Synthèse :</strong> <?= e($workshop['debrief']) ?></p>
+                    <p><strong>Auswertung:</strong> <?= e($workshop['debrief']) ?></p>
                 <?php endif; ?>
             </aside>
         <?php endif; ?>
@@ -140,7 +140,7 @@ $renderCard = static function (string $title, array $items, bool $ordered = fals
     <div class="resource-detail-grid">
         <?php if (is_array($selectedDossierChapter['key_points'] ?? null)): ?>
             <section class="card resource-detail-card">
-                <h3>À retenir</h3>
+                <h3>Merken</h3>
                 <ul class="list-tight">
                     <?php foreach ($selectedDossierChapter['key_points'] as $point): ?>
                         <?php if (is_string($point) && trim($point) !== ''): ?>
@@ -153,7 +153,7 @@ $renderCard = static function (string $title, array $items, bool $ordered = fals
 
         <?php if (is_array($selectedDossierChapter['citizen_actions'] ?? null)): ?>
             <section class="card resource-detail-card">
-                <h3>Actions citoyennes</h3>
+                <h3>Handlungsmöglichkeiten</h3>
                 <ul class="list-tight">
                     <?php foreach ($selectedDossierChapter['citizen_actions'] as $action): ?>
                         <?php if (is_string($action) && trim($action) !== ''): ?>
@@ -166,14 +166,14 @@ $renderCard = static function (string $title, array $items, bool $ordered = fals
 
         <?php if (is_array($selectedDossierChapter['discussion_questions'] ?? null)): ?>
             <section class="card resource-detail-card">
-                <h3>Questions pour débattre</h3>
+                <h3>Diskussionsfragen</h3>
                 <?php $renderList($selectedDossierChapter['discussion_questions']); ?>
             </section>
         <?php endif; ?>
 
         <?php if (is_array($selectedDossierChapter['teacher_notes'] ?? null)): ?>
             <section class="card resource-detail-card">
-                <h3>Repères d’animation</h3>
+                <h3>Hinweise für die Moderation</h3>
                 <?php $renderList($selectedDossierChapter['teacher_notes']); ?>
             </section>
         <?php endif; ?>
@@ -181,11 +181,12 @@ $renderCard = static function (string $title, array $items, bool $ordered = fals
 
     <?php if (is_array($selectedDossier['vocabulary'] ?? null)): ?>
         <section class="card dossier-vocabulary" aria-labelledby="dossier-vocabulary-title">
-            <h3 id="dossier-vocabulary-title">Lexique lié au dossier</h3>
+            <h3 id="dossier-vocabulary-title">Begriffe zum Dossier</h3>
             <div class="vocabulary-links">
                 <?php foreach ($selectedDossier['vocabulary'] as $term): ?>
                     <?php if (is_string($term) && trim($term) !== ''): ?>
-                        <a href="?page=glossaire&amp;term=<?= e(glossarySlug($term)) ?>"><?= e($term) ?></a>
+                        <?php $linkedTerm = glossaryTermByTitle($glossary, $term); ?>
+                        <a href="?page=glossaire&amp;term=<?= e(is_array($linkedTerm) ? glossaryEntrySlug($linkedTerm) : glossarySlug($term)) ?>"><?= e($term) ?></a>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
@@ -194,7 +195,7 @@ $renderCard = static function (string $title, array $items, bool $ordered = fals
 
     <?php if ($references !== []): ?>
         <section class="card references-card" aria-labelledby="references-title">
-            <h3 id="references-title">Références utiles</h3>
+            <h3 id="references-title">Nützliche Quellen</h3>
             <ul class="reference-list">
                 <?php foreach ($references as $reference): ?>
                     <?php

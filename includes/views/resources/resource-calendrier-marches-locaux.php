@@ -10,23 +10,23 @@ $checklist = is_array($selectedResource['checklist'] ?? null) ? $selectedResourc
 ?>
 
 <section aria-labelledby="resource-title" class="shadow-soft">
-    <p><a href="?page=ressources">&#8592; Retour aux ressources</a></p>
+    <p><a href="?page=ressources">&#8592; Zurück zu den Ressourcen</a></p>
     <h2 id="resource-title"><?= e($selectedResource['title']) ?></h2>
     <p class="section-intro"><?= e($selectedResource['description']) ?></p>
 
     <article class="card resource-summary">
         <?php if (is_string($selectedResource['overview'] ?? null) && trim((string) $selectedResource['overview']) !== ''): ?>
-            <h3>En bref</h3>
+            <h3>Kurz gesagt</h3>
             <p><?= e($selectedResource['overview']) ?></p>
         <?php endif; ?>
         <?php if (is_string($selectedResource['for'] ?? null) && trim((string) $selectedResource['for']) !== ''): ?>
-            <p><strong>Public concerne :</strong> <?= e($selectedResource['for']) ?></p>
+            <p><strong>Zielgruppe:</strong> <?= e($selectedResource['for']) ?></p>
         <?php endif; ?>
     </article>
 
     <?php if ($continuousContent !== ''): ?>
         <article class="card">
-            <h3>Contexte</h3>
+            <h3>Kontext</h3>
             <?php foreach (splitTextIntoParagraphs($continuousContent) as $paragraph): ?>
                 <p><?= e($paragraph) ?></p>
             <?php endforeach; ?>
@@ -48,7 +48,7 @@ $checklist = is_array($selectedResource['checklist'] ?? null) ? $selectedResourc
 
     <?php if ($checklist !== []): ?>
         <article class="card resource-detail-card">
-            <h3>Checklist</h3>
+            <h3>Checkliste</h3>
             <ul class="list-tight">
                 <?php foreach ($checklist as $item): ?>
                     <?php if (is_string($item) && trim($item) !== ''): ?>

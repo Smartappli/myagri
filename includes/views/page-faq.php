@@ -1,5 +1,5 @@
 <section aria-labelledby="faq-title" class="shadow-soft">
-    <h2 id="faq-title">FAQ citoyenne</h2>
+    <h2 id="faq-title">Bürger-FAQ</h2>
     <div class="grid">
         <?php foreach ($faq as $index => $item): ?>
             <?php

@@ -19,23 +19,23 @@ $blocks = is_array($selectedResource['content_blocks'] ?? null) ? $selectedResou
 ?>
 
 <section aria-labelledby="resource-title" class="shadow-soft">
-    <p><a href="?page=ressources">← Retour aux ressources</a></p>
+    <p><a href="?page=ressources">← Zurück zu den Ressourcen</a></p>
     <h2 id="resource-title"><?= e($selectedResource['title']) ?></h2>
     <p class="section-intro"><?= e($selectedResource['description']) ?></p>
 
     <article class="card resource-summary">
         <?php if (is_string($selectedResource['overview'] ?? null) && trim((string) $selectedResource['overview']) !== ''): ?>
-            <h3>En bref</h3>
+            <h3>Kurz gesagt</h3>
             <p><?= e($selectedResource['overview']) ?></p>
         <?php endif; ?>
         <?php if (is_string($selectedResource['for'] ?? null) && trim((string) $selectedResource['for']) !== ''): ?>
-            <p><strong>Public cible :</strong> <?= e($selectedResource['for']) ?></p>
+            <p><strong>Zielgruppe:</strong> <?= e($selectedResource['for']) ?></p>
         <?php endif; ?>
     </article>
 
     <?php if ($continuousContent !== ''): ?>
         <article class="card">
-            <h3>Contexte et objectif</h3>
+            <h3>Kontext und Ziel</h3>
             <?php foreach (splitTextIntoParagraphs($continuousContent) as $paragraph): ?>
                 <p><?= e($paragraph) ?></p>
             <?php endforeach; ?>
@@ -80,7 +80,7 @@ $blocks = is_array($selectedResource['content_blocks'] ?? null) ? $selectedResou
 
     <?php if ($steps !== []): ?>
         <article class="card">
-            <h3>Parcours recommande</h3>
+            <h3>Empfohlener Ablauf</h3>
             <ol class="list-tight">
                 <?php foreach ($steps as $item): ?>
                     <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -95,7 +95,7 @@ $blocks = is_array($selectedResource['content_blocks'] ?? null) ? $selectedResou
         <article class="resource-detail-grid">
             <?php if ($checklist !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Checklist de preparation</h3>
+                    <h3>Vorbereitungscheckliste</h3>
                     <ul class="list-tight">
                         <?php foreach ($checklist as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -108,7 +108,7 @@ $blocks = is_array($selectedResource['content_blocks'] ?? null) ? $selectedResou
 
             <?php if ($objectives !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Objectifs pedagogiques</h3>
+                    <h3>Lernziele</h3>
                     <ul class="list-tight">
                         <?php foreach ($objectives as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -121,7 +121,7 @@ $blocks = is_array($selectedResource['content_blocks'] ?? null) ? $selectedResou
 
             <?php if ($program !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Programme type</h3>
+                    <h3>Musterprogramm</h3>
                     <ul class="list-tight">
                         <?php foreach ($program as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -134,7 +134,7 @@ $blocks = is_array($selectedResource['content_blocks'] ?? null) ? $selectedResou
 
             <?php if ($ageAdaptations !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Adaptation selon l'age</h3>
+                    <h3>Anpassung nach Alter</h3>
                     <ul class="list-tight">
                         <?php foreach ($ageAdaptations as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -147,7 +147,7 @@ $blocks = is_array($selectedResource['content_blocks'] ?? null) ? $selectedResou
 
             <?php if ($activities !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Activites pedagogiques</h3>
+                    <h3>Lernaktivitäten</h3>
                     <ul class="list-tight">
                         <?php foreach ($activities as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -160,7 +160,7 @@ $blocks = is_array($selectedResource['content_blocks'] ?? null) ? $selectedResou
 
             <?php if ($risks !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Risque et securite</h3>
+                    <h3>Risiko und Sicherheit</h3>
                     <ul class="list-tight">
                         <?php foreach ($risks as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -173,7 +173,7 @@ $blocks = is_array($selectedResource['content_blocks'] ?? null) ? $selectedResou
 
             <?php if ($budget !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Budget previsionnel</h3>
+                    <h3>Voraussichtliches Budget</h3>
                     <ul class="list-tight">
                         <?php foreach ($budget as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -186,7 +186,7 @@ $blocks = is_array($selectedResource['content_blocks'] ?? null) ? $selectedResou
 
             <?php if ($evaluation !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Evaluation</h3>
+                    <h3>Auswertung</h3>
                     <ul class="list-tight">
                         <?php foreach ($evaluation as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -199,7 +199,7 @@ $blocks = is_array($selectedResource['content_blocks'] ?? null) ? $selectedResou
 
             <?php if ($contacts !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Qui peut accompagner</h3>
+                    <h3>Mögliche Begleitung</h3>
                     <ul class="list-tight">
                         <?php foreach ($contacts as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>

@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'myagri-pwa-v2026-06-01-logo-local-tailwind';
+const CACHE_VERSION = 'myagri-pwa-v2026-06-27-de-seo-geo';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 

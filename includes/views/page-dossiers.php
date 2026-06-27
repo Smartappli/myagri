@@ -1,6 +1,6 @@
 <section aria-labelledby="dossiers-title" class="shadow-soft">
-    <h2 id="dossiers-title">Dossiers thématiques citoyens</h2>
-    <p class="section-intro">Des parcours illustrés, découpés en chapitres courts, pour comprendre les grands sujets agricoles wallons avec des repères pratiques et des références vérifiables.</p>
+    <h2 id="dossiers-title">Thematische Bürgerdossiers</h2>
+    <p class="section-intro">Illustrierte Lernpfade in kurzen Kapiteln, um zentrale Agrarthemen der Wallonie mit praktischen Orientierungspunkten und überprüfbaren Quellen zu verstehen.</p>
 
     <div class="grid grid-3 dossier-list">
         <?php foreach ($dossiers as $dossier): ?>
@@ -22,16 +22,16 @@
                     </figure>
                 <?php endif; ?>
                 <div class="dossier-card-body">
-                    <p class="eyebrow"><?= count($chapters) ?> chapitres</p>
+                    <p class="eyebrow"><?= count($chapters) ?> Kapitel</p>
                     <h3><?= e($dossier['title']) ?></h3>
                     <?php if (isset($dossier['subtitle']) && is_string($dossier['subtitle'])): ?>
                         <p><?= e($dossier['subtitle']) ?></p>
                     <?php endif; ?>
                     <?php if (isset($dossier['audience']) && is_string($dossier['audience'])): ?>
-                        <p class="tagline"><strong>Pour :</strong> <?= e($dossier['audience']) ?></p>
+                        <p class="tagline"><strong>Für:</strong> <?= e($dossier['audience']) ?></p>
                     <?php endif; ?>
                     <p class="card-action">
-                        <a class="button-link" href="?page=dossier&amp;dossier=<?= e($dossier['id']) ?><?= is_string($firstChapter) && $firstChapter !== '' ? '&amp;chapitre=' . e($firstChapter) : '' ?>">Lire le dossier</a>
+                        <a class="button-link" href="?page=dossier&amp;dossier=<?= e($dossier['id']) ?><?= is_string($firstChapter) && $firstChapter !== '' ? '&amp;chapitre=' . e($firstChapter) : '' ?>">Dossier lesen</a>
                     </p>
                 </div>
             </article>

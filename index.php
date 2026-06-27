@@ -109,7 +109,7 @@ $seo = pageSeo(
 );
 $canonicalResource = is_array($selectedResource) && $resourceId !== '' ? $resourceId : '';
 $canonicalGlossaryTerm = is_array($selectedGlossaryTerm) && isset($selectedGlossaryTerm['term']) && is_string($selectedGlossaryTerm['term'])
-    ? glossarySlug($selectedGlossaryTerm['term'])
+    ? glossaryEntrySlug($selectedGlossaryTerm)
     : '';
 $canonicalDossier = is_array($selectedDossier) && isset($selectedDossier['id']) && is_string($selectedDossier['id']) ? $selectedDossier['id'] : '';
 $canonicalChapter = is_array($selectedDossierChapter) && isset($selectedDossierChapter['id']) && is_string($selectedDossierChapter['id']) ? $selectedDossierChapter['id'] : '';

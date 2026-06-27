@@ -10,59 +10,51 @@ if (!is_array($selectedGlossaryTerm)) {
 $term = isset($selectedGlossaryTerm['term']) && is_string($selectedGlossaryTerm['term']) ? $selectedGlossaryTerm['term'] : 'WALLeSmart';
 $definition = isset($selectedGlossaryTerm['definition']) && is_string($selectedGlossaryTerm['definition'])
     ? $selectedGlossaryTerm['definition']
-    : 'Plateforme numérique wallonne qui facilite l’échange sécurisé de données agricoles entre outils, agriculteurs et partenaires autorisés.';
+    : 'Wallonische digitale Plattform, die den sicheren Austausch landwirtschaftlicher Daten zwischen Werkzeugen, Betrieben und autorisierten Partnern erleichtert.';
 
 $problems = [
-    'Les données de ferme sont souvent réparties entre plusieurs logiciels, portails, capteurs et organismes.',
-    'Les agriculteurs peuvent perdre du temps à se connecter à plusieurs services ou à encoder plusieurs fois une même information.',
-    'Les applications agricoles ne se comprennent pas toujours entre elles : formats, référentiels et droits d’accès peuvent varier.',
-    'La valeur d’une donnée agricole dépend aussi de sa gouvernance : qui y accède, pour quel usage, avec quel consentement et quelle traçabilité.',
+    'Betriebsdaten liegen häufig verteilt in mehreren Programmen, Portalen, Sensoren und Organisationen.',
+    'Landwirtinnen und Landwirte verlieren Zeit, wenn sie sich in mehrere Dienste einloggen oder dieselbe Information mehrfach eingeben müssen.',
+    'Agraranwendungen sind nicht immer kompatibel: Formate, Referenzen und Zugriffsrechte unterscheiden sich.',
+    'Der Wert landwirtschaftlicher Daten hängt auch von der Governance ab: Wer greift zu, zu welchem Zweck, mit welcher Zustimmung und welcher Nachverfolgbarkeit?',
 ];
 
 $howItWorks = [
-    'Interopérabilité : la plateforme cherche à faire circuler les données entre outils compatibles plutôt qu’à enfermer chaque service dans son propre silo.',
-    'Accès simplifié : WALLeSmart met en avant un guichet d’accès sécurisé pour retrouver des applications et services agricoles partenaires.',
-    'Tableau de bord : l’objectif est de donner une vue synthétique de certaines informations utiles à l’exploitation, sans remplacer les outils métier détaillés.',
-    'Gestion des consentements : le partage de données doit rester lié à l’accord de l’utilisateur et aux règles prévues par les services concernés.',
+    'Interoperabilität: Daten sollen zwischen kompatiblen Werkzeugen zirkulieren, statt in getrennten Silos zu bleiben.',
+    'Vereinfachter Zugang: WALLeSmart bietet einen gesicherten Zugangspunkt zu landwirtschaftlichen Anwendungen und Partnerdiensten.',
+    'Dashboard: Ziel ist ein zusammenfassender Blick auf nützliche Betriebsinformationen, ohne spezialisierte Fachwerkzeuge zu ersetzen.',
+    'Zustimmungsmanagement: Datenaustausch bleibt an die Zustimmung der Nutzerinnen und Nutzer sowie an klare Dienstregeln gebunden.',
 ];
 
 $uses = [
-    'Pour une ferme : réduire les doubles encodages, retrouver plus facilement des indicateurs et garder la main sur les autorisations de partage.',
-    'Pour un conseiller ou un organisme technique : travailler avec des données mieux structurées, à condition que l’accès soit justifié et accepté.',
-    'Pour un développeur d’outil agricole : s’appuyer sur une infrastructure et des référentiels communs au lieu de recréer seul chaque connexion.',
-    'Pour un enseignant ou un citoyen : comprendre que le numérique agricole n’est pas seulement une application, mais aussi une question de confiance, de standards et de gouvernance.',
+    'Für Betriebe: Doppeleingaben reduzieren, Indikatoren leichter finden und Freigaben besser kontrollieren.',
+    'Für Beratung und technische Organisationen: mit strukturierteren Daten arbeiten, sofern Zugang begründet und akzeptiert ist.',
+    'Für Entwickler landwirtschaftlicher Werkzeuge: gemeinsame Infrastruktur und Referenzen nutzen, statt jede Verbindung neu aufzubauen.',
+    'Für Lehrkräfte und Bürgerinnen und Bürger: verstehen, dass Agrardigitalisierung auch Vertrauen, Standards und Governance betrifft.',
 ];
 
 $watchPoints = [
-    'Ne pas confondre centralisation et accès libre : une donnée agricole reste sensible et son partage doit être encadré.',
-    'Vérifier quels services sont réellement intégrés au moment de l’usage : une plateforme évolutive n’offre pas tout dès le départ.',
-    'Distinguer promesse technique et bénéfice mesuré : gain de temps, réduction d’erreurs, qualité du conseil ou simplification administrative doivent pouvoir être observés.',
-    'Regarder la dépendance numérique : connexion, matériel, accompagnement et compréhension des consentements conditionnent l’usage réel par les fermes.',
+    'Zentralisierung nicht mit freiem Zugang verwechseln: Landwirtschaftliche Daten bleiben sensibel.',
+    'Prüfen, welche Dienste zum Zeitpunkt der Nutzung tatsächlich integriert sind.',
+    'Technisches Versprechen und messbaren Nutzen unterscheiden: Zeitgewinn, weniger Fehler, bessere Beratung oder Verwaltungsvereinfachung müssen beobachtbar sein.',
+    'Digitale Abhängigkeit betrachten: Verbindung, Geräte, Begleitung und Verständnis der Zustimmung bestimmen die reale Nutzung.',
 ];
 
 $questions = [
-    'Quelle donnée est partagée : troupeau, lait, parcelle, météo, conseil, document administratif ou indicateur économique ?',
-    'Qui demande l’accès, pour quelle durée et pour quel service précis ?',
-    'L’agriculteur peut-il modifier ou retirer un consentement facilement ?',
-    'Le service évite-t-il réellement une double saisie ou ajoute-t-il une couche numérique supplémentaire ?',
-    'Les sources de données et les limites de l’indicateur affiché sont-elles compréhensibles ?',
+    'Welche Daten werden geteilt: Herde, Milch, Parzelle, Wetter, Beratung, Verwaltungsdokument oder wirtschaftlicher Indikator?',
+    'Wer beantragt den Zugang, für welche Dauer und für welchen konkreten Dienst?',
+    'Kann der Betrieb eine Zustimmung leicht ändern oder widerrufen?',
+    'Vermeidet der Dienst wirklich eine Doppelerfassung oder fügt er eine zusätzliche digitale Ebene hinzu?',
+    'Sind Datenquellen und Grenzen der angezeigten Indikatoren verständlich?',
 ];
 
 $examples = [
-    'Un tableau de bord peut rassembler des alertes issues de plusieurs outils, puis renvoyer vers le service d’origine pour l’analyse détaillée.',
-    'Une application de gestion d’élevage peut exploiter des données déjà connues par un organisme partenaire si l’échange est techniquement compatible et autorisé.',
-    'Une donnée météo, parcellaire ou sanitaire devient plus utile lorsqu’elle peut être reliée à une décision concrète : pâturage, intervention, suivi laitier ou conseil.',
+    'Ein Dashboard kann Warnungen aus mehreren Werkzeugen bündeln und für Detailanalysen zum Ursprungsdienst zurückführen.',
+    'Eine Herdenmanagement-App kann bekannte Partnerdaten nutzen, wenn Austausch technisch kompatibel und autorisiert ist.',
+    'Wetter-, Parzellen- oder Gesundheitsdaten werden nützlicher, wenn sie mit einer konkreten Entscheidung verbunden sind: Weide, Eingriff, Milchkontrolle oder Beratung.',
 ];
 
-$relatedSlugs = [
-    'agriculture-de-precision',
-    'tracabilite',
-    'filiere',
-    'pac',
-    'systeme-alimentaire-territorial',
-    'resilience',
-];
-
+$relatedSlugs = ['agriculture-de-precision', 'tracabilite', 'filiere', 'pac', 'systeme-alimentaire-territorial', 'resilience'];
 $relatedTerms = [];
 foreach ($relatedSlugs as $relatedSlug) {
     $related = glossaryTermBySlug($glossary, $relatedSlug);
@@ -72,42 +64,27 @@ foreach ($relatedSlugs as $relatedSlug) {
 }
 
 $references = [
-    [
-        'label' => 'WALLeSmart — site officiel',
-        'url' => 'https://www.wallesmart.be/',
-    ],
-    [
-        'label' => 'WALLeSmart — services et fonctionnement',
-        'url' => 'https://www.wallesmart.be/nos-services',
-    ],
-    [
-        'label' => 'WALLeSmart — origine, gouvernance et partenaires',
-        'url' => 'https://www.wallesmart.be/qui-sommes-nous',
-    ],
-    [
-        'label' => 'CRA-W — projet WalleSmart',
-        'url' => 'https://www.cra.wallonie.be/fr/wallesmart',
-    ],
-    [
-        'label' => 'CRA-W — alléger le quotidien numérique des agriculteurs',
-        'url' => 'https://www.cra.wallonie.be/fr/wallesmart-alleger-le-quotidien-numerique-des-agriculteurs',
-    ],
+    ['label' => 'WALLeSmart - offizielle Website', 'url' => 'https://www.wallesmart.be/'],
+    ['label' => 'WALLeSmart - Dienste und Funktionsweise', 'url' => 'https://www.wallesmart.be/nos-services'],
+    ['label' => 'WALLeSmart - Ursprung, Governance und Partner', 'url' => 'https://www.wallesmart.be/qui-sommes-nous'],
+    ['label' => 'CRA-W - Projekt WALLeSmart', 'url' => 'https://www.cra.wallonie.be/fr/wallesmart'],
+    ['label' => 'CRA-W - digitalen Alltag der Landwirte erleichtern', 'url' => 'https://www.cra.wallonie.be/fr/wallesmart-alleger-le-quotidien-numerique-des-agriculteurs'],
 ];
 ?>
 
 <section aria-labelledby="glossary-term-title" class="shadow-soft glossary-detail">
-    <p><a href="?page=glossaire">Retour au glossaire</a></p>
-    <p class="eyebrow">Numérique agricole, données et gouvernance</p>
+    <p><a href="?page=glossaire">Zurück zum Glossar</a></p>
+    <p class="eyebrow">Agrardigitalisierung, Daten und Governance</p>
     <h2 id="glossary-term-title"><?= e($term) ?></h2>
 
     <article class="card resource-summary">
-        <p><strong>Définition courte :</strong> <?= e($definition) ?></p>
-        <p>WALLeSmart doit être compris comme une infrastructure de coordination numérique : son enjeu n’est pas seulement de “mettre des données en ligne”, mais de rendre des outils agricoles compatibles, utiles et gouvernables par les utilisateurs concernés.</p>
+        <p><strong>Kurzdefinition:</strong> <?= e($definition) ?></p>
+        <p>WALLeSmart ist als digitale Koordinationsinfrastruktur zu verstehen. Es geht nicht nur darum, Daten online zu stellen, sondern landwirtschaftliche Werkzeuge kompatibel, nützlich und durch die betroffenen Nutzer kontrollierbar zu machen.</p>
     </article>
 
     <div class="resource-detail-grid">
         <article class="card">
-            <h3>Le problème de départ</h3>
+            <h3>Ausgangsproblem</h3>
             <ul class="list-tight">
                 <?php foreach ($problems as $line): ?>
                     <li><?= e($line) ?></li>
@@ -116,7 +93,7 @@ $references = [
         </article>
 
         <article class="card">
-            <h3>Comment ça fonctionne</h3>
+            <h3>Funktionsweise</h3>
             <ul class="list-tight">
                 <?php foreach ($howItWorks as $line): ?>
                     <li><?= e($line) ?></li>
@@ -126,14 +103,14 @@ $references = [
     </div>
 
     <article class="card">
-        <h3>Contexte wallon</h3>
-        <p>La Wallonie dispose déjà d’outils agricoles spécialisés : suivi d’élevage, données laitières, météo, parcelles, santé animale, conseils techniques ou démarches administratives. WALLeSmart vise à réduire la fragmentation de cet écosystème en facilitant les échanges entre services compatibles.</p>
-        <p>La fiche ne doit pas présenter la plateforme comme une solution magique. Son intérêt dépend de l’intégration effective des services, de la qualité des données, de la clarté des consentements et de l’accompagnement des utilisateurs.</p>
+        <h3>Wallonischer Kontext</h3>
+        <p>Die Wallonie verfügt bereits über spezialisierte Agrarwerkzeuge für Herdenführung, Milchdaten, Wetter, Parzellen, Tiergesundheit, technische Beratung und Verwaltung. WALLeSmart soll die Fragmentierung dieses Ökosystems verringern, indem es den Austausch zwischen kompatiblen Diensten erleichtert.</p>
+        <p>Die Plattform sollte nicht als Wundermittel verstanden werden. Ihr Nutzen hängt von realer Dienstintegration, Datenqualität, klaren Zustimmungen und guter Begleitung der Nutzerinnen und Nutzer ab.</p>
     </article>
 
     <div class="resource-detail-grid">
         <section class="card">
-            <h3>Usages concrets</h3>
+            <h3>Konkrete Nutzungen</h3>
             <ul class="list-tight">
                 <?php foreach ($uses as $line): ?>
                     <li><?= e($line) ?></li>
@@ -142,7 +119,7 @@ $references = [
         </section>
 
         <section class="card">
-            <h3>Exemples lisibles</h3>
+            <h3>Lesbare Beispiele</h3>
             <ul class="list-tight">
                 <?php foreach ($examples as $line): ?>
                     <li><?= e($line) ?></li>
@@ -153,7 +130,7 @@ $references = [
 
     <div class="resource-detail-grid">
         <section class="card">
-            <h3>Points de vigilance</h3>
+            <h3>Prüfpunkte</h3>
             <ul class="list-tight">
                 <?php foreach ($watchPoints as $line): ?>
                     <li><?= e($line) ?></li>
@@ -162,7 +139,7 @@ $references = [
         </section>
 
         <section class="card">
-            <h3>Questions à poser</h3>
+            <h3>Fragen stellen</h3>
             <ul class="list-tight">
                 <?php foreach ($questions as $line): ?>
                     <li><?= e($line) ?></li>
@@ -172,13 +149,13 @@ $references = [
     </div>
 
     <article class="card">
-        <h3>À retenir</h3>
-        <p>WALLeSmart n’est pas un simple annuaire d’applications. C’est une tentative de rendre le numérique agricole wallon plus interopérable, plus sûr et plus lisible. La bonne question n’est donc pas seulement “que fait la plateforme ?”, mais “quelle donnée circule, avec quel accord, pour produire quelle décision utile sur la ferme ?”.</p>
+        <h3>Merken</h3>
+        <p>WALLeSmart ist nicht nur ein Verzeichnis von Anwendungen. Es ist ein Versuch, wallonische Agrardigitalisierung interoperabler, sicherer und verständlicher zu machen. Die zentrale Frage lautet daher: Welche Daten zirkulieren, mit welcher Zustimmung und für welche nützliche Entscheidung auf dem Betrieb?</p>
     </article>
 
     <?php if ($relatedTerms !== []): ?>
         <article class="card">
-            <h3>Termes liés</h3>
+            <h3>Verwandte Begriffe</h3>
             <ul class="related-terms">
                 <?php foreach ($relatedTerms as $relatedTerm): ?>
                     <?php
@@ -187,15 +164,15 @@ $references = [
                         continue;
                     }
                     ?>
-                    <li><a href="?page=glossaire&amp;term=<?= e(glossarySlug($relatedName)) ?>"><?= e($relatedName) ?></a></li>
+                    <li><a href="?page=glossaire&amp;term=<?= e(glossaryEntrySlug($relatedTerm)) ?>"><?= e($relatedName) ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </article>
     <?php endif; ?>
 
     <article class="card references-card">
-        <h3>Sources utiles</h3>
-        <p class="meta">Sources consultées pour reformuler la fiche sans recopier les textes institutionnels.</p>
+        <h3>Nützliche Quellen</h3>
+        <p class="meta">Quellen, die für eine eigene, nicht kopierte Erklärung herangezogen wurden.</p>
         <ul class="reference-list">
             <?php foreach ($references as $reference): ?>
                 <li><a href="<?= e($reference['url']) ?>" rel="noopener noreferrer" target="_blank"><?= e($reference['label']) ?></a></li>

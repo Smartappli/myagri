@@ -1,6 +1,6 @@
 <section aria-labelledby="resources-title" class="shadow-soft">
-    <h2 id="resources-title">Ressources utiles</h2>
-    <p class="section-intro">Guides pratiques pour passer de l’intention à l’action : organiser une visite, comparer des labels, mieux acheter, découvrir les métiers ou préparer un dossier d’accompagnement.</p>
+    <h2 id="resources-title">Nützliche Ressourcen</h2>
+    <p class="section-intro">Praktische Leitfäden, um von der Absicht ins Handeln zu kommen: Besuch organisieren, Labels vergleichen, besser einkaufen, Berufe entdecken oder ein Begleitdossier vorbereiten.</p>
     <div class="grid grid-3">
         <?php foreach ($resources as $resource): ?>
             <?php
@@ -16,10 +16,10 @@
                     <p class="resource-overview"><?= e($resource['overview']) ?></p>
                 <?php endif; ?>
                 <?php if (isset($resource['for']) && is_string($resource['for']) && $resource['for'] !== ''): ?>
-                    <p class="tagline"><strong>Pour :</strong> <?= e($resource['for']) ?></p>
+                    <p class="tagline"><strong>Für:</strong> <?= e($resource['for']) ?></p>
                 <?php endif; ?>
                 <?php if (isset($resource['id']) && is_string($resource['id'])): ?>
-                    <p class="card-action"><a class="button-link" href="?page=ressource&amp;resource=<?= e($resource['id']) ?>">Voir la page détaillée</a></p>
+                    <p class="card-action"><a class="button-link" href="?page=ressource&amp;resource=<?= e($resource['id']) ?>">Detailseite ansehen</a></p>
                 <?php endif; ?>
             </article>
         <?php endforeach; ?>

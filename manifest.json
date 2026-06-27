@@ -1,8 +1,8 @@
 {
-  "name": "MyAgri - Agriculture wallonne expliquée",
+  "name": "MyAgri - Landwirtschaft in der Wallonie verständlich erklärt",
   "short_name": "MyAgri",
-  "description": "Portail citoyen pour comprendre l'agriculture wallonne, ses filières, ses ressources pratiques et son glossaire.",
-  "lang": "fr-BE",
+  "description": "Bürgerportal zur Landwirtschaft in der Wallonie: Sektoren, Ressourcen, Dossiers, FAQ und Glossar.",
+  "lang": "de-BE",
   "dir": "ltr",
   "id": "/?page=accueil",
   "start_url": "/?page=accueil",
@@ -34,30 +34,30 @@
   ],
   "shortcuts": [
     {
-      "name": "Filières agricoles",
-      "short_name": "Filières",
-      "description": "Explorer les filières agricoles wallonnes.",
+      "name": "Agrarsektoren",
+      "short_name": "Sektoren",
+      "description": "Landwirtschaftliche Sektoren der Wallonie erkunden.",
       "url": "/?page=filieres",
       "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
     },
     {
-      "name": "Ressources pratiques",
-      "short_name": "Ressources",
-      "description": "Accéder aux guides pratiques MyAgri.",
+      "name": "Praktische Ressourcen",
+      "short_name": "Ressourcen",
+      "description": "Praktische MyAgri-Leitfäden öffnen.",
       "url": "/?page=ressources",
       "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
     },
     {
-      "name": "Dossiers citoyens",
+      "name": "Bürgerdossiers",
       "short_name": "Dossiers",
-      "description": "Lire les dossiers thématiques MyAgri.",
+      "description": "Thematische MyAgri-Dossiers lesen.",
       "url": "/?page=dossiers",
       "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
     },
     {
-      "name": "Glossaire agricole",
-      "short_name": "Glossaire",
-      "description": "Consulter le glossaire agricole citoyen.",
+      "name": "Landwirtschaftliches Glossar",
+      "short_name": "Glossar",
+      "description": "Das landwirtschaftliche Bürgerglossar öffnen.",
       "url": "/?page=glossaire",
       "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
     }

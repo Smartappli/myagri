@@ -58,7 +58,7 @@ if (isset($site['glossary']) && is_array($site['glossary'])) {
         if (!isset($glossaryTerm['term']) || !is_string($glossaryTerm['term'])) {
             continue;
         }
-        $slug = glossarySlug($glossaryTerm['term']);
+        $slug = glossaryEntrySlug($glossaryTerm);
         $pages[] = [
             'loc' => $baseUrl . '/?page=glossaire&term=' . rawurlencode($slug),
             'changefreq' => 'monthly',

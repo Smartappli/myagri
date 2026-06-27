@@ -17,23 +17,23 @@ $kpi = is_array($selectedResource['kpi_tracking'] ?? null) ? $selectedResource['
 ?>
 
 <section aria-labelledby="resource-title" class="shadow-soft">
-    <p><a href="?page=ressources">&#8592; Retour aux ressources</a></p>
+    <p><a href="?page=ressources">&#8592; Zurück zu den Ressourcen</a></p>
     <h2 id="resource-title"><?= e($selectedResource['title']) ?></h2>
     <p class="section-intro"><?= e($selectedResource['description']) ?></p>
 
     <article class="card resource-summary">
         <?php if (is_string($selectedResource['overview'] ?? null) && trim((string) $selectedResource['overview']) !== ''): ?>
-            <h3>En bref</h3>
+            <h3>Kurz gesagt</h3>
             <p><?= e($selectedResource['overview']) ?></p>
         <?php endif; ?>
         <?php if (is_string($selectedResource['for'] ?? null) && trim((string) $selectedResource['for']) !== ''): ?>
-            <p><strong>Public concerne :</strong> <?= e($selectedResource['for']) ?></p>
+            <p><strong>Zielgruppe:</strong> <?= e($selectedResource['for']) ?></p>
         <?php endif; ?>
     </article>
 
     <?php if ($continuousContent !== ''): ?>
         <article class="card">
-            <h3>Contexte</h3>
+            <h3>Kontext</h3>
             <?php foreach (splitTextIntoParagraphs($continuousContent) as $paragraph): ?>
                 <p><?= e($paragraph) ?></p>
             <?php endforeach; ?>
@@ -42,7 +42,7 @@ $kpi = is_array($selectedResource['kpi_tracking'] ?? null) ? $selectedResource['
 
     <?php if ($steps !== []): ?>
         <article class="card">
-            <h3>Parcours d'action</h3>
+            <h3>Handlungsweg</h3>
             <ol class="list-tight">
                 <?php foreach ($steps as $item): ?>
                     <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -57,7 +57,7 @@ $kpi = is_array($selectedResource['kpi_tracking'] ?? null) ? $selectedResource['
         <article class="resource-detail-grid">
             <?php if ($checklist !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Checklist</h3>
+                    <h3>Checkliste</h3>
                     <ul class="list-tight">
                         <?php foreach ($checklist as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -70,7 +70,7 @@ $kpi = is_array($selectedResource['kpi_tracking'] ?? null) ? $selectedResource['
 
             <?php if ($purchaseStrategy !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Strategie d'achat</h3>
+                    <h3>Einkaufsstrategie</h3>
                     <ul class="list-tight">
                         <?php foreach ($purchaseStrategy as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -83,7 +83,7 @@ $kpi = is_array($selectedResource['kpi_tracking'] ?? null) ? $selectedResource['
 
             <?php if ($labelReading !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Lecture des labels</h3>
+                    <h3>Labels lesen</h3>
                     <ul class="list-tight">
                         <?php foreach ($labelReading as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -96,7 +96,7 @@ $kpi = is_array($selectedResource['kpi_tracking'] ?? null) ? $selectedResource['
 
             <?php if ($seasonalPlanning !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Planification saisonniere</h3>
+                    <h3>Saisonplanung</h3>
                     <ul class="list-tight">
                         <?php foreach ($seasonalPlanning as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -109,7 +109,7 @@ $kpi = is_array($selectedResource['kpi_tracking'] ?? null) ? $selectedResource['
 
             <?php if ($antiWaste !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Guide anti-gaspillage</h3>
+                    <h3>Anti-Verschwendungsleitfaden</h3>
                     <ul class="list-tight">
                         <?php foreach ($antiWaste as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -122,7 +122,7 @@ $kpi = is_array($selectedResource['kpi_tracking'] ?? null) ? $selectedResource['
 
             <?php if ($nutrition !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Equilibre nutritionnel</h3>
+                    <h3>Ernährungsbalance</h3>
                     <ul class="list-tight">
                         <?php foreach ($nutrition as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -135,7 +135,7 @@ $kpi = is_array($selectedResource['kpi_tracking'] ?? null) ? $selectedResource['
 
             <?php if ($budget !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Optimisation du budget</h3>
+                    <h3>Budgetoptimierung</h3>
                     <ul class="list-tight">
                         <?php foreach ($budget as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
@@ -148,7 +148,7 @@ $kpi = is_array($selectedResource['kpi_tracking'] ?? null) ? $selectedResource['
 
             <?php if ($kpi !== []): ?>
                 <section class="card resource-detail-card">
-                    <h3>Suivi et indicateurs</h3>
+                    <h3>Monitoring und Kennzahlen</h3>
                     <ul class="list-tight">
                         <?php foreach ($kpi as $item): ?>
                             <?php if (is_string($item) && trim($item) !== ''): ?>
