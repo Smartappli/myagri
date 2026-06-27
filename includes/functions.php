@@ -21,6 +21,16 @@ function currentPage(): string
     return in_array($page, $allowed, true) ? $page : 'accueil';
 }
 
+function siteLanguage(): string
+{
+    return 'de-BE';
+}
+
+function siteLocale(): string
+{
+    return 'de_BE';
+}
+
 /**
  * @param array<string, mixed> $site
  * @return array<string, string>
@@ -32,10 +42,10 @@ function siteGeoConfig(array $site): array
         $geo = [];
     }
 
-    $name = isset($geo['name']) && is_string($geo['name']) ? trim($geo['name']) : 'Wallonie, Belgique';
+    $name = isset($geo['name']) && is_string($geo['name']) ? trim($geo['name']) : 'Wallonie, Belgien';
     $region = isset($geo['region']) && is_string($geo['region']) ? trim($geo['region']) : 'Wallonie';
     $regionCode = isset($geo['region_code']) && is_string($geo['region_code']) ? trim($geo['region_code']) : 'BE-WAL';
-    $country = isset($geo['country']) && is_string($geo['country']) ? trim($geo['country']) : 'Belgique';
+    $country = isset($geo['country']) && is_string($geo['country']) ? trim($geo['country']) : 'Belgien';
     $countryCode = isset($geo['country_code']) && is_string($geo['country_code']) ? trim($geo['country_code']) : 'BE';
     $locality = isset($geo['locality']) && is_string($geo['locality']) ? trim($geo['locality']) : 'Namur';
     $latitude = isset($geo['latitude']) && is_scalar($geo['latitude']) ? trim((string) $geo['latitude']) : '50.5039';
@@ -72,25 +82,25 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
 
     if ($page === 'filieres') {
         return [
-            'title' => 'Filières agricoles en Wallonie | MyAgri',
-            'description' => 'Comprendre les filières agricoles wallonnes : grandes cultures, élevage, maraîchage, diversification, innovation et actions citoyennes.',
-            'keywords' => 'filières agricoles, agriculture wallonne, grandes cultures, élevage, maraîchage, diversification agricole',
+            'title' => 'Landwirtschaftliche Wertschöpfungsketten in der Wallonie | MyAgri',
+            'description' => 'Die wallonischen Agrarsektoren verständlich erklärt: Ackerbau, Tierhaltung, Gemüsebau, Diversifizierung, Innovation und konkrete Handlungsmöglichkeiten.',
+            'keywords' => 'Landwirtschaft Wallonie, Agrarsektoren Belgien, Ackerbau, Tierhaltung, Gemüsebau, regionale Lebensmittel, Agrarinnovation',
         ];
     }
 
     if ($page === 'ressources') {
         return [
-            'title' => 'Ressources agricoles pratiques | MyAgri',
-            'description' => 'Accès aux ressources pratiques sur les formations, marchés locaux, labels, consommation responsable, anti-gaspillage et parcours pédagogiques.',
-            'keywords' => 'ressources agricoles, aides agricoles, circuits courts, labels, consommation responsable, marché local',
+            'title' => 'Praktische Landwirtschaftsressourcen | MyAgri',
+            'description' => 'Praxisnahe Ressourcen zu Ausbildungen, lokalen Märkten, Labels, verantwortungsvollem Konsum, Anti-Verschwendung und Lernangeboten.',
+            'keywords' => 'Landwirtschaft Ressourcen, Agrarhilfen, kurze Lieferketten, Labels, verantwortungsvoller Konsum, lokale Märkte',
         ];
     }
 
     if ($page === 'faq') {
         return [
-            'title' => 'FAQ agriculture wallonne | MyAgri',
-            'description' => 'Réponses claires sur les prix agricoles, les circuits courts, la souveraineté alimentaire et les actions citoyennes concrètes.',
-            'keywords' => 'FAQ agriculture wallonne, questions agriculture, circuits courts, prix agricoles, souveraineté alimentaire',
+            'title' => 'FAQ zur Landwirtschaft in der Wallonie | MyAgri',
+            'description' => 'Klare Antworten zu Agrarpreisen, kurzen Lieferketten, Ernährungssouveränität und konkreten Handlungsmöglichkeiten für Bürgerinnen und Bürger.',
+            'keywords' => 'FAQ Landwirtschaft Wallonie, Agrarpreise, kurze Lieferketten, Ernährungssouveränität, regionale Lebensmittel',
         ];
     }
 
@@ -98,50 +108,50 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         $termTitle = $glossaryTerm['term'];
         $termDescription = isset($glossaryTerm['definition']) && is_string($glossaryTerm['definition'])
             ? $glossaryTerm['definition']
-            : 'Définition et applications concrètes en agriculture.';
+            : 'Definition und praktische Anwendung in der Landwirtschaft.';
 
         return [
-            'title' => $termTitle . ' | Glossaire agricole | MyAgri',
+            'title' => $termTitle . ' | Landwirtschaftliches Glossar | MyAgri',
             'description' => $termDescription,
-            'keywords' => strtolower($termTitle) . ', glossaire agricole, agriculture wallonne, définition agricole, termes de l\'agriculture',
+            'keywords' => strtolower($termTitle) . ', Landwirtschaft Glossar, Landwirtschaft Wallonie, Agrarbegriff, Agrardefinition',
         ];
     }
 
     if ($page === 'glossaire') {
         return [
-            'title' => 'Glossaire agricole citoyen | MyAgri',
-            'description' => 'Décryptage des mots-clés de l\'agriculture wallonne : sols, eau, élevage, filières, labels, vente directe, PAC, biodiversité et transition.',
-            'keywords' => 'glossaire agricole, vocabulaire agriculture, définitions agriculture, agroécologie, circuit court, PAC, vente directe, wallonie',
+            'title' => 'Landwirtschaftliches Bürgerglossar | MyAgri',
+            'description' => 'Schlüsselbegriffe der wallonischen Landwirtschaft erklärt: Böden, Wasser, Tierhaltung, Wertschöpfungsketten, Labels, Direktverkauf, GAP, Biodiversität und Wandel.',
+            'keywords' => 'Landwirtschaft Glossar, Agrarbegriffe, Definitionen Landwirtschaft, Agroökologie, kurze Lieferkette, GAP, Direktverkauf, Wallonie',
         ];
     }
 
     if ($page === 'dossiers') {
         return [
-            'title' => 'Dossiers citoyens sur l’agriculture wallonne | MyAgri',
-            'description' => 'Dossiers thématiques illustrés pour comprendre l’eau, les sols, les circuits courts, le climat, la biodiversité et les pratiques agricoles en Wallonie.',
-            'keywords' => 'dossiers agriculture wallonne, citoyens, eau sols agriculture, circuits courts, biodiversité agricole, climat agriculture',
+            'title' => 'Bürgerdossiers zur Landwirtschaft in der Wallonie | MyAgri',
+            'description' => 'Illustrierte Themendossiers zu Wasser, Böden, kurzen Lieferketten, Klima, Biodiversität und landwirtschaftlichen Praktiken in der Wallonie.',
+            'keywords' => 'Dossiers Landwirtschaft Wallonie, Wasser Böden Landwirtschaft, kurze Lieferketten, Biodiversität Landwirtschaft, Klima Landwirtschaft',
         ];
     }
 
     if ($page === 'dossier' && is_array($dossier)) {
-        $dossierTitle = isset($dossier['title']) && is_string($dossier['title']) ? $dossier['title'] : 'Dossier citoyen';
+        $dossierTitle = isset($dossier['title']) && is_string($dossier['title']) ? $dossier['title'] : 'Bürgerdossier';
         $chapterTitle = isset($dossierChapter['title']) && is_string($dossierChapter['title']) ? $dossierChapter['title'] : '';
         $description = isset($dossierChapter['summary']) && is_string($dossierChapter['summary'])
             ? $dossierChapter['summary']
-            : (isset($dossier['subtitle']) && is_string($dossier['subtitle']) ? $dossier['subtitle'] : 'Dossier citoyen MyAgri.');
+            : (isset($dossier['subtitle']) && is_string($dossier['subtitle']) ? $dossier['subtitle'] : 'Bürgerdossier von MyAgri.');
 
         return [
             'title' => ($chapterTitle !== '' ? $chapterTitle . ' | ' : '') . $dossierTitle . ' | MyAgri',
             'description' => $description,
-            'keywords' => strtolower($dossierTitle) . ', dossier citoyen, agriculture wallonne, références, pédagogie agricole',
+            'keywords' => strtolower($dossierTitle) . ', Bürgerdossier, Landwirtschaft Wallonie, Quellen, Agrarpädagogik',
         ];
     }
 
     if ($page === 'dossier') {
         return [
-            'title' => 'Dossier introuvable | MyAgri',
-            'description' => 'Le dossier demandé n’existe pas ou n’est pas disponible.',
-            'keywords' => 'dossier introuvable, agriculture wallonne, MyAgri',
+            'title' => 'Dossier nicht gefunden | MyAgri',
+            'description' => 'Das angeforderte Dossier existiert nicht oder ist nicht verfügbar.',
+            'keywords' => 'Dossier nicht gefunden, Landwirtschaft Wallonie, MyAgri',
         ];
     }
 
@@ -149,27 +159,27 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         $resourceTitle = isset($resource['title']) && is_string($resource['title']) ? $resource['title'] : 'Ressource';
         $resourceDescription = isset($resource['description']) && is_string($resource['description'])
             ? $resource['description']
-            : 'Ressource pratique du portail MyAgri.';
+            : 'Praktische Ressource des MyAgri-Portals.';
 
         return [
             'title' => $resourceTitle . ' | MyAgri',
             'description' => $resourceDescription,
-            'keywords' => strtolower($resourceTitle) . ', agriculture wallonne, ressource pratique, guide agricole',
+            'keywords' => strtolower($resourceTitle) . ', Landwirtschaft Wallonie, praktische Ressource, Agrarleitfaden',
         ];
     }
 
     if ($page === 'ressource') {
         return [
-            'title' => 'Ressource introuvable | MyAgri',
-            'description' => 'La fiche de ressource demandée n\'existe pas ou n\'est pas disponible pour le moment.',
-            'keywords' => 'ressource introuvable, agriculture wallonne, portail citoyen',
+            'title' => 'Ressource nicht gefunden | MyAgri',
+            'description' => 'Die angeforderte Ressource existiert nicht oder ist derzeit nicht verfügbar.',
+            'keywords' => 'Ressource nicht gefunden, Landwirtschaft Wallonie, Bürgerportal',
         ];
     }
 
     return [
-        'title' => 'MyAgri | Portail citoyen de l\'agriculture wallonne',
-        'description' => 'Comprendre l\'agriculture wallonne : alimentation, environnement, métiers, filières, labels, ressources pratiques et glossaire citoyen.',
-        'keywords' => 'agriculture wallonne, portail citoyen, alimentation locale, environnement, filières agricoles, ressources',
+        'title' => 'MyAgri | Bürgerportal zur Landwirtschaft in der Wallonie',
+        'description' => 'Landwirtschaft in der Wallonie verstehen: Ernährung, Umwelt, Berufe, Wertschöpfungsketten, Labels, praktische Ressourcen und verständliches Glossar.',
+        'keywords' => 'Landwirtschaft Wallonie, Bürgerportal, regionale Ernährung, Umwelt, Agrarsektoren, Ressourcen',
     ];
 }
 
@@ -204,9 +214,7 @@ function pageStructuredData(
     $siteSubtitle = isset($site['subtitle']) && is_string($site['subtitle']) ? $site['subtitle'] : '';
     $dateModified = updatedAtIsoDate(isset($site['updated_at']) && is_string($site['updated_at']) ? $site['updated_at'] : '');
     $resourceId = isset($resource['id']) && is_string($resource['id']) ? $resource['id'] : '';
-    $glossaryTermSlug = is_array($glossaryTerm) && isset($glossaryTerm['term']) && is_string($glossaryTerm['term'])
-        ? glossarySlug($glossaryTerm['term'])
-        : '';
+    $glossaryTermSlug = is_array($glossaryTerm) ? glossaryEntrySlug($glossaryTerm) : '';
     $dossierId = isset($dossier['id']) && is_string($dossier['id']) ? $dossier['id'] : '';
     $chapterId = isset($dossierChapter['id']) && is_string($dossierChapter['id']) ? $dossierChapter['id'] : '';
     $seo = pageSeo($page, $site, $resource, $glossaryTerm, $dossier, $dossierChapter);
@@ -255,7 +263,7 @@ function pageStructuredData(
             'alternateName' => 'MyAgri',
             'url' => $baseUrl,
             'description' => $siteSubtitle,
-            'inLanguage' => 'fr-BE',
+            'inLanguage' => siteLanguage(),
             'keywords' => pageKeywordList($seo['keywords']),
             'publisher' => ['@id' => $baseUrl . '/#organization'],
             'potentialAction' => [
@@ -276,20 +284,28 @@ function pageStructuredData(
             'primaryImageOfPage' => [
                 '@type' => 'ImageObject',
                 'url' => $baseUrl . '/assets/img/hero.png',
-                'caption' => 'Paysage agricole wallon illustrant le portail citoyen MyAgri.',
+                'caption' => 'Wallonische Agrarlandschaft als Illustration des Bürgerportals MyAgri.',
             ],
             'keywords' => pageKeywordList($seo['keywords']),
             'about' => [
-                'agriculture wallonne',
-                'alimentation locale',
-                'filières agricoles',
-                'ressources citoyennes',
+                'Landwirtschaft in der Wallonie',
+                'regionale Ernährung',
+                'landwirtschaftliche Wertschöpfungsketten',
+                'Bürgerressourcen',
+            ],
+            'knowsAbout' => [
+                'Böden und Wasser',
+                'kurze Lieferketten',
+                'Agrarberufe',
+                'Agroökologie',
+                'Biodiversität',
+                'GAP und Agrarhilfen',
             ],
             'audience' => [
                 '@type' => 'Audience',
-                'audienceType' => 'Citoyens, familles, enseignants, collectivités et acteurs agricoles en Wallonie',
+                'audienceType' => 'Bürgerinnen und Bürger, Familien, Lehrkräfte, Gemeinden und landwirtschaftliche Akteure in der Wallonie',
             ],
-            'inLanguage' => 'fr-BE',
+            'inLanguage' => siteLanguage(),
             'datePublished' => $dateModified,
             'dateModified' => $dateModified,
             'publisher' => ['@id' => $baseUrl . '/#organization'],
@@ -388,44 +404,44 @@ function resourceFaqPairs(array $resource, int $limit = 6): array
 
     if (isset($resource['title'], $resource['description']) && is_string($resource['title']) && is_string($resource['description'])) {
         $add(
-            'De quoi parle cette ressource ?',
+            'Worum geht es in dieser Ressource?',
             $resource['title'] . ' : ' . $resource['description']
         );
     }
 
     if (isset($resource['for']) && is_string($resource['for']) && trim($resource['for']) !== '') {
-        $add('Qui peut s’en servir ?', trim($resource['for']));
+        $add('Wer kann diese Ressource nutzen?', trim($resource['for']));
     }
 
     if (isset($resource['overview']) && is_string($resource['overview']) && trim($resource['overview']) !== '') {
-        $add('Quel est l’objectif de cette ressource ?', trim($resource['overview']));
+        $add('Welches Ziel hat diese Ressource?', trim($resource['overview']));
     }
 
     if (is_array($resource['steps'] ?? null) && $resource['steps'] !== []) {
         $steps = array_slice(array_values(array_filter($resource['steps'], 'is_string')), 0, 3);
         if ($steps !== []) {
-            $add('Quelle démarche suivre ?', implode(' / ', array_map('trim', $steps)));
+            $add('Welche Vorgehensweise ist sinnvoll?', implode(' / ', array_map('trim', $steps)));
         }
     }
 
     if (is_array($resource['checklist'] ?? null) && $resource['checklist'] !== []) {
         $items = array_slice(array_values(array_filter($resource['checklist'], 'is_string')), 0, 3);
         if ($items !== []) {
-            $add('Quels sont les points clés ?', 'Points principaux : ' . implode(' ; ', array_map('trim', $items)));
+            $add('Welche Punkte sind zentral?', 'Wichtige Punkte: ' . implode(' ; ', array_map('trim', $items)));
         }
     }
 
     if (is_array($resource['timeline'] ?? null) && $resource['timeline'] !== []) {
         $items = array_slice(array_values(array_filter($resource['timeline'], 'is_string')), 0, 3);
         if ($items !== []) {
-            $add('Comment suivre le calendrier ?', implode(' > ', array_map('trim', $items)));
+            $add('Wie lässt sich der Zeitplan verfolgen?', implode(' > ', array_map('trim', $items)));
         }
     }
 
     if (is_array($resource['support_contacts'] ?? null) && $resource['support_contacts'] !== []) {
         $items = array_slice(array_values(array_filter($resource['support_contacts'], 'is_string')), 0, 2);
         if ($items !== []) {
-            $add('Qui accompagne sur ce sujet ?', implode(' ; ', array_map('trim', $items)));
+            $add('Wer kann bei diesem Thema begleiten?', implode(' ; ', array_map('trim', $items)));
         }
     }
 
@@ -446,19 +462,19 @@ function glossaryTermFaqPairs(array $glossaryTerm, int $limit = 4): array
 
     $pairs = [
         [
-            'question' => sprintf('Que signifie le terme "%s" ?', $term),
+            'question' => sprintf('Was bedeutet der Begriff "%s"?', $term),
             'answer' => $definition,
         ],
         [
-            'question' => 'Pourquoi ce terme est-il important pour une pratique agricole durable ?',
-            'answer' => 'Parce qu’il permet de mieux comprendre les choix techniques, les impacts environnementaux et les effets économiques.',
+            'question' => 'Warum ist dieser Begriff für nachhaltige Landwirtschaft wichtig?',
+            'answer' => 'Er hilft, technische Entscheidungen, ökologische Auswirkungen und wirtschaftliche Folgen besser einzuordnen.',
         ],
     ];
 
     if (count($pairs) < $limit) {
         $pairs[] = [
-            'question' => 'Dans quel contexte ce terme est-il le plus utilisé ?',
-            'answer' => 'Ce terme est fréquemment utilisé dans les échanges entre agriculteurs, transformateurs, collectivités et citoyen.ne.s.',
+            'question' => 'In welchem Kontext wird dieser Begriff besonders häufig verwendet?',
+            'answer' => 'Er wird oft in Gesprächen zwischen landwirtschaftlichen Betrieben, Verarbeitern, Gemeinden und Bürgerinnen und Bürgern genutzt.',
         ];
     }
 
@@ -536,13 +552,13 @@ function breadcrumbItems(string $page, ?array $resource = null, ?array $glossary
         [
             '@type' => 'ListItem',
             'position' => 1,
-            'name' => 'Accueil',
+            'name' => 'Startseite',
             'item' => $baseUrl . '/',
         ],
     ];
 
     if ($page === 'filieres') {
-        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Filières', 'item' => $baseUrl . '/?page=filieres'];
+        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Sektoren', 'item' => $baseUrl . '/?page=filieres'];
     } elseif ($page === 'ressources') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Ressources', 'item' => $baseUrl . '/?page=ressources'];
     } elseif ($page === 'dossiers') {
@@ -550,14 +566,14 @@ function breadcrumbItems(string $page, ?array $resource = null, ?array $glossary
     } elseif ($page === 'faq') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'FAQ', 'item' => $baseUrl . '/?page=faq'];
     } elseif ($page === 'glossaire' && !is_array($glossaryTerm)) {
-        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Glossaire', 'item' => $baseUrl . '/?page=glossaire'];
+        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Glossar', 'item' => $baseUrl . '/?page=glossaire'];
     } elseif ($page === 'glossaire' && is_array($glossaryTerm)) {
-        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Glossaire', 'item' => $baseUrl . '/?page=glossaire'];
+        $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Glossar', 'item' => $baseUrl . '/?page=glossaire'];
         $items[] = [
             '@type' => 'ListItem',
             'position' => 3,
-            'name' => isset($glossaryTerm['term']) && is_string($glossaryTerm['term']) ? $glossaryTerm['term'] : 'Glossaire',
-            'item' => $baseUrl . canonicalPath('glossaire', '', glossarySlug(is_array($glossaryTerm) && isset($glossaryTerm['term']) && is_string($glossaryTerm['term']) ? $glossaryTerm['term'] : '')),
+            'name' => isset($glossaryTerm['term']) && is_string($glossaryTerm['term']) ? $glossaryTerm['term'] : 'Glossar',
+            'item' => $baseUrl . canonicalPath('glossaire', '', glossaryEntrySlug($glossaryTerm)),
         ];
     } elseif ($page === 'ressource') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Ressources', 'item' => $baseUrl . '/?page=ressources'];
@@ -593,7 +609,7 @@ function sectorItemList(array $sectors, string $baseUrl): array
         $items[] = [
             '@type' => 'ListItem',
             'position' => $position + 1,
-            'name' => isset($sector['label']) && is_string($sector['label']) ? $sector['label'] : 'Filière agricole',
+            'name' => isset($sector['label']) && is_string($sector['label']) ? $sector['label'] : 'Agrarsektor',
             'description' => isset($sector['summary']) && is_string($sector['summary']) ? $sector['summary'] : '',
             'url' => $baseUrl . '/?page=filieres',
         ];
@@ -602,7 +618,7 @@ function sectorItemList(array $sectors, string $baseUrl): array
     return [
         '@type' => 'ItemList',
         '@id' => $baseUrl . '/?page=filieres#sector-list',
-        'name' => 'Filières agricoles en Wallonie',
+        'name' => 'Landwirtschaftliche Sektoren in der Wallonie',
         'itemListElement' => $items,
     ];
 }
@@ -619,7 +635,7 @@ function resourceItemList(array $resources, string $baseUrl): array
         $items[] = [
             '@type' => 'ListItem',
             'position' => $position + 1,
-            'name' => isset($resource['title']) && is_string($resource['title']) ? $resource['title'] : 'Ressource agricole',
+            'name' => isset($resource['title']) && is_string($resource['title']) ? $resource['title'] : 'Landwirtschaftsressource',
             'description' => isset($resource['description']) && is_string($resource['description']) ? $resource['description'] : '',
             'url' => $baseUrl . canonicalPath('ressource', $id),
         ];
@@ -628,7 +644,7 @@ function resourceItemList(array $resources, string $baseUrl): array
     return [
         '@type' => 'ItemList',
         '@id' => $baseUrl . '/?page=ressources#resource-list',
-        'name' => 'Ressources pratiques sur l\'agriculture wallonne',
+        'name' => 'Praktische Ressourcen zur Landwirtschaft in der Wallonie',
         'itemListElement' => $items,
     ];
 }
@@ -645,7 +661,7 @@ function dossierItemList(array $dossiers, string $baseUrl): array
         $items[] = [
             '@type' => 'ListItem',
             'position' => $position + 1,
-            'name' => isset($dossier['title']) && is_string($dossier['title']) ? $dossier['title'] : 'Dossier citoyen',
+            'name' => isset($dossier['title']) && is_string($dossier['title']) ? $dossier['title'] : 'Bürgerdossier',
             'description' => isset($dossier['subtitle']) && is_string($dossier['subtitle']) ? $dossier['subtitle'] : '',
             'url' => $baseUrl . canonicalPath('dossier', '', '', $id),
         ];
@@ -654,7 +670,7 @@ function dossierItemList(array $dossiers, string $baseUrl): array
     return [
         '@type' => 'ItemList',
         '@id' => $baseUrl . '/?page=dossiers#dossier-list',
-        'name' => 'Dossiers citoyens MyAgri',
+        'name' => 'MyAgri-Bürgerdossiers',
         'itemListElement' => $items,
     ];
 }
@@ -666,7 +682,7 @@ function dossierItemList(array $dossiers, string $baseUrl): array
  */
 function dossierArticleStructuredData(array $dossier, ?array $chapter, string $canonicalUrl, string $baseUrl, string $siteTitle, string $dateModified): array
 {
-    $title = isset($dossier['title']) && is_string($dossier['title']) ? $dossier['title'] : 'Dossier MyAgri';
+    $title = isset($dossier['title']) && is_string($dossier['title']) ? $dossier['title'] : 'MyAgri-Dossier';
     $headline = $title;
     if (isset($chapter['title']) && is_string($chapter['title']) && $chapter['title'] !== '') {
         $headline = $chapter['title'] . ' | ' . $title;
@@ -683,7 +699,7 @@ function dossierArticleStructuredData(array $dossier, ?array $chapter, string $c
         'description' => $description,
         'mainEntityOfPage' => $canonicalUrl,
         'image' => $baseUrl . (isset($dossier['illustration']) && is_string($dossier['illustration']) ? $dossier['illustration'] : '/assets/img/hero.png'),
-        'inLanguage' => 'fr-BE',
+        'inLanguage' => siteLanguage(),
         'datePublished' => $dateModified,
         'dateModified' => $dateModified,
         'author' => [
@@ -752,7 +768,7 @@ function glossaryStructuredData(array $glossary, string $canonicalUrl): array
     return [
         '@type' => 'DefinedTermSet',
         '@id' => $canonicalUrl . '#glossary',
-        'name' => 'Glossaire agricole citoyen',
+        'name' => 'Landwirtschaftliches Bürgerglossar',
         'hasDefinedTerm' => $terms,
     ];
 }
@@ -771,13 +787,13 @@ function resourceArticleStructuredData(
 ): array {
     $siteName = isset($siteGeo['name']) && is_string($siteGeo['name']) ? trim($siteGeo['name']) : '';
     if ($siteName === '') {
-        $siteName = 'Wallonie, Belgique';
+        $siteName = 'Wallonie, Belgien';
     }
 
     return [
         '@type' => 'Article',
         '@id' => $canonicalUrl . '#article',
-        'headline' => isset($resource['title']) && is_string($resource['title']) ? $resource['title'] : 'Ressource MyAgri',
+        'headline' => isset($resource['title']) && is_string($resource['title']) ? $resource['title'] : 'MyAgri-Ressource',
         'description' => isset($resource['description']) && is_string($resource['description']) ? $resource['description'] : '',
         'articleBody' => resourcePlainText($resource),
         'mainEntityOfPage' => $canonicalUrl,
@@ -785,7 +801,7 @@ function resourceArticleStructuredData(
         'spatialCoverage' => $siteName,
         'image' => $baseUrl . '/assets/img/hero.png',
         'keywords' => pageKeywordList(pageSeo('ressource', ['title' => $siteTitle], $resource)['keywords']),
-        'inLanguage' => 'fr-BE',
+        'inLanguage' => siteLanguage(),
         'datePublished' => $dateModified,
         'author' => [
             '@type' => 'Organization',
@@ -821,6 +837,19 @@ function resourcePlainText(array $resource): string
 function updatedAtIsoDate(string $updatedAt): string
 {
     $months = [
+        'januar' => '01',
+        'februar' => '02',
+        'märz' => '03',
+        'maerz' => '03',
+        'april' => '04',
+        'mai' => '05',
+        'juni' => '06',
+        'juli' => '07',
+        'august' => '08',
+        'september' => '09',
+        'oktober' => '10',
+        'november' => '11',
+        'dezember' => '12',
         'janvier' => '01',
         'février' => '02',
         'mars' => '03',
@@ -835,7 +864,7 @@ function updatedAtIsoDate(string $updatedAt): string
         'décembre' => '12',
     ];
 
-    if (preg_match('/^(\d{1,2})\s+([[:alpha:]]+)\s+(\d{4})$/u', mb_strtolower($updatedAt), $matches) === 1) {
+    if (preg_match('/^(\d{1,2})\.?\s+([[:alpha:]äöüÄÖÜßéû]+)\s+(\d{4})$/u', mb_strtolower($updatedAt), $matches) === 1) {
         $month = $months[$matches[2]] ?? null;
         if ($month !== null) {
             return sprintf('%04d-%s-%02d', (int) $matches[3], $month, (int) $matches[1]);
@@ -983,6 +1012,22 @@ function glossarySlug(string $term): string
 }
 
 /**
+ * @param array<string, mixed> $entry
+ */
+function glossaryEntrySlug(array $entry): string
+{
+    if (isset($entry['slug']) && is_string($entry['slug']) && trim($entry['slug']) !== '') {
+        return glossarySlug($entry['slug']);
+    }
+
+    if (isset($entry['term']) && is_string($entry['term'])) {
+        return glossarySlug($entry['term']);
+    }
+
+    return '';
+}
+
+/**
  * @return array<string, mixed>|null
  */
 function glossaryTermBySlug(array $glossary, string $slug): ?array
@@ -993,7 +1038,7 @@ function glossaryTermBySlug(array $glossary, string $slug): ?array
             continue;
         }
 
-        if (glossarySlug($entry['term']) === $normalizedSlug) {
+        if (glossaryEntrySlug($entry) === $normalizedSlug || glossarySlug($entry['term']) === $normalizedSlug) {
             return $entry;
         }
     }
