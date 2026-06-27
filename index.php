@@ -15,17 +15,17 @@ try {
 if (!is_array($data) || $dataLoadError !== null) {
     http_response_code(503);
     ?><!DOCTYPE html>
-    <html lang="fr-BE">
+    <html lang="de-BE">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Service temporairement indisponible — MyAgri</title>
+        <title>Dienst vorübergehend nicht verfügbar - MyAgri</title>
         <meta name="robots" content="noindex, nofollow">
     </head>
     <body>
         <main>
-            <h1>Service temporairement indisponible</h1>
-            <p>La base de données MySQL du portail est momentanément inaccessible.</p>
+            <h1>Dienst vorübergehend nicht verfügbar</h1>
+            <p>Die MySQL-Datenbank des Portals ist momentan nicht erreichbar.</p>
             <?php if (is_string($dataLoadError) && $dataLoadError !== ''): ?>
                 <p><small><?= e($dataLoadError) ?></small></p>
             <?php endif; ?>
@@ -177,8 +177,8 @@ switch ($page) {
 }
 
 if ($pageFaqPairs !== []) {
-    $qaTitle = $page === 'ressource' ? 'Questions autour de cette ressource' : 'Questions autour de ce terme';
-    $qaIntro = 'Reponses rapides pour la recherche et la relecture :';
+    $qaTitle = $page === 'ressource' ? 'Fragen zu dieser Ressource' : 'Fragen zu diesem Begriff';
+    $qaIntro = 'Kurze Antworten für Suche und Wiederholung:';
     require __DIR__ . '/includes/partials/page-qa-block.php';
 }
 
