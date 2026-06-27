@@ -1102,7 +1102,7 @@ function glossaryTemplatePath(string $termSlug): ?string
  */
 function glossaryTermStructuredData(array $glossaryTerm, string $canonicalUrl): array
 {
-    $term = isset($glossaryTerm['term']) && is_string($glossaryTerm['term']) ? $glossaryTerm['term'] : 'Terme';
+    $term = isset($glossaryTerm['term']) && is_string($glossaryTerm['term']) ? $glossaryTerm['term'] : 'Begriff';
     $definition = isset($glossaryTerm['definition']) && is_string($glossaryTerm['definition']) ? $glossaryTerm['definition'] : '';
     $base = rtrim($canonicalUrl, '#');
 
@@ -1112,10 +1112,10 @@ function glossaryTermStructuredData(array $glossaryTerm, string $canonicalUrl): 
         'name' => $term,
         'description' => $definition,
         'url' => $canonicalUrl,
-        'inLanguage' => 'fr-BE',
+        'inLanguage' => siteLanguage(),
         'inDefinedTermSet' => [
             '@type' => 'DefinedTermSet',
-            'name' => 'Glossaire agricole citoyen',
+            'name' => 'Landwirtschaftliches Bürgerglossar',
             '@id' => $base . '#glossary',
             'url' => $base . '#glossary',
         ],
@@ -1174,7 +1174,7 @@ function splitTextIntoParagraphs(string $text): array
         return $paragraphs;
     }
 
-    $sentences = preg_split('/(?<=[\.\?\!\x{2026}])\s+(?=[«A-Za-zÀ-ÖØ-öø-ÿ0-9])/u', $text, -1, PREG_SPLIT_NO_EMPTY);
+    $sentences = preg_split('/(?<=[\.\?\!\x{2026}])\s+(?=[«A-Za-zÄÖÜäöüßÀ-ÖØ-öø-ÿ0-9])/u', $text, -1, PREG_SPLIT_NO_EMPTY);
     if (!is_array($sentences) || count($sentences) <= 1) {
         return [$text];
     }
