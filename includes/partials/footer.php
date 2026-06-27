@@ -4,7 +4,7 @@
         <p>MyAgri - öffentliches Informationsportal zur Landwirtschaft.</p>
         <nav aria-label="Technische und redaktionelle Links">
             <ul class="footer-links">
-                <li><a href="?page=ressources">Ressources</a></li>
+                <li><a href="?page=ressources">Ressourcen</a></li>
                 <li><a href="?page=dossiers">Dossiers</a></li>
                 <li><a href="?page=glossaire">Glossar</a></li>
                 <li><a href="api.php">API JSON</a></li>
