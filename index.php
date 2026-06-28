@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
 
-require __DIR__ . '/includes/portal_repository.php';
-require __DIR__ . '/includes/functions.php';
+require_once __DIR__ . '/includes/portal_repository.php';
+require_once __DIR__ . '/includes/functions.php';
 
 $data = [];
 $dataLoadError = null;
@@ -12,7 +12,7 @@ try {
     $dataLoadError = $exception->getMessage();
 }
 
-if (!is_array($data) || $dataLoadError !== null) {
+if ($dataLoadError !== null) {
     http_response_code(503);
     $languageConfig = portalLanguageConfig();
     ?><!DOCTYPE html>
@@ -27,7 +27,7 @@ if (!is_array($data) || $dataLoadError !== null) {
         <main>
             <h1>MyAgri</h1>
             <p><?= e(t('api.db_error')) ?></p>
-            <?php if (is_string($dataLoadError) && $dataLoadError !== ''): ?>
+            <?php if ($dataLoadError !== ''): ?>
                 <p><small><?= e($dataLoadError) ?></small></p>
             <?php endif; ?>
         </main>
@@ -95,7 +95,7 @@ if ($page === 'glossaire') {
 $isNotFoundResource = $page === 'ressource' && !is_array($selectedResource);
 $isNotFoundDossier = $page === 'dossier' && (!is_array($selectedDossier) || !is_array($selectedDossierChapter));
 $isNotFoundGlossaryTerm = $page === 'glossaire' && $glossaryTermSlug !== '' && !is_array($selectedGlossaryTerm);
-$shouldIndex = $shouldIndex && !$isInvalidPage && !$isNotFoundResource && !$isNotFoundDossier && !$isNotFoundGlossaryTerm;
+$shouldIndex = !$isInvalidPage && !$isNotFoundResource && !$isNotFoundDossier && !$isNotFoundGlossaryTerm;
 if (!$shouldIndex) {
     http_response_code(404);
 }
@@ -131,7 +131,7 @@ $structuredData = pageStructuredData(
     $glossary,
     is_array($selectedResource) ? $selectedResource : null,
     is_array($selectedGlossaryTerm) ? $selectedGlossaryTerm : null,
-    is_array($dossiers) ? $dossiers : [],
+    $dossiers,
     is_array($selectedDossier) ? $selectedDossier : null,
     is_array($selectedDossierChapter) ? $selectedDossierChapter : null
 );

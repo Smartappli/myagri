@@ -34,3 +34,8 @@ Meertalig burgerinformatieportaal over landbouw in Wallonië.
 - EN: editorial content lives in `includes/translations/` and interface strings in `includes/ui-translations/`. The smoke test verifies both sets.
 - DE: redaktionelle Inhalte liegen in `includes/translations/`, Interface-Texte in `includes/ui-translations/`. Der Smoke-Test prüft beide Bereiche.
 - NL: redactionele inhoud staat in `includes/translations/` en interfaceteksten in `includes/ui-translations/`. De smoke test controleert beide.
+
+## Quality / Qualité / Qualität / Kwaliteit
+
+- Smoke test: `composer smoke`
+- Static analysis: `composer analyse`

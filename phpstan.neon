@@ -1,0 +1,11 @@
+parameters:
+    level: 5
+    paths:
+        - api.php
+        - index.php
+        - manifest.php
+        - includes/data.php
+        - includes/functions.php
+        - includes/portal_repository.php
+        - scripts
+        - tests
