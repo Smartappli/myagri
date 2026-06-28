@@ -202,6 +202,10 @@ foreach (['fr' => 'fr-BE', 'en' => 'en-BE', 'ge' => 'de-BE', 'nl' => 'nl-BE'] as
 $_GET['lang'] = 'fr';
 assertTrue(is_file(__DIR__ . '/../sw.js'), 'service worker exists');
 assertTrue(is_file(__DIR__ . '/../offline.html'), 'offline page exists');
+$offlineMarkup = (string) file_get_contents(__DIR__ . '/../offline.html');
+foreach (['data-lang="fr"', 'data-lang="en"', 'data-lang="ge"', 'data-lang="nl"', 'document.documentElement.lang', 'MyAgri is tijdelijk offline'] as $offlineFragment) {
+    assertTrue(str_contains($offlineMarkup, $offlineFragment), "offline page contains {$offlineFragment}");
+}
 assertTrue(is_file(__DIR__ . '/../assets/img/pwa-icon-192.png'), '192px PWA icon exists');
 assertTrue(is_file(__DIR__ . '/../assets/img/pwa-icon-512.png'), '512px PWA icon exists');
 assertTrue(is_file(__DIR__ . '/../assets/img/pwa-maskable-512.png'), 'maskable PWA icon exists');
@@ -317,8 +321,22 @@ foreach (['xmlns:xhtml="http://www.w3.org/1999/xhtml"', 'hreflang="fr-BE"', 'hre
     assertTrue(str_contains($sitemapMarkup, $sitemapFragment), "sitemap contains {$sitemapFragment}");
 }
 $llmsShort = (string) file_get_contents(__DIR__ . '/../llms.txt');
-foreach (['- Dossiers: https://myagri.be/?lang=en', '- Dossiers: https://myagri.be/?lang=ge', '- Dossiers: https://myagri.be/?lang=nl', '- FAQ'] as $staleFragment) {
+foreach (['- Dossiers: https://myagri.be/?lang=en', '- Dossiers: https://myagri.be/?lang=ge', '- Dossiers: https://myagri.be/?lang=nl', '- FAQ', '- Long corpus:'] as $staleFragment) {
     assertTrue(!str_contains($llmsShort, $staleFragment), "llms.txt has no stale fragment {$staleFragment}");
+}
+foreach (['Maschineller Zugriff', 'Machinetoegang', 'Vollständiger Korpus', 'Volledig corpus'] as $localizedMachineFragment) {
+    assertTrue(str_contains($llmsShort, $localizedMachineFragment), "llms.txt contains {$localizedMachineFragment}");
+}
+$llmsFull = (string) file_get_contents(__DIR__ . '/../llms-full.txt');
+foreach (['## Structured Access' . PHP_EOL, '- API, French:', '- API, English:', '- API, German:', '- API, Dutch:'] as $staleFragment) {
+    assertTrue(!str_contains($llmsFull, $staleFragment), "llms-full.txt has no stale fragment {$staleFragment}");
+}
+foreach (['Accès structuré', 'Strukturierter Zugriff', 'Gestructureerde toegang', 'API française', 'Deutsche API', 'Nederlandse API'] as $localizedCorpusFragment) {
+    assertTrue(str_contains($llmsFull, $localizedCorpusFragment), "llms-full.txt contains {$localizedCorpusFragment}");
+}
+$readme = (string) file_get_contents(__DIR__ . '/../README.md');
+foreach (['Hinweise', 'Notities', 'redaktionelle Inhalte', 'redactionele inhoud'] as $readmeFragment) {
+    assertTrue(str_contains($readme, $readmeFragment), "README contains {$readmeFragment}");
 }
 $logoMarkup = (string) file_get_contents(__DIR__ . '/../assets/img/logo-myagri.svg');
 $ogMarkup = (string) file_get_contents(__DIR__ . '/../assets/img/og-default.svg');

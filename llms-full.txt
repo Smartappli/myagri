@@ -44,10 +44,10 @@ MyAgri is een meertalig burgerportaal over landbouw in Wallonië. Het legt secto
 - Veelgestelde vragen: https://myagri.be/?lang=nl&page=faq
 - Landbouwglossarium: https://myagri.be/?lang=nl&page=glossaire
 
-## Structured Access
+## Structured Access / Accès structuré / Strukturierter Zugriff / Gestructureerde toegang
 
-- API, French: https://myagri.be/api.php?lang=fr
-- API, English: https://myagri.be/api.php?lang=en
-- API, German: https://myagri.be/api.php?lang=ge
-- API, Dutch: https://myagri.be/api.php?lang=nl
-- Sitemap: https://myagri.be/sitemap.xml
+- API française: https://myagri.be/api.php?lang=fr
+- English API: https://myagri.be/api.php?lang=en
+- Deutsche API: https://myagri.be/api.php?lang=ge
+- Nederlandse API: https://myagri.be/api.php?lang=nl
+- Sitemap / Plan du site: https://myagri.be/sitemap.xml

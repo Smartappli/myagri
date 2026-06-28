@@ -44,7 +44,7 @@
 - Vragen: https://myagri.be/?lang=nl&page=faq
 - Glossarium: https://myagri.be/?lang=nl&page=glossaire
 
-## Machine Access / Accès Machine
+## Machine Access / Accès Machine / Maschineller Zugriff / Machinetoegang
 
-- Long corpus: https://myagri.be/llms-full.txt
-- JSON API: https://myagri.be/api.php
+- Full corpus / Corpus complet / Vollständiger Korpus / Volledig corpus: https://myagri.be/llms-full.txt
+- JSON API / API JSON / JSON-API: https://myagri.be/api.php

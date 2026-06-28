@@ -81,26 +81,26 @@
 <main>
     <img class="offline-logo" src="/assets/img/logo-myagri.svg" alt="MyAgri">
 
-    <section class="offline-panel" data-lang="fr" lang="fr-BE">
+    <section class="offline-panel" data-lang="fr" data-title="MyAgri est hors ligne" lang="fr-BE">
         <h1>MyAgri est hors ligne</h1>
         <p>La connexion semble indisponible. Les pages déjà consultées peuvent rester accessibles dans l’application. Revenez à l’accueil ou réessayez lorsque le réseau sera rétabli.</p>
         <a href="/?lang=fr&page=accueil">Retour à l’accueil</a>
     </section>
 
-    <section class="offline-panel" data-lang="en" lang="en-BE" hidden>
+    <section class="offline-panel" data-lang="en" data-title="MyAgri is offline" lang="en-BE" hidden>
         <h1>MyAgri is offline</h1>
         <p>The connection seems unavailable. Pages you have already viewed may remain accessible in the app. Return home or try again when the network is restored.</p>
         <a href="/?lang=en&page=accueil">Back to home</a>
     </section>
 
-    <section class="offline-panel" data-lang="ge" lang="de-BE" hidden>
+    <section class="offline-panel" data-lang="ge" data-title="MyAgri ist offline" lang="de-BE" hidden>
         <h1>MyAgri ist offline</h1>
         <p>Die Verbindung scheint nicht verfügbar zu sein. Bereits besuchte Seiten können in der App weiterhin zugänglich bleiben. Kehren Sie zur Startseite zurück oder versuchen Sie es erneut, sobald das Netzwerk wiederhergestellt ist.</p>
         <a href="/?lang=ge&page=accueil">Zur Startseite</a>
     </section>
 
-    <section class="offline-panel" data-lang="nl" lang="nl-BE" hidden>
-        <h1>MyAgri is offline</h1>
+    <section class="offline-panel" data-lang="nl" data-title="MyAgri is tijdelijk offline" lang="nl-BE" hidden>
+        <h1>MyAgri is tijdelijk offline</h1>
         <p>De verbinding lijkt niet beschikbaar. Pagina’s die u al hebt bezocht, kunnen in de app toegankelijk blijven. Keer terug naar de startpagina of probeer opnieuw zodra het netwerk hersteld is.</p>
         <a href="/?lang=nl&page=accueil">Terug naar start</a>
     </section>
@@ -113,9 +113,15 @@
         const language = requested || (browser.startsWith('nl') ? 'nl' : browser.startsWith('de') ? 'ge' : browser.startsWith('en') ? 'en' : 'fr');
         const normalized = ['fr', 'en', 'ge', 'nl'].includes(language) ? language : 'fr';
 
-        document.querySelectorAll('[data-lang]').forEach((panel) => {
+        const panels = Array.from(document.querySelectorAll('[data-lang]'));
+        panels.forEach((panel) => {
             panel.hidden = panel.dataset.lang !== normalized;
         });
+        const activePanel = panels.find((panel) => panel.dataset.lang === normalized);
+        if (activePanel) {
+            document.documentElement.lang = activePanel.lang;
+            document.title = activePanel.dataset.title || 'MyAgri';
+        }
     })();
 </script>
 </body>
