@@ -19,7 +19,7 @@ if ($resourceTemplate !== null) {
 ?>
 
 <section aria-labelledby="resource-title" class="shadow-soft">
-    <p><a href="<?= e(localizedUrl(['page' => 'ressources'])) ?>">← <?= e(t('resources.back')) ?></a></p>
+    <p><a href="<?= e(localizedUrl(['page' => 'ressources'])) ?>">&larr; <?= e(t('resources.back')) ?></a></p>
     <h2 id="resource-title"><?= e($selectedResource['title']) ?></h2>
     <p class="section-intro"><?= e($selectedResource['description']) ?></p>
 

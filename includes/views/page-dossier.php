@@ -53,7 +53,7 @@ $renderCard = static function (string $title, array $items, bool $ordered = fals
                     <?= e($selectedDossier['duration']) ?>
                 <?php endif; ?>
                 <?php if (isset($selectedDossier['audience']) && is_string($selectedDossier['audience'])): ?>
-                    · <?= e(t('dossiers.for')) ?>: <?= e($selectedDossier['audience']) ?>
+                    &middot; <?= e(t('dossiers.for')) ?>: <?= e($selectedDossier['audience']) ?>
                 <?php endif; ?>
             </p>
         </div>

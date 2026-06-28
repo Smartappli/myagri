@@ -115,7 +115,7 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
                 <figcaption class="hero-copy">
                     <h1 id="hero-title"><?= e($site['title']) ?></h1>
                     <p><?= e($site['subtitle']) ?></p>
-                    <p class="hero-meta"><?= e(t('hero.updated_prefix')) ?> <?= e($site['updated_at']) ?> · <?= e(t('hero.geo_label')) ?></p>
+                    <p class="hero-meta"><?= e(t('hero.updated_prefix')) ?> <?= e($site['updated_at']) ?> &middot; <?= e(t('hero.geo_label')) ?></p>
                 </figcaption>
             </figure>
         </section>
