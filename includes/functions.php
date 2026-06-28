@@ -102,7 +102,7 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         return [
             'title' => t('faq.title') . ' | MyAgri',
             'description' => t('faq.intro'),
-            'keywords' => $baseKeywords . ', FAQ',
+            'keywords' => $baseKeywords . ', ' . t('seo.keywords_faq'),
         ];
     }
 
