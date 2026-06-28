@@ -2,6 +2,7 @@
     "license": "proprietary",
     "scripts": {
         "smoke": "php tests/smoke.php",
+        "security:audit": "composer audit --locked --no-interaction",
         "analyse": "phpstan analyse --memory-limit=512M",
         "build:sitemap": "php scripts/build_sitemap.php",
         "check:sitemap": "php scripts/check_sitemap.php",
