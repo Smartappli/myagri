@@ -523,7 +523,7 @@ function pageSchemaType(string $page, bool $isGlossaryTerm = false): string
         return 'CollectionPage';
     }
 
-    if ($page === 'glossaire' && $isGlossaryTerm) {
+    if ($page === 'glossaire') {
         return 'Article';
     }
 
@@ -569,7 +569,7 @@ function breadcrumbItems(string $page, ?array $resource = null, ?array $glossary
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => t('nav.faq'), 'item' => $baseUrl . canonicalPath('faq')];
     } elseif ($page === 'glossaire' && !is_array($glossaryTerm)) {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => t('nav.glossary'), 'item' => $baseUrl . canonicalPath('glossaire')];
-    } elseif ($page === 'glossaire' && is_array($glossaryTerm)) {
+    } elseif ($page === 'glossaire') {
         $items[] = ['@type' => 'ListItem', 'position' => 2, 'name' => t('nav.glossary'), 'item' => $baseUrl . canonicalPath('glossaire')];
         $items[] = [
             '@type' => 'ListItem',
@@ -1049,7 +1049,7 @@ function glossaryTermBySlug(array $glossary, string $slug): ?array
 {
     $normalizedSlug = glossarySlug($slug);
     foreach ($glossary as $entry) {
-        if (!is_array($entry) || !isset($entry['term']) || !is_string($entry['term'])) {
+        if (!isset($entry['term']) || !is_string($entry['term'])) {
             continue;
         }
 
@@ -1068,7 +1068,7 @@ function glossaryTermBySlug(array $glossary, string $slug): ?array
 function glossaryTermByTitle(array $glossary, string $termTitle): ?array
 {
     foreach ($glossary as $entry) {
-        if (!is_array($entry) || !isset($entry['term']) || !is_string($entry['term'])) {
+        if (!isset($entry['term']) || !is_string($entry['term'])) {
             continue;
         }
 
@@ -1092,7 +1092,7 @@ function glossaryTermById(string $termId, array $glossary): ?array
 /**
  * Return dedicated glossary template path when it exists.
  */
-function glossaryTemplatePath(string $termSlug): ?string
+function glossaryTemplatePath(string $termSlug): null
 {
     return null;
 }
@@ -1140,7 +1140,7 @@ function resourceContinuousText(array $items): string
 /**
  * Return dedicated resource template path when it exists.
  */
-function resourceTemplatePath(string $resourceId): ?string
+function resourceTemplatePath(string $resourceId): null
 {
     return null;
 }
