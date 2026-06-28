@@ -19,12 +19,12 @@ if (is_array($selectedGlossaryTerm)) {
     $selectedSlug = glossaryEntrySlug($selectedGlossaryTerm);
     ?>
     <section aria-labelledby="glossary-title" class="shadow-soft">
-        <p><a href="?page=glossaire">Zurück zum Glossar</a></p>
+        <p><a href="<?= e(localizedUrl(['page' => 'glossaire'])) ?>"><?= e(t('glossary.back')) ?></a></p>
         <h2 id="glossary-title"><?= e($selectedTerm) ?></h2>
         <article class="card resource-summary">
             <p><?= e($selectedDefinition) ?></p>
             <?php if ($selectedSlug !== ''): ?>
-                <p><a href="?page=glossaire&amp;term=<?= e($selectedSlug) ?>">Zur Detailseite zurück</a></p>
+                <p><a href="<?= e(localizedUrl(['page' => 'glossaire', 'term' => $selectedSlug])) ?>"><?= e(t('glossary.back_detail')) ?></a></p>
             <?php endif; ?>
         </article>
     </section>
@@ -42,8 +42,8 @@ usort($sortedGlossary, static function (array $left, array $right): int {
 ?>
 
 <section aria-labelledby="glossary-title" class="shadow-soft">
-    <h2 id="glossary-title">Glossar</h2>
-    <p class="section-intro">Ein Verzeichnis mit <?= count($glossary) ?> Begriffen zu Agrarsektoren, Praxis auf dem Feld, öffentlichen Politiken, regionaler Ernährung und agroökologischem Wandel.</p>
+    <h2 id="glossary-title"><?= e(t('glossary.title')) ?></h2>
+    <p class="section-intro"><?= e(t('glossary.intro', ['count' => count($glossary)])) ?></p>
     <div class="grid grid-2">
         <?php foreach ($sortedGlossary as $entry): ?>
             <?php
@@ -63,7 +63,7 @@ usort($sortedGlossary, static function (array $left, array $right): int {
             <article class="card h-full">
                 <h3><?= e($term) ?></h3>
                 <p><?= e($definition) ?></p>
-                <p><a href="?page=glossaire&amp;term=<?= e($termSlug) ?>">Detailseite ansehen</a></p>
+                <p><a href="<?= e(localizedUrl(['page' => 'glossaire', 'term' => $termSlug])) ?>"><?= e(t('glossary.detail_link')) ?></a></p>
             </article>
         <?php endforeach; ?>
     </div>

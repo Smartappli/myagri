@@ -34,9 +34,9 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
     <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
     <link rel="sitemap" type="application/xml" href="<?= e(siteBaseUrl() . '/sitemap.xml') ?>">
-    <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms.txt') ?>" title="MyAgri-Kurzfassung für generative Suchsysteme">
-    <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms-full.txt') ?>" title="MyAgri-Korpus für generative Suchsysteme">
-    <link rel="alternate" type="application/json" href="<?= e(siteBaseUrl() . '/api.php') ?>" title="Strukturierte MyAgri-Daten">
+    <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms.txt') ?>" title="<?= e(t('head.llms_short_title')) ?>">
+    <link rel="alternate" type="text/plain" href="<?= e(siteBaseUrl() . '/llms-full.txt') ?>" title="<?= e(t('head.llms_full_title')) ?>">
+    <link rel="alternate" type="application/json" href="<?= e(siteBaseUrl() . '/api.php?lang=' . rawurlencode(currentLanguage())) ?>" title="<?= e(t('head.api_title')) ?>">
     <meta property="og:locale" content="<?= e(siteLocale()) ?>">
     <meta property="og:type" content="<?= ($page === 'ressource' || $page === 'dossier' || ($page === 'glossaire' && is_array($selectedGlossaryTerm ?? null))) ? 'article' : 'website' ?>">
     <meta property="og:title" content="<?= e($pageTitle) ?>">
@@ -44,7 +44,7 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
     <meta property="og:url" content="<?= e($canonicalUrl) ?>">
     <meta property="og:site_name" content="<?= e($site['title']) ?>">
     <meta property="og:image" content="<?= e($metaImage) ?>">
-    <meta property="og:image:alt" content="Wallonische Agrarlandschaft als Illustration des Bürgerportals MyAgri">
+    <meta property="og:image:alt" content="<?= e(t('head.image_alt')) ?>">
     <meta property="place:location:latitude" content="<?= e($siteGeo['latitude']) ?>">
     <meta property="place:location:longitude" content="<?= e($siteGeo['longitude']) ?>">
     <meta property="place:location:country_name" content="<?= e($siteGeo['country']) ?>">
@@ -54,10 +54,11 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
     <meta name="twitter:title" content="<?= e($pageTitle) ?>">
     <meta name="twitter:description" content="<?= e($metaDescription) ?>">
     <meta name="twitter:image" content="<?= e($metaImage) ?>">
-    <meta name="twitter:image:alt" content="Wallonische Agrarlandschaft als Illustration des Bürgerportals MyAgri">
-    <link rel="alternate" href="<?= e($canonicalUrl) ?>" hreflang="de-BE">
-    <link rel="alternate" href="<?= e($canonicalUrl) ?>" hreflang="de">
-    <link rel="alternate" href="<?= e($canonicalUrl) ?>" hreflang="x-default">
+    <meta name="twitter:image:alt" content="<?= e(t('head.image_alt')) ?>">
+    <?php foreach (portalLanguages() as $alternateCode => $alternateConfig): ?>
+        <link rel="alternate" href="<?= e(siteBaseUrl() . canonicalPath($page, $canonicalResource ?? '', $canonicalGlossaryTerm ?? '', $canonicalDossier ?? '', $canonicalChapter ?? '', $alternateCode)) ?>" hreflang="<?= e($alternateConfig['hreflang']) ?>">
+    <?php endforeach; ?>
+    <link rel="alternate" href="<?= e(siteBaseUrl() . canonicalPath($page, $canonicalResource ?? '', $canonicalGlossaryTerm ?? '', $canonicalDossier ?? '', $canonicalChapter ?? '', defaultPortalLanguage())) ?>" hreflang="x-default">
     <meta property="article:published_time" content="<?= e(updatedAtIsoDate(isset($site['updated_at']) && is_string($site['updated_at']) ? $site['updated_at'] : '')) ?>">
     <link rel="stylesheet" href="assets/css/tailwind-local.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -84,27 +85,37 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
 <header class="site-hero relative overflow-hidden">
     <div class="container">
         <div class="header-top">
-            <a class="brand-link" href="?page=accueil" aria-label="MyAgri Startseite">
+            <a class="brand-link" href="<?= e(localizedUrl(['page' => 'accueil'])) ?>" aria-label="<?= e(t('head.brand_aria')) ?>">
                 <img src="/assets/img/logo-myagri.svg" alt="MyAgri">
             </a>
-            <nav aria-label="Hauptnavigation">
-                <ul class="nav-list shadow-soft">
-                    <li><a href="?page=accueil"<?= $page === 'accueil' ? ' aria-current="page"' : '' ?>>Start</a></li>
-                    <li><a href="?page=filieres"<?= $page === 'filieres' ? ' aria-current="page"' : '' ?>>Sektoren</a></li>
-                    <li><a href="?page=ressources"<?= $page === 'ressources' ? ' aria-current="page"' : '' ?>>Ressourcen</a></li>
-                    <li><a href="?page=dossiers"<?= in_array($page, ['dossiers', 'dossier'], true) ? ' aria-current="page"' : '' ?>>Dossiers</a></li>
-                    <li><a href="?page=faq"<?= $page === 'faq' ? ' aria-current="page"' : '' ?>>FAQ</a></li>
-                    <li><a href="?page=glossaire"<?= $page === 'glossaire' ? ' aria-current="page"' : '' ?>>Glossar</a></li>
-                </ul>
-            </nav>
+            <div class="header-actions">
+                <nav aria-label="<?= e(t('head.nav_aria')) ?>">
+                    <ul class="nav-list shadow-soft">
+                        <li><a href="<?= e(localizedUrl(['page' => 'accueil'])) ?>"<?= $page === 'accueil' ? ' aria-current="page"' : '' ?>><?= e(t('nav.home')) ?></a></li>
+                        <li><a href="<?= e(localizedUrl(['page' => 'filieres'])) ?>"<?= $page === 'filieres' ? ' aria-current="page"' : '' ?>><?= e(t('nav.sectors')) ?></a></li>
+                        <li><a href="<?= e(localizedUrl(['page' => 'ressources'])) ?>"<?= $page === 'ressources' ? ' aria-current="page"' : '' ?>><?= e(t('nav.resources')) ?></a></li>
+                        <li><a href="<?= e(localizedUrl(['page' => 'dossiers'])) ?>"<?= in_array($page, ['dossiers', 'dossier'], true) ? ' aria-current="page"' : '' ?>><?= e(t('nav.dossiers')) ?></a></li>
+                        <li><a href="<?= e(localizedUrl(['page' => 'faq'])) ?>"<?= $page === 'faq' ? ' aria-current="page"' : '' ?>><?= e(t('nav.faq')) ?></a></li>
+                        <li><a href="<?= e(localizedUrl(['page' => 'glossaire'])) ?>"<?= $page === 'glossaire' ? ' aria-current="page"' : '' ?>><?= e(t('nav.glossary')) ?></a></li>
+                    </ul>
+                </nav>
+                <nav class="language-switcher" aria-label="<?= e(t('language.aria')) ?>">
+                    <span><?= e(t('language.label')) ?></span>
+                    <ul>
+                        <?php foreach (portalLanguages() as $languageCode => $languageConfig): ?>
+                            <li><a href="<?= e(languageSwitchUrl($languageCode)) ?>"<?= currentLanguage() === $languageCode ? ' aria-current="true"' : '' ?>><?= e(strtoupper($languageCode === 'ge' ? 'de' : $languageCode)) ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <section class="hero" aria-labelledby="hero-title">
             <figure class="hero-visual">
-                <img src="assets/img/hero.png" alt="MyAgri erklärt Landwirtschaft in der Wallonie verständlich und verbindet Alltag, Ernährung, Umwelt und regionale Produktion.">
+                <img src="assets/img/hero.png" alt="<?= e(t('head.image_alt')) ?>">
                 <figcaption class="hero-copy">
                     <h1 id="hero-title"><?= e($site['title']) ?></h1>
                     <p><?= e($site['subtitle']) ?></p>
-                    <p class="hero-meta">Aktualisiert am <?= e($site['updated_at']) ?> · Wallonie, Belgien</p>
+                    <p class="hero-meta"><?= e(t('hero.updated_prefix')) ?> <?= e($site['updated_at']) ?> · <?= e(t('hero.geo_label')) ?></p>
                 </figcaption>
             </figure>
         </section>
@@ -114,8 +125,9 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
 <div class="container hero-search-wrap">
     <form method="get" class="search-form hero-search">
         <input type="hidden" name="page" value="<?= e($page) ?>">
-        <label for="global-search" class="meta">Globale Suche</label>
-        <input id="global-search" class="filter w-full rounded-xl border border-emerald-200 bg-white/95 px-3 py-2" name="q" value="<?= e($search) ?>" placeholder="z. B. Wasser, Tierhaltung, Saison" type="search">
+        <input type="hidden" name="lang" value="<?= e(currentLanguage()) ?>">
+        <label for="global-search" class="meta"><?= e(t('search.label')) ?></label>
+        <input id="global-search" class="filter w-full rounded-xl border border-emerald-200 bg-white/95 px-3 py-2" name="q" value="<?= e($search) ?>" placeholder="<?= e(t('search.placeholder')) ?>" type="search">
     </form>
 </div>
 

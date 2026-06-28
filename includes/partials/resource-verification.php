@@ -5,7 +5,7 @@
 
 $resourceTitle = isset($selectedResource['title']) && is_string($selectedResource['title'])
     ? trim($selectedResource['title'])
-    : 'diese Ressource';
+    : t('resources.default_resource');
 
 $verificationPrompts = is_array($selectedResource['verification_prompts'] ?? null)
     ? $selectedResource['verification_prompts']
@@ -17,8 +17,8 @@ $verificationPrompts = is_array($selectedResource['verification_prompts'] ?? nul
 ?>
 
 <article class="card resource-verification">
-    <h3>Vor dem Handeln prüfen</h3>
-    <p><?= e($resourceTitle) ?> liefert praktische Orientierung. Vor einer verbindlichen Entscheidung sollten Quellen, Kosten, lokale Zwänge und konsultierte Personen dokumentiert werden.</p>
+    <h3><?= e(t('resources.verification_title')) ?></h3>
+    <p><?= e(t('resources.verification_text', ['resource' => $resourceTitle])) ?></p>
     <ul class="list-tight">
         <?php foreach ($verificationPrompts as $prompt): ?>
             <?php if (is_string($prompt) && trim($prompt) !== ''): ?>

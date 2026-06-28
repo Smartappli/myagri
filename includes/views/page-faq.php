@@ -1,5 +1,6 @@
 <section aria-labelledby="faq-title" class="shadow-soft">
-    <h2 id="faq-title">Bürger-FAQ</h2>
+    <h2 id="faq-title"><?= e(t('faq.title')) ?></h2>
+    <p class="section-intro"><?= e(t('faq.intro')) ?></p>
     <div class="grid">
         <?php foreach ($faq as $index => $item): ?>
             <?php

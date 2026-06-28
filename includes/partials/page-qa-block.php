@@ -8,7 +8,7 @@ if (!isset($faqPairs) || !is_array($faqPairs) || $faqPairs === []) {
     return;
 }
 
-$escapedTitle = isset($qaTitle) && is_string($qaTitle) ? $qaTitle : 'Kurze Fragen und Antworten';
+$escapedTitle = isset($qaTitle) && is_string($qaTitle) ? $qaTitle : t('qa.default_title');
 $escapedIntro = isset($qaIntro) && is_string($qaIntro) ? $qaIntro : '';
 ?>
 

@@ -1097,6 +1097,10 @@ function glossaryTermById(string $termId, array $glossary): ?array
  */
 function glossaryTemplatePath(string $termSlug): ?string
 {
+    if (currentLanguage() !== 'ge') {
+        return null;
+    }
+
     $normalized = trim($termSlug);
     if (!preg_match('/^[a-z0-9-]+$/', $normalized)) {
         return null;
@@ -1160,16 +1164,6 @@ function resourceContinuousText(array $items): string
  */
 function resourceTemplatePath(string $resourceId): ?string
 {
-    $normalized = trim($resourceId);
-    if (!preg_match('/^[a-z0-9-]+$/', $normalized)) {
-        return null;
-    }
-
-    $candidate = __DIR__ . '/views/resources/resource-' . $normalized . '.php';
-    if (is_file($candidate)) {
-        return $candidate;
-    }
-
     return null;
 }
 

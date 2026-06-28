@@ -2,9 +2,9 @@
 if (!is_array($selectedResource)) {
     ?>
     <section aria-labelledby="resource-not-found-title">
-        <h2 id="resource-not-found-title">Ressource nicht gefunden</h2>
-        <p>Die angeforderte Ressource existiert nicht oder ist nicht mehr verfügbar.</p>
-        <p><a href="?page=ressources">Zur Ressourcenliste zurück</a></p>
+        <h2 id="resource-not-found-title"><?= e(t('resources.not_found_title')) ?></h2>
+        <p><?= e(t('resources.not_found_text')) ?></p>
+        <p><a href="<?= e(localizedUrl(['page' => 'ressources'])) ?>"><?= e(t('resources.back_list')) ?></a></p>
     </section>
     <?php
     return;
@@ -19,7 +19,7 @@ if ($resourceTemplate !== null) {
 ?>
 
 <section aria-labelledby="resource-title" class="shadow-soft">
-    <p><a href="?page=ressources">← Zurück zu den Ressourcen</a></p>
+    <p><a href="<?= e(localizedUrl(['page' => 'ressources'])) ?>">← <?= e(t('resources.back')) ?></a></p>
     <h2 id="resource-title"><?= e($selectedResource['title']) ?></h2>
     <p class="section-intro"><?= e($selectedResource['description']) ?></p>
 
@@ -29,7 +29,7 @@ if ($resourceTemplate !== null) {
             echo '<p>' . e($selectedResource['overview']) . '</p>';
         }
         if (isset($selectedResource['for']) && is_string($selectedResource['for']) && $selectedResource['for'] !== '') {
-            echo '<p><strong>Zielgruppe:</strong> ' . e($selectedResource['for']) . '</p>';
+            echo '<p><strong>' . e(t('resources.target')) . ':</strong> ' . e($selectedResource['for']) . '</p>';
         }
         ?>
     </article>
@@ -38,7 +38,7 @@ if ($resourceTemplate !== null) {
     $continuousContent = $selectedResource['continuous_content'] ?? null;
     if (is_string($continuousContent) && trim($continuousContent) !== ''): ?>
         <article class="card">
-            <h3>Allgemeine Einführung</h3>
+            <h3><?= e(t('resources.intro_title')) ?></h3>
             <?php
             foreach (splitTextIntoParagraphs($continuousContent) as $continuousParagraph) {
                 echo '<p>' . e($continuousParagraph) . '</p>';
@@ -86,20 +86,20 @@ if ($resourceTemplate !== null) {
 
     <?php
     $resourceSections = [
-        'steps' => 'Empfohlene Schritte',
-        'checklist' => 'Praktische Checkliste',
-        'eligible_projects' => 'In der Regel förderfähige Projekte',
-        'required_documents' => 'Häufig verlangte Unterlagen',
-        'timeline' => 'Orientierender Zeitplan',
-        'common_pitfalls' => 'Häufige Fehler vermeiden',
-        'support_contacts' => 'Mögliche Begleiter',
-        'learning_objectives' => 'Lernziele',
-        'recommended_program' => 'Empfohlener Ablauf',
-        'age_adaptations' => 'Anpassung nach Alter der Zielgruppe',
-        'pedagogical_activities' => 'Beispiele für Lernaktivitäten',
-        'risk_prevention' => 'Prävention und Sicherheit',
-        'budget_items' => 'Einzuplanende Budgetposten',
-        'evaluation_method' => 'Evaluationsmethode',
+        'steps' => t('resources.section_steps'),
+        'checklist' => t('resources.section_checklist'),
+        'eligible_projects' => t('resources.section_eligible_projects'),
+        'required_documents' => t('resources.section_required_documents'),
+        'timeline' => t('resources.section_timeline'),
+        'common_pitfalls' => t('resources.section_common_pitfalls'),
+        'support_contacts' => t('resources.section_support_contacts'),
+        'learning_objectives' => t('resources.section_learning_objectives'),
+        'recommended_program' => t('resources.section_recommended_program'),
+        'age_adaptations' => t('resources.section_age_adaptations'),
+        'pedagogical_activities' => t('resources.section_pedagogical_activities'),
+        'risk_prevention' => t('resources.section_risk_prevention'),
+        'budget_items' => t('resources.section_budget_items'),
+        'evaluation_method' => t('resources.section_evaluation_method'),
     ];
 
     $resourceSectionCards = [];
