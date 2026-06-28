@@ -24,6 +24,8 @@ function activeInterfaceFiles(): array
         __DIR__ . '/../api.php',
         __DIR__ . '/../manifest.php',
         __DIR__ . '/../includes/functions.php',
+        __DIR__ . '/../includes/portal_repository.php',
+        __DIR__ . '/../scripts/sync_portal_to_mysql.php',
     ];
 
     foreach ([__DIR__ . '/../includes/partials/*.php', __DIR__ . '/../includes/views/page-*.php'] as $pattern) {
@@ -250,6 +252,7 @@ $sharedTextAssets = [
     __DIR__ . '/../offline.html',
     __DIR__ . '/../llms.txt',
     __DIR__ . '/../llms-full.txt',
+    __DIR__ . '/../README.md',
 ];
 foreach ($sharedTextAssets as $assetPath) {
     assertUtf8CleanFile($assetPath);

@@ -1,18 +1,33 @@
 # MyAgri
 
+## Français
+
 Portail citoyen multilingue d'information sur l'agriculture en Wallonie.
 
-## Langues
+- Langue : `?lang=fr`
+- Validation : `php tests\smoke.php`
 
-- Français : `?lang=fr`
-- Anglais : `?lang=en`
-- Allemand : `?lang=ge`
-- Néerlandais : `?lang=nl`
+## English
 
-Les contenus éditoriaux sont séparés dans `includes/translations/`.
+Multilingual citizen information portal about agriculture in Wallonia.
 
-## Validation
+- Language: `?lang=en`
+- Validation: `php tests\smoke.php`
 
-- `php tests\smoke.php`
-- `php scripts\build_sitemap.php`
-- `php -l` sur les fichiers PHP modifiés
+## Deutsch
+
+Mehrsprachiges Bürgerinformationsportal zur Landwirtschaft in der Wallonie.
+
+- Sprache: `?lang=ge`
+- Validierung: `php tests\smoke.php`
+
+## Nederlands
+
+Meertalig burgerinformatieportaal over landbouw in Wallonië.
+
+- Taal: `?lang=nl`
+- Validatie: `php tests\smoke.php`
+
+## Notes
+
+Editorial content is stored by language in `includes/translations/`. Interface strings are verified by the smoke test.

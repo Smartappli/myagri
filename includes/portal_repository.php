@@ -5,10 +5,8 @@ declare(strict_types=1);
 require_once __DIR__ . '/data.php';
 
 /**
- * Lädt Portaldaten aus MySQL, wenn die Datenbank verfügbar ist.
- * Die lokalen Daten werden vor dem Lesen automatisch synchronisiert.
- * Ist MySQL nicht verfügbar, bleibt das Portal mit den versionierten
- * lokalen Daten nutzbar.
+ * Charge les donnees du portail depuis MySQL quand la base est disponible.
+ * Les donnees locales restent la source de secours versionnee.
  *
  * @return array<string, mixed>
  */
@@ -23,7 +21,7 @@ function loadPortalData(?string $language = null): array
 
         $mysqlData = loadPortalDataFromMySql($pdo, $language);
         if (!is_array($mysqlData)) {
-            throw new RuntimeException('MySQL-Daten des Portals konnten nicht geladen werden.');
+            throw new RuntimeException(t('repository.mysql_load_error'));
         }
 
         return $mysqlData;
@@ -33,7 +31,7 @@ function loadPortalData(?string $language = null): array
 }
 
 /**
- * Überträgt den lokalen Inhalt explizit in die MySQL-Datenbank.
+ * Transfere explicitement le contenu local vers MySQL.
  *
  * @throws RuntimeException
  */
@@ -65,7 +63,7 @@ function createPortalPdo(): PDO
             ]
         );
     } catch (Throwable $exception) {
-        throw new RuntimeException('Erforderliche MySQL-Verbindung nicht verfügbar: ' . $exception->getMessage(), 0, $exception);
+        throw new RuntimeException(t('repository.mysql_connection_unavailable') . ': ' . $exception->getMessage(), 0, $exception);
     }
 }
 
@@ -85,12 +83,12 @@ SQL;
     try {
         $pdo->exec($sql);
     } catch (Throwable $exception) {
-        throw new RuntimeException('Tabelle portal_content konnte nicht vorbereitet werden: ' . $exception->getMessage(), 0, $exception);
+        throw new RuntimeException(t('repository.mysql_storage_prepare_error') . ': ' . $exception->getMessage(), 0, $exception);
     }
 }
 
 /**
- * Synchronisiert lokale Daten automatisch in die Datenbank.
+ * Synchronise les donnees locales dans la base.
  *
  * @throws RuntimeException
  */
@@ -112,12 +110,12 @@ SQL;
             ':payload_json' => $payload,
         ]);
     } catch (Throwable $exception) {
-        throw new RuntimeException('Daten konnten nicht nach MySQL synchronisiert werden: ' . $exception->getMessage(), 0, $exception);
+        throw new RuntimeException(t('repository.mysql_sync_error') . ': ' . $exception->getMessage(), 0, $exception);
     }
 }
 
 /**
- * Liest einen JSON-Payload aus MySQL.
+ * Lit un payload JSON depuis MySQL.
  *
  * @return array<string, mixed>|null
  */
@@ -129,7 +127,7 @@ function loadPortalDataFromMySql(PDO $pdo, ?string $language = null): ?array
     try {
         return fetchPortalPayload($pdo, $sql);
     } catch (PDOException $exception) {
-        // Automatische Reparatur, falls die Tabelle noch nicht existiert.
+        // Repare automatiquement le stockage si la table n'existe pas encore.
         $sqlState = $exception->getCode();
         if ($sqlState === '42S02') {
             ensurePortalStorageExists($pdo);
@@ -137,9 +135,9 @@ function loadPortalDataFromMySql(PDO $pdo, ?string $language = null): ?array
             return fetchPortalPayload($pdo, $sql);
         }
 
-        throw new RuntimeException('MySQL-Daten konnten nicht gelesen werden: ' . $exception->getMessage(), 0, $exception);
+        throw new RuntimeException(t('repository.mysql_read_error') . ': ' . $exception->getMessage(), 0, $exception);
     } catch (Throwable $exception) {
-        throw new RuntimeException('MySQL-Daten konnten nicht gelesen werden: ' . $exception->getMessage(), 0, $exception);
+        throw new RuntimeException(t('repository.mysql_read_error') . ': ' . $exception->getMessage(), 0, $exception);
     }
 }
 
