@@ -14,7 +14,7 @@ function assertTrue(bool $condition, string $message): void
     }
 }
 
-$data = getPortalData();
+$data = getPortalData('fr');
 assertTrue(isset($data['site']['title']), 'site title exists');
 assertTrue(count($data['sectors']) >= 3, 'at least 3 sectors');
 assertTrue(count($data['provinces']) === 5, 'five walloon provinces listed');
@@ -93,7 +93,13 @@ if (is_array($sampleTerm)) {
     assertTrue($termPairs !== [], 'glossary FAQ pairs are not empty');
 }
 
-assertTrue(glossaryTemplatePath('vente-directe') !== null, 'generic glossary term template fallback exists');
+foreach (['fr', 'en', 'ge', 'nl'] as $language) {
+    $translatedData = getPortalData($language);
+    assertTrue(($translatedData['language']['code'] ?? null) === $language, "language {$language} loads");
+    assertTrue(isset($translatedData['site']['title']), "site title exists for {$language}");
+}
+
+assertTrue(glossaryTemplatePath('vente-directe') === null, 'glossary uses translated generic rendering');
 
 try {
     $loadedData = loadPortalData();
