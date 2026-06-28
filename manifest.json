@@ -1,11 +1,11 @@
 {
-  "name": "MyAgri - Landwirtschaft in der Wallonie verständlich erklärt",
+  "name": "MyAgri — L'agriculture wallonne expliquée",
   "short_name": "MyAgri",
-  "description": "Bürgerportal zur Landwirtschaft in der Wallonie: Sektoren, Ressourcen, Dossiers, FAQ und Glossar.",
-  "lang": "de-BE",
+  "description": "Portail citoyen sur l'agriculture en Wallonie : filières, ressources, dossiers, FAQ et glossaire.",
+  "lang": "fr-BE",
   "dir": "ltr",
-  "id": "/?page=accueil",
-  "start_url": "/?page=accueil",
+  "id": "/?lang=fr&page=accueil",
+  "start_url": "/?lang=fr&page=accueil",
   "scope": "/",
   "display": "standalone",
   "background_color": "#f6f7f2",
@@ -34,31 +34,31 @@
   ],
   "shortcuts": [
     {
-      "name": "Agrarsektoren",
-      "short_name": "Sektoren",
-      "description": "Landwirtschaftliche Sektoren der Wallonie erkunden.",
-      "url": "/?page=filieres",
+      "name": "Filières agricoles",
+      "short_name": "Filières",
+      "description": "Explorer les filières agricoles de Wallonie.",
+      "url": "/?lang=fr&page=filieres",
       "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
     },
     {
-      "name": "Praktische Ressourcen",
-      "short_name": "Ressourcen",
-      "description": "Praktische MyAgri-Leitfäden öffnen.",
-      "url": "/?page=ressources",
+      "name": "Ressources pratiques",
+      "short_name": "Ressources",
+      "description": "Ouvrir les guides pratiques MyAgri.",
+      "url": "/?lang=fr&page=ressources",
       "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
     },
     {
-      "name": "Bürgerdossiers",
+      "name": "Dossiers citoyens",
       "short_name": "Dossiers",
-      "description": "Thematische MyAgri-Dossiers lesen.",
-      "url": "/?page=dossiers",
+      "description": "Lire les dossiers thématiques MyAgri.",
+      "url": "/?lang=fr&page=dossiers",
       "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
     },
     {
-      "name": "Landwirtschaftliches Glossar",
-      "short_name": "Glossar",
-      "description": "Das landwirtschaftliche Bürgerglossar öffnen.",
-      "url": "/?page=glossaire",
+      "name": "Glossaire agricole",
+      "short_name": "Glossaire",
+      "description": "Ouvrir le glossaire citoyen agricole.",
+      "url": "/?lang=fr&page=glossaire",
       "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
     }
   ]

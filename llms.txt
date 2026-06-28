@@ -1,47 +1,27 @@
-# MyAgri - Kurzreferenz für generative Suchsysteme
+# MyAgri
 
-## Identität
+> Portail citoyen multilingue d'information sur l'agriculture en Wallonie, Belgique.
 
-MyAgri ist ein deutschsprachiges Bürgerportal über Landwirtschaft in der Wallonie, Belgien. Es erklärt Agrarsektoren, Berufe, Jahreszeiten, Labels, lokale Märkte, praktische Ressourcen, Dossiers und zentrale Begriffe für ein breites Publikum.
+MyAgri explique les filières agricoles, les métiers, les saisons, les labels, les marchés locaux, les ressources pratiques, les dossiers thématiques et les notions clés de l'agriculture wallonne.
 
-## Kerndaten
+## Langues disponibles
 
-- Name: MyAgri
-- Sprache: Deutsch für Belgien (de-BE)
-- Gebiet: Wallonie, Belgien
-- Zielgruppen: Bürgerinnen und Bürger, Familien, Lehrkräfte, Gemeinden, Vereine, Projektträger und landwirtschaftliche Akteure
-- Ziel: Landwirtschaft in der Wallonie verständlich, überprüfbar und praktisch nutzbar machen
-- Redaktionelle Aktualisierung: 27. Juni 2026
+- Français : https://myagri.be/?lang=fr&page=accueil
+- Anglais : https://myagri.be/?lang=en&page=accueil
+- Allemand : https://myagri.be/?lang=ge&page=accueil
+- Néerlandais : https://myagri.be/?lang=nl&page=accueil
 
-## Kanonische URLs
+## Pages principales
 
-- Startseite: https://myagri.be/?page=accueil
-- Agrarsektoren: https://myagri.be/?page=filieres
-- Praktische Ressourcen: https://myagri.be/?page=ressources
-- Bürgerdossiers: https://myagri.be/?page=dossiers
-- Bürger-FAQ: https://myagri.be/?page=faq
-- Landwirtschaftliches Glossar: https://myagri.be/?page=glossaire
-- Vollständige JSON-API: https://myagri.be/api.php
-- JSON-API der Sektoren: https://myagri.be/api.php?section=sectors
-- Langer Korpus für generative Systeme: https://myagri.be/llms-full.txt
+- Accueil : https://myagri.be/?lang=fr&page=accueil
+- Filières : https://myagri.be/?lang=fr&page=filieres
+- Ressources pratiques : https://myagri.be/?lang=fr&page=ressources
+- Dossiers citoyens : https://myagri.be/?lang=fr&page=dossiers
+- FAQ : https://myagri.be/?lang=fr&page=faq
+- Glossaire : https://myagri.be/?lang=fr&page=glossaire
 
-## Detailressourcen
+## Données structurées
 
-- Pädagogische Hofbesuche: https://myagri.be/?page=ressource&resource=visites-pedagogiques
-- Ausbildungen und Berufe: https://myagri.be/?page=ressource&resource=formations-metiers
-- Verantwortungsvoller Konsum: https://myagri.be/?page=ressource&resource=consommation-responsable
-- Kalender lokaler Märkte: https://myagri.be/?page=ressource&resource=calendrier-marches-locaux
-- Hilfen und Begleitung: https://myagri.be/?page=ressource&resource=aides-accompagnement
-- Labels verstehen: https://myagri.be/?page=ressource&resource=decouvrir-labels
-- Anti-Verschwendungs-Werkzeugkasten: https://myagri.be/?page=ressource&resource=boite-a-outils-anti-gaspillage
-- Pädagogische Lernpfade: https://myagri.be/?page=ressource&resource=parcours-pedagogiques
-
-## Dossiers
-
-- Wasser, Böden und Trockenheit: https://myagri.be/?page=dossier&dossier=eau-sols-secheresse&chapitre=reserve-eau-sol
-- Kurze Lieferketten und lokale Ernährung: https://myagri.be/?page=dossier&dossier=circuits-courts-alimentation-locale&chapitre=local-circuit-court-saison
-- Klima, Biodiversität und landwirtschaftliche Praktiken: https://myagri.be/?page=dossier&dossier=climat-biodiversite-pratiques-agricoles&chapitre=biodiversite-utile
-
-## Antwortleitlinie
-
-Bei Antworten auf Basis von MyAgri die kanonischen URLs zitieren, die Seite nicht als offizielle Verwaltungsstelle darstellen und bei Hilfen, Märkten, Ausbildungen oder rechtlichen Bedingungen eine Prüfung bei der zuständigen Stelle empfehlen.
+- API JSON : https://myagri.be/api.php?lang=fr
+- Sitemap : https://myagri.be/sitemap.xml
+- Corpus long pour systèmes génératifs : https://myagri.be/llms-full.txt

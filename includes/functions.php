@@ -770,7 +770,7 @@ function glossaryStructuredData(array $glossary, string $canonicalUrl): array
     return [
         '@type' => 'DefinedTermSet',
         '@id' => $canonicalUrl . '#glossary',
-        'name' => 'Landwirtschaftliches Bürgerglossar',
+        'name' => t('glossary.title'),
         'hasDefinedTerm' => $terms,
     ];
 }
@@ -1105,7 +1105,7 @@ function glossaryTemplatePath(string $termSlug): ?string
  */
 function glossaryTermStructuredData(array $glossaryTerm, string $canonicalUrl): array
 {
-    $term = isset($glossaryTerm['term']) && is_string($glossaryTerm['term']) ? $glossaryTerm['term'] : 'Begriff';
+    $term = isset($glossaryTerm['term']) && is_string($glossaryTerm['term']) ? $glossaryTerm['term'] : t('glossary.default_term');
     $definition = isset($glossaryTerm['definition']) && is_string($glossaryTerm['definition']) ? $glossaryTerm['definition'] : '';
     $base = rtrim($canonicalUrl, '#');
 
@@ -1118,7 +1118,7 @@ function glossaryTermStructuredData(array $glossaryTerm, string $canonicalUrl): 
         'inLanguage' => siteLanguage(),
         'inDefinedTermSet' => [
             '@type' => 'DefinedTermSet',
-            'name' => 'Landwirtschaftliches Bürgerglossar',
+            'name' => t('glossary.title'),
             '@id' => $base . '#glossary',
             'url' => $base . '#glossary',
         ],
