@@ -87,6 +87,7 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
         <div class="header-top">
             <a class="brand-link" href="<?= e(localizedUrl(['page' => 'accueil'])) ?>" aria-label="<?= e(t('head.brand_aria')) ?>">
                 <img src="/assets/img/logo-myagri.svg" alt="MyAgri">
+                <span class="brand-slogan"><?= e(t('brand.slogan')) ?></span>
             </a>
             <div class="header-actions">
                 <nav aria-label="<?= e(t('head.nav_aria')) ?>">
