@@ -91,7 +91,18 @@ function assertUtf8CleanFile(string $path): void
 {
     $contents = (string) file_get_contents($path);
     assertTrue(preg_match('//u', $contents) === 1, "file is valid UTF-8: {$path}");
-    assertTrue(preg_match('/(?:Â|Ã|â€™|â€œ|â€|�)/u', $contents) !== 1, "file has no mojibake markers: {$path}");
+
+    $mojibakeMarkers = [
+        "\u{00C2}",
+        "\u{00C3}",
+        "\u{00E2}\u{20AC}\u{2122}",
+        "\u{00E2}\u{20AC}\u{0153}",
+        "\u{00E2}\u{20AC}",
+        "\u{FFFD}",
+    ];
+    foreach ($mojibakeMarkers as $marker) {
+        assertTrue(!str_contains($contents, $marker), "file has no mojibake marker in {$path}");
+    }
 }
 
 $data = getPortalData('fr');
