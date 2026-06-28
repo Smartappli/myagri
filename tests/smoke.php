@@ -159,6 +159,26 @@ foreach (['fr', 'en', 'ge', 'nl'] as $language) {
     }
 }
 
+$englishUiTranslations = portalUiTranslations('en');
+$allowedSameAsEnglish = [
+    'fr' => ['nav.dossiers' => true, 'nav.faq' => true],
+    'ge' => ['nav.dossiers' => true, 'nav.faq' => true, 'footer.sitemap' => true],
+    'nl' => ['nav.dossiers' => true, 'nav.faq' => true, 'footer.sitemap' => true, 'glossary.default_term' => true],
+];
+foreach (['fr', 'ge', 'nl'] as $language) {
+    $uiTranslations = portalUiTranslations($language);
+    foreach (array_keys($interfaceTranslationKeys) as $key) {
+        if (!isset($englishUiTranslations[$key], $uiTranslations[$key])) {
+            continue;
+        }
+        if ($uiTranslations[$key] !== $englishUiTranslations[$key]) {
+            continue;
+        }
+
+        assertTrue(isset($allowedSameAsEnglish[$language][$key]), "interface key {$key} is not an accidental English fallback for {$language}");
+    }
+}
+
 $hardCodedGermanFragments = ['Zurück', 'Zielgruppe', 'Kurz gesagt', 'Welche Information', 'Welches Kriterium', 'Welche Grenze'];
 foreach ($interfaceFiles as $file) {
     $contents = (string) file_get_contents($file);
