@@ -1,957 +1,3783 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://myagri.be/</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=accueil</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=filieres</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=filieres</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=faq</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=faq</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=ressources</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=ressources</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=dossiers</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=dossiers</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=ressource&amp;resource=visites-pedagogiques</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=ressource&amp;resource=visites-pedagogiques</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=ressource&amp;resource=formations-metiers</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=ressource&amp;resource=formations-metiers</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=ressource&amp;resource=consommation-responsable</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=ressource&amp;resource=consommation-responsable</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=ressource&amp;resource=calendrier-marches-locaux</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=ressource&amp;resource=calendrier-marches-locaux</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=ressource&amp;resource=aides-accompagnement</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=ressource&amp;resource=aides-accompagnement</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=ressource&amp;resource=decouvrir-labels</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=ressource&amp;resource=decouvrir-labels</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=ressource&amp;resource=boite-a-outils-anti-gaspillage</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=ressource&amp;resource=boite-a-outils-anti-gaspillage</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=ressource&amp;resource=parcours-pedagogiques</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=ressource&amp;resource=parcours-pedagogiques</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=reserve-eau-sol</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=reserve-eau-sol</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=erosion-ruissellement</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=erosion-ruissellement</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=eau-nitrates</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=eau-nitrates</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=local-circuit-court-saison</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=local-circuit-court-saison</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=prix-juste-budget</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=prix-juste-budget</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=collectif-cantines-communes</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=collectif-cantines-communes</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=biodiversite-utile</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=biodiversite-utile</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=pratiques-climat</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=pratiques-climat</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=pac-maec-eco-regimes</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=pac-maec-eco-regimes</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=agriculture-biologique</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=agriculture-biologique</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=agriculture-de-precision</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=agriculture-de-precision</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=agriculture-integree</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=agriculture-integree</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=agriculture-regeneratrice</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=agriculture-regeneratrice</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=agriculture-urbaine</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=agriculture-urbaine</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=agroecologie</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=agroecologie</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=agroforesterie</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=agroforesterie</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=aop-igp</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=aop-igp</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=assolement</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=assolement</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=autonomie-fourragere</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=autonomie-fourragere</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=autonomie-proteique</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=autonomie-proteique</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=auxiliaires-de-culture</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=auxiliaires-de-culture</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=bande-enherbee</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=bande-enherbee</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=bilan-carbone</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=bilan-carbone</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=biodiversite-fonctionnelle</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=biodiversite-fonctionnelle</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=bocage</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=bocage</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=cahier-des-charges</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=cahier-des-charges</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=certification</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=certification</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=chaine-du-froid</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=chaine-du-froid</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=circuit-court</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=circuit-court</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=compost</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=compost</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=conditionnalite</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=conditionnalite</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=cooperative-agricole</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=cooperative-agricole</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=couvert-vegetal</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=couvert-vegetal</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=couverts-permanents</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=couverts-permanents</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=cultures-associees</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=cultures-associees</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=cultures-intermediaires</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=cultures-intermediaires</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=densite-de-chargement</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=densite-de-chargement</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=digestat</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=digestat</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=diversification</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=diversification</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=economie-circulaire</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=economie-circulaire</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=eco-regime</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=eco-regime</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=effluents-d-elevage</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=effluents-d-elevage</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=elevage-extensif</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=elevage-extensif</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=empreinte-eau</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=empreinte-eau</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=erosion-des-sols</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=erosion-des-sols</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=ferme-pedagogique</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=ferme-pedagogique</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=fertilite-du-sol</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=fertilite-du-sol</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=filiere</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=filiere</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=gestion-de-l-eau-a-la-parcelle</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=gestion-de-l-eau-a-la-parcelle</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=gestion-integree-des-ravageurs</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=gestion-integree-des-ravageurs</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=haie-vive</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=haie-vive</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=humus</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=humus</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=intrants</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=intrants</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=irrigation-raisonnee</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=irrigation-raisonnee</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=lutte-biologique</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=lutte-biologique</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=maec</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=maec</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=matiere-organique</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=matiere-organique</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=methanisation</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=methanisation</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=natura-2000</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=natura-2000</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=nitrates</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=nitrates</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=pac</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=pac</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=paiement-pour-services-environnementaux</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=paiement-pour-services-environnementaux</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=paturage-tournant</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=paturage-tournant</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=pertes-post-recolte</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=pertes-post-recolte</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=plan-de-fumure</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=plan-de-fumure</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=pollinisation</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=pollinisation</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=polyculture-elevage</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=polyculture-elevage</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=prairie-permanente</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=prairie-permanente</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=prairie-temporaire</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=prairie-temporaire</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=prix-au-kilo</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=prix-au-kilo</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=prix-remunerateur</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=prix-remunerateur</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=proteagineux</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=proteagineux</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=qualite-differenciee</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=qualite-differenciee</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=relocalisation-alimentaire</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=relocalisation-alimentaire</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=reserve-utile-du-sol</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=reserve-utile-du-sol</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=resilience</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=resilience</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=restauration-collective</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=restauration-collective</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=rotation</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=rotation</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=saisonnalite</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=saisonnalite</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=semis-direct</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=semis-direct</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=sequestration-carbone</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=sequestration-carbone</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=services-ecosystemiques</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=services-ecosystemiques</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=souverainete-alimentaire</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=souverainete-alimentaire</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=stress-hydrique</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=stress-hydrique</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=systeme-alimentaire-territorial</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=systeme-alimentaire-territorial</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=techniques-culturales-simplifiees</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=techniques-culturales-simplifiees</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=tracabilite</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=tracabilite</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=transformation-a-la-ferme</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=transformation-a-la-ferme</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=transition-agroecologique</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=transition-agroecologique</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=valeur-ajoutee</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=valeur-ajoutee</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=vente-directe</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=vente-directe</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=amendement-organique</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=amendement-organique</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=analyse-de-sol</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=analyse-de-sol</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=apiculture</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=apiculture</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=battance</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=battance</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=bassin-versant</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=bassin-versant</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=bien-etre-animal</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=bien-etre-animal</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=biomasse</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=biomasse</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=capteur-agricole</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=capteur-agricole</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=charge-de-travail</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=charge-de-travail</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=conservation-des-aliments</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=conservation-des-aliments</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=consentement-des-donnees</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=consentement-des-donnees</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=culture-derobee</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=culture-derobee</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=culture-fourragere</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=culture-fourragere</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=decarbonation-agricole</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=decarbonation-agricole</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=drainage-agricole</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=drainage-agricole</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=energie-renouvelable-agricole</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=energie-renouvelable-agricole</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=ensilage</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=ensilage</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=exploitation-familiale</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=exploitation-familiale</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=fauche</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=fauche</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=foncier-agricole</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=foncier-agricole</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=fourrage</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=fourrage</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=groupe-d-achat</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=groupe-d-achat</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=interculture</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=interculture</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=interoperabilite</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=interoperabilite</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=labour</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=labour</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=logistique-alimentaire</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=logistique-alimentaire</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=marche-public-alimentaire</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=marche-public-alimentaire</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=mycorhizes</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=mycorhizes</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=outil-d-aide-a-la-decision</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=outil-d-aide-a-la-decision</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=ph-du-sol</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=ph-du-sol</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=point-relais</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=point-relais</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=prix-de-revient</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=prix-de-revient</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=projet-alimentaire-territorial</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=projet-alimentaire-territorial</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=ruissellement</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=ruissellement</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=sante-animale</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=sante-animale</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=stockage-a-la-ferme</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=stockage-a-la-ferme</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=tableau-de-bord-agricole</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=tableau-de-bord-agricole</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=tassement-du-sol</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=tassement-du-sol</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=travail-du-sol</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=travail-du-sol</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=unite-gros-betail-ugb</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=unite-gros-betail-ugb</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=variete-resistante</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=variete-resistante</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=verger-haute-tige</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=verger-haute-tige</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=zone-humide</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=zone-humide</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=wallesmart</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=wallesmart</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=zero-artificialisation-nette-zan</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=zero-artificialisation-nette-zan</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/?page=glossaire&amp;term=zone-tampon</loc>
+    <loc>https://myagri.be/?lang=fr&amp;page=glossaire&amp;term=zone-tampon</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myagri.be/llms.txt</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://myagri.be/llms-full.txt</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://myagri.be/api.php</loc>
+    <loc>https://myagri.be/api.php?lang=fr</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://myagri.be/api.php?section=site</loc>
+    <loc>https://myagri.be/api.php?lang=fr&amp;section=site</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.25</priority>
   </url>
   <url>
-    <loc>https://myagri.be/api.php?section=sectors</loc>
+    <loc>https://myagri.be/api.php?lang=fr&amp;section=sectors</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.25</priority>
   </url>
   <url>
-    <loc>https://myagri.be/api.php?section=faq</loc>
+    <loc>https://myagri.be/api.php?lang=fr&amp;section=faq</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.25</priority>
   </url>
   <url>
-    <loc>https://myagri.be/api.php?section=glossary</loc>
+    <loc>https://myagri.be/api.php?lang=fr&amp;section=glossary</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.25</priority>
   </url>
   <url>
-    <loc>https://myagri.be/api.php?section=resources</loc>
+    <loc>https://myagri.be/api.php?lang=fr&amp;section=resources</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=accueil</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=filieres</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=faq</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=ressources</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=dossiers</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=ressource&amp;resource=visites-pedagogiques</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=ressource&amp;resource=formations-metiers</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=ressource&amp;resource=consommation-responsable</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=ressource&amp;resource=calendrier-marches-locaux</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=ressource&amp;resource=aides-accompagnement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=ressource&amp;resource=decouvrir-labels</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=ressource&amp;resource=boite-a-outils-anti-gaspillage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=ressource&amp;resource=parcours-pedagogiques</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=reserve-eau-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=erosion-ruissellement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=eau-nitrates</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=local-circuit-court-saison</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=prix-juste-budget</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=collectif-cantines-communes</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=biodiversite-utile</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=pratiques-climat</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=pac-maec-eco-regimes</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=agriculture-biologique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=agriculture-de-precision</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=agriculture-integree</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=agriculture-regeneratrice</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=agriculture-urbaine</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=agroecologie</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=agroforesterie</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=aop-igp</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=assolement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=autonomie-fourragere</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=autonomie-proteique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=auxiliaires-de-culture</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=bande-enherbee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=bilan-carbone</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=biodiversite-fonctionnelle</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=bocage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=cahier-des-charges</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=certification</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=chaine-du-froid</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=circuit-court</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=compost</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=conditionnalite</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=cooperative-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=couvert-vegetal</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=couverts-permanents</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=cultures-associees</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=cultures-intermediaires</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=densite-de-chargement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=digestat</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=diversification</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=economie-circulaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=eco-regime</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=effluents-d-elevage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=elevage-extensif</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=empreinte-eau</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=erosion-des-sols</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=ferme-pedagogique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=fertilite-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=filiere</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=gestion-de-l-eau-a-la-parcelle</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=gestion-integree-des-ravageurs</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=haie-vive</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=humus</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=intrants</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=irrigation-raisonnee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=lutte-biologique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=maec</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=matiere-organique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=methanisation</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=natura-2000</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=nitrates</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=pac</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=paiement-pour-services-environnementaux</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=paturage-tournant</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=pertes-post-recolte</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=plan-de-fumure</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=pollinisation</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=polyculture-elevage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=prairie-permanente</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=prairie-temporaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=prix-au-kilo</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=prix-remunerateur</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=proteagineux</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=qualite-differenciee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=relocalisation-alimentaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=reserve-utile-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=resilience</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=restauration-collective</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=rotation</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=saisonnalite</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=semis-direct</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=sequestration-carbone</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=services-ecosystemiques</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=souverainete-alimentaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=stress-hydrique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=systeme-alimentaire-territorial</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=techniques-culturales-simplifiees</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=tracabilite</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=transformation-a-la-ferme</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=transition-agroecologique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=valeur-ajoutee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=vente-directe</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=amendement-organique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=analyse-de-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=apiculture</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=battance</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=bassin-versant</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=bien-etre-animal</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=biomasse</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=capteur-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=charge-de-travail</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=conservation-des-aliments</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=consentement-des-donnees</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=culture-derobee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=culture-fourragere</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=decarbonation-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=drainage-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=energie-renouvelable-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=ensilage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=exploitation-familiale</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=fauche</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=foncier-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=fourrage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=groupe-d-achat</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=interculture</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=interoperabilite</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=labour</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=logistique-alimentaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=marche-public-alimentaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=mycorhizes</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=outil-d-aide-a-la-decision</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=ph-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=point-relais</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=prix-de-revient</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=projet-alimentaire-territorial</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=ruissellement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=sante-animale</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=stockage-a-la-ferme</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=tableau-de-bord-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=tassement-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=travail-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=unite-gros-betail-ugb</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=variete-resistante</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=verger-haute-tige</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=zone-humide</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=wallesmart</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=zero-artificialisation-nette-zan</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=en&amp;page=glossaire&amp;term=zone-tampon</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=en</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=en&amp;section=site</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=en&amp;section=sectors</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=en&amp;section=faq</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=en&amp;section=glossary</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=en&amp;section=resources</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=accueil</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=filieres</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=faq</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=ressources</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=dossiers</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=ressource&amp;resource=visites-pedagogiques</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=ressource&amp;resource=formations-metiers</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=ressource&amp;resource=consommation-responsable</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=ressource&amp;resource=calendrier-marches-locaux</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=ressource&amp;resource=aides-accompagnement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=ressource&amp;resource=decouvrir-labels</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=ressource&amp;resource=boite-a-outils-anti-gaspillage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=ressource&amp;resource=parcours-pedagogiques</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=reserve-eau-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=erosion-ruissellement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=eau-nitrates</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=local-circuit-court-saison</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=prix-juste-budget</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=collectif-cantines-communes</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=biodiversite-utile</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=pratiques-climat</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=pac-maec-eco-regimes</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=agriculture-biologique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=agriculture-de-precision</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=agriculture-integree</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=agriculture-regeneratrice</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=agriculture-urbaine</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=agroecologie</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=agroforesterie</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=aop-igp</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=assolement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=autonomie-fourragere</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=autonomie-proteique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=auxiliaires-de-culture</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=bande-enherbee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=bilan-carbone</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=biodiversite-fonctionnelle</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=bocage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=cahier-des-charges</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=certification</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=chaine-du-froid</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=circuit-court</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=compost</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=conditionnalite</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=cooperative-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=couvert-vegetal</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=couverts-permanents</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=cultures-associees</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=cultures-intermediaires</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=densite-de-chargement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=digestat</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=diversification</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=economie-circulaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=eco-regime</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=effluents-d-elevage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=elevage-extensif</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=empreinte-eau</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=erosion-des-sols</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=ferme-pedagogique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=fertilite-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=filiere</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=gestion-de-l-eau-a-la-parcelle</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=gestion-integree-des-ravageurs</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=haie-vive</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=humus</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=intrants</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=irrigation-raisonnee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=lutte-biologique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=maec</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=matiere-organique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=methanisation</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=natura-2000</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=nitrates</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=pac</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=paiement-pour-services-environnementaux</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=paturage-tournant</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=pertes-post-recolte</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=plan-de-fumure</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=pollinisation</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=polyculture-elevage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=prairie-permanente</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=prairie-temporaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=prix-au-kilo</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=prix-remunerateur</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=proteagineux</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=qualite-differenciee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=relocalisation-alimentaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=reserve-utile-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=resilience</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=restauration-collective</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=rotation</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=saisonnalite</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=semis-direct</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=sequestration-carbone</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=services-ecosystemiques</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=souverainete-alimentaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=stress-hydrique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=systeme-alimentaire-territorial</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=techniques-culturales-simplifiees</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=tracabilite</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=transformation-a-la-ferme</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=transition-agroecologique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=valeur-ajoutee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=vente-directe</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=amendement-organique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=analyse-de-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=apiculture</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=battance</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=bassin-versant</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=bien-etre-animal</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=biomasse</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=capteur-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=charge-de-travail</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=conservation-des-aliments</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=consentement-des-donnees</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=culture-derobee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=culture-fourragere</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=decarbonation-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=drainage-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=energie-renouvelable-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=ensilage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=exploitation-familiale</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=fauche</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=foncier-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=fourrage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=groupe-d-achat</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=interculture</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=interoperabilite</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=labour</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=logistique-alimentaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=marche-public-alimentaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=mycorhizes</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=outil-d-aide-a-la-decision</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=ph-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=point-relais</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=prix-de-revient</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=projet-alimentaire-territorial</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=ruissellement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=sante-animale</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=stockage-a-la-ferme</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=tableau-de-bord-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=tassement-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=travail-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=unite-gros-betail-ugb</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=variete-resistante</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=verger-haute-tige</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=zone-humide</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=wallesmart</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=zero-artificialisation-nette-zan</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=ge&amp;page=glossaire&amp;term=zone-tampon</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=ge</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=ge&amp;section=site</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=ge&amp;section=sectors</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=ge&amp;section=faq</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=ge&amp;section=glossary</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=ge&amp;section=resources</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=accueil</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=filieres</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=faq</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=ressources</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=dossiers</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=ressource&amp;resource=visites-pedagogiques</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=ressource&amp;resource=formations-metiers</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=ressource&amp;resource=consommation-responsable</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=ressource&amp;resource=calendrier-marches-locaux</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=ressource&amp;resource=aides-accompagnement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=ressource&amp;resource=decouvrir-labels</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=ressource&amp;resource=boite-a-outils-anti-gaspillage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=ressource&amp;resource=parcours-pedagogiques</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=reserve-eau-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=erosion-ruissellement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=dossier&amp;dossier=eau-sols-secheresse&amp;chapitre=eau-nitrates</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=local-circuit-court-saison</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=prix-juste-budget</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=dossier&amp;dossier=circuits-courts-alimentation-locale&amp;chapitre=collectif-cantines-communes</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=biodiversite-utile</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=pratiques-climat</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=dossier&amp;dossier=climat-biodiversite-pratiques-agricoles&amp;chapitre=pac-maec-eco-regimes</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=agriculture-biologique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=agriculture-de-precision</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=agriculture-integree</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=agriculture-regeneratrice</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=agriculture-urbaine</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=agroecologie</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=agroforesterie</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=aop-igp</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=assolement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=autonomie-fourragere</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=autonomie-proteique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=auxiliaires-de-culture</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=bande-enherbee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=bilan-carbone</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=biodiversite-fonctionnelle</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=bocage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=cahier-des-charges</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=certification</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=chaine-du-froid</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=circuit-court</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=compost</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=conditionnalite</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=cooperative-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=couvert-vegetal</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=couverts-permanents</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=cultures-associees</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=cultures-intermediaires</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=densite-de-chargement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=digestat</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=diversification</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=economie-circulaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=eco-regime</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=effluents-d-elevage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=elevage-extensif</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=empreinte-eau</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=erosion-des-sols</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=ferme-pedagogique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=fertilite-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=filiere</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=gestion-de-l-eau-a-la-parcelle</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=gestion-integree-des-ravageurs</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=haie-vive</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=humus</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=intrants</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=irrigation-raisonnee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=lutte-biologique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=maec</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=matiere-organique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=methanisation</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=natura-2000</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=nitrates</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=pac</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=paiement-pour-services-environnementaux</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=paturage-tournant</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=pertes-post-recolte</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=plan-de-fumure</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=pollinisation</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=polyculture-elevage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=prairie-permanente</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=prairie-temporaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=prix-au-kilo</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=prix-remunerateur</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=proteagineux</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=qualite-differenciee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=relocalisation-alimentaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=reserve-utile-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=resilience</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=restauration-collective</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=rotation</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=saisonnalite</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=semis-direct</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=sequestration-carbone</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=services-ecosystemiques</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=souverainete-alimentaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=stress-hydrique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=systeme-alimentaire-territorial</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=techniques-culturales-simplifiees</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=tracabilite</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=transformation-a-la-ferme</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=transition-agroecologique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=valeur-ajoutee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=vente-directe</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=amendement-organique</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=analyse-de-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=apiculture</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=battance</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=bassin-versant</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=bien-etre-animal</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=biomasse</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=capteur-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=charge-de-travail</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=conservation-des-aliments</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=consentement-des-donnees</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=culture-derobee</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=culture-fourragere</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=decarbonation-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=drainage-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=energie-renouvelable-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=ensilage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=exploitation-familiale</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=fauche</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=foncier-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=fourrage</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=groupe-d-achat</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=interculture</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=interoperabilite</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=labour</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=logistique-alimentaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=marche-public-alimentaire</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=mycorhizes</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=outil-d-aide-a-la-decision</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=ph-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=point-relais</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=prix-de-revient</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=projet-alimentaire-territorial</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=ruissellement</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=sante-animale</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=stockage-a-la-ferme</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=tableau-de-bord-agricole</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=tassement-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=travail-du-sol</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=unite-gros-betail-ugb</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=variete-resistante</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=verger-haute-tige</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=zone-humide</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=wallesmart</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=zero-artificialisation-nette-zan</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/?lang=nl&amp;page=glossaire&amp;term=zone-tampon</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=nl</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=nl&amp;section=site</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=nl&amp;section=sectors</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=nl&amp;section=faq</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=nl&amp;section=glossary</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/api.php?lang=nl&amp;section=resources</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.25</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/llms.txt</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://myagri.be/llms-full.txt</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 </urlset>
