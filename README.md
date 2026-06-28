@@ -30,7 +30,7 @@ Meertalig burgerinformatieportaal over landbouw in Wallonië.
 
 ## Notes / Hinweise / Notities
 
-- FR : les contenus éditoriaux sont stockés par langue dans `includes/translations/`. Les chaînes d’interface sont vérifiées par le smoke test.
-- EN: editorial content is stored by language in `includes/translations/`. Interface strings are verified by the smoke test.
-- DE: redaktionelle Inhalte werden je Sprache in `includes/translations/` gespeichert. Interface-Texte werden vom Smoke-Test geprüft.
-- NL: redactionele inhoud staat per taal in `includes/translations/`. Interfaceteksten worden door de smoke test gecontroleerd.
+- FR : les contenus éditoriaux sont dans `includes/translations/` et les chaînes d’interface dans `includes/ui-translations/`. Le smoke test vérifie les deux ensembles.
+- EN: editorial content lives in `includes/translations/` and interface strings in `includes/ui-translations/`. The smoke test verifies both sets.
+- DE: redaktionelle Inhalte liegen in `includes/translations/`, Interface-Texte in `includes/ui-translations/`. Der Smoke-Test prüft beide Bereiche.
+- NL: redactionele inhoud staat in `includes/translations/` en interfaceteksten in `includes/ui-translations/`. De smoke test controleert beide.
