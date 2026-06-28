@@ -124,6 +124,7 @@ function assertUtf8CleanFile(string $path): void
         "\u{00E2}\u{20AC}\u{2122}",
         "\u{00E2}\u{20AC}\u{0153}",
         "\u{00E2}\u{20AC}",
+        "\u{FEFF}",
         "\u{FFFD}",
     ];
     foreach ($mojibakeMarkers as $marker) {
@@ -263,6 +264,9 @@ foreach (['fr', 'ge', 'nl'] as $language) {
 }
 
 $interfaceFiles = activeInterfaceFiles();
+foreach ($interfaceFiles as $interfaceFile) {
+    assertUtf8CleanFile($interfaceFile);
+}
 $interfaceTranslationKeys = collectInterfaceTranslationKeys($interfaceFiles);
 assertTrue($interfaceTranslationKeys !== [], 'interface translation keys are detected');
 foreach (['fr', 'en', 'ge', 'nl'] as $language) {

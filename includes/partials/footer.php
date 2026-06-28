@@ -1,4 +1,4 @@
-﻿</main>
+</main>
 <footer>
     <div class="container">
         <p><?= e(t('footer.description')) ?></p>
