@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/../includes/portal_repository.php';
 
-$requestedLanguage = isset($argv[1]) && is_string($argv[1]) ? $argv[1] : defaultPortalLanguage();
+$requestedLanguage = $argv[1] ?? defaultPortalLanguage();
 $_GET['lang'] = normalizePortalLanguage($requestedLanguage);
 
 try {

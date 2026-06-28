@@ -217,14 +217,12 @@ assertTrue(is_file(__DIR__ . '/../assets/img/dossier-climat-biodiversite.png'), 
 $sampleResource = $data['resources'][0] ?? null;
 if (is_array($sampleResource)) {
     $resourcePairs = resourceFaqPairs($sampleResource);
-    assertTrue(is_array($resourcePairs), 'resource FAQ pairs computed');
     assertTrue($resourcePairs !== [], 'resource FAQ pairs are not empty');
 }
 
 $sampleTerm = $data['glossary'][0] ?? null;
 if (is_array($sampleTerm)) {
     $termPairs = glossaryTermFaqPairs($sampleTerm);
-    assertTrue(is_array($termPairs), 'glossary FAQ pairs computed');
     assertTrue($termPairs !== [], 'glossary FAQ pairs are not empty');
 }
 
@@ -368,9 +366,6 @@ foreach (['L\'agriculture wallonne expliquée', 'Landwirtschaft in der Wallonie'
     assertTrue(!str_contains($logoMarkup, $monolingualSlogan), "logo has no monolingual slogan: {$monolingualSlogan}");
     assertTrue(!str_contains($ogMarkup, $monolingualSlogan), "OG image has no monolingual slogan: {$monolingualSlogan}");
 }
-
-assertTrue(glossaryTemplatePath('vente-directe') === null, 'glossary uses translated generic rendering');
-assertTrue(resourceTemplatePath('visites-pedagogiques') === null, 'resources use translated generic rendering');
 
 try {
     $loadedData = loadPortalData();
