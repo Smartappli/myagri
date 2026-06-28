@@ -563,6 +563,13 @@ function portalUiTranslations(?string $language = null): array
             'structured.knows_local_supply_chains' => 'kurze Lieferketten',
             'api.db_error' => 'MySQL-Datenbank nicht verfügbar',
             'api.unknown_section' => 'Unbekannter Abschnitt',
+            'repository.mysql_load_error' => 'Die MySQL-Daten des Portals konnten nicht geladen werden.',
+            'repository.mysql_connection_unavailable' => 'Erforderliche MySQL-Verbindung nicht verfügbar',
+            'repository.mysql_storage_prepare_error' => 'Die Tabelle portal_content konnte nicht vorbereitet werden',
+            'repository.mysql_sync_error' => 'Die Daten konnten nicht nach MySQL synchronisiert werden',
+            'repository.mysql_read_error' => 'Die MySQL-Daten konnten nicht gelesen werden',
+            'repository.sync_success' => 'MyAgri -> MySQL-Synchronisierung erfolgreich.',
+            'repository.sync_failed' => 'MySQL-Synchronisierung fehlgeschlagen',
         ]);
     }
 
@@ -681,6 +688,13 @@ function portalUiTranslations(?string $language = null): array
             'structured.knows_local_supply_chains' => 'korte ketens',
             'api.db_error' => 'MySQL-database niet beschikbaar',
             'api.unknown_section' => 'Onbekende sectie',
+            'repository.mysql_load_error' => 'De MySQL-gegevens van het portaal konden niet worden geladen.',
+            'repository.mysql_connection_unavailable' => 'Vereiste MySQL-verbinding niet beschikbaar',
+            'repository.mysql_storage_prepare_error' => 'De tabel portal_content kon niet worden voorbereid',
+            'repository.mysql_sync_error' => 'De gegevens konden niet naar MySQL worden gesynchroniseerd',
+            'repository.mysql_read_error' => 'De MySQL-gegevens konden niet worden gelezen',
+            'repository.sync_success' => 'MyAgri -> MySQL-synchronisatie geslaagd.',
+            'repository.sync_failed' => 'MySQL-synchronisatie mislukt',
         ]);
     }
 
