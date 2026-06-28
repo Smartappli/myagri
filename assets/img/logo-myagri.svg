@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="112" viewBox="0 0 500 112" role="img" aria-labelledby="logo-title logo-desc">
   <title id="logo-title">MyAgri</title>
-  <desc id="logo-desc">Logo MyAgri - Landwirtschaft in der Wallonie verständlich erklärt</desc>
+  <desc id="logo-desc">Logo MyAgri - l'agriculture wallonne expliquée</desc>
   <defs>
     <linearGradient id="mark-bg" x1="8" y1="8" x2="104" y2="104" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#145733"/>
@@ -31,6 +31,6 @@
     <text x="124" y="51" font-size="43" font-weight="850" letter-spacing="0">
       <tspan fill="#13281d">My</tspan><tspan fill="#1f7a45">Agri</tspan>
     </text>
-    <text x="126" y="82" font-size="18" font-weight="760" letter-spacing="0" fill="#315d88">Landwirtschaft in der Wallonie erklärt</text>
+    <text x="126" y="82" font-size="18" font-weight="760" letter-spacing="0" fill="#315d88">L'agriculture wallonne expliquée</text>
   </g>
 </svg>

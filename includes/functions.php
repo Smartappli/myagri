@@ -80,7 +80,12 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
 {
     $siteTitle = isset($site['title']) && is_string($site['title']) ? $site['title'] : 'MyAgri';
     $siteDescription = isset($site['subtitle']) && is_string($site['subtitle']) ? $site['subtitle'] : '';
-    $baseKeywords = 'MyAgri, agriculture, Wallonie, Wallonia, Landwirtschaft, landbouw';
+    $baseKeywords = match (currentLanguage()) {
+        'en' => 'MyAgri, agriculture, Wallonia, citizen portal, food systems',
+        'ge' => 'MyAgri, Landwirtschaft, Wallonie, Bürgerportal, Ernährungssysteme',
+        'nl' => 'MyAgri, landbouw, Wallonië, burgerportaal, voedselsystemen',
+        default => 'MyAgri, agriculture, Wallonie, portail citoyen, systèmes alimentaires',
+    };
 
     if ($page === 'filieres') {
         return [
