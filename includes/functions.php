@@ -484,7 +484,7 @@ function glossaryTermFaqPairs(array $glossaryTerm, int $limit = 4): array
 }
 
 /**
- * @param array<int, array{question:string, answer:string}> $pairs
+ * @param array<int, array<string, mixed>> $pairs
  */
 function faqStructuredDataFromPairs(array $pairs, string $id): array
 {
@@ -843,11 +843,9 @@ function updatedAtIsoDate(string $updatedAt): string
         'februar' => '02',
         'märz' => '03',
         'maerz' => '03',
-        'april' => '04',
         'mai' => '05',
         'juni' => '06',
         'juli' => '07',
-        'august' => '08',
         'september' => '09',
         'oktober' => '10',
         'november' => '11',
@@ -856,7 +854,6 @@ function updatedAtIsoDate(string $updatedAt): string
         'février' => '02',
         'mars' => '03',
         'avril' => '04',
-        'mai' => '05',
         'juin' => '06',
         'juillet' => '07',
         'août' => '08',
@@ -872,6 +869,7 @@ function updatedAtIsoDate(string $updatedAt): string
         'june' => '06',
         'july' => '07',
         'august' => '08',
+        'september' => '09',
         'october' => '10',
         'december' => '12',
         'januari' => '01',

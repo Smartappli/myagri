@@ -1,15 +1,15 @@
 <?php
 /**
- * @var array<int, array<string, string>> $faqPairs
+ * @var array<int, array<string, mixed>> $faqPairs
  * @var string $qaTitle
  * @var string $qaIntro
  */
-if (!isset($faqPairs) || !is_array($faqPairs) || $faqPairs === []) {
+if ($faqPairs === []) {
     return;
 }
 
-$escapedTitle = isset($qaTitle) && is_string($qaTitle) ? $qaTitle : t('qa.default_title');
-$escapedIntro = isset($qaIntro) && is_string($qaIntro) ? $qaIntro : '';
+$escapedTitle = $qaTitle !== '' ? $qaTitle : t('qa.default_title');
+$escapedIntro = $qaIntro;
 ?>
 
 <section class="shadow-soft" aria-labelledby="page-qa-title">
