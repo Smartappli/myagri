@@ -234,6 +234,26 @@ foreach (['fr', 'en', 'ge', 'nl'] as $language) {
     assertTrue(isset($translatedData['site']['title']), "site title exists for {$language}");
 }
 
+$uiTranslationLeaves = [];
+foreach (['fr', 'en', 'ge', 'nl'] as $language) {
+    $uiTranslationPath = __DIR__ . "/../includes/ui-translations/{$language}.php";
+    assertTrue(is_file($uiTranslationPath), "UI translation file exists for {$language}");
+    assertUtf8CleanFile($uiTranslationPath);
+    $uiTranslations = require $uiTranslationPath;
+    assertTrue(is_array($uiTranslations), "UI translation file {$language} returns an array");
+    assertTrue($uiTranslations === portalUiTranslations($language), "UI translation file {$language} matches loader output");
+    $uiTranslationLeaves[$language] = $uiTranslations;
+}
+$frenchUiKeys = array_keys($uiTranslationLeaves['fr']);
+foreach (['en', 'ge', 'nl'] as $language) {
+    $missing = array_diff($frenchUiKeys, array_keys($uiTranslationLeaves[$language]));
+    $extra = array_diff(array_keys($uiTranslationLeaves[$language]), $frenchUiKeys);
+    assertTrue($missing === [], "UI translation file {$language} has no missing keys");
+    assertTrue($extra === [], "UI translation file {$language} has no extra keys");
+}
+$dataSource = (string) file_get_contents(__DIR__ . '/../includes/data.php');
+assertTrue(!str_contains($dataSource, "'nav.home' =>"), 'UI translation strings are externalized from data.php');
+
 $translationLeaves = [];
 foreach (['fr', 'en', 'ge', 'nl'] as $language) {
     $translationPath = __DIR__ . "/../includes/translations/{$language}.php";
