@@ -12,6 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 BASE_URL = os.environ.get("BASE_URL", "http://127.0.0.1:8087").rstrip("/")
+APP_HEALTH_URL = os.environ.get("APP_HEALTH_URL", BASE_URL).rstrip("/")
 SELENIUM_URL = os.environ.get("SELENIUM_REMOTE_URL", "http://127.0.0.1:4444/wd/hub")
 
 LANGUAGES = {
@@ -138,7 +139,7 @@ def check_page_matrix(driver: webdriver.Remote, language: str, expected: dict[st
 
 
 def main() -> int:
-    wait_for_http(f"{BASE_URL}/?lang=fr&page=accueil", "MyAgri")
+    wait_for_http(f"{APP_HEALTH_URL}/?lang=fr&page=accueil", "MyAgri")
     wait_for_http(SELENIUM_URL.replace("/wd/hub", "/status"), "Selenium")
 
     options = ChromeOptions()

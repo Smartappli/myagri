@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+php-server*.log
+php-server.pid

@@ -55,6 +55,7 @@ jobs:
           - 4444:4444
         options: >-
           --shm-size=2g
+          --add-host=host.docker.internal:host-gateway
 
     steps:
       - name: Checkout
@@ -84,7 +85,7 @@ jobs:
 
       - name: Start PHP server
         run: |
-          php -S 127.0.0.1:8087 -t . > php-server.log 2> php-server.err.log &
+          php -S 0.0.0.0:8087 -t . > php-server.log 2> php-server.err.log &
           echo $! > php-server.pid
 
       - name: Wait for services
@@ -110,7 +111,8 @@ jobs:
 
       - name: Run Selenium tests
         env:
-          BASE_URL: http://127.0.0.1:8087
+          BASE_URL: http://host.docker.internal:8087
+          APP_HEALTH_URL: http://127.0.0.1:8087
           SELENIUM_REMOTE_URL: http://127.0.0.1:4444/wd/hub
         run: composer selenium
 
