@@ -1097,25 +1097,6 @@ function glossaryTermById(string $termId, array $glossary): ?array
  */
 function glossaryTemplatePath(string $termSlug): ?string
 {
-    if (currentLanguage() !== 'ge') {
-        return null;
-    }
-
-    $normalized = trim($termSlug);
-    if (!preg_match('/^[a-z0-9-]+$/', $normalized)) {
-        return null;
-    }
-
-    $candidate = __DIR__ . '/views/glossaire/term-' . $normalized . '.php';
-    if (is_file($candidate)) {
-        return $candidate;
-    }
-
-    $fallback = __DIR__ . '/views/glossaire/term-template.php';
-    if (is_file($fallback)) {
-        return $fallback;
-    }
-
     return null;
 }
 
