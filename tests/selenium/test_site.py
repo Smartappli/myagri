@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+from pathlib import Path
 from urllib.request import urlopen
 
 from selenium import webdriver
@@ -14,6 +15,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 BASE_URL = os.environ.get("BASE_URL", "http://127.0.0.1:8087").rstrip("/")
 APP_HEALTH_URL = os.environ.get("APP_HEALTH_URL", BASE_URL).rstrip("/")
 SELENIUM_URL = os.environ.get("SELENIUM_REMOTE_URL", "http://127.0.0.1:4444/wd/hub")
+ARTIFACT_DIR = Path(os.environ.get("SELENIUM_ARTIFACT_DIR", "tests/selenium/artifacts"))
 
 LANGUAGES = {
     "fr": {
@@ -85,9 +87,22 @@ def open_path(driver: webdriver.Remote, path: str) -> None:
 
 def assert_no_encoding_artifacts(driver: webdriver.Remote, context: str) -> None:
     markup = driver.page_source
-    for marker in ["Ã", "Â", "�", "\ufeff"]:
+    for marker in ["\u00c3", "\u00c2", "\ufffd", "\ufeff"]:
         if marker in markup:
             raise AssertionError(f"{context}: unexpected encoding marker {marker!r}")
+
+
+def save_failure_artifacts(driver: webdriver.Remote) -> None:
+    ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
+    timestamp = time.strftime("%Y%m%d-%H%M%S")
+    prefix = ARTIFACT_DIR / f"failure-{timestamp}"
+
+    (prefix.with_suffix(".txt")).write_text(
+        f"url: {driver.current_url}\ntitle: {driver.title}\n",
+        encoding="utf-8",
+    )
+    (prefix.with_suffix(".html")).write_text(driver.page_source, encoding="utf-8")
+    driver.save_screenshot(str(prefix.with_suffix(".png")))
 
 
 def check_language_header(driver: webdriver.Remote, language: str, expected: dict[str, str]) -> None:
@@ -138,6 +153,30 @@ def check_page_matrix(driver: webdriver.Remote, language: str, expected: dict[st
             raise AssertionError(f"{context}: page unexpectedly rendered as not found")
 
 
+def check_language_switcher(driver: webdriver.Remote) -> None:
+    open_path(driver, "?lang=fr&page=dossier&dossier=eau-sols-secheresse&chapitre=reserve-eau-sol")
+
+    links = {
+        link.text.strip(): link
+        for link in driver.find_elements(By.CSS_SELECTOR, ".language-switcher a")
+    }
+    for label in ["FR", "EN", "DE", "NL"]:
+        if label not in links:
+            raise AssertionError(f"language switcher: missing {label} link")
+
+    assert_equal(links["FR"].get_attribute("aria-current"), "true", "language switcher current language")
+
+    links["DE"].click()
+    WebDriverWait(driver, 10).until(EC.url_contains("lang=ge"))
+    context = "language switcher German dossier"
+    assert_equal(driver.find_element(By.TAG_NAME, "html").get_attribute("lang"), "de-BE", context)
+    assert_no_encoding_artifacts(driver, context)
+    for fragment in ["page=dossier", "dossier=eau-sols-secheresse", "chapitre=reserve-eau-sol"]:
+        assert_text_contains(driver.current_url, fragment, context)
+    slogan = driver.find_element(By.CSS_SELECTOR, ".brand-slogan").text
+    assert_equal(slogan, LANGUAGES["ge"]["slogan"], f"{context} brand slogan")
+
+
 def main() -> int:
     wait_for_http(f"{APP_HEALTH_URL}/?lang=fr&page=accueil", "MyAgri")
     wait_for_http(SELENIUM_URL.replace("/wd/hub", "/status"), "Selenium")
@@ -155,8 +194,13 @@ def main() -> int:
             check_language_header(driver, language, expected)
             check_page_matrix(driver, language, expected)
 
+        check_language_switcher(driver)
+
         driver.set_window_size(390, 844)
         check_language_header(driver, "nl", LANGUAGES["nl"])
+    except Exception:
+        save_failure_artifacts(driver)
+        raise
     finally:
         driver.quit()
 

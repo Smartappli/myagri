@@ -3,7 +3,7 @@
     "scripts": {
         "smoke": "php tests/smoke.php",
         "analyse": "phpstan analyse --memory-limit=512M",
-        "selenium": "python tests/selenium/test_site.py"
+        "selenium": "php scripts/run_selenium.php"
     },
     "require-dev": {
         "phpstan/phpstan": "^2.2"

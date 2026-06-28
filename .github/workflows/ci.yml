@@ -114,7 +114,16 @@ jobs:
           BASE_URL: http://host.docker.internal:8087
           APP_HEALTH_URL: http://127.0.0.1:8087
           SELENIUM_REMOTE_URL: http://127.0.0.1:4444/wd/hub
+          SELENIUM_ARTIFACT_DIR: selenium-artifacts
         run: composer selenium
+
+      - name: Upload Selenium artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenium-artifacts
+          path: selenium-artifacts
+          if-no-files-found: ignore
 
       - name: Upload PHP server logs
         if: always()
