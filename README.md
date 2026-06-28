@@ -39,3 +39,4 @@ Meertalig burgerinformatieportaal over landbouw in Wallonië.
 
 - Smoke test: `composer smoke`
 - Static analysis: `composer analyse`
+- Selenium browser tests: `composer selenium` with `BASE_URL` and `SELENIUM_REMOTE_URL`

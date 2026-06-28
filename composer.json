@@ -1,7 +1,9 @@
 {
+    "license": "proprietary",
     "scripts": {
         "smoke": "php tests/smoke.php",
-        "analyse": "phpstan analyse --memory-limit=512M"
+        "analyse": "phpstan analyse --memory-limit=512M",
+        "selenium": "python tests/selenium/test_site.py"
     },
     "require-dev": {
         "phpstan/phpstan": "^2.2"
