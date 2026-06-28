@@ -7,7 +7,8 @@
 - Accueil : https://myagri.be/?lang=fr&page=accueil
 - Filières : https://myagri.be/?lang=fr&page=filieres
 - Ressources : https://myagri.be/?lang=fr&page=ressources
-- Dossiers : https://myagri.be/?lang=fr&page=dossiers
+- Dossiers citoyens : https://myagri.be/?lang=fr&page=dossiers
+- Questions fréquentes : https://myagri.be/?lang=fr&page=faq
 - Glossaire : https://myagri.be/?lang=fr&page=glossaire
 
 ## English
@@ -17,7 +18,8 @@
 - Home: https://myagri.be/?lang=en&page=accueil
 - Sectors: https://myagri.be/?lang=en&page=filieres
 - Resources: https://myagri.be/?lang=en&page=ressources
-- Dossiers: https://myagri.be/?lang=en&page=dossiers
+- Topics: https://myagri.be/?lang=en&page=dossiers
+- Questions: https://myagri.be/?lang=en&page=faq
 - Glossary: https://myagri.be/?lang=en&page=glossaire
 
 ## Deutsch
@@ -27,7 +29,8 @@
 - Startseite: https://myagri.be/?lang=ge&page=accueil
 - Sektoren: https://myagri.be/?lang=ge&page=filieres
 - Ressourcen: https://myagri.be/?lang=ge&page=ressources
-- Dossiers: https://myagri.be/?lang=ge&page=dossiers
+- Themen: https://myagri.be/?lang=ge&page=dossiers
+- Fragen: https://myagri.be/?lang=ge&page=faq
 - Glossar: https://myagri.be/?lang=ge&page=glossaire
 
 ## Nederlands
@@ -37,10 +40,11 @@
 - Start: https://myagri.be/?lang=nl&page=accueil
 - Sectoren: https://myagri.be/?lang=nl&page=filieres
 - Hulpmiddelen: https://myagri.be/?lang=nl&page=ressources
-- Dossiers: https://myagri.be/?lang=nl&page=dossiers
+- Thema’s: https://myagri.be/?lang=nl&page=dossiers
+- Vragen: https://myagri.be/?lang=nl&page=faq
 - Glossarium: https://myagri.be/?lang=nl&page=glossaire
 
-## Machine Access
+## Machine Access / Accès Machine
 
 - Long corpus: https://myagri.be/llms-full.txt
 - JSON API: https://myagri.be/api.php

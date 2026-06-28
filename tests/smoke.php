@@ -87,6 +87,32 @@ function flattenTranslationLeaves(array $value, string $prefix = ''): array
     return $result;
 }
 
+function isComparableEditorialLeaf(string $path, mixed $value): bool
+{
+    if (!is_string($value)) {
+        return false;
+    }
+
+    $text = trim($value);
+    if (mb_strlen($text) < 24 || !str_contains($text, ' ')) {
+        return false;
+    }
+
+    if (preg_match('/(^|\.)((id|slug|url|icon|emoji|illustration|region_code|country_code|latitude|longitude))$/', $path) === 1) {
+        return false;
+    }
+
+    if (preg_match('/^(https?:|\/|[\w.-]+\.(png|svg|jpg|jpeg|webp|xml|txt|json)$)/i', $text) === 1) {
+        return false;
+    }
+
+    if (preg_match('/^[A-Z0-9 _.-]+$/', $text) === 1) {
+        return false;
+    }
+
+    return true;
+}
+
 function assertUtf8CleanFile(string $path): void
 {
     $contents = (string) file_get_contents($path);
@@ -217,6 +243,21 @@ foreach (['en', 'ge', 'nl'] as $language) {
     assertTrue($extra === [], "translation file {$language} has no extra leaves");
 }
 
+foreach (['fr', 'ge', 'nl'] as $language) {
+    foreach ($translationLeaves['en'] as $key => $englishValue) {
+        if (!isComparableEditorialLeaf($key, $englishValue) || !array_key_exists($key, $translationLeaves[$language])) {
+            continue;
+        }
+
+        $translatedValue = $translationLeaves[$language][$key];
+        if (!isComparableEditorialLeaf($key, $translatedValue)) {
+            continue;
+        }
+
+        assertTrue($translatedValue !== $englishValue, "editorial content key {$key} is not an accidental English fallback for {$language}");
+    }
+}
+
 $interfaceFiles = activeInterfaceFiles();
 $interfaceTranslationKeys = collectInterfaceTranslationKeys($interfaceFiles);
 assertTrue($interfaceTranslationKeys !== [], 'interface translation keys are detected');
@@ -264,9 +305,20 @@ $sharedTextAssets = [
     __DIR__ . '/../llms.txt',
     __DIR__ . '/../llms-full.txt',
     __DIR__ . '/../README.md',
+    __DIR__ . '/../sitemap.xml',
 ];
 foreach ($sharedTextAssets as $assetPath) {
     assertUtf8CleanFile($assetPath);
+}
+$sitemap = new DOMDocument();
+assertTrue($sitemap->load(__DIR__ . '/../sitemap.xml'), 'sitemap XML is valid');
+$sitemapMarkup = (string) file_get_contents(__DIR__ . '/../sitemap.xml');
+foreach (['xmlns:xhtml="http://www.w3.org/1999/xhtml"', 'hreflang="fr-BE"', 'hreflang="en-BE"', 'hreflang="de-BE"', 'hreflang="nl-BE"', 'hreflang="x-default"'] as $sitemapFragment) {
+    assertTrue(str_contains($sitemapMarkup, $sitemapFragment), "sitemap contains {$sitemapFragment}");
+}
+$llmsShort = (string) file_get_contents(__DIR__ . '/../llms.txt');
+foreach (['- Dossiers: https://myagri.be/?lang=en', '- Dossiers: https://myagri.be/?lang=ge', '- Dossiers: https://myagri.be/?lang=nl', '- FAQ'] as $staleFragment) {
+    assertTrue(!str_contains($llmsShort, $staleFragment), "llms.txt has no stale fragment {$staleFragment}");
 }
 $logoMarkup = (string) file_get_contents(__DIR__ . '/../assets/img/logo-myagri.svg');
 $ogMarkup = (string) file_get_contents(__DIR__ . '/../assets/img/og-default.svg');

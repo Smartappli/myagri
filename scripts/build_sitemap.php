@@ -7,6 +7,27 @@ $baseUrl = getenv('SITE_URL') ?: 'https://myagri.be';
 $baseUrl = rtrim($baseUrl, '/');
 $pages = [];
 
+/**
+ * @return list<array{hreflang:string, href:string}>
+ */
+function sitemapAlternates(string $baseUrl, string $page, string $resourceId = '', string $glossaryTerm = '', string $dossierId = '', string $chapterId = ''): array
+{
+    $alternates = [];
+    foreach (portalLanguages() as $language => $config) {
+        $alternates[] = [
+            'hreflang' => $config['hreflang'],
+            'href' => $baseUrl . canonicalPath($page, $resourceId, $glossaryTerm, $dossierId, $chapterId, $language),
+        ];
+    }
+
+    $alternates[] = [
+        'hreflang' => 'x-default',
+        'href' => $baseUrl . canonicalPath($page, $resourceId, $glossaryTerm, $dossierId, $chapterId, defaultPortalLanguage()),
+    ];
+
+    return $alternates;
+}
+
 foreach (array_keys(portalLanguages()) as $language) {
     $_GET['lang'] = $language;
     $site = getPortalData($language);
@@ -14,28 +35,38 @@ foreach (array_keys(portalLanguages()) as $language) {
         ? updatedAtIsoDate($site['site']['updated_at'])
         : date('Y-m-d');
 
-    $add = static function (string $loc, string $changefreq, string $priority) use (&$pages, $baseUrl, $lastmod): void {
+    $add = static function (string $page, string $changefreq, string $priority, string $resourceId = '', string $glossaryTerm = '', string $dossierId = '', string $chapterId = '') use (&$pages, $baseUrl, $lastmod, $language): void {
+        $pages[] = [
+            'loc' => $baseUrl . canonicalPath($page, $resourceId, $glossaryTerm, $dossierId, $chapterId, $language),
+            'lastmod' => $lastmod,
+            'changefreq' => $changefreq,
+            'priority' => $priority,
+            'alternates' => sitemapAlternates($baseUrl, $page, $resourceId, $glossaryTerm, $dossierId, $chapterId),
+        ];
+    };
+    $addRaw = static function (string $loc, string $changefreq, string $priority) use (&$pages, $baseUrl, $lastmod): void {
         $pages[] = [
             'loc' => $baseUrl . $loc,
             'lastmod' => $lastmod,
             'changefreq' => $changefreq,
             'priority' => $priority,
+            'alternates' => [],
         ];
     };
 
-    $add(canonicalPath('accueil', '', '', '', '', $language), 'weekly', '1.0');
-    $add(canonicalPath('filieres', '', '', '', '', $language), 'monthly', '0.9');
-    $add(canonicalPath('faq', '', '', '', '', $language), 'monthly', '0.8');
-    $add(canonicalPath('glossaire', '', '', '', '', $language), 'monthly', '0.8');
-    $add(canonicalPath('ressources', '', '', '', '', $language), 'weekly', '0.9');
-    $add(canonicalPath('dossiers', '', '', '', '', $language), 'monthly', '0.85');
+    $add('accueil', 'weekly', '1.0');
+    $add('filieres', 'monthly', '0.9');
+    $add('faq', 'monthly', '0.8');
+    $add('glossaire', 'monthly', '0.8');
+    $add('ressources', 'weekly', '0.9');
+    $add('dossiers', 'monthly', '0.85');
 
     if (isset($site['resources']) && is_array($site['resources'])) {
         foreach ($site['resources'] as $resource) {
             if (!isset($resource['id']) || !is_string($resource['id'])) {
                 continue;
             }
-            $add(canonicalPath('ressource', $resource['id'], '', '', '', $language), 'monthly', '0.7');
+            $add('ressource', 'monthly', '0.7', $resource['id']);
         }
     }
 
@@ -51,7 +82,7 @@ foreach (array_keys(portalLanguages()) as $language) {
                     continue;
                 }
 
-                $add(canonicalPath('dossier', '', '', $dossier['id'], $chapter['id'], $language), 'monthly', '0.75');
+                $add('dossier', 'monthly', '0.75', '', '', $dossier['id'], $chapter['id']);
             }
         }
     }
@@ -61,23 +92,23 @@ foreach (array_keys(portalLanguages()) as $language) {
             if (!isset($glossaryTerm['term']) || !is_string($glossaryTerm['term'])) {
                 continue;
             }
-            $add(canonicalPath('glossaire', '', glossaryEntrySlug($glossaryTerm), '', '', $language), 'monthly', '0.6');
+            $add('glossaire', 'monthly', '0.6', '', glossaryEntrySlug($glossaryTerm));
         }
     }
 
-    $add('/api.php?lang=' . rawurlencode($language), 'yearly', '0.3');
+    $addRaw('/api.php?lang=' . rawurlencode($language), 'yearly', '0.3');
     foreach (['site', 'sectors', 'faq', 'glossary', 'resources'] as $section) {
-        $add('/api.php?lang=' . rawurlencode($language) . '&section=' . rawurlencode($section), 'yearly', '0.25');
+        $addRaw('/api.php?lang=' . rawurlencode($language) . '&section=' . rawurlencode($section), 'yearly', '0.25');
     }
 }
 
-$pages[] = ['loc' => $baseUrl . '/llms.txt', 'lastmod' => date('Y-m-d'), 'changefreq' => 'yearly', 'priority' => '0.2'];
-$pages[] = ['loc' => $baseUrl . '/llms-full.txt', 'lastmod' => date('Y-m-d'), 'changefreq' => 'yearly', 'priority' => '0.2'];
+$pages[] = ['loc' => $baseUrl . '/llms.txt', 'lastmod' => date('Y-m-d'), 'changefreq' => 'yearly', 'priority' => '0.2', 'alternates' => []];
+$pages[] = ['loc' => $baseUrl . '/llms-full.txt', 'lastmod' => date('Y-m-d'), 'changefreq' => 'yearly', 'priority' => '0.2', 'alternates' => []];
 
 $xml = new DOMDocument('1.0', 'UTF-8');
 $xml->formatOutput = true;
-$urlset = $xml->createElement('urlset');
-$urlset->setAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
+$urlset = $xml->createElementNS('http://www.sitemaps.org/schemas/sitemap/0.9', 'urlset');
+$urlset->setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns:xhtml', 'http://www.w3.org/1999/xhtml');
 $xml->appendChild($urlset);
 
 foreach ($pages as $page) {
@@ -87,6 +118,14 @@ foreach ($pages as $page) {
     foreach (['loc', 'lastmod', 'changefreq', 'priority'] as $field) {
         $node = $xml->createElement($field);
         $node->appendChild($xml->createTextNode($page[$field]));
+        $url->appendChild($node);
+    }
+
+    foreach ($page['alternates'] as $alternate) {
+        $node = $xml->createElementNS('http://www.w3.org/1999/xhtml', 'xhtml:link');
+        $node->setAttribute('rel', 'alternate');
+        $node->setAttribute('hreflang', $alternate['hreflang']);
+        $node->setAttribute('href', $alternate['href']);
         $url->appendChild($node);
     }
 }
