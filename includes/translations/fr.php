@@ -314,641 +314,769 @@ return array (
     array (
       'term' => 'Agriculture biologique',
       'definition' => 'Système certifié qui encadre les pratiques de culture et d’élevage, réduit fortement le recours aux produits de synthèse et impose une traçabilité contrôlée.',
+      'slug' => 'agriculture-biologique',
     ),
     1 => 
     array (
       'term' => 'Agriculture de précision',
       'definition' => 'Manière de piloter une parcelle ou un troupeau avec des données de terrain afin d’ajuster les doses, les passages, les alertes ou les interventions.',
+      'slug' => 'agriculture-de-precision',
     ),
     2 => 
     array (
       'term' => 'Agriculture intégrée',
       'definition' => 'Conduite qui privilégie l’observation, la prévention et le choix du bon moment d’intervention avant de mobiliser des solutions plus lourdes.',
+      'slug' => 'agriculture-integree',
     ),
     3 => 
     array (
       'term' => 'Agriculture régénératrice',
       'definition' => 'Famille de pratiques cherchant à améliorer le fonctionnement du sol, la couverture végétale, la biodiversité utile et la résistance des fermes aux chocs.',
+      'slug' => 'agriculture-regeneratrice',
     ),
     4 => 
     array (
       'term' => 'Agriculture urbaine',
       'definition' => 'Activités alimentaires implantées dans la ville ou à sa lisière, avec des fonctions variables : production, animation, insertion, pédagogie ou végétalisation.',
+      'slug' => 'agriculture-urbaine',
     ),
     5 => 
     array (
       'term' => 'Agroécologie',
       'definition' => 'Façon de concevoir une ferme en combinant production, équilibres biologiques, autonomie, diversité des pratiques et adaptation au territoire.',
+      'slug' => 'agroecologie',
     ),
     6 => 
     array (
       'term' => 'Agroforesterie',
       'definition' => 'Association d’arbres et de cultures ou d’élevage sur une même parcelle pour renforcer les services écosystémiques.',
+      'slug' => 'agroforesterie',
     ),
     7 => 
     array (
       'term' => 'AOP/IGP',
       'definition' => 'Repères européens d’origine qui relient un produit à un territoire et à un cahier des charges, avec des exigences différentes selon le signe concerné.',
+      'slug' => 'aop-igp',
     ),
     8 => 
     array (
       'term' => 'Assolement',
       'definition' => 'Répartition des différentes cultures sur les parcelles d’une exploitation pour une campagne donnée.',
+      'slug' => 'assolement',
     ),
     9 => 
     array (
       'term' => 'Autonomie fourragère',
       'definition' => 'Capacité d’un élevage à produire la majorité de l’alimentation de ses animaux.',
+      'slug' => 'autonomie-fourragere',
     ),
     10 => 
     array (
       'term' => 'Autonomie protéique',
       'definition' => 'Capacité d’un élevage ou d’un territoire à produire une part importante des protéines nécessaires à l’alimentation animale ou humaine.',
+      'slug' => 'autonomie-proteique',
     ),
     11 => 
     array (
       'term' => 'Auxiliaires de culture',
       'definition' => 'Organismes utiles aux cultures, comme certains insectes, oiseaux ou micro-organismes, qui contribuent à la pollinisation ou à la régulation des ravageurs.',
+      'slug' => 'auxiliaires-de-culture',
     ),
     12 => 
     array (
       'term' => 'Bande enherbée',
       'definition' => 'Zone couverte d’herbe en bord de parcelle, de cours d’eau ou de chemin, utilisée pour limiter le ruissellement, l’érosion et les transferts de polluants.',
+      'slug' => 'bande-enherbee',
     ),
     13 => 
     array (
       'term' => 'Bilan carbone',
       'definition' => 'Évaluation des émissions de gaz à effet de serre générées par une activité ou une filière.',
+      'slug' => 'bilan-carbone',
     ),
     14 => 
     array (
       'term' => 'Biodiversité fonctionnelle',
       'definition' => 'Part de la biodiversité qui rend des services directs à l’agriculture, comme la pollinisation, la régulation biologique ou l’amélioration de la vie du sol.',
+      'slug' => 'biodiversite-fonctionnelle',
     ),
     15 => 
     array (
       'term' => 'Bocage',
       'definition' => 'Paysage agricole composé de parcelles entourées de haies, favorable à la biodiversité et à la protection des sols.',
+      'slug' => 'bocage',
     ),
     16 => 
     array (
       'term' => 'Cahier des charges',
       'definition' => 'Document qui fixe les règles à respecter pour une production, un label, une certification, une transformation ou une relation commerciale.',
+      'slug' => 'cahier-des-charges',
     ),
     17 => 
     array (
       'term' => 'Certification',
       'definition' => 'Procédure de contrôle attestant qu’un produit, une ferme ou une organisation respecte des exigences définies dans un référentiel.',
+      'slug' => 'certification',
     ),
     18 => 
     array (
       'term' => 'Chaîne du froid',
       'definition' => 'Ensemble des conditions de température à maintenir pour préserver la sécurité sanitaire et la qualité des produits sensibles.',
+      'slug' => 'chaine-du-froid',
     ),
     19 => 
     array (
       'term' => 'Circuit court',
       'definition' => 'Mode de vente qui réduit le nombre d’intermédiaires entre producteur et mangeur ; il ne garantit pas à lui seul la proximité, le prix juste ou l’impact environnemental.',
+      'slug' => 'circuit-court',
     ),
     20 => 
     array (
       'term' => 'Compost',
       'definition' => 'Matière organique stabilisée issue de la décomposition contrôlée de déchets végétaux ou alimentaires, utilisable pour améliorer le sol.',
+      'slug' => 'compost',
     ),
     21 => 
     array (
       'term' => 'Conditionnalité',
       'definition' => 'Ensemble d’exigences que les bénéficiaires de certaines aides agricoles doivent respecter, notamment en matière d’environnement, de traçabilité ou de bonnes pratiques.',
+      'slug' => 'conditionnalite',
     ),
     22 => 
     array (
       'term' => 'Coopérative agricole',
       'definition' => 'Organisation collective détenue par ses membres, souvent utilisée pour mutualiser transformation, stockage, achat, vente ou services techniques.',
+      'slug' => 'cooperative-agricole',
     ),
     23 => 
     array (
       'term' => 'Couvert végétal',
       'definition' => 'Culture implantée entre deux cultures principales pour protéger et enrichir le sol.',
+      'slug' => 'couvert-vegetal',
     ),
     24 => 
     array (
       'term' => 'Couverts permanents',
       'definition' => 'Présence continue de végétation sur le sol afin de réduire l’érosion et améliorer sa structure.',
+      'slug' => 'couverts-permanents',
     ),
     25 => 
     array (
       'term' => 'Cultures associées',
       'definition' => 'Conduite simultanée de plusieurs espèces sur une même parcelle pour mieux utiliser les ressources.',
+      'slug' => 'cultures-associees',
     ),
     26 => 
     array (
       'term' => 'Cultures intermédiaires',
       'definition' => 'Cultures implantées entre deux cultures principales pour couvrir le sol, recycler les éléments nutritifs ou produire de la biomasse.',
+      'slug' => 'cultures-intermediaires',
     ),
     27 => 
     array (
       'term' => 'Densité de chargement',
       'definition' => 'Nombre d’animaux rapporté à une surface donnée, indicateur de pression sur les prairies et ressources.',
+      'slug' => 'densite-de-chargement',
     ),
     28 => 
     array (
       'term' => 'Digestat',
       'definition' => 'Résidu issu de la méthanisation, pouvant être valorisé comme fertilisant organique lorsque sa composition et ses conditions d’épandage sont maîtrisées.',
+      'slug' => 'digestat',
     ),
     29 => 
     array (
       'term' => 'Diversification',
       'definition' => 'Ajout de nouvelles productions, activités ou circuits de vente pour sécuriser les revenus de la ferme.',
+      'slug' => 'diversification',
     ),
     30 => 
     array (
       'term' => 'Économie circulaire',
       'definition' => 'Organisation qui cherche à limiter les déchets et achats inutiles en réutilisant mieux les matières, les coproduits, l’énergie ou les emballages.',
+      'slug' => 'economie-circulaire',
     ),
     31 => 
     array (
       'term' => 'Éco-régime',
       'definition' => 'Paiement annuel de la PAC lié à des pratiques ou critères environnementaux définis pour une campagne donnée et soumis à conditions.',
+      'slug' => 'eco-regime',
     ),
     32 => 
     array (
       'term' => 'Effluents d’élevage',
       'definition' => 'Déjections animales et mélanges associés, comme lisier, fumier ou purin, pouvant être valorisés comme fertilisants sous conditions.',
+      'slug' => 'effluents-d-elevage',
     ),
     33 => 
     array (
       'term' => 'Élevage extensif',
       'definition' => 'Système d’élevage basé sur une faible densité animale et une forte valorisation des surfaces herbagères.',
+      'slug' => 'elevage-extensif',
     ),
     34 => 
     array (
       'term' => 'Empreinte eau',
       'definition' => 'Indicateur estimant les volumes d’eau mobilisés directement ou indirectement pour produire un bien ou un service.',
+      'slug' => 'empreinte-eau',
     ),
     35 => 
     array (
       'term' => 'Érosion des sols',
       'definition' => 'Perte de particules de sol sous l’action de l’eau ou du vent, pouvant réduire la fertilité des parcelles.',
+      'slug' => 'erosion-des-sols',
     ),
     36 => 
     array (
       'term' => 'Ferme pédagogique',
       'definition' => 'Ferme qui accueille des publics pour expliquer les productions, les métiers, les saisons, l’alimentation et les liens avec le vivant.',
+      'slug' => 'ferme-pedagogique',
     ),
     37 => 
     array (
       'term' => 'Fertilité du sol',
       'definition' => 'Capacité d’un sol à fournir eau, nutriments et conditions favorables à la croissance des cultures.',
+      'slug' => 'fertilite-du-sol',
     ),
     38 => 
     array (
       'term' => 'Filière',
       'definition' => 'Chaîne d’acteurs allant de la production à la transformation puis à la distribution d’un produit agricole.',
+      'slug' => 'filiere',
     ),
     39 => 
     array (
       'term' => 'Gestion de l’eau à la parcelle',
       'definition' => 'Ensemble des pratiques qui favorisent l’infiltration, limitent le ruissellement et sécurisent l’eau disponible pour les cultures.',
+      'slug' => 'gestion-de-l-eau-a-la-parcelle',
     ),
     40 => 
     array (
       'term' => 'Gestion intégrée des ravageurs',
       'definition' => 'Approche combinant prévention, observation et interventions ciblées pour limiter les dégâts sanitaires.',
+      'slug' => 'gestion-integree-des-ravageurs',
     ),
     41 => 
     array (
       'term' => 'Haie vive',
       'definition' => 'Alignement d’arbustes et d’arbres jouant un rôle pour la biodiversité, le vent, l’eau et les paysages.',
+      'slug' => 'haie-vive',
     ),
     42 => 
     array (
       'term' => 'Humus',
       'definition' => 'Fraction organique stable du sol contribuant à sa structure, sa fertilité et sa capacité de rétention d’eau.',
+      'slug' => 'humus',
     ),
     43 => 
     array (
       'term' => 'Intrants',
       'definition' => 'Ensemble des produits utilisés pour produire : semences, engrais, produits de protection, énergie, aliments du bétail, etc.',
+      'slug' => 'intrants',
     ),
     44 => 
     array (
       'term' => 'Irrigation raisonnée',
       'definition' => 'Apport d’eau ajusté aux besoins réels des cultures pour optimiser la ressource et éviter les excès.',
+      'slug' => 'irrigation-raisonnee',
     ),
     45 => 
     array (
       'term' => 'Lutte biologique',
       'definition' => 'Utilisation d’organismes vivants ou de mécanismes naturels pour limiter les ravageurs, les maladies ou certains déséquilibres.',
+      'slug' => 'lutte-biologique',
     ),
     46 => 
     array (
       'term' => 'MAEC',
       'definition' => 'Engagements agro-environnementaux généralement pluriannuels qui compensent des pratiques ciblées, par exemple sur prairies, haies, sols, eau ou biodiversité.',
+      'slug' => 'maec',
     ),
     47 => 
     array (
       'term' => 'Matière organique',
       'definition' => 'Ensemble des résidus végétaux et animaux en décomposition qui nourrissent la vie du sol.',
+      'slug' => 'matiere-organique',
     ),
     48 => 
     array (
       'term' => 'Méthanisation',
       'definition' => 'Processus biologique transformant des matières organiques en biogaz et digestat valorisable en agriculture.',
+      'slug' => 'methanisation',
     ),
     49 => 
     array (
       'term' => 'Natura 2000',
       'definition' => 'Réseau européen de zones où certains habitats et espèces doivent être préservés, ce qui peut encadrer des usages agricoles sans exclure toute activité.',
+      'slug' => 'natura-2000',
     ),
     50 => 
     array (
       'term' => 'Nitrates',
       'definition' => 'Formes minérales de l’azote utiles aux plantes mais susceptibles de contaminer l’eau lorsqu’elles sont présentes en excès ou mal maîtrisées.',
+      'slug' => 'nitrates',
     ),
     51 => 
     array (
       'term' => 'PAC',
       'definition' => 'Cadre européen qui organise une partie des aides, obligations et orientations agricoles, avec une mise en œuvre adaptée par les autorités compétentes.',
+      'slug' => 'pac',
     ),
     52 => 
     array (
       'term' => 'Paiement pour services environnementaux',
       'definition' => 'Mécanisme qui rémunère des pratiques produisant des bénéfices environnementaux mesurables, comme la protection de l’eau ou de la biodiversité.',
+      'slug' => 'paiement-pour-services-environnementaux',
     ),
     53 => 
     array (
       'term' => 'Pâturage tournant',
       'definition' => 'Méthode de gestion des prairies qui alterne les parcelles pâturées afin d’améliorer la repousse de l’herbe.',
+      'slug' => 'paturage-tournant',
     ),
     54 => 
     array (
       'term' => 'Pertes post-récolte',
       'definition' => 'Quantités perdues entre la récolte et la consommation à cause du stockage, du transport ou de la transformation.',
+      'slug' => 'pertes-post-recolte',
     ),
     55 => 
     array (
       'term' => 'Plan de fumure',
       'definition' => 'Programmation des apports fertilisants selon les besoins des cultures et les caractéristiques des sols.',
+      'slug' => 'plan-de-fumure',
     ),
     56 => 
     array (
       'term' => 'Pollinisation',
       'definition' => 'Transport du pollen permettant la reproduction de nombreuses plantes, essentiel pour certaines cultures fruitières, légumières et semencières.',
+      'slug' => 'pollinisation',
     ),
     57 => 
     array (
       'term' => 'Polyculture-élevage',
       'definition' => 'Système qui combine cultures et élevage sur la même ferme pour mieux valoriser les ressources.',
+      'slug' => 'polyculture-elevage',
     ),
     58 => 
     array (
       'term' => 'Prairie permanente',
       'definition' => 'Prairie installée durablement, utile à l’élevage et aux écosystèmes.',
+      'slug' => 'prairie-permanente',
     ),
     59 => 
     array (
       'term' => 'Prairie temporaire',
       'definition' => 'Prairie implantée pour une durée limitée dans une rotation, utilisée pour produire du fourrage, structurer le sol ou diversifier l’assolement.',
+      'slug' => 'prairie-temporaire',
     ),
     60 => 
     array (
       'term' => 'Prix au kilo',
       'definition' => 'Indicateur de comparaison ramenant le coût d’un produit à un kilogramme afin de mieux évaluer les différences de prix entre formats et points de vente.',
+      'slug' => 'prix-au-kilo',
     ),
     61 => 
     array (
       'term' => 'Prix rémunérateur',
       'definition' => 'Prix permettant de couvrir les coûts de production et d’assurer un revenu viable à l’exploitant.',
+      'slug' => 'prix-remunerateur',
     ),
     62 => 
     array (
       'term' => 'Protéagineux',
       'definition' => 'Cultures riches en protéines (pois, féverole, lupin, etc.) utilisées en alimentation humaine ou animale.',
+      'slug' => 'proteagineux',
     ),
     63 => 
     array (
       'term' => 'Qualité différenciée',
       'definition' => 'Démarche de valorisation qui distingue un produit par des caractéristiques vérifiables liées à la qualité, au mode de production ou à l’origine.',
+      'slug' => 'qualite-differenciee',
     ),
     64 => 
     array (
       'term' => 'Relocalisation alimentaire',
       'definition' => 'Démarche visant à renforcer la production, la transformation, la distribution et la consommation alimentaires à une échelle territoriale plus proche.',
+      'slug' => 'relocalisation-alimentaire',
     ),
     65 => 
     array (
       'term' => 'Réserve utile du sol',
       'definition' => 'Quantité d’eau qu’un sol peut stocker et restituer aux plantes, selon sa profondeur, sa texture, sa structure et sa matière organique.',
+      'slug' => 'reserve-utile-du-sol',
     ),
     66 => 
     array (
       'term' => 'Résilience',
       'definition' => 'Capacité d’une exploitation à absorber un choc (climat, prix, crise sanitaire) et à continuer de fonctionner.',
+      'slug' => 'resilience',
     ),
     67 => 
     array (
       'term' => 'Restauration collective',
       'definition' => 'Organisation des repas servis dans les écoles, hôpitaux, maisons de repos, entreprises ou administrations, avec un rôle potentiel dans les débouchés locaux.',
+      'slug' => 'restauration-collective',
     ),
     68 => 
     array (
       'term' => 'Rotation',
       'definition' => 'Alternance planifiée des cultures sur une même parcelle.',
+      'slug' => 'rotation',
     ),
     69 => 
     array (
       'term' => 'Saisonnalité',
       'definition' => 'Période naturelle de production d’un aliment, influençant disponibilité, goût, coût et impact environnemental.',
+      'slug' => 'saisonnalite',
     ),
     70 => 
     array (
       'term' => 'Semis direct',
       'definition' => 'Technique d’implantation d’une culture sans labour préalable, qui vise à réduire le travail du sol et à préserver sa structure.',
+      'slug' => 'semis-direct',
     ),
     71 => 
     array (
       'term' => 'Séquestration carbone',
       'definition' => 'Stockage du carbone dans les sols et la biomasse, contribuant à atténuer le changement climatique.',
+      'slug' => 'sequestration-carbone',
     ),
     72 => 
     array (
       'term' => 'Services écosystémiques',
       'definition' => 'Bénéfices fournis par les écosystèmes aux sociétés humaines, comme la pollinisation, la filtration de l’eau, le stockage de carbone ou la fertilité des sols.',
+      'slug' => 'services-ecosystemiques',
     ),
     73 => 
     array (
       'term' => 'Souveraineté alimentaire',
       'definition' => 'Capacité politique et économique à choisir comment produire, transformer, distribuer et sécuriser l’alimentation d’un territoire.',
+      'slug' => 'souverainete-alimentaire',
     ),
     74 => 
     array (
       'term' => 'Stress hydrique',
       'definition' => 'Situation où les besoins en eau des cultures dépassent les disponibilités, affectant rendement et qualité.',
+      'slug' => 'stress-hydrique',
     ),
     75 => 
     array (
       'term' => 'Système alimentaire territorial',
       'definition' => 'Organisation locale reliant production, transformation, distribution, consommation, déchets, acteurs publics et citoyens autour de l’alimentation.',
+      'slug' => 'systeme-alimentaire-territorial',
     ),
     76 => 
     array (
       'term' => 'Techniques culturales simplifiées',
       'definition' => 'Pratiques réduisant l’intensité du travail du sol par rapport au labour, afin de limiter l’érosion, préserver la structure et réduire certains coûts.',
+      'slug' => 'techniques-culturales-simplifiees',
     ),
     77 => 
     array (
       'term' => 'Traçabilité',
       'definition' => 'Possibilité de suivre un produit de son origine à sa vente grâce à des informations vérifiables.',
+      'slug' => 'tracabilite',
     ),
     78 => 
     array (
       'term' => 'Transformation à la ferme',
       'definition' => 'Valorisation des productions directement sur l\'exploitation (fromage, jus, yaourt, etc.).',
+      'slug' => 'transformation-a-la-ferme',
     ),
     79 => 
     array (
       'term' => 'Transition agroécologique',
       'definition' => 'Chemin de changement qui combine essais techniques, viabilité économique, conditions de travail, réduction des dépendances et effets mesurables sur le vivant.',
+      'slug' => 'transition-agroecologique',
     ),
     80 => 
     array (
       'term' => 'Valeur ajoutée',
       'definition' => 'Richesse créée par la transformation, la qualité, l’origine ou le mode de commercialisation d’un produit.',
+      'slug' => 'valeur-ajoutee',
     ),
     81 => 
     array (
       'term' => 'Vente directe',
       'definition' => 'Commercialisation d’un produit du producteur au consommateur sans intermédiaire commercial, à la ferme, au marché, en point relais ou en ligne.',
+      'slug' => 'vente-directe',
     ),
     82 => 
     array (
       'term' => 'Amendement organique',
       'definition' => 'Apport de matière organique comme compost, fumier ou digestat pour améliorer la structure du sol, sa vie biologique et sa capacité à retenir l’eau.',
+      'slug' => 'amendement-organique',
     ),
     83 => 
     array (
       'term' => 'Analyse de sol',
       'definition' => 'Examen d’un échantillon de terre permettant d’évaluer pH, matière organique, éléments nutritifs et besoins d’ajustement avant de fertiliser ou modifier une pratique.',
+      'slug' => 'analyse-de-sol',
     ),
     84 => 
     array (
       'term' => 'Apiculture',
       'definition' => 'Élevage d’abeilles pour produire miel ou autres produits de la ruche, avec un rôle important dans la pollinisation et la lecture de l’état des paysages.',
+      'slug' => 'apiculture',
     ),
     85 => 
     array (
       'term' => 'Battance',
       'definition' => 'Formation d’une croûte en surface après pluie, qui peut limiter l’infiltration, gêner la levée des semis et augmenter le ruissellement.',
+      'slug' => 'battance',
     ),
     86 => 
     array (
       'term' => 'Bassin versant',
       'definition' => 'Territoire où les eaux de pluie convergent vers un même cours d’eau ou exutoire, utile pour comprendre ruissellement, inondations et qualité de l’eau.',
+      'slug' => 'bassin-versant',
     ),
     87 => 
     array (
       'term' => 'Bien-être animal',
       'definition' => 'État lié aux conditions de vie d’un animal : santé, alimentation, logement, comportement, absence de souffrance évitable et qualité des soins.',
+      'slug' => 'bien-etre-animal',
     ),
     88 => 
     array (
       'term' => 'Biomasse',
       'definition' => 'Matière issue du vivant, comme résidus de culture, bois, effluents ou coproduits, pouvant être valorisée en énergie, fertilisant ou matière première.',
+      'slug' => 'biomasse',
     ),
     89 => 
     array (
       'term' => 'Capteur agricole',
       'definition' => 'Dispositif qui mesure une information de terrain, par exemple humidité, température, mouvement, production laitière ou état d’un équipement.',
+      'slug' => 'capteur-agricole',
     ),
     90 => 
     array (
       'term' => 'Charge de travail',
       'definition' => 'Volume et intensité du travail à fournir sur une ferme, influencés par la saison, les productions, la main-d’œuvre, les astreintes et l’organisation.',
+      'slug' => 'charge-de-travail',
     ),
     91 => 
     array (
       'term' => 'Conservation des aliments',
       'definition' => 'Ensemble des méthodes qui maintiennent la qualité et la sécurité des aliments : froid, séchage, fermentation, transformation, emballage ou gestion des dates.',
+      'slug' => 'conservation-des-aliments',
     ),
     92 => 
     array (
       'term' => 'Consentement des données',
       'definition' => 'Accord donné pour partager ou utiliser certaines données agricoles, avec un usage, un destinataire et des conditions qui doivent être compréhensibles.',
+      'slug' => 'consentement-des-donnees',
     ),
     93 => 
     array (
       'term' => 'Culture dérobée',
       'definition' => 'Culture implantée entre deux cultures principales, souvent pour produire du fourrage, couvrir le sol ou valoriser une courte fenêtre de croissance.',
+      'slug' => 'culture-derobee',
     ),
     94 => 
     array (
       'term' => 'Culture fourragère',
       'definition' => 'Culture destinée à nourrir les animaux, comme herbe, luzerne, maïs ensilage, méteil ou autres mélanges récoltés ou pâturés.',
+      'slug' => 'culture-fourragere',
     ),
     95 => 
     array (
       'term' => 'Décarbonation agricole',
       'definition' => 'Réduction progressive des émissions nettes liées à la ferme, par économies d’énergie, moindre dépendance fossile, stockage de carbone ou changements de pratiques.',
+      'slug' => 'decarbonation-agricole',
     ),
     96 => 
     array (
       'term' => 'Drainage agricole',
       'definition' => 'Aménagement qui évacue l’excès d’eau d’un sol humide, avec des effets à évaluer sur portance, rendement, biodiversité et fonctionnement hydrologique local.',
+      'slug' => 'drainage-agricole',
     ),
     97 => 
     array (
       'term' => 'Énergie renouvelable agricole',
       'definition' => 'Production d’énergie sur ou avec la ferme, par exemple solaire, biométhane, bois-énergie ou valorisation de chaleur, à raisonner avec les besoins agricoles.',
+      'slug' => 'energie-renouvelable-agricole',
     ),
     98 => 
     array (
       'term' => 'Ensilage',
       'definition' => 'Méthode de conservation de fourrage humide en milieu privé d’air, souvent utilisée pour nourrir les troupeaux hors période de pâturage.',
+      'slug' => 'ensilage',
     ),
     99 => 
     array (
       'term' => 'Exploitation familiale',
       'definition' => 'Ferme où la famille joue un rôle central dans le travail, les décisions et la transmission, même si elle peut aussi employer ou collaborer avec d’autres personnes.',
+      'slug' => 'exploitation-familiale',
     ),
     100 => 
     array (
       'term' => 'Fauche',
       'definition' => 'Coupe d’une prairie ou d’une culture fourragère pour produire du foin, de l’ensilage ou de l’enrubannage, selon météo, stade de plante et besoins du troupeau.',
+      'slug' => 'fauche',
     ),
     101 => 
     array (
       'term' => 'Foncier agricole',
       'definition' => 'Terres disponibles pour produire, installer ou transmettre une activité agricole, avec des enjeux de prix, bail, accès, urbanisation et concurrence d’usages.',
+      'slug' => 'foncier-agricole',
     ),
     102 => 
     array (
       'term' => 'Fourrage',
       'definition' => 'Aliment végétal destiné aux animaux d’élevage, consommé frais, pâturé, séché, ensilé ou enrubanné.',
+      'slug' => 'fourrage',
     ),
     103 => 
     array (
       'term' => 'Groupe d’achat',
       'definition' => 'Organisation de consommateurs qui mutualisent des commandes auprès de producteurs ou fournisseurs, avec des règles propres de choix, livraison et paiement.',
+      'slug' => 'groupe-d-achat',
     ),
     104 => 
     array (
       'term' => 'Interculture',
       'definition' => 'Période située entre deux cultures principales, pendant laquelle le sol peut rester nu, être couvert ou accueillir une culture intermédiaire.',
+      'slug' => 'interculture',
     ),
     105 => 
     array (
       'term' => 'Interopérabilité',
       'definition' => 'Capacité de plusieurs outils numériques à échanger des données compréhensibles entre eux sans ressaisie inutile ni format fermé.',
+      'slug' => 'interoperabilite',
     ),
     106 => 
     array (
       'term' => 'Labour',
       'definition' => 'Travail du sol qui retourne la terre avant une culture, utile dans certains contextes mais à raisonner avec érosion, structure, énergie et vie du sol.',
+      'slug' => 'labour',
     ),
     107 => 
     array (
       'term' => 'Logistique alimentaire',
       'definition' => 'Organisation du transport, du stockage, du conditionnement et des livraisons qui permet à un produit d’arriver au bon endroit, au bon moment et en bon état.',
+      'slug' => 'logistique-alimentaire',
     ),
     108 => 
     array (
       'term' => 'Marché public alimentaire',
       'definition' => 'Procédure d’achat utilisée par une collectivité pour se fournir en repas ou denrées, avec des critères pouvant porter sur qualité, origine, saison ou logistique.',
+      'slug' => 'marche-public-alimentaire',
     ),
     109 => 
     array (
       'term' => 'Mycorhizes',
       'definition' => 'Associations entre champignons du sol et racines de plantes, qui peuvent améliorer l’accès à certains nutriments et participer à la vie biologique du sol.',
+      'slug' => 'mycorhizes',
     ),
     110 => 
     array (
       'term' => 'Outil d’aide à la décision',
       'definition' => 'Support numérique, technique ou méthodologique qui aide à choisir une intervention en croisant données, règles, observations et objectifs de production.',
+      'slug' => 'outil-d-aide-a-la-decision',
     ),
     111 => 
     array (
       'term' => 'pH du sol',
       'definition' => 'Indicateur d’acidité ou d’alcalinité du sol, important pour la disponibilité des nutriments, l’activité biologique et le choix de certaines pratiques.',
+      'slug' => 'ph-du-sol',
     ),
     112 => 
     array (
       'term' => 'Point relais',
       'definition' => 'Lieu où des produits commandés ou regroupés sont remis aux consommateurs, utile pour organiser des ventes locales sans magasin permanent.',
+      'slug' => 'point-relais',
     ),
     113 => 
     array (
       'term' => 'Prix de revient',
       'definition' => 'Coût complet nécessaire pour produire un bien ou un service, incluant charges, main-d’œuvre, amortissements et pertes éventuelles.',
+      'slug' => 'prix-de-revient',
     ),
     114 => 
     array (
       'term' => 'Projet alimentaire territorial',
       'definition' => 'Démarche collective qui organise l’alimentation d’un territoire en reliant production, transformation, distribution, restauration, santé et politiques locales.',
+      'slug' => 'projet-alimentaire-territorial',
     ),
     115 => 
     array (
       'term' => 'Ruissellement',
       'definition' => 'Écoulement de l’eau en surface lorsque la pluie ne s’infiltre pas assez vite, pouvant entraîner terre, nutriments ou polluants vers l’aval.',
+      'slug' => 'ruissellement',
     ),
     116 => 
     array (
       'term' => 'Santé animale',
       'definition' => 'Suivi de l’état sanitaire d’un troupeau ou d’un animal, combinant prévention, observation, soins, biosécurité et gestion des risques collectifs.',
+      'slug' => 'sante-animale',
     ),
     117 => 
     array (
       'term' => 'Stockage à la ferme',
       'definition' => 'Capacité à conserver récoltes, fourrages, intrants ou produits transformés sur l’exploitation, avec des enjeux de qualité, sécurité, coût et calendrier de vente.',
+      'slug' => 'stockage-a-la-ferme',
     ),
     118 => 
     array (
       'term' => 'Tableau de bord agricole',
       'definition' => 'Vue synthétique d’indicateurs de ferme ou de filière, utile si les données sont fiables, à jour et reliées à des décisions concrètes.',
+      'slug' => 'tableau-de-bord-agricole',
     ),
     119 => 
     array (
       'term' => 'Tassement du sol',
       'definition' => 'Compression du sol par passages, poids ou conditions humides, réduisant porosité, enracinement, infiltration et facilité de travail.',
+      'slug' => 'tassement-du-sol',
     ),
     120 => 
     array (
       'term' => 'Travail du sol',
       'definition' => 'Ensemble des interventions mécaniques sur la terre, du labour au semis direct, choisies selon objectif, sol, météo, culture et risque d’érosion.',
+      'slug' => 'travail-du-sol',
     ),
     121 => 
     array (
       'term' => 'Unité gros bétail (UGB)',
       'definition' => 'Repère de comparaison qui exprime différents animaux d’élevage dans une unité commune afin d’évaluer chargement, surfaces ou besoins fourragers.',
+      'slug' => 'unite-gros-betail-ugb',
     ),
     122 => 
     array (
       'term' => 'Variété résistante',
       'definition' => 'Variété sélectionnée pour mieux supporter une maladie, un stress ou une condition donnée, sans supprimer totalement le besoin d’observation.',
+      'slug' => 'variete-resistante',
     ),
     123 => 
     array (
       'term' => 'Verger haute tige',
       'definition' => 'Verger composé d’arbres fruitiers de grande hauteur, souvent associé à des prairies, paysages traditionnels, biodiversité et productions extensives.',
+      'slug' => 'verger-haute-tige',
     ),
     124 => 
     array (
       'term' => 'Zone humide',
       'definition' => 'Espace où l’eau influence durablement le sol, la végétation et les usages, avec des fonctions pour biodiversité, stockage d’eau et qualité des milieux.',
+      'slug' => 'zone-humide',
     ),
     125 => 
     array (
       'term' => 'WALLeSmart',
       'definition' => 'Plateforme numérique wallonne qui facilite l’échange sécurisé de données agricoles entre outils, agriculteurs et partenaires autorisés.',
+      'slug' => 'wallesmart',
     ),
     126 => 
     array (
       'term' => 'Zéro artificialisation nette (ZAN)',
       'definition' => 'Objectif de sobriété foncière : réduire l’extension des surfaces bâties ou imperméabilisées et compenser les pertes quand les règles le prévoient.',
+      'slug' => 'zero-artificialisation-nette-zan',
     ),
     127 => 
     array (
       'term' => 'Zone tampon',
       'definition' => 'Espace aménagé entre une activité agricole et un milieu sensible pour réduire les transferts de polluants, protéger l’eau ou préserver la biodiversité.',
+      'slug' => 'zone-tampon',
     ),
   ),
   'dossiers' => 

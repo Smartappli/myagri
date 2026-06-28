@@ -314,641 +314,769 @@ return array (
     array (
       'term' => 'Biologische landbouw',
       'definition' => 'Gecertificeerd systeem dat de teelt- en veredelingspraktijken reguleert, het gebruik van synthetische producten sterk terugdringt en gecontroleerde traceerbaarheid oplegt.',
+      'slug' => 'agriculture-biologique',
     ),
     1 => 
     array (
       'term' => 'Precisielandbouw',
       'definition' => 'Manier om een perceel of kudde te beheren met veldgegevens om doseringen, passages, waarschuwingen of interventies aan te passen.',
+      'slug' => 'agriculture-de-precision',
     ),
     2 => 
     array (
       'term' => 'Geïntegreerde landbouw',
       'definition' => 'Gedrag dat de voorkeur geeft aan observatie, preventie en het kiezen van het juiste moment voor interventie voordat serieuzere oplossingen worden gemobiliseerd.',
+      'slug' => 'agriculture-integree',
     ),
     3 => 
     array (
       'term' => 'Regeneratieve landbouw',
       'definition' => 'Familie van praktijken die het functioneren van de bodem, de beplanting, de nuttige biodiversiteit en de weerstand van boerderijen tegen schokken willen verbeteren.',
+      'slug' => 'agriculture-regeneratrice',
     ),
     4 => 
     array (
       'term' => 'Stedelijke landbouw',
       'definition' => 'Voedselactiviteiten gelegen in de stad of aan de rand ervan, met variabele functies: productie, entertainment, integratie, onderwijs of herbegroeiing.',
+      'slug' => 'agriculture-urbaine',
     ),
     5 => 
     array (
       'term' => 'Agro-ecologie',
       'definition' => 'Manier om een boerderij te ontwerpen door productie, biologisch evenwicht, autonomie, diversiteit van praktijken en aanpassing aan het grondgebied te combineren.',
+      'slug' => 'agroecologie',
     ),
     6 => 
     array (
       'term' => 'Agrobosbouw',
       'definition' => 'Vereniging van bomen en gewassen of vee op hetzelfde perceel om ecosysteemdiensten te versterken.',
+      'slug' => 'agroforesterie',
     ),
     7 => 
     array (
       'term' => 'AOP/IGP',
       'definition' => 'Europese oorsprongsbenchmarks die een product koppelen aan een gebied en aan specificaties, met verschillende eisen afhankelijk van het betreffende teken.',
+      'slug' => 'aop-igp',
     ),
     8 => 
     array (
       'term' => 'Gewasrotatie',
       'definition' => 'Verdeling van verschillende gewassen op de percelen van een boerderij voor een bepaalde campagne.',
+      'slug' => 'assolement',
     ),
     9 => 
     array (
       'term' => 'Autonomie van het voer',
       'definition' => 'Capaciteit van een veehouderijbedrijf om het grootste deel van het voedsel van zijn dieren te produceren.',
+      'slug' => 'autonomie-fourragere',
     ),
     10 => 
     array (
       'term' => 'Eiwitautonomie',
       'definition' => 'Capaciteit van een veehouderijbedrijf of gebied om een aanzienlijk deel van de eiwitten te produceren die nodig zijn voor dierlijke of menselijke voeding.',
+      'slug' => 'autonomie-proteique',
     ),
     11 => 
     array (
       'term' => 'Teelthulpmiddelen',
       'definition' => 'Organismen die nuttig zijn voor gewassen, zoals bepaalde insecten, vogels of micro-organismen, die bijdragen aan de bestuiving of de regulering van ongedierte.',
+      'slug' => 'auxiliaires-de-culture',
     ),
     12 => 
     array (
       'term' => 'Grasstrook',
       'definition' => 'Gebied bedekt met gras aan de rand van een perceel, waterloop of pad, dat wordt gebruikt om afvloeiing, erosie en overdracht van verontreinigende stoffen te beperken.',
+      'slug' => 'bande-enherbee',
     ),
     13 => 
     array (
       'term' => 'Koolstofvoetafdruk',
       'definition' => 'Beoordeling van de broeikasgasemissies gegenereerd door een activiteit of sector.',
+      'slug' => 'bilan-carbone',
     ),
     14 => 
     array (
       'term' => 'Functionele biodiversiteit',
       'definition' => 'Onderdeel van de biodiversiteit dat directe diensten levert aan de landbouw, zoals bestuiving, biologische regulering of verbetering van het bodemleven.',
+      'slug' => 'biodiversite-fonctionnelle',
     ),
     15 => 
     array (
       'term' => 'Bocage',
       'definition' => 'Agrarisch landschap bestaande uit percelen omringd door heggen, gunstig voor de biodiversiteit en bodembescherming.',
+      'slug' => 'bocage',
     ),
     16 => 
     array (
       'term' => 'Specificaties',
       'definition' => 'Document dat de regels vastlegt die moeten worden gerespecteerd voor een productie, een label, een certificering, een transformatie of een commerciële relatie.',
+      'slug' => 'cahier-des-charges',
     ),
     17 => 
     array (
       'term' => 'Certificering',
       'definition' => 'Controleprocedure die bevestigt dat een product, een boerderij of een organisatie voldoet aan de eisen die in een norm zijn vastgelegd.',
+      'slug' => 'certification',
     ),
     18 => 
     array (
       'term' => 'Koude keten',
       'definition' => 'Een reeks temperatuuromstandigheden die moeten worden gehandhaafd om de gezondheidsveiligheid en kwaliteit van gevoelige producten te behouden.',
+      'slug' => 'chaine-du-froid',
     ),
     19 => 
     array (
       'term' => 'Kortsluiting',
       'definition' => 'Verkoopmethode die het aantal tussenpersonen tussen producent en eter vermindert; het garandeert niet alleen nabijheid, eerlijke prijzen of gevolgen voor het milieu.',
+      'slug' => 'circuit-court',
     ),
     20 => 
     array (
       'term' => 'Composteren',
       'definition' => 'Gestabiliseerd organisch materiaal dat ontstaat door de gecontroleerde afbraak van plantaardig of voedselafval, bruikbaar om de bodem te verbeteren.',
+      'slug' => 'compost',
     ),
     21 => 
     array (
       'term' => 'Conditionaliteit',
       'definition' => 'Een geheel van eisen waaraan de begunstigden van bepaalde landbouwsteun moeten voldoen, met name op het gebied van milieu, traceerbaarheid of goede praktijken.',
+      'slug' => 'conditionnalite',
     ),
     22 => 
     array (
       'term' => 'Landbouwcoöperatie',
       'definition' => 'Collectieve organisatie die eigendom is van haar leden en vaak wordt gebruikt voor het bundelen van verwerkings-, opslag-, inkoop-, verkoop- of technische diensten.',
+      'slug' => 'cooperative-agricole',
     ),
     23 => 
     array (
       'term' => 'Plantenafdekking',
       'definition' => 'Gewas geplant tussen twee hoofdgewassen om de bodem te beschermen en te verrijken.',
+      'slug' => 'couvert-vegetal',
     ),
     24 => 
     array (
       'term' => 'Permanent bestek',
       'definition' => 'Continue aanwezigheid van vegetatie op de bodem om erosie te verminderen en de structuur ervan te verbeteren.',
+      'slug' => 'couverts-permanents',
     ),
     25 => 
     array (
       'term' => 'Bijbehorende gewassen',
       'definition' => 'Gelijktijdig beheer van verschillende soorten op hetzelfde perceel om de hulpbronnen beter te gebruiken.',
+      'slug' => 'cultures-associees',
     ),
     26 => 
     array (
       'term' => 'Tussengewassen',
       'definition' => 'Gewassen die tussen twee hoofdgewassen worden geplant om de bodem te bedekken, voedingsstoffen te recyclen of biomassa te produceren.',
+      'slug' => 'cultures-intermediaires',
     ),
     27 => 
     array (
       'term' => 'Laaddichtheid',
       'definition' => 'Aantal gerapporteerde dieren op een bepaald oppervlak, indicator van de druk op graslanden en hulpbronnen.',
+      'slug' => 'densite-de-chargement',
     ),
     28 => 
     array (
       'term' => 'Digestat',
       'definition' => 'Residu van de methanisering, dat kan worden gebruikt als organische meststof, mits de samenstelling en de verspreidingsomstandigheden onder controle zijn.',
+      'slug' => 'digestat',
     ),
     29 => 
     array (
       'term' => 'Diversificatie',
       'definition' => 'Toevoeging van nieuwe producties, activiteiten of verkoopkanalen om het landbouwinkomen veilig te stellen.',
+      'slug' => 'diversification',
     ),
     30 => 
     array (
       'term' => 'Circulaire economie',
       'definition' => 'Organisatie die verspilling en onnodige aankopen wil beperken door materialen, bijproducten, energie of verpakkingen beter te hergebruiken.',
+      'slug' => 'economie-circulaire',
     ),
     31 => 
     array (
       'term' => 'Eco-dieet',
       'definition' => 'Jaarlijkse GLB-betaling gekoppeld aan milieupraktijken of criteria die voor een bepaalde campagne zijn gedefinieerd en onderworpen zijn aan voorwaarden.',
+      'slug' => 'eco-regime',
     ),
     32 => 
     array (
       'term' => 'Afvalwater van vee',
       'definition' => 'Dierlijk afval en bijbehorende mengsels, zoals drijfmest, mest of mest, die onder bepaalde voorwaarden als meststof kunnen worden gebruikt.',
+      'slug' => 'effluents-d-elevage',
     ),
     33 => 
     array (
       'term' => 'Uitgebreide fokkerij',
       'definition' => 'Veehouderijsysteem gebaseerd op lage dierdichtheid en hoge valorisatie van graslandgebieden.',
+      'slug' => 'elevage-extensif',
     ),
     34 => 
     array (
       'term' => 'Watervoetafdruk',
       'definition' => 'Indicator die een schatting maakt van de watervolumes die direct of indirect worden gemobiliseerd om een goed of dienst te produceren.',
+      'slug' => 'empreinte-eau',
     ),
     35 => 
     array (
       'term' => 'Bodemerosie',
       'definition' => 'Verlies van bodemdeeltjes onder invloed van water of wind, wat de vruchtbaarheid van percelen kan verminderen.',
+      'slug' => 'erosion-des-sols',
     ),
     36 => 
     array (
       'term' => 'Educatieve boerderij',
       'definition' => 'Boerderij die het publiek verwelkomt om uitleg te geven over de productie, beroepen, seizoenen, voedsel en verbanden met levende wezens.',
+      'slug' => 'ferme-pedagogique',
     ),
     37 => 
     array (
       'term' => 'Bodemvruchtbaarheid',
       'definition' => 'Het vermogen van een bodem om water, voedingsstoffen en gunstige omstandigheden voor de groei van gewassen te leveren.',
+      'slug' => 'fertilite-du-sol',
     ),
     38 => 
     array (
       'term' => 'Sector',
       'definition' => 'Keten van actoren gaande van productie tot transformatie en vervolgens distributie van een landbouwproduct.',
+      'slug' => 'filiere',
     ),
     39 => 
     array (
       'term' => 'Waterbeheer op het perceel',
       'definition' => 'Een reeks praktijken die de infiltratie bevorderen, de afvoer beperken en het beschikbare water voor gewassen veiligstellen.',
+      'slug' => 'gestion-de-l-eau-a-la-parcelle',
     ),
     40 => 
     array (
       'term' => 'Geïntegreerde ongediertebestrijding',
       'definition' => 'Aanpak die preventie, observatie en gerichte interventies combineert om gezondheidsschade te beperken.',
+      'slug' => 'gestion-integree-des-ravageurs',
     ),
     41 => 
     array (
       'term' => 'Levende haag',
       'definition' => 'Uitlijning van struiken en bomen die een rol spelen in biodiversiteit, wind, water en landschappen.',
+      'slug' => 'haie-vive',
     ),
     42 => 
     array (
       'term' => 'Humus',
       'definition' => 'Stabiele organische fractie van de bodem die bijdraagt aan de structuur, vruchtbaarheid en waterretentiecapaciteit.',
+      'slug' => 'humus',
     ),
     43 => 
     array (
       'term' => 'Ingangen',
       'definition' => 'Alle producten die worden gebruikt voor de productie: zaden, meststoffen, beschermende producten, energie, veevoer, enz.',
+      'slug' => 'intrants',
     ),
     44 => 
     array (
       'term' => 'Redelijke irrigatie',
       'definition' => 'De watervoorziening is aangepast aan de werkelijke behoeften van de gewassen om de hulpbronnen te optimaliseren en excessen te voorkomen.',
+      'slug' => 'irrigation-raisonnee',
     ),
     45 => 
     array (
       'term' => 'Biologische controle',
       'definition' => 'Gebruik van levende organismen of natuurlijke mechanismen om plagen, ziekten of bepaalde onevenwichtigheden te beperken.',
+      'slug' => 'lutte-biologique',
     ),
     46 => 
     array (
       'term' => 'MAEC',
       'definition' => 'Agromilieuverbintenissen zijn doorgaans meerjarig en compenseren gerichte praktijken, bijvoorbeeld op het gebied van weilanden, heggen, bodems, water of biodiversiteit.',
+      'slug' => 'maec',
     ),
     47 => 
     array (
       'term' => 'Organische stof',
       'definition' => 'Allemaal afbrekende planten- en dierenresten die het bodemleven voeden.',
+      'slug' => 'matiere-organique',
     ),
     48 => 
     array (
       'term' => 'Methanisering',
       'definition' => 'Biologisch proces waarbij organisch materiaal wordt omgezet in biogas en digestaat dat in de landbouw kan worden gebruikt.',
+      'slug' => 'methanisation',
     ),
     49 => 
     array (
       'term' => 'Natura 2000',
       'definition' => 'Europees netwerk van gebieden waar bepaalde habitats en soorten behouden moeten blijven, dat het landbouwgebruik kan reguleren zonder enige activiteit uit te sluiten.',
+      'slug' => 'natura-2000',
     ),
     50 => 
     array (
       'term' => 'Nitraten',
       'definition' => 'Minerale vormen van stikstof die nuttig zijn voor planten, maar die waarschijnlijk water vervuilen als ze in overmaat aanwezig zijn of slecht onder controle worden gehouden.',
+      'slug' => 'nitrates',
     ),
     51 => 
     array (
       'term' => 'GLB',
       'definition' => 'Europees raamwerk dat een deel van de landbouwhulp, verplichtingen en richtlijnen regelt, met aangepaste uitvoering door de bevoegde autoriteiten.',
+      'slug' => 'pac',
     ),
     52 => 
     array (
       'term' => 'Betaling voor milieudiensten',
       'definition' => 'Mechanisme dat betaalt voor praktijken die meetbare milieuvoordelen opleveren, zoals de bescherming van water of biodiversiteit.',
+      'slug' => 'paiement-pour-services-environnementaux',
     ),
     53 => 
     array (
       'term' => 'Roterende begrazing',
       'definition' => 'Wijze van weidebeheer waarbij begraasde percelen worden afgewisseld om de hergroei van gras te bevorderen.',
+      'slug' => 'paturage-tournant',
     ),
     54 => 
     array (
       'term' => 'Verliezen na de oogst',
       'definition' => 'Hoeveelheden die verloren gaan tussen oogst en consumptie als gevolg van opslag, transport of verwerking.',
+      'slug' => 'pertes-post-recolte',
     ),
     55 => 
     array (
       'term' => 'Mestplan',
       'definition' => 'Programmering van de bemesting volgens de gewasbehoeften en bodemkenmerken.',
+      'slug' => 'plan-de-fumure',
     ),
     56 => 
     array (
       'term' => 'Bestuiving',
       'definition' => 'Transport van stuifmeel dat de voortplanting van vele planten mogelijk maakt, essentieel voor bepaalde fruit-, groente- en zaadgewassen.',
+      'slug' => 'pollinisation',
     ),
     57 => 
     array (
       'term' => 'Polycultuur-veredeling',
       'definition' => 'Systeem dat gewassen en vee op dezelfde boerderij combineert om hulpbronnen beter te exploiteren.',
+      'slug' => 'polyculture-elevage',
     ),
     58 => 
     array (
       'term' => 'Permanente weide',
       'definition' => 'Duurzame weide, nuttig voor vee en ecosystemen.',
+      'slug' => 'prairie-permanente',
     ),
     59 => 
     array (
       'term' => 'Tijdelijke weide',
       'definition' => 'Weide dat voor een beperkte periode in een rotatie wordt aangeplant, wordt gebruikt om voer te produceren, de bodem te structureren of de vruchtwisseling te diversifiëren.',
+      'slug' => 'prairie-temporaire',
     ),
     60 => 
     array (
       'term' => 'Prijs per kilo',
       'definition' => 'Vergelijkingsindicator die de kosten van een product terugbrengt tot één kilogram om de prijsverschillen tussen formaten en verkooppunten beter te kunnen evalueren.',
+      'slug' => 'prix-au-kilo',
     ),
     61 => 
     array (
       'term' => 'Belonende prijs',
       'definition' => 'Prijs om de productiekosten te dekken en een levensvatbaar inkomen voor de exploitant te garanderen.',
+      'slug' => 'prix-remunerateur',
     ),
     62 => 
     array (
       'term' => 'Eiwitgewassen',
       'definition' => 'Gewassen rijk aan eiwitten (erwten, tuinbonen, lupine, enz.) die worden gebruikt in menselijke of dierlijke voeding.',
+      'slug' => 'proteagineux',
     ),
     63 => 
     array (
       'term' => 'Gedifferentieerde kwaliteit',
       'definition' => 'Valorisatiebenadering waarbij een product zich onderscheidt door verifieerbare kenmerken die verband houden met kwaliteit, productiemethode of herkomst.',
+      'slug' => 'qualite-differenciee',
     ),
     64 => 
     array (
       'term' => 'Verhuizing van voedsel',
       'definition' => 'Aanpak gericht op het versterken van de voedselproductie, -verwerking, -distributie en -consumptie op een nauwere territoriale schaal.',
+      'slug' => 'relocalisation-alimentaire',
     ),
     65 => 
     array (
       'term' => 'Nuttige bodemreserve',
       'definition' => 'De hoeveelheid water die een bodem kan opslaan en teruggeven aan planten, afhankelijk van de diepte, textuur, structuur en organische stof.',
+      'slug' => 'reserve-utile-du-sol',
     ),
     66 => 
     array (
       'term' => 'Veerkracht',
       'definition' => 'Capaciteit van een landbouwbedrijf om een schok (klimaat, prijs, gezondheidscrisis) op te vangen en te blijven functioneren.',
+      'slug' => 'resilience',
     ),
     67 => 
     array (
       'term' => 'Collectieve horeca',
       'definition' => 'Organisatie van maaltijden geserveerd in scholen, ziekenhuizen, verpleeghuizen, bedrijven of overheden, met een potentiële rol in lokale verkooppunten.',
+      'slug' => 'restauration-collective',
     ),
     68 => 
     array (
       'term' => 'Rotatie',
       'definition' => 'Geplande afwisseling van gewassen op hetzelfde perceel.',
+      'slug' => 'rotation',
     ),
     69 => 
     array (
       'term' => 'Seizoensgebondenheid',
       'definition' => 'Natuurlijke productieperiode van een voedingsmiddel, die de beschikbaarheid, smaak, kosten en impact op het milieu beïnvloedt.',
+      'slug' => 'saisonnalite',
     ),
     70 => 
     array (
       'term' => 'Direct zaaien',
       'definition' => 'Techniek voor het opzetten van een gewas zonder voorafgaand ploegen, met als doel het grondwerk te verminderen en de structuur ervan te behouden.',
+      'slug' => 'semis-direct',
     ),
     71 => 
     array (
       'term' => 'Koolstofopslag',
       'definition' => 'Koolstofopslag in de bodem en biomassa, om de klimaatverandering te helpen verzachten.',
+      'slug' => 'sequestration-carbone',
     ),
     72 => 
     array (
       'term' => 'Ecosysteemdiensten',
       'definition' => 'Voordelen die ecosystemen bieden aan menselijke samenlevingen, zoals bestuiving, waterfiltratie, koolstofopslag of bodemvruchtbaarheid.',
+      'slug' => 'services-ecosystemiques',
     ),
     73 => 
     array (
       'term' => 'Voedselsoevereiniteit',
       'definition' => 'Politieke en economische capaciteit om te kiezen hoe de voedselvoorziening van een gebied geproduceerd, getransformeerd, gedistribueerd en veiliggesteld wordt.',
+      'slug' => 'souverainete-alimentaire',
     ),
     74 => 
     array (
       'term' => 'Waterstress',
       'definition' => 'Situatie waarin de behoefte aan gewaswater groter is dan de beschikbaarheid, wat de opbrengst en kwaliteit beïnvloedt.',
+      'slug' => 'stress-hydrique',
     ),
     75 => 
     array (
       'term' => 'Territoriaal voedselsysteem',
       'definition' => 'Lokale organisatie die productie, verwerking, distributie, consumptie, afval, publieke actoren en burgers rond voedsel met elkaar verbindt.',
+      'slug' => 'systeme-alimentaire-territorial',
     ),
     76 => 
     array (
       'term' => 'Vereenvoudigde teelttechnieken',
       'definition' => 'Praktijken die de intensiteit van de grondbewerking verminderen in vergelijking met ploegen, om erosie te beperken, de structuur te behouden en bepaalde kosten te verlagen.',
+      'slug' => 'techniques-culturales-simplifiees',
     ),
     77 => 
     array (
       'term' => 'Traceerbaarheid',
       'definition' => 'Mogelijkheid om een product te volgen vanaf de oorsprong tot de verkoop met behulp van verifieerbare informatie.',
+      'slug' => 'tracabilite',
     ),
     78 => 
     array (
       'term' => 'Verwerking op de boerderij',
       'definition' => 'Promotie van de productie rechtstreeks op de boerderij (kaas, sap, yoghurt, enz.).',
+      'slug' => 'transformation-a-la-ferme',
     ),
     79 => 
     array (
       'term' => 'Agro-ecologische transitie',
       'definition' => 'Pad van verandering dat technische tests, economische levensvatbaarheid, arbeidsomstandigheden, vermindering van afhankelijkheden en meetbare effecten op levende wezens combineert.',
+      'slug' => 'transition-agroecologique',
     ),
     80 => 
     array (
       'term' => 'Toegevoegde waarde',
       'definition' => 'Rijkdom gecreëerd door de verwerking, kwaliteit, herkomst of wijze van marketing van een product.',
+      'slug' => 'valeur-ajoutee',
     ),
     81 => 
     array (
       'term' => 'Directe verkoop',
       'definition' => 'Marketing van een product van producent naar consument zonder commerciële tussenpersoon, op de boerderij, op de markt, op een relaispunt of online.',
+      'slug' => 'vente-directe',
     ),
     82 => 
     array (
       'term' => 'Organisch amendement',
       'definition' => 'Aanvoer van organische stof zoals compost, mest of digestaat om de structuur van de bodem, het biologische leven en het vermogen om water vast te houden te verbeteren.',
+      'slug' => 'amendement-organique',
     ),
     83 => 
     array (
       'term' => 'Bodemanalyse',
       'definition' => 'Onderzoek van een bodemmonster om de pH, organische stof, voedingsstoffen en aanpassingsbehoeften te beoordelen voordat een praktijk wordt bemest of aangepast.',
+      'slug' => 'analyse-de-sol',
     ),
     84 => 
     array (
       'term' => 'Bijenteelt',
       'definition' => 'Het fokken van bijen om honing of andere bijenkorfproducten te produceren, met een belangrijke rol bij de bestuiving en het lezen van de toestand van het landschap.',
+      'slug' => 'apiculture',
     ),
     85 => 
     array (
       'term' => 'Battance',
       'definition' => 'Vorming van een korst op het oppervlak na regen, die de infiltratie kan beperken, de opkomst van zaailingen kan belemmeren en de afvoer kan vergroten.',
+      'slug' => 'battance',
     ),
     86 => 
     array (
       'term' => 'Waterscheiding',
       'definition' => 'Gebied waar regenwater naar dezelfde waterloop of afvoer convergeert, handig voor het begrijpen van afvoer, overstromingen en waterkwaliteit.',
+      'slug' => 'bassin-versant',
     ),
     87 => 
     array (
       'term' => 'Dierenwelzijn',
       'definition' => 'Omstandigheid die verband houdt met de levensomstandigheden van een dier: gezondheid, voeding, huisvesting, gedrag, afwezigheid van vermijdbaar lijden en kwaliteit van de zorg.',
+      'slug' => 'bien-etre-animal',
     ),
     88 => 
     array (
       'term' => 'Biomassa',
       'definition' => 'Materiaal uit levende organismen, zoals gewasresten, hout, afvalwater of bijproducten, dat kan worden gebruikt als energie, kunstmest of grondstof.',
+      'slug' => 'biomasse',
     ),
     89 => 
     array (
       'term' => 'Landbouwsensor',
       'definition' => 'Apparaat dat veldinformatie meet, bijvoorbeeld vochtigheid, temperatuur, beweging, melkproductie of de staat van apparatuur.',
+      'slug' => 'capteur-agricole',
     ),
     90 => 
     array (
       'term' => 'Werklast',
       'definition' => 'Volume en intensiteit van het werk dat op een boerderij moet worden gedaan, beïnvloed door seizoen, productie, arbeid, beperkingen en organisatie.',
+      'slug' => 'charge-de-travail',
     ),
     91 => 
     array (
       'term' => 'Bewaren van voedsel',
       'definition' => 'Set van methoden die de kwaliteit en veiligheid van voedsel behouden: koud, drogen, fermenteren, verwerken, verpakken of dadelbeheer.',
+      'slug' => 'conservation-des-aliments',
     ),
     92 => 
     array (
       'term' => 'Gegevenstoestemming',
       'definition' => 'Overeenkomst gegeven om bepaalde landbouwgegevens te delen of te gebruiken, met een gebruik, een ontvanger en voorwaarden die begrijpelijk moeten zijn.',
+      'slug' => 'consentement-des-donnees',
     ),
     93 => 
     array (
       'term' => 'Vang gewas',
       'definition' => 'Gewas dat tussen twee hoofdgewassen wordt geplant, vaak om voer te produceren, de grond te bedekken of een kort groeivenster te versterken.',
+      'slug' => 'culture-derobee',
     ),
     94 => 
     array (
       'term' => 'Voedergewas',
       'definition' => 'Gewas bedoeld voor het voederen van dieren, zoals gras, luzerne, kuilgras, mengkorst of andere geoogste of begraasde mengsels.',
+      'slug' => 'culture-fourragere',
     ),
     95 => 
     array (
       'term' => 'Het koolstofvrij maken van de landbouw',
       'definition' => 'Geleidelijke vermindering van de netto-uitstoot die verband houdt met de boerderij, door energiebesparingen, verminderde afhankelijkheid van fossielen, koolstofopslag of veranderingen in praktijken.',
+      'slug' => 'decarbonation-agricole',
     ),
     96 => 
     array (
       'term' => 'Landbouwdrainage',
       'definition' => 'Ontwikkeling die overtollig water uit vochtige grond afvoert, waarbij de effecten op het draagvermogen, de opbrengst, de biodiversiteit en het lokale hydrologische functioneren moeten worden beoordeeld.',
+      'slug' => 'drainage-agricole',
     ),
     97 => 
     array (
       'term' => 'Duurzame landbouwenergie',
       'definition' => 'Energieproductie op of met de boerderij, bijvoorbeeld zonne-energie, biomethaan, houtenergie of warmteterugwinning, afgestemd op de behoeften van de landbouw.',
+      'slug' => 'energie-renouvelable-agricole',
     ),
     98 => 
     array (
       'term' => 'Kuilvoer',
       'definition' => 'Methode voor het bewaren van vochtig voer in een luchtloze omgeving, vaak gebruikt om kuddes buiten de weideperiode te voeren.',
+      'slug' => 'ensilage',
     ),
     99 => 
     array (
       'term' => 'Familie boerderij',
       'definition' => 'Boerderij waar het gezin een centrale rol speelt bij het werk, de beslissingen en de overdracht, maar ook andere mensen in dienst kan nemen of ermee kan samenwerken.',
+      'slug' => 'exploitation-familiale',
     ),
     100 => 
     array (
       'term' => 'Maaien',
       'definition' => 'Het maaien van een weide of voedergewas om hooi, kuilvoer of kuilvoer te produceren, afhankelijk van het weer, het plantstadium en de behoeften van de kudde.',
+      'slug' => 'fauche',
     ),
     101 => 
     array (
       'term' => 'Landbouwgrond',
       'definition' => 'Grond die beschikbaar is voor het produceren, installeren of overbrengen van een landbouwactiviteit, met kwesties als prijs, pacht, toegang, verstedelijking en concurrentie van gebruik.',
+      'slug' => 'foncier-agricole',
     ),
     102 => 
     array (
       'term' => 'Voer',
       'definition' => 'Plantaardig voedsel bestemd voor vee, vers geconsumeerd, begraasd, gedroogd, ingekuild of verpakt.',
+      'slug' => 'fourrage',
     ),
     103 => 
     array (
       'term' => 'Inkoop groep',
       'definition' => 'Organisatie van consumenten die bestellingen bundelen met producenten of leveranciers, met hun eigen regels voor keuze, levering en betaling.',
+      'slug' => 'groupe-d-achat',
     ),
     104 => 
     array (
       'term' => 'Intercultuur',
       'definition' => 'Periode tussen twee hoofdgewassen, waarin de grond kaal kan blijven, afgedekt kan worden of een tussengewas kan huisvesten.',
+      'slug' => 'interculture',
     ),
     105 => 
     array (
       'term' => 'Interoperabiliteit',
       'definition' => 'Mogelijkheid van verschillende digitale tools om begrijpelijke gegevens onderling uit te wisselen zonder onnodige herinvoer of een gesloten formaat.',
+      'slug' => 'interoperabilite',
     ),
     106 => 
     array (
       'term' => 'Ploegen',
       'definition' => 'Bodemwerk dat de aarde draait vóór de teelt, nuttig in bepaalde contexten, maar moet in aanmerking worden genomen bij erosie, structuur, energie en leven van de bodem.',
+      'slug' => 'labour',
     ),
     107 => 
     array (
       'term' => 'Voedsellogistiek',
       'definition' => 'Organisatie van transport, opslag, verpakking en levering waardoor een product op de juiste plaats, op het juiste moment en in goede staat aankomt.',
+      'slug' => 'logistique-alimentaire',
     ),
     108 => 
     array (
       'term' => 'Openbare voedselmarkt',
       'definition' => 'Aankoopprocedure die door een gemeenschap wordt gebruikt om zichzelf te voorzien van maaltijden of levensmiddelen, met criteria die betrekking kunnen hebben op kwaliteit, herkomst, seizoen of logistiek.',
+      'slug' => 'marche-public-alimentaire',
     ),
     109 => 
     array (
       'term' => 'Mycorrhiza',
       'definition' => 'Associaties tussen bodemschimmels en plantenwortels, die de toegang tot bepaalde voedingsstoffen kunnen verbeteren en kunnen deelnemen aan het biologische leven van de bodem.',
+      'slug' => 'mycorhizes',
     ),
     110 => 
     array (
       'term' => 'Beslissingsondersteunend hulpmiddel',
       'definition' => 'Digitale, technische of methodologische ondersteuning die helpt bij het kiezen van een interventie door data, regels, observaties en productiedoelstellingen te combineren.',
+      'slug' => 'outil-d-aide-a-la-decision',
     ),
     111 => 
     array (
       'term' => 'pH van de bodem',
       'definition' => 'Indicator van de zuurgraad of alkaliteit van de bodem, belangrijk voor de beschikbaarheid van voedingsstoffen, biologische activiteit en de keuze voor bepaalde praktijken.',
+      'slug' => 'ph-du-sol',
     ),
     112 => 
     array (
       'term' => 'Relais punt',
       'definition' => 'Plaats waar bestelde of gegroepeerde producten aan consumenten worden geleverd, handig voor het organiseren van lokale verkopen zonder een permanente winkel.',
+      'slug' => 'point-relais',
     ),
     113 => 
     array (
       'term' => 'Kostprijs',
       'definition' => 'Volledige kosten die nodig zijn om een goed of dienst te produceren, inclusief kosten, arbeid, afschrijvingen en mogelijke verliezen.',
+      'slug' => 'prix-de-revient',
     ),
     114 => 
     array (
       'term' => 'Territoriaal voedselproject',
       'definition' => 'Collectieve aanpak die de voedselvoorziening van een gebied organiseert door productie, verwerking, distributie, catering, gezondheidszorg en lokaal beleid met elkaar te verbinden.',
+      'slug' => 'projet-alimentaire-territorial',
     ),
     115 => 
     array (
       'term' => 'Afvloeiing',
       'definition' => 'Oppervlaktewaterstroming wanneer de regen niet snel genoeg infiltreert, waardoor mogelijk bodem, voedingsstoffen of verontreinigende stoffen stroomafwaarts worden meegevoerd.',
+      'slug' => 'ruissellement',
     ),
     116 => 
     array (
       'term' => 'Gezondheid van dieren',
       'definition' => 'Het monitoren van de gezondheidsstatus van een kudde of dier, waarbij preventie, observatie, zorg, bioveiligheid en collectief risicobeheer worden gecombineerd.',
+      'slug' => 'sante-animale',
     ),
     117 => 
     array (
       'term' => 'Boerderij opslag',
       'definition' => 'Mogelijkheid om gewassen, voer, inputs of verwerkte producten op de boerderij te houden, met problemen op het gebied van kwaliteit, veiligheid, kosten en verkoopschema.',
+      'slug' => 'stockage-a-la-ferme',
     ),
     118 => 
     array (
       'term' => 'Agrarisch dashboard',
       'definition' => 'Synthetische weergave van bedrijfs- of sectorindicatoren, handig als de gegevens betrouwbaar en actueel zijn en gekoppeld zijn aan concrete beslissingen.',
+      'slug' => 'tableau-de-bord-agricole',
     ),
     119 => 
     array (
       'term' => 'Bodemverdichting',
       'definition' => 'Compressie van de grond door passages, gewicht of natte omstandigheden, waardoor porositeit, beworteling, infiltratie en werkgemak worden verminderd.',
+      'slug' => 'tassement-du-sol',
     ),
     120 => 
     array (
       'term' => 'Grondbewerking',
       'definition' => 'Alle mechanische ingrepen op het land, van ploegen tot direct zaaien, gekozen op basis van doelstelling, bodem, weer, cultuur en risico op erosie.',
+      'slug' => 'travail-du-sol',
     ),
     121 => 
     array (
       'term' => 'Vee-eenheid (LGU)',
       'definition' => 'Vergelijkingsbenchmark die verschillende soorten vee in een gemeenschappelijke eenheid uitdrukt om de belasting, oppervlakten of voerbehoeften te evalueren.',
+      'slug' => 'unite-gros-betail-ugb',
     ),
     122 => 
     array (
       'term' => 'Resistente variëteit',
       'definition' => 'Een variëteit die is geselecteerd om een bepaalde ziekte, stress of aandoening beter te verdragen, zonder de noodzaak van observatie volledig te elimineren.',
+      'slug' => 'variete-resistante',
     ),
     123 => 
     array (
       'term' => 'Boomgaard met hoge stam',
       'definition' => 'Boomgaard bestaande uit hoge fruitbomen, vaak geassocieerd met weilanden, traditionele landschappen, biodiversiteit en extensieve productie.',
+      'slug' => 'verger-haute-tige',
     ),
     124 => 
     array (
       'term' => 'Wetland',
       'definition' => 'Ruimte waar water een blijvende invloed heeft op de bodem, de vegetatie en het gebruik, met functies voor biodiversiteit, waterberging en milieukwaliteit.',
+      'slug' => 'zone-humide',
     ),
     125 => 
     array (
       'term' => 'WALLeSmart',
       'definition' => 'Waals digitaal platform dat de veilige uitwisseling van landbouwgegevens tussen tools, boeren en geautoriseerde partners mogelijk maakt.',
+      'slug' => 'wallesmart',
     ),
     126 => 
     array (
       'term' => 'Zero netto-kunstmatigheid (ZAN)',
       'definition' => 'Doelstelling van landsoberheid: de uitbreiding van bebouwde of waterdicht gemaakte gebieden verminderen en verliezen compenseren wanneer de regels daarin voorzien.',
+      'slug' => 'zero-artificialisation-nette-zan',
     ),
     127 => 
     array (
       'term' => 'Bufferzone',
       'definition' => 'Er ontstond ruimte tussen een landbouwactiviteit en een gevoelige omgeving om de overdracht van verontreinigende stoffen te verminderen, water te beschermen of de biodiversiteit te behouden.',
+      'slug' => 'zone-tampon',
     ),
   ),
   'dossiers' => 
