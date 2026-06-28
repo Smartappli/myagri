@@ -10,9 +10,9 @@ $resourceTitle = isset($selectedResource['title']) && is_string($selectedResourc
 $verificationPrompts = is_array($selectedResource['verification_prompts'] ?? null)
     ? $selectedResource['verification_prompts']
     : [
-        'Welche Information muss bei einer Anlaufstelle, einem Betrieb, einer Gemeinde oder einer zuständigen Organisation bestätigt werden?',
-        'Welches Kriterium prüft die angekündigte Wirkung: Kosten, Zeit, Herkunft, Menge, Saison, Sicherheit, Einkommen oder Umweltwirkung?',
-        'Welche Grenze muss genannt werden, damit ein nützlicher Hinweis nicht als allgemeingültige Regel erscheint?',
+        t('resources.verification_prompt_information'),
+        t('resources.verification_prompt_criterion'),
+        t('resources.verification_prompt_limit'),
     ];
 ?>
 
