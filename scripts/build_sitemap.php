@@ -84,10 +84,11 @@ foreach ($pages as $page) {
     $url = $xml->createElement('url');
     $urlset->appendChild($url);
 
-    $url->appendChild($xml->createElement('loc', htmlspecialchars($page['loc'], ENT_XML1)));
-    $url->appendChild($xml->createElement('lastmod', htmlspecialchars($page['lastmod'], ENT_XML1)));
-    $url->appendChild($xml->createElement('changefreq', htmlspecialchars($page['changefreq'], ENT_XML1)));
-    $url->appendChild($xml->createElement('priority', htmlspecialchars($page['priority'], ENT_XML1)));
+    foreach (['loc', 'lastmod', 'changefreq', 'priority'] as $field) {
+        $node = $xml->createElement($field);
+        $node->appendChild($xml->createTextNode($page[$field]));
+        $url->appendChild($node);
+    }
 }
 
 file_put_contents(__DIR__ . '/../sitemap.xml', $xml->saveXML());
