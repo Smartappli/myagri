@@ -65,7 +65,7 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 330px;
+    min-width: 220px;
     max-width: 100%;
     padding: 0.28rem 0.35rem;
     border-radius: 14px;
@@ -82,7 +82,7 @@ header {
 
 .brand-link img {
     display: block;
-    width: 390px;
+    width: 260px;
     max-width: 52vw;
     height: auto;
 }

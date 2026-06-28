@@ -42,12 +42,12 @@ function siteGeoConfig(array $site): array
         $geo = [];
     }
 
-    $name = isset($geo['name']) && is_string($geo['name']) ? trim($geo['name']) : 'Wallonie, Belgien';
-    $region = isset($geo['region']) && is_string($geo['region']) ? trim($geo['region']) : 'Wallonie';
+    $name = isset($geo['name']) && is_string($geo['name']) ? trim($geo['name']) : t('geo.name');
+    $region = isset($geo['region']) && is_string($geo['region']) ? trim($geo['region']) : t('geo.region');
     $regionCode = isset($geo['region_code']) && is_string($geo['region_code']) ? trim($geo['region_code']) : 'BE-WAL';
-    $country = isset($geo['country']) && is_string($geo['country']) ? trim($geo['country']) : 'Belgien';
+    $country = isset($geo['country']) && is_string($geo['country']) ? trim($geo['country']) : t('geo.country');
     $countryCode = isset($geo['country_code']) && is_string($geo['country_code']) ? trim($geo['country_code']) : 'BE';
-    $locality = isset($geo['locality']) && is_string($geo['locality']) ? trim($geo['locality']) : 'Namur';
+    $locality = isset($geo['locality']) && is_string($geo['locality']) ? trim($geo['locality']) : t('geo.locality');
     $latitude = isset($geo['latitude']) && is_scalar($geo['latitude']) ? trim((string) $geo['latitude']) : '50.5039';
     $longitude = isset($geo['longitude']) && is_scalar($geo['longitude']) ? trim((string) $geo['longitude']) : '4.4699';
 
@@ -80,18 +80,13 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
 {
     $siteTitle = isset($site['title']) && is_string($site['title']) ? $site['title'] : 'MyAgri';
     $siteDescription = isset($site['subtitle']) && is_string($site['subtitle']) ? $site['subtitle'] : '';
-    $baseKeywords = match (currentLanguage()) {
-        'en' => 'MyAgri, agriculture, Wallonia, citizen portal, food systems',
-        'ge' => 'MyAgri, Landwirtschaft, Wallonie, Bürgerportal, Ernährungssysteme',
-        'nl' => 'MyAgri, landbouw, Wallonië, burgerportaal, voedselsystemen',
-        default => 'MyAgri, agriculture, Wallonie, portail citoyen, systèmes alimentaires',
-    };
+    $baseKeywords = t('seo.keywords_base');
 
     if ($page === 'filieres') {
         return [
             'title' => t('sectors.title') . ' | MyAgri',
             'description' => t('sectors.intro'),
-            'keywords' => $baseKeywords . ', sectors, filières, sectoren',
+            'keywords' => $baseKeywords . ', ' . t('seo.keywords_sectors'),
         ];
     }
 
@@ -99,7 +94,7 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         return [
             'title' => t('resources.title') . ' | MyAgri',
             'description' => t('resources.intro'),
-            'keywords' => $baseKeywords . ', resources, ressources, hulpmiddelen',
+            'keywords' => $baseKeywords . ', ' . t('seo.keywords_resources'),
         ];
     }
 
@@ -120,7 +115,7 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         return [
             'title' => $termTitle . ' | ' . t('glossary.title') . ' | MyAgri',
             'description' => $termDescription,
-            'keywords' => strtolower($termTitle) . ', ' . $baseKeywords . ', glossary',
+            'keywords' => strtolower($termTitle) . ', ' . $baseKeywords . ', ' . t('seo.keywords_glossary'),
         ];
     }
 
@@ -128,7 +123,7 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         return [
             'title' => t('glossary.title') . ' | MyAgri',
             'description' => t('glossary.intro', ['count' => '80+']),
-            'keywords' => $baseKeywords . ', glossary, glossaire, glossarium',
+            'keywords' => $baseKeywords . ', ' . t('seo.keywords_glossary'),
         ];
     }
 
@@ -136,7 +131,7 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         return [
             'title' => t('dossiers.title') . ' | MyAgri',
             'description' => t('dossiers.intro'),
-            'keywords' => $baseKeywords . ', dossiers, water, climate, biodiversity',
+            'keywords' => $baseKeywords . ', ' . t('seo.keywords_dossiers'),
         ];
     }
 
@@ -150,7 +145,7 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         return [
             'title' => ($chapterTitle !== '' ? $chapterTitle . ' | ' : '') . $dossierTitle . ' | MyAgri',
             'description' => $description,
-            'keywords' => strtolower($dossierTitle) . ', ' . $baseKeywords . ', dossier',
+            'keywords' => strtolower($dossierTitle) . ', ' . $baseKeywords . ', ' . t('seo.keywords_dossiers'),
         ];
     }
 
@@ -158,7 +153,7 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         return [
             'title' => t('dossiers.not_found_title') . ' | MyAgri',
             'description' => t('dossiers.not_found_text'),
-            'keywords' => $baseKeywords . ', not found',
+            'keywords' => $baseKeywords . ', ' . t('seo.keywords_not_found'),
         ];
     }
 
@@ -171,7 +166,7 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         return [
             'title' => $resourceTitle . ' | MyAgri',
             'description' => $resourceDescription,
-            'keywords' => strtolower($resourceTitle) . ', ' . $baseKeywords . ', resource',
+            'keywords' => strtolower($resourceTitle) . ', ' . $baseKeywords . ', ' . t('seo.keywords_resource'),
         ];
     }
 
@@ -179,7 +174,7 @@ function pageSeo(string $page, array $site, ?array $resource = null, ?array $glo
         return [
             'title' => t('resources.not_found_title') . ' | MyAgri',
             'description' => t('resources.not_found_text'),
-            'keywords' => $baseKeywords . ', not found',
+            'keywords' => $baseKeywords . ', ' . t('seo.keywords_not_found'),
         ];
     }
 
@@ -301,12 +296,12 @@ function pageStructuredData(
                 t('nav.glossary'),
             ],
             'knowsAbout' => [
-                'agriculture',
-                'Wallonie',
-                'food systems',
-                'biodiversity',
-                'soil and water',
-                'local supply chains',
+                t('structured.knows_agriculture'),
+                t('structured.knows_region'),
+                t('structured.knows_food_systems'),
+                t('structured.knows_biodiversity'),
+                t('structured.knows_soil_water'),
+                t('structured.knows_local_supply_chains'),
             ],
             'audience' => [
                 '@type' => 'Audience',
@@ -794,7 +789,7 @@ function resourceArticleStructuredData(
 ): array {
     $siteName = isset($siteGeo['name']) && is_string($siteGeo['name']) ? trim($siteGeo['name']) : '';
     if ($siteName === '') {
-        $siteName = 'Wallonie, Belgien';
+        $siteName = t('geo.name');
     }
 
     return [

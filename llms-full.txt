@@ -1,31 +1,53 @@
-# MyAgri - corpus pour moteurs génératifs
+# MyAgri - Multilingual Corpus For Generative Systems
+
+## Français
 
 MyAgri est un portail citoyen multilingue consacré à l'agriculture en Wallonie. Il explique les filières, l'alimentation locale, les ressources pédagogiques, les dossiers thématiques, les pratiques agricoles, les enjeux environnementaux et les termes utiles pour comprendre les débats publics.
 
-## Langues et accès
-
-- Français : https://myagri.be/?lang=fr&page=accueil
-- Anglais : https://myagri.be/?lang=en&page=accueil
-- Allemand : https://myagri.be/?lang=ge&page=accueil
-- Néerlandais : https://myagri.be/?lang=nl&page=accueil
-
-## Sections
-
+- Accueil : https://myagri.be/?lang=fr&page=accueil
 - Filières agricoles : https://myagri.be/?lang=fr&page=filieres
 - Ressources pratiques : https://myagri.be/?lang=fr&page=ressources
 - Dossiers citoyens : https://myagri.be/?lang=fr&page=dossiers
-- Questions fréquentes : https://myagri.be/?lang=fr&page=faq
+- FAQ : https://myagri.be/?lang=fr&page=faq
 - Glossaire agricole : https://myagri.be/?lang=fr&page=glossaire
 
-## API
+## English
 
-- Tout le corpus français : https://myagri.be/api.php?lang=fr
-- Site : https://myagri.be/api.php?lang=fr&section=site
-- Filières : https://myagri.be/api.php?lang=fr&section=sectors
-- FAQ : https://myagri.be/api.php?lang=fr&section=faq
-- Glossaire : https://myagri.be/api.php?lang=fr&section=glossary
-- Ressources : https://myagri.be/api.php?lang=fr&section=resources
+MyAgri is a multilingual citizen portal about agriculture in Wallonia. It explains sectors, local food, educational resources, thematic dossiers, farming practices, environmental issues and useful terms for understanding public debates.
 
-## Résumé éditorial
+- Home: https://myagri.be/?lang=en&page=accueil
+- Agricultural sectors: https://myagri.be/?lang=en&page=filieres
+- Practical resources: https://myagri.be/?lang=en&page=ressources
+- Citizen dossiers: https://myagri.be/?lang=en&page=dossiers
+- FAQ: https://myagri.be/?lang=en&page=faq
+- Agricultural glossary: https://myagri.be/?lang=en&page=glossaire
 
-MyAgri aide les citoyens, familles, enseignants, communes, associations, porteurs de projets et acteurs agricoles à comprendre l'agriculture wallonne avec des contenus reformulés, contextualisés et vérifiables. Les liens historiques des pages sont conservés, tandis que la langue active est sélectionnée avec le paramètre `lang`.
+## Deutsch
+
+MyAgri ist ein mehrsprachiges Bürgerportal zur Landwirtschaft in der Wallonie. Es erklärt Sektoren, lokale Ernährung, pädagogische Ressourcen, thematische Dossiers, landwirtschaftliche Praktiken, Umweltfragen und nützliche Begriffe für öffentliche Debatten.
+
+- Startseite: https://myagri.be/?lang=ge&page=accueil
+- Agrarsektoren: https://myagri.be/?lang=ge&page=filieres
+- Praktische Ressourcen: https://myagri.be/?lang=ge&page=ressources
+- Bürgerdossiers: https://myagri.be/?lang=ge&page=dossiers
+- FAQ: https://myagri.be/?lang=ge&page=faq
+- Agrarglossar: https://myagri.be/?lang=ge&page=glossaire
+
+## Nederlands
+
+MyAgri is een meertalig burgerportaal over landbouw in Wallonië. Het legt sectoren, lokale voeding, educatieve hulpmiddelen, thematische dossiers, landbouwpraktijken, milieukwesties en nuttige begrippen voor publieke debatten uit.
+
+- Start: https://myagri.be/?lang=nl&page=accueil
+- Landbouwsectoren: https://myagri.be/?lang=nl&page=filieres
+- Praktische hulpmiddelen: https://myagri.be/?lang=nl&page=ressources
+- Burgerdossiers: https://myagri.be/?lang=nl&page=dossiers
+- FAQ: https://myagri.be/?lang=nl&page=faq
+- Landbouwglossarium: https://myagri.be/?lang=nl&page=glossaire
+
+## Structured Access
+
+- API, French: https://myagri.be/api.php?lang=fr
+- API, English: https://myagri.be/api.php?lang=en
+- API, German: https://myagri.be/api.php?lang=ge
+- API, Dutch: https://myagri.be/api.php?lang=nl
+- Sitemap: https://myagri.be/sitemap.xml

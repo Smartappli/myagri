@@ -1,27 +1,46 @@
 # MyAgri
 
+## Français
+
 > Portail citoyen multilingue d'information sur l'agriculture en Wallonie, Belgique.
-
-MyAgri explique les filières agricoles, les métiers, les saisons, les labels, les marchés locaux, les ressources pratiques, les dossiers thématiques et les notions clés de l'agriculture wallonne.
-
-## Langues disponibles
-
-- Français : https://myagri.be/?lang=fr&page=accueil
-- Anglais : https://myagri.be/?lang=en&page=accueil
-- Allemand : https://myagri.be/?lang=ge&page=accueil
-- Néerlandais : https://myagri.be/?lang=nl&page=accueil
-
-## Pages principales
 
 - Accueil : https://myagri.be/?lang=fr&page=accueil
 - Filières : https://myagri.be/?lang=fr&page=filieres
-- Ressources pratiques : https://myagri.be/?lang=fr&page=ressources
-- Dossiers citoyens : https://myagri.be/?lang=fr&page=dossiers
-- FAQ : https://myagri.be/?lang=fr&page=faq
+- Ressources : https://myagri.be/?lang=fr&page=ressources
+- Dossiers : https://myagri.be/?lang=fr&page=dossiers
 - Glossaire : https://myagri.be/?lang=fr&page=glossaire
 
-## Données structurées
+## English
 
-- API JSON : https://myagri.be/api.php?lang=fr
-- Sitemap : https://myagri.be/sitemap.xml
-- Corpus long pour systèmes génératifs : https://myagri.be/llms-full.txt
+> Multilingual citizen information portal about agriculture in Wallonia, Belgium.
+
+- Home: https://myagri.be/?lang=en&page=accueil
+- Sectors: https://myagri.be/?lang=en&page=filieres
+- Resources: https://myagri.be/?lang=en&page=ressources
+- Dossiers: https://myagri.be/?lang=en&page=dossiers
+- Glossary: https://myagri.be/?lang=en&page=glossaire
+
+## Deutsch
+
+> Mehrsprachiges Bürgerinformationsportal zur Landwirtschaft in der Wallonie, Belgien.
+
+- Startseite: https://myagri.be/?lang=ge&page=accueil
+- Sektoren: https://myagri.be/?lang=ge&page=filieres
+- Ressourcen: https://myagri.be/?lang=ge&page=ressources
+- Dossiers: https://myagri.be/?lang=ge&page=dossiers
+- Glossar: https://myagri.be/?lang=ge&page=glossaire
+
+## Nederlands
+
+> Meertalig burgerinformatieportaal over landbouw in Wallonië, België.
+
+- Start: https://myagri.be/?lang=nl&page=accueil
+- Sectoren: https://myagri.be/?lang=nl&page=filieres
+- Hulpmiddelen: https://myagri.be/?lang=nl&page=ressources
+- Dossiers: https://myagri.be/?lang=nl&page=dossiers
+- Glossarium: https://myagri.be/?lang=nl&page=glossaire
+
+## Machine Access
+
+- Long corpus: https://myagri.be/llms-full.txt
+- JSON API: https://myagri.be/api.php

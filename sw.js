@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'myagri-pwa-v2026-06-27-de-seo-geo';
+const CACHE_VERSION = 'myagri-pwa-v2026-06-28-i18n-assets';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -11,7 +11,15 @@ const PRECACHE_URLS = [
     '/?page=faq',
     '/?page=glossaire',
     '/offline.html',
+    '/offline.html?lang=fr',
+    '/offline.html?lang=en',
+    '/offline.html?lang=ge',
+    '/offline.html?lang=nl',
     '/manifest.json',
+    '/manifest.php?lang=fr',
+    '/manifest.php?lang=en',
+    '/manifest.php?lang=ge',
+    '/manifest.php?lang=nl',
     '/assets/css/tailwind-local.css',
     '/assets/css/style.css',
     '/assets/js/main.js',
@@ -86,6 +94,7 @@ function isStaticAsset(request, url) {
     return ['style', 'script', 'image', 'font', 'manifest'].includes(request.destination)
         || url.pathname.startsWith('/assets/')
         || url.pathname === '/manifest.json'
+        || url.pathname === '/manifest.php'
         || url.pathname === '/offline.html';
 }
 
@@ -104,11 +113,17 @@ async function networkFirst(request, useOfflineFallback) {
         }
 
         if (useOfflineFallback) {
-            return (await caches.match('/offline.html')) || Response.error();
+            return (await caches.match(offlineFallbackUrlFor(request))) || (await caches.match('/offline.html')) || Response.error();
         }
 
         return Response.error();
     }
+}
+
+function offlineFallbackUrlFor(request) {
+    const url = new URL(request.url);
+    const language = url.searchParams.get('lang');
+    return ['fr', 'en', 'ge', 'nl'].includes(language) ? `/offline.html?lang=${language}` : '/offline.html';
 }
 
 async function staleWhileRevalidate(request) {

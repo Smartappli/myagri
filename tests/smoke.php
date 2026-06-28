@@ -22,6 +22,7 @@ function activeInterfaceFiles(): array
     $files = [
         __DIR__ . '/../index.php',
         __DIR__ . '/../api.php',
+        __DIR__ . '/../manifest.php',
         __DIR__ . '/../includes/functions.php',
     ];
 
@@ -61,6 +62,34 @@ function collectInterfaceTranslationKeys(array $files): array
     ksort($keys);
 
     return $keys;
+}
+
+/**
+ * @return array<string, scalar|null>
+ */
+function flattenTranslationLeaves(array $value, string $prefix = ''): array
+{
+    $result = [];
+    foreach ($value as $key => $child) {
+        $path = $prefix === '' ? (string) $key : $prefix . '.' . $key;
+        if (is_array($child)) {
+            $result += flattenTranslationLeaves($child, $path);
+            continue;
+        }
+
+        if (is_scalar($child) || $child === null) {
+            $result[$path] = $child;
+        }
+    }
+
+    return $result;
+}
+
+function assertUtf8CleanFile(string $path): void
+{
+    $contents = (string) file_get_contents($path);
+    assertTrue(preg_match('//u', $contents) === 1, "file is valid UTF-8: {$path}");
+    assertTrue(preg_match('/(?:Â|Ã|â€™|â€œ|â€|�)/u', $contents) !== 1, "file has no mojibake markers: {$path}");
 }
 
 $data = getPortalData('fr');
@@ -112,6 +141,7 @@ $tailwindCdn = 'cdn.' . 'tailwindcss.com';
 assertTrue(str_contains($headMarkup, 'assets/css/tailwind-local.css'), 'head references local Tailwind CSS');
 assertTrue(!str_contains($headMarkup, $tailwindCdn), 'head does not reference Tailwind CDN');
 assertTrue(str_contains($headMarkup, 'logo-myagri.svg'), 'head references MyAgri logo');
+assertTrue(str_contains($headMarkup, 'manifest.php?lang='), 'head references language-aware PWA manifest');
 
 $manifestPath = __DIR__ . '/../manifest.json';
 assertTrue(is_file($manifestPath), 'PWA manifest exists');
@@ -119,6 +149,18 @@ $manifest = json_decode((string) file_get_contents($manifestPath), true);
 assertTrue(is_array($manifest), 'PWA manifest is valid JSON');
 assertTrue(($manifest['short_name'] ?? null) === 'MyAgri', 'PWA short name exists');
 assertTrue(isset($manifest['icons']) && is_array($manifest['icons']) && count($manifest['icons']) >= 3, 'PWA icons are declared');
+foreach (['fr' => 'fr-BE', 'en' => 'en-BE', 'ge' => 'de-BE', 'nl' => 'nl-BE'] as $language => $htmlLanguage) {
+    $_GET['lang'] = $language;
+    ob_start();
+    require __DIR__ . '/../manifest.php';
+    $manifestJson = (string) ob_get_clean();
+    $localizedManifest = json_decode($manifestJson, true);
+    assertTrue(is_array($localizedManifest), "localized PWA manifest is valid JSON for {$language}");
+    assertTrue(($localizedManifest['lang'] ?? null) === $htmlLanguage, "localized PWA manifest lang matches {$language}");
+    assertTrue(isset($localizedManifest['name'], $localizedManifest['description']) && is_string($localizedManifest['name']) && is_string($localizedManifest['description']), "localized PWA manifest has text for {$language}");
+    assertTrue(isset($localizedManifest['shortcuts']) && is_array($localizedManifest['shortcuts']) && count($localizedManifest['shortcuts']) === 4, "localized PWA manifest shortcuts exist for {$language}");
+}
+$_GET['lang'] = 'fr';
 assertTrue(is_file(__DIR__ . '/../sw.js'), 'service worker exists');
 assertTrue(is_file(__DIR__ . '/../offline.html'), 'offline page exists');
 assertTrue(is_file(__DIR__ . '/../assets/img/pwa-icon-192.png'), '192px PWA icon exists');
@@ -148,6 +190,20 @@ foreach (['fr', 'en', 'ge', 'nl'] as $language) {
     assertTrue(isset($translatedData['site']['title']), "site title exists for {$language}");
 }
 
+$translationLeaves = [];
+foreach (['fr', 'en', 'ge', 'nl'] as $language) {
+    $translationPath = __DIR__ . "/../includes/translations/{$language}.php";
+    assertUtf8CleanFile($translationPath);
+    $translationLeaves[$language] = flattenTranslationLeaves(require $translationPath);
+}
+$frenchLeafKeys = array_keys($translationLeaves['fr']);
+foreach (['en', 'ge', 'nl'] as $language) {
+    $missing = array_diff($frenchLeafKeys, array_keys($translationLeaves[$language]));
+    $extra = array_diff(array_keys($translationLeaves[$language]), $frenchLeafKeys);
+    assertTrue($missing === [], "translation file {$language} has no missing leaves");
+    assertTrue($extra === [], "translation file {$language} has no extra leaves");
+}
+
 $interfaceFiles = activeInterfaceFiles();
 $interfaceTranslationKeys = collectInterfaceTranslationKeys($interfaceFiles);
 assertTrue($interfaceTranslationKeys !== [], 'interface translation keys are detected');
@@ -161,8 +217,8 @@ foreach (['fr', 'en', 'ge', 'nl'] as $language) {
 
 $englishUiTranslations = portalUiTranslations('en');
 $allowedSameAsEnglish = [
-    'fr' => ['nav.dossiers' => true, 'nav.faq' => true],
-    'ge' => ['nav.dossiers' => true, 'nav.faq' => true, 'footer.sitemap' => true],
+    'fr' => ['nav.dossiers' => true, 'nav.faq' => true, 'geo.locality' => true, 'structured.knows_agriculture' => true],
+    'ge' => ['nav.dossiers' => true, 'nav.faq' => true, 'geo.locality' => true, 'footer.sitemap' => true],
     'nl' => ['nav.dossiers' => true, 'nav.faq' => true, 'footer.sitemap' => true, 'glossary.default_term' => true],
 ];
 foreach (['fr', 'ge', 'nl'] as $language) {
@@ -185,6 +241,24 @@ foreach ($interfaceFiles as $file) {
     foreach ($hardCodedGermanFragments as $fragment) {
         assertTrue(!str_contains($contents, $fragment), "no hard-coded German fragment {$fragment} in active interface file {$file}");
     }
+}
+
+$sharedTextAssets = [
+    __DIR__ . '/../assets/img/logo-myagri.svg',
+    __DIR__ . '/../assets/img/og-default.svg',
+    __DIR__ . '/../manifest.json',
+    __DIR__ . '/../offline.html',
+    __DIR__ . '/../llms.txt',
+    __DIR__ . '/../llms-full.txt',
+];
+foreach ($sharedTextAssets as $assetPath) {
+    assertUtf8CleanFile($assetPath);
+}
+$logoMarkup = (string) file_get_contents(__DIR__ . '/../assets/img/logo-myagri.svg');
+$ogMarkup = (string) file_get_contents(__DIR__ . '/../assets/img/og-default.svg');
+foreach (['L\'agriculture wallonne expliquée', 'Landwirtschaft in der Wallonie', 'Waalse landbouw uitgelegd', 'Walloon agriculture explained'] as $monolingualSlogan) {
+    assertTrue(!str_contains($logoMarkup, $monolingualSlogan), "logo has no monolingual slogan: {$monolingualSlogan}");
+    assertTrue(!str_contains($ogMarkup, $monolingualSlogan), "OG image has no monolingual slogan: {$monolingualSlogan}");
 }
 
 assertTrue(glossaryTemplatePath('vente-directe') === null, 'glossary uses translated generic rendering');

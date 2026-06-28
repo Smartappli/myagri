@@ -1,7 +1,7 @@
 {
-  "name": "MyAgri — L'agriculture wallonne expliquée",
+  "name": "MyAgri",
   "short_name": "MyAgri",
-  "description": "Portail citoyen sur l'agriculture en Wallonie : filières, ressources, dossiers, FAQ et glossaire.",
+  "description": "MyAgri",
   "lang": "fr-BE",
   "dir": "ltr",
   "id": "/?lang=fr&page=accueil",
@@ -30,36 +30,6 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Filières agricoles",
-      "short_name": "Filières",
-      "description": "Explorer les filières agricoles de Wallonie.",
-      "url": "/?lang=fr&page=filieres",
-      "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
-    },
-    {
-      "name": "Ressources pratiques",
-      "short_name": "Ressources",
-      "description": "Ouvrir les guides pratiques MyAgri.",
-      "url": "/?lang=fr&page=ressources",
-      "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
-    },
-    {
-      "name": "Dossiers citoyens",
-      "short_name": "Dossiers",
-      "description": "Lire les dossiers thématiques MyAgri.",
-      "url": "/?lang=fr&page=dossiers",
-      "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
-    },
-    {
-      "name": "Glossaire agricole",
-      "short_name": "Glossaire",
-      "description": "Ouvrir le glossaire citoyen agricole.",
-      "url": "/?lang=fr&page=glossaire",
-      "icons": [{ "src": "/assets/img/pwa-icon-192.png", "sizes": "192x192" }]
     }
   ]
 }

@@ -30,7 +30,7 @@ $geoCoordinates = $siteGeo['latitude'] . '; ' . $siteGeo['longitude'];
     <meta name="geo.country" content="<?= e($siteGeo['country_code']) ?>">
     <meta name="robots" content="<?= e($robotsDirective) ?>">
     <link rel="canonical" href="<?= e($canonicalUrl) ?>">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/manifest.php?lang=<?= e(currentLanguage()) ?>">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
     <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
     <link rel="sitemap" type="application/xml" href="<?= e(siteBaseUrl() . '/sitemap.xml') ?>">

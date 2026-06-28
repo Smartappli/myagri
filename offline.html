@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offline - MyAgri</title>
+    <title>MyAgri</title>
     <meta name="robots" content="noindex, nofollow">
     <meta name="theme-color" content="#1f7a45">
     <link rel="manifest" href="/manifest.json">
@@ -80,9 +80,43 @@
 <body>
 <main>
     <img class="offline-logo" src="/assets/img/logo-myagri.svg" alt="MyAgri">
-    <h1>MyAgri est hors ligne</h1>
-    <p>La connexion semble indisponible. Les pages déjà consultées peuvent rester accessibles dans l’application. Revenez à l’accueil ou réessayez lorsque le réseau sera rétabli.</p>
-    <a href="/?lang=fr&page=accueil">Retour à l’accueil</a>
+
+    <section class="offline-panel" data-lang="fr" lang="fr-BE">
+        <h1>MyAgri est hors ligne</h1>
+        <p>La connexion semble indisponible. Les pages déjà consultées peuvent rester accessibles dans l’application. Revenez à l’accueil ou réessayez lorsque le réseau sera rétabli.</p>
+        <a href="/?lang=fr&page=accueil">Retour à l’accueil</a>
+    </section>
+
+    <section class="offline-panel" data-lang="en" lang="en-BE" hidden>
+        <h1>MyAgri is offline</h1>
+        <p>The connection seems unavailable. Pages you have already viewed may remain accessible in the app. Return home or try again when the network is restored.</p>
+        <a href="/?lang=en&page=accueil">Back to home</a>
+    </section>
+
+    <section class="offline-panel" data-lang="ge" lang="de-BE" hidden>
+        <h1>MyAgri ist offline</h1>
+        <p>Die Verbindung scheint nicht verfügbar zu sein. Bereits besuchte Seiten können in der App weiterhin zugänglich bleiben. Kehren Sie zur Startseite zurück oder versuchen Sie es erneut, sobald das Netzwerk wiederhergestellt ist.</p>
+        <a href="/?lang=ge&page=accueil">Zur Startseite</a>
+    </section>
+
+    <section class="offline-panel" data-lang="nl" lang="nl-BE" hidden>
+        <h1>MyAgri is offline</h1>
+        <p>De verbinding lijkt niet beschikbaar. Pagina’s die u al hebt bezocht, kunnen in de app toegankelijk blijven. Keer terug naar de startpagina of probeer opnieuw zodra het netwerk hersteld is.</p>
+        <a href="/?lang=nl&page=accueil">Terug naar start</a>
+    </section>
 </main>
+<script>
+    (() => {
+        const params = new URLSearchParams(window.location.search);
+        const requested = params.get('lang');
+        const browser = (navigator.language || '').toLowerCase();
+        const language = requested || (browser.startsWith('nl') ? 'nl' : browser.startsWith('de') ? 'ge' : browser.startsWith('en') ? 'en' : 'fr');
+        const normalized = ['fr', 'en', 'ge', 'nl'].includes(language) ? language : 'fr';
+
+        document.querySelectorAll('[data-lang]').forEach((panel) => {
+            panel.hidden = panel.dataset.lang !== normalized;
+        });
+    })();
+</script>
 </body>
 </html>
