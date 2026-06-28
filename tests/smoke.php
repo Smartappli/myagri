@@ -14,6 +14,55 @@ function assertTrue(bool $condition, string $message): void
     }
 }
 
+/**
+ * @return list<string>
+ */
+function activeInterfaceFiles(): array
+{
+    $files = [
+        __DIR__ . '/../index.php',
+        __DIR__ . '/../api.php',
+        __DIR__ . '/../includes/functions.php',
+    ];
+
+    foreach ([__DIR__ . '/../includes/partials/*.php', __DIR__ . '/../includes/views/page-*.php'] as $pattern) {
+        $matches = glob($pattern);
+        if (!is_array($matches)) {
+            continue;
+        }
+        foreach ($matches as $match) {
+            $files[] = $match;
+        }
+    }
+
+    return array_values(array_unique($files));
+}
+
+/**
+ * @param list<string> $files
+ * @return array<string, list<string>>
+ */
+function collectInterfaceTranslationKeys(array $files): array
+{
+    $keys = [];
+    foreach ($files as $file) {
+        $contents = (string) file_get_contents($file);
+        if ($contents === '') {
+            continue;
+        }
+
+        if (preg_match_all("/\bt\('([^']+)'/", $contents, $matches) !== false) {
+            foreach ($matches[1] as $key) {
+                $keys[$key][] = $file;
+            }
+        }
+    }
+
+    ksort($keys);
+
+    return $keys;
+}
+
 $data = getPortalData('fr');
 assertTrue(isset($data['site']['title']), 'site title exists');
 assertTrue(count($data['sectors']) >= 3, 'at least 3 sectors');
@@ -99,7 +148,27 @@ foreach (['fr', 'en', 'ge', 'nl'] as $language) {
     assertTrue(isset($translatedData['site']['title']), "site title exists for {$language}");
 }
 
+$interfaceFiles = activeInterfaceFiles();
+$interfaceTranslationKeys = collectInterfaceTranslationKeys($interfaceFiles);
+assertTrue($interfaceTranslationKeys !== [], 'interface translation keys are detected');
+foreach (['fr', 'en', 'ge', 'nl'] as $language) {
+    $uiTranslations = portalUiTranslations($language);
+    foreach (array_keys($interfaceTranslationKeys) as $key) {
+        assertTrue(array_key_exists($key, $uiTranslations), "interface key {$key} exists for {$language}");
+        assertTrue(is_string($uiTranslations[$key]) && trim($uiTranslations[$key]) !== '', "interface key {$key} is not empty for {$language}");
+    }
+}
+
+$hardCodedGermanFragments = ['Zurück', 'Zielgruppe', 'Kurz gesagt', 'Welche Information', 'Welches Kriterium', 'Welche Grenze'];
+foreach ($interfaceFiles as $file) {
+    $contents = (string) file_get_contents($file);
+    foreach ($hardCodedGermanFragments as $fragment) {
+        assertTrue(!str_contains($contents, $fragment), "no hard-coded German fragment {$fragment} in active interface file {$file}");
+    }
+}
+
 assertTrue(glossaryTemplatePath('vente-directe') === null, 'glossary uses translated generic rendering');
+assertTrue(resourceTemplatePath('visites-pedagogiques') === null, 'resources use translated generic rendering');
 
 try {
     $loadedData = loadPortalData();
