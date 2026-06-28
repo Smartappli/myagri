@@ -38,5 +38,6 @@ Meertalig burgerinformatieportaal over landbouw in Wallonië.
 ## Quality / Qualité / Qualität / Kwaliteit
 
 - Smoke test: `composer smoke`
+- Generated sitemap check: `composer check:sitemap`
 - Static analysis: `composer analyse`
 - Selenium browser tests: `composer selenium` with `BASE_URL`, `APP_HEALTH_URL` and `SELENIUM_REMOTE_URL`
