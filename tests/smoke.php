@@ -230,9 +230,9 @@ foreach (['fr', 'en', 'ge', 'nl'] as $language) {
 
 $englishUiTranslations = portalUiTranslations('en');
 $allowedSameAsEnglish = [
-    'fr' => ['nav.faq' => true, 'geo.locality' => true, 'structured.knows_agriculture' => true],
-    'ge' => ['nav.faq' => true, 'geo.locality' => true, 'footer.sitemap' => true],
-    'nl' => ['nav.faq' => true, 'footer.sitemap' => true, 'glossary.default_term' => true],
+    'fr' => ['geo.locality' => true, 'structured.knows_agriculture' => true],
+    'ge' => ['geo.locality' => true, 'footer.sitemap' => true],
+    'nl' => ['footer.sitemap' => true, 'glossary.default_term' => true],
 ];
 foreach (['fr', 'ge', 'nl'] as $language) {
     $uiTranslations = portalUiTranslations($language);
