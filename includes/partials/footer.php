@@ -7,9 +7,9 @@
                 <li><a href="<?= e(localizedUrl(['page' => 'ressources'])) ?>"><?= e(t('nav.resources')) ?></a></li>
                 <li><a href="<?= e(localizedUrl(['page' => 'dossiers'])) ?>"><?= e(t('nav.dossiers')) ?></a></li>
                 <li><a href="<?= e(localizedUrl(['page' => 'glossaire'])) ?>"><?= e(t('nav.glossary')) ?></a></li>
-                <li><a href="api.php?lang=<?= e(currentLanguage()) ?>">API JSON</a></li>
+                <li><a href="api.php?lang=<?= e(currentLanguage()) ?>"><?= e(t('footer.api')) ?></a></li>
                 <li><a href="llms.txt"><?= e(t('footer.llms')) ?></a></li>
-                <li><a href="sitemap.xml">Sitemap</a></li>
+                <li><a href="sitemap.xml"><?= e(t('footer.sitemap')) ?></a></li>
             </ul>
         </nav>
         <p class="meta"><?= e(t('footer.last_update')) ?>: <?= e($site['updated_at']) ?></p>
