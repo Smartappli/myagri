@@ -1318,6 +1318,11 @@ return array (
         ),
         2 => 
         array (
+          'label' => 'SPW Landwirtschaft - Kartografischer Referenzrahmen zur Erosionsanfälligkeit',
+          'url' => 'https://agriculture.wallonie.be/home/ruralite-et-foncier/ruralite/protection-des-sols/prevention-et-lutte-contre-l-erosion-des-sols/referentiel-cartographique-de-sensibilite-a-l-erosion.html',
+        ),
+        3 => 
+        array (
           'label' => 'SPW Umwelt - Nitrate und Trinkwasser',
           'url' => 'https://environnement.wallonie.be/home/milieux/eau/etat-des-eaux/eau-de-distribution/qualite-de-l-eau-de-distribution/nitrates.html',
         ),
@@ -1560,7 +1565,12 @@ return array (
         ),
         2 => 
         array (
-          'label' => 'APAQ-W - Barometer lokaler Produkte',
+          'label' => 'Stand der wallonischen Landwirtschaft - Betriebe',
+          'url' => 'https://etat-agriculture.wallonie.be/contents/indicatorsheets/EAW-A_II_b_1-1.eew-sheet.html?thematic=9537325a-2206-4104-b8fc-5f2ed34c8636',
+        ),
+        3 => 
+        array (
+          'label' => 'APAQ-W - Barometer lokaler Produkte und kurzer Lieferketten',
           'url' => 'https://www.apaqw.be/fr/node/11388',
         ),
       ),
@@ -1803,8 +1813,18 @@ return array (
         ),
         2 => 
         array (
-          'label' => 'Natagriwal - Agrarumweltmaßnahmen',
+          'label' => 'SPW Landwirtschaft - Agrarumwelt- und Klimamaßnahmen',
+          'url' => 'https://agriculture.wallonie.be/home/environnement/methodes-agro-environnementales-et-climatiques.html',
+        ),
+        3 => 
+        array (
+          'label' => 'Natagriwal - Agrarumwelt- und Klimamaßnahmen',
           'url' => 'https://www.natagriwal.be/maec/',
+        ),
+        4 => 
+        array (
+          'label' => 'SPW Landwirtschaft - Umwelt und Biodiversität',
+          'url' => 'https://agriculture.wallonie.be/home/environnement.html',
         ),
       ),
     ),
@@ -1830,27 +1850,46 @@ return array (
         0 => 
         array (
           'title' => 'Vor dem Besuch vorbereiten',
+          'type' => 'list',
           'items' => 
           array (
             0 => 'Ein Lernziel je Gruppe festlegen.',
             1 => 'Hof nach Zugänglichkeit, Hygiene, Sicherheit und Kapazität auswählen.',
             2 => 'Rollen der Begleitpersonen klären.',
             3 => 'Genehmigungen, Gesundheitsinfos und Notfallkontakte sammeln.',
+            4 => 'Transport, Zeitplan, Pausen, Schlechtwetterlösung und Notfallhilfe planen.',
           ),
         ),
         1 => 
         array (
           'title' => 'Ablauf strukturieren',
+          'type' => 'text',
           'text' => 'Eine stabile Sequenz folgt fünf Momenten: Einführung, Beobachtung, Praxis, Zusammenfassung und Anschlussarbeit. Jeder Teil bleibt kurz und vorhersehbar.',
         ),
         2 => 
         array (
-          'title' => 'Nach dem Besuch nutzen',
+          'title' => 'Vor Ort durchführen',
+          'type' => 'list',
           'items' => 
           array (
-            0 => 'Fünf-Minuten-Bericht mit zentralem Begriff erstellen.',
-            1 => 'Fotos und Notizen für Unterricht oder Workshop sichern.',
-            2 => 'Kreative Auswertung als Plakat, Heft oder Audio aufnehmen.',
+            0 => 'Mit Sicherheitsregeln und Wegeplan beginnen.',
+            1 => 'Geführte Beobachtungen und einfache Handgriffe altersgerecht anleiten.',
+            2 => 'Kurze Erklärungen und entdeckendes Handeln abwechseln.',
+            3 => 'Gemeinsam wichtige Beobachtungspunkte für die abschließende Auswertung notieren.',
+            4 => 'Mit einer kurzen Zusammenfassung der Lerninhalte abschließen.',
+          ),
+        ),
+        3 => 
+        array (
+          'title' => 'Nach dem Besuch weiterarbeiten',
+          'type' => 'list',
+          'items' => 
+          array (
+            0 => 'Einen Fünf-Minuten-Bericht mit zentralem Begriff und nützlicher Entdeckung teilen.',
+            1 => 'Fotos, Notizen und Materialien für Unterricht oder Workshop sichern.',
+            2 => 'Eine kreative Auswertung als Plakat, Heft oder Audioaufnahme vorschlagen.',
+            3 => 'Lernfortschritte mit einem kurzen Vorher-Nachher-Fragebogen messen.',
+            4 => 'Einen Verbesserungspunkt für den nächsten Ausflug festhalten.',
           ),
         ),
       ),
@@ -2080,9 +2119,10 @@ return array (
       ),
       'label_reading' => 
       array (
-        0 => 'Zertifiziertes Label von Marketingversprechen trennen.',
-        1 => 'Kontrollstelle und abgedeckten Produktteil prüfen.',
-        2 => 'Label mit Saison, Herkunft, Zutaten und Kilopreis kombinieren.',
+        0 => 'Tatsächliche Herkunft prüfen (Produktions- und Verarbeitungsland).',
+        1 => 'Offizielles Label, Marketinghinweis und Selbsterklärung unterscheiden.',
+        2 => 'Zutatenliste prüfen: Einfachheit, Zusatzstoffe, Zucker-/Salz-/Fettgehalt.',
+        3 => 'Kilopreis oder Literpreis vergleichen, um die Entscheidung zu objektivieren.',
       ),
       'seasonal_planning' => 
       array (
@@ -2097,6 +2137,7 @@ return array (
         1 => 'Reste mit Datum und Portion beschriften.',
         2 => 'Überschüsse in Suppen, Quiches, Kompott oder Saucen verwandeln.',
         3 => 'Portionen an tatsächlichen Appetit anpassen.',
+        4 => 'Nicht essbare Bioabfälle kompostieren, wenn möglich.',
       ),
       'nutrition_balance' => 
       array (
