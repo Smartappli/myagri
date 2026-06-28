@@ -6,6 +6,10 @@ require __DIR__ . '/../includes/functions.php';
 $baseUrl = getenv('SITE_URL') ?: 'https://myagri.be';
 $baseUrl = rtrim($baseUrl, '/');
 $pages = [];
+$defaultSite = getPortalData(defaultPortalLanguage());
+$defaultLastmod = isset($defaultSite['site']['updated_at']) && is_string($defaultSite['site']['updated_at'])
+    ? updatedAtIsoDate($defaultSite['site']['updated_at'])
+    : date('Y-m-d');
 
 /**
  * @return list<array{hreflang:string, href:string}>
@@ -102,8 +106,8 @@ foreach (array_keys(portalLanguages()) as $language) {
     }
 }
 
-$pages[] = ['loc' => $baseUrl . '/llms.txt', 'lastmod' => date('Y-m-d'), 'changefreq' => 'yearly', 'priority' => '0.2', 'alternates' => []];
-$pages[] = ['loc' => $baseUrl . '/llms-full.txt', 'lastmod' => date('Y-m-d'), 'changefreq' => 'yearly', 'priority' => '0.2', 'alternates' => []];
+$pages[] = ['loc' => $baseUrl . '/llms.txt', 'lastmod' => $defaultLastmod, 'changefreq' => 'yearly', 'priority' => '0.2', 'alternates' => []];
+$pages[] = ['loc' => $baseUrl . '/llms-full.txt', 'lastmod' => $defaultLastmod, 'changefreq' => 'yearly', 'priority' => '0.2', 'alternates' => []];
 
 $xml = new DOMDocument('1.0', 'UTF-8');
 $xml->formatOutput = true;

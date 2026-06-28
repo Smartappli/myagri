@@ -3,6 +3,8 @@
     "scripts": {
         "smoke": "php tests/smoke.php",
         "analyse": "phpstan analyse --memory-limit=512M",
+        "build:sitemap": "php scripts/build_sitemap.php",
+        "check:sitemap": "php scripts/check_sitemap.php",
         "selenium": "php scripts/run_selenium.php"
     },
     "require-dev": {
