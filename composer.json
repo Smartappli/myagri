@@ -6,6 +6,12 @@
         "analyse": "phpstan analyse --memory-limit=512M",
         "build:sitemap": "php scripts/build_sitemap.php",
         "check:sitemap": "php scripts/check_sitemap.php",
+        "quality": [
+            "@security:audit",
+            "@smoke",
+            "@check:sitemap",
+            "@analyse"
+        ],
         "selenium": "php scripts/run_selenium.php"
     },
     "require-dev": {

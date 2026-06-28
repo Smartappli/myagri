@@ -7,8 +7,6 @@ on:
       - master
   pull_request:
   workflow_dispatch:
-  schedule:
-    - cron: "24 4 * * 1"
 
 permissions:
   contents: read
@@ -26,6 +24,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -71,7 +71,7 @@ jobs:
 
     services:
       selenium:
-        image: selenium/standalone-chrome:latest
+        image: selenium/standalone-chrome@sha256:90fbfd0cec921daba37e87f92e0edbd2c1b6e03b14d3972dba6338dec3884b70
         ports:
           - 4444:4444
         options: >-
@@ -81,6 +81,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -156,6 +158,7 @@ jobs:
           name: selenium-artifacts
           path: selenium-artifacts
           if-no-files-found: ignore
+          retention-days: 7
 
       - name: Upload PHP server logs
         if: always()
@@ -166,3 +169,4 @@ jobs:
             php-server.log
             php-server.err.log
           if-no-files-found: ignore
+          retention-days: 7

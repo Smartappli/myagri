@@ -41,4 +41,6 @@ Meertalig burgerinformatieportaal over landbouw in Wallonië.
 - Dependency audit: `composer security:audit`
 - Generated sitemap check: `composer check:sitemap`
 - Static analysis: `composer analyse`
+- Full non-browser quality suite: `composer quality`
 - Selenium browser tests: `composer selenium` with `BASE_URL`, `APP_HEALTH_URL` and `SELENIUM_REMOTE_URL`
+- Selenium CI dependencies are pinned in `tests/selenium/requirements.txt` and `.github/workflows/ci.yml`.
