@@ -12,21 +12,23 @@ require_once __DIR__ . '/data.php';
  *
  * @return array<string, mixed>
  */
-function loadPortalData(): array
+function loadPortalData(?string $language = null): array
 {
+    $language = normalizePortalLanguage($language ?? currentLanguage());
+
     try {
-        pushPortalDataToMySql();
+        pushPortalDataToMySql($language);
 
         $pdo = createPortalPdo();
 
-        $mysqlData = loadPortalDataFromMySql($pdo);
+        $mysqlData = loadPortalDataFromMySql($pdo, $language);
         if (!is_array($mysqlData)) {
             throw new RuntimeException('MySQL-Daten des Portals konnten nicht geladen werden.');
         }
 
         return $mysqlData;
     } catch (Throwable) {
-        return getPortalData();
+        return getPortalData($language);
     }
 }
 
@@ -35,11 +37,12 @@ function loadPortalData(): array
  *
  * @throws RuntimeException
  */
-function pushPortalDataToMySql(): void
+function pushPortalDataToMySql(?string $language = null): void
 {
+    $language = normalizePortalLanguage($language ?? currentLanguage());
     $pdo = createPortalPdo();
     ensurePortalStorageExists($pdo);
-    syncPortalDataToMySql($pdo);
+    syncPortalDataToMySql($pdo, $language);
 }
 
 /**
@@ -91,9 +94,10 @@ SQL;
  *
  * @throws RuntimeException
  */
-function syncPortalDataToMySql(PDO $pdo): void
+function syncPortalDataToMySql(PDO $pdo, ?string $language = null): void
 {
-    $payload = json_encode(getPortalData(), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR);
+    $language = normalizePortalLanguage($language ?? currentLanguage());
+    $payload = json_encode(getPortalData($language), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR);
 
     $sql = <<<SQL
 INSERT INTO portal_content (code, payload_json)
@@ -104,7 +108,7 @@ SQL;
     try {
         $statement = $pdo->prepare($sql);
         $statement->execute([
-            ':code' => 'main',
+            ':code' => portalStorageCode($language),
             ':payload_json' => $payload,
         ]);
     } catch (Throwable $exception) {
@@ -117,9 +121,10 @@ SQL;
  *
  * @return array<string, mixed>|null
  */
-function loadPortalDataFromMySql(PDO $pdo): ?array
+function loadPortalDataFromMySql(PDO $pdo, ?string $language = null): ?array
 {
-    $sql = "SELECT payload_json FROM portal_content WHERE code = 'main' LIMIT 1";
+    $language = normalizePortalLanguage($language ?? currentLanguage());
+    $sql = 'SELECT payload_json FROM portal_content WHERE code = ' . $pdo->quote(portalStorageCode($language)) . ' LIMIT 1';
 
     try {
         return fetchPortalPayload($pdo, $sql);
@@ -128,7 +133,7 @@ function loadPortalDataFromMySql(PDO $pdo): ?array
         $sqlState = $exception->getCode();
         if ($sqlState === '42S02') {
             ensurePortalStorageExists($pdo);
-            syncPortalDataToMySql($pdo);
+            syncPortalDataToMySql($pdo, $language);
             return fetchPortalPayload($pdo, $sql);
         }
 
@@ -136,6 +141,11 @@ function loadPortalDataFromMySql(PDO $pdo): ?array
     } catch (Throwable $exception) {
         throw new RuntimeException('MySQL-Daten konnten nicht gelesen werden: ' . $exception->getMessage(), 0, $exception);
     }
+}
+
+function portalStorageCode(string $language): string
+{
+    return 'main_' . normalizePortalLanguage($language);
 }
 
 /**
