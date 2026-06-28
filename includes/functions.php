@@ -869,7 +869,6 @@ function updatedAtIsoDate(string $updatedAt): string
         'june' => '06',
         'july' => '07',
         'august' => '08',
-        'september' => '09',
         'october' => '10',
         'december' => '12',
         'januari' => '01',
